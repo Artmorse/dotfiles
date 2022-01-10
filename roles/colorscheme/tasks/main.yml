@@ -1,0 +1,8 @@
+---
+- name: Copy `~/.Xresources` file
+  copy:
+    src: .Xresources
+    dest: "~"
+
+- name: Update `xrdb`
+  shell: xrdb .Xresources

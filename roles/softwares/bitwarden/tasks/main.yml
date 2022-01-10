@@ -1,0 +1,5 @@
+---
+- name: Install `bitwarden` packages from the internet
+  become: yes
+  apt:
+    deb: https://github.com/bitwarden/desktop/releases/download/v{{ bitwarden.version }}/Bitwarden-{{ bitwarden.version }}-amd64.deb

@@ -1,0 +1,12 @@
+---
+- name: Add `deluge` repository from PPA
+  become: yes
+  apt_repository:
+    repo: ppa:deluge-team/stable
+
+
+- name: Install `deluge` package
+  become: yes
+  package: 
+    name: deluge
+    state: latest

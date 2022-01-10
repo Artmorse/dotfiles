@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: {{ container.name }}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/.docker/portainer/volumes/data:/data
+    restart: unless-stopped
+    ports:
+      - {{ container.ports.external }}:9000

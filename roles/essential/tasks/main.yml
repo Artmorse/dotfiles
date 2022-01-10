@@ -1,0 +1,61 @@
+---
+
+#
+# Updates & Installation
+#
+- name: Update and upgrade aptitude packages
+  become: yes
+  apt:
+    update_cache: yes
+    upgrade: 'yes'
+
+
+- name: Install essential packages
+  become: yes
+  package: 
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ essential_package_list }}"
+
+
+- name: Install pip
+  # become: yes
+  include_role:
+    name: geerlingguy.pip
+  vars:
+    - ansible_become: yes
+    - pip_package: python3-pip
+
+
+#
+# Folders
+#
+
+- name: Ensures folders exists
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "~/.config"
+    - "~/.local/share"
+
+#
+# Timezone
+#
+
+- name: Set timezone
+  shell: timedatectl set-timezone {{ timezone }}
+
+- name: Restart `timesyncd` service
+  become: yes
+  systemd:
+    name: systemd-timesyncd.service
+    state: restarted
+
+#
+# Locale
+#
+- name: Generate the locale
+  locale_gen:
+    name: "{{ locale }}"
+    state: present

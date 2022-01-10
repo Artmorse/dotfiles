@@ -1,0 +1,131 @@
+---
+- hosts: pve
+
+  pre_tasks:
+  - name: "Limiting the playbooks execution to Debian distributions."
+    fail:
+      msg: "{{ ansible_distribution }} is not supported by these playbooks!"
+    when: ansible_os_family != "Debian"
+
+  tasks:
+    - name: update the system ans install the essential packages
+      include_role:
+        name: essential
+        apply: 
+          tags: [essential, common]
+
+    - name: install some fonts
+      include_role: 
+        name: fonts
+        apply: 
+          tags: [font]
+
+    - name: install colorscheme
+      include_role:
+        name: colorscheme
+        apply: 
+          tags: [colorscheme, xresources]
+
+    - name: install some themes
+      include_role:
+        name: themes
+        apply: 
+          tags: [theme]
+
+    - name: install some icons
+      include_role:
+        name: icons
+        apply: 
+          tags: [theme, icon]
+
+    - name: configure git workspaces
+      include_role:
+        name: git
+        apply: 
+          tags: [git]
+
+    - name: install docker
+      include_role:
+        name: docker
+        apply: 
+          tags: [docker]
+
+    - name: install exa to override `ls`
+      include_role:
+        name: exa
+        apply: 
+          tags: [ls]
+
+    - name: configure nano
+      include_role:
+        name: nano
+        apply: 
+          tags: [nano]
+
+    - name: configure aliases
+      include_role:
+        name: alias
+        apply: 
+          tags: [shell]
+
+    - name: configure bash
+      include_role:
+        name: bash
+        apply: 
+          tags: [shell]
+
+    - name: install and configure zsh
+      include_role:
+        name: zsh
+        apply: 
+          tags: [shell]
+
+    - name: install and configure konsole
+      include_role:
+        name: konsole
+        apply: 
+          tags: [terminal]
+
+    - name: install feh and upload wallpapers
+      include_role:
+        name: wallpapers
+        apply: 
+          tags: [wallpaper, feh]
+
+    - name: install and configure rofi
+      include_role:
+        name: rofi
+        apply: 
+          tags: [rofi, menu]
+
+    - name: configure xrandr
+      include_role:
+        name: xrandr
+        apply: 
+          tags: [xrandr, monitors]
+
+    - name: install and configure bar
+      include_role:
+        name: bars
+
+    - name: install and configure i3
+      include_role:
+        name: i3
+        apply: 
+          tags: [wm]
+  
+    - name: install softwares
+      include_role: 
+        name: softwares
+        apply: 
+          tags: [software]
+
+    - name: reboot the machine
+      import_tasks: tasks/reboot.yml
+      tags: [reboot]
+  
+    - name: run some containers
+      include_role: 
+        name: containers
+        apply: 
+          tags: [docker, container]

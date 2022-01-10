@@ -1,0 +1,18 @@
+---
+- name: Install `arandr` packages
+  become: yes
+  package: 
+    name: "arandr"
+    state: latest
+
+
+- name: Ensures `~/.screenlayout/` folder exists
+  file:
+    path: "~/.screenlayout/"
+    state: directory
+
+- name: Copy the `init.sh` file
+  copy:
+    src: init.sh
+    dest: "~/.screenlayout/init.sh"
+    force: yes

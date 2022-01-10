@@ -1,0 +1,48 @@
+---
+- name: Install `zsh` package
+  become: yes
+  package: 
+    name: zsh
+    state: latest
+
+
+- name: Download `oh-my-zsh` repository
+  git:
+    repo: https://github.com/ohmyzsh/ohmyzsh.git
+    dest: ~/.oh-my-zsh
+
+
+# - name: Backup the existing `~/.zshrc` file
+#   copy:
+#     src: "~/.zshrc"
+#     dest: "~/.zshrc.orig"
+
+
+- name: Change the user shell to `zsh`
+  become: yes
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: /usr/bin/zsh
+
+
+- name: Install zsh `powerlevel10k` theme
+  git:
+    repo: https://github.com/romkatv/powerlevel10k.git
+    dest: ~/.oh-my-zsh/themes/powerlevel10k
+
+- name: Install zsh plugins
+  git:
+    repo: https://github.com/zsh-users/{{ item }}.git
+    dest: ~/.oh-my-zsh/custom/plugins/{{ item }}
+  with_items:
+    - zsh-syntax-highlighting
+    - zsh-autosuggestions
+
+
+- name: Copy configuration files
+  copy:
+    src: "{{ item }}"
+    dest: "~"
+  with_items:
+    - .p10k.zsh
+    - .zshrc

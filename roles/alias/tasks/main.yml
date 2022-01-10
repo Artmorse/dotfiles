@@ -1,0 +1,5 @@
+---
+- name: Copy `~/.aliases` file
+  copy:
+    src: .aliases
+    dest: "~"

@@ -1,0 +1,18 @@
+---
+- name: Install `code`
+  become: yes
+  snap:
+    name: code
+    classic: yes
+
+
+- name: Install extensions
+  command: code --install-extension {{ item }}
+  with_items: "{{ vscode_extension_list }}"
+
+
+- name: Copy the `settings.json` file
+  copy:
+    src: settings.json
+    dest: "~/.config/Code/User/"
+    force: yes

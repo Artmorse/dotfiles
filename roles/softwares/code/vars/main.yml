@@ -1,0 +1,79 @@
+---
+vscode_extension_list:
+
+  # tools
+  - alefragnani.Bookmarks
+  - genuitecllc.codetogether
+  - coenraads.bracket-pair-colorizer
+  - adpyke.codesnap
+  - softwaredotcom.swdc-vscode
+  - christian-kohler.path-intellisense
+  - naumovs.color-highlight
+
+  # html/css
+  - abusaidm.html-snippets
+  - ecmel.vscode-html-css
+  - FallenMax.mithril-emmet
+  - mohd-akram.vscode-html-format
+  - syler.sass-indented
+  - Zignd.html-css-class-completion
+
+  # beautifier
+  - HookyQR.beautify
+  - sensourceinc.vscode-sql-beautify
+  - esbenp.prettier-vscode
+
+  # plantuml
+  - jebbs.plantuml
+
+  # toml/yaml/jinja/json
+  - bungcip.better-toml
+  - redhat.vscode-yaml
+  - wholroyd.jinja
+  - ZainChen.json
+
+  # provider
+  - hashicorp.terraform
+  - owenfarrell.vscode-vault
+  - ms-kubernetes-tools.vscode-kubernetes-tools
+  - snyk-security.snyk-vulnerability-scanner
+
+  # docker
+  - p1c2u.docker-compose
+  - ms-azuretools.vscode-docker
+
+  # themes
+  - arcticicestudio.nord-visual-studio-code
+  - dline.CobaltNext
+  - johnpapa.vscode-peacock
+  - pkief.material-product-icons
+
+  # icons
+  - PKief.material-icon-theme
+
+  # python
+  - cstrap.flask-snippets
+  - KevinRose.vsc-python-indent
+  - ms-python.python
+  - ms-python.vscode-pylance
+  - njpwerner.autodocstring
+
+  # vue
+  - octref.vetur
+
+  # markdown
+  - marp-team.marp-vscode
+  - shd101wyy.markdown-preview-enhanced
+  - yzhang.markdown-all-in-one
+
+  # languages
+  - TabNine.tabnine-vscode
+
+  # csv
+  - mechatroner.rainbow-csv
+
+  # git
+  - eamodio.gitlens
+
+  # rasi
+  - dlasagno.rasi

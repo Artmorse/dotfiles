@@ -1,0 +1,14 @@
+---
+- name: Ensures `{{ wallpapers_directory }}` folder exists
+  file:
+    path: "{{ wallpapers_directory }}"
+    state: directory
+
+- name: Copy the wallpapers
+  copy:
+    src: "{{ item }}"
+    dest: "{{ wallpapers_directory }}"  
+  with_fileglob:
+    - "*.jpg"
+    - "*.png"
+

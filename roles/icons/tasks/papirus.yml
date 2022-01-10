@@ -1,0 +1,29 @@
+---
+- name: Add `papirus/papirus` repository from PPA
+  become: yes
+  apt_repository:
+    repo: ppa:papirus/papirus
+
+
+- name: Install `papirus-icon-theme` package
+  become: yes
+  package: 
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - papirus-icon-theme
+    - papirus-folders
+
+
+# - name: Get all the papirus icons colors
+#   command: "papirus-folders -l --theme {{ item }}"
+#   with_items:
+#     - Papirus
+#     - Papirus-Dark
+
+- name: Change the papirus icons color
+  become: yes
+  command: "papirus-folders -C {{ papirus_color }} --theme {{ item }}"
+  with_items:
+    - Papirus
+    - Papirus-Dark

@@ -1,0 +1,9 @@
+#
+# VSCode
+#
+.vscode
+
+#
+# Ansible
+#
+test.yml

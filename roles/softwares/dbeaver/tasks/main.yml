@@ -1,0 +1,8 @@
+---
+- name: Install `dbeaver-ce` and `dbeaver-ee` packages from the internet
+  become: yes
+  apt:
+    deb: "{{ item }}"
+  with_items:
+    - https://download.dbeaver.com/community/{{ dbeaver.ce.version }}/dbeaver-ce_{{ dbeaver.ce.version }}_amd64.deb
+    - https://download.dbeaver.com/enterprise/{{ dbeaver.ee.version }}/dbeaver-ee_{{ dbeaver.ee.version }}_amd64.deb

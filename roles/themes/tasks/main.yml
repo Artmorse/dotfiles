@@ -1,0 +1,11 @@
+---
+
+- name: Install Adapta Nord themes
+  include_tasks: adapta-nord.yml
+
+- name: Install Nordic themes
+  include_tasks: nordic.yml
+  loop: "{{ nordic.themes }}"
+
+- name: Configure GTK3
+  include_tasks: common.yml

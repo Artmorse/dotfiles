@@ -1,0 +1,8 @@
+---
+- name: Insert/Update `~/.bashrc` configuration
+  blockinfile:
+    path: ~/.bashrc
+    block: |
+      if [ -f ~/.aliases ]; then
+          . ~/.aliases
+      fi

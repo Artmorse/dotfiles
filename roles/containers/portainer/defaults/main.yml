@@ -1,0 +1,5 @@
+---
+container: 
+  name: portainer
+  ports: 
+    external: 9000

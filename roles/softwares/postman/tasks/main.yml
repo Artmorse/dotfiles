@@ -1,0 +1,5 @@
+---
+- name: Install `snap` package
+  become: yes
+  snap:
+    name: postman

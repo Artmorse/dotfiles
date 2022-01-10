@@ -1,0 +1,6 @@
+---
+- name: Install `fonts-firacode` package
+  become: yes
+  package: 
+    name: fonts-firacode 
+    state: latest

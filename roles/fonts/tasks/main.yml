@@ -1,0 +1,9 @@
+---
+- name: Install `Caskaydia Cove` font
+  include_tasks: caskaydia-cove.yml
+
+- name: Install `Firacode` font
+  include_tasks: firacode.yml
+
+- name: Update font cache
+  include_tasks: common.yml

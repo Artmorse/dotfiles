@@ -1,0 +1,31 @@
+---
+- name: Install `discord` package from the internet
+  become: yes
+  apt:
+    deb: https://dl.discordapp.net/apps/linux/{{ discord.version }}/discord-{{ discord.version }}.deb
+
+# - name: First discord launch (used for the module installations)
+#   shell: "(cmdpid=$BASHPID; (sleep 20; kill $cmdpid) & exec discord)"
+
+
+- name: Install `betterdiscordctl`
+  become: yes
+  get_url:
+    url: "https://raw.githubusercontent.com/bb010g/betterdiscordctl/master/betterdiscordctl"
+    dest: /usr/local/bin
+    mode: '0775'
+
+# - name: Install `betterdiscord` with `betterdiscordctl`
+#   shell: betterdiscordctl install
+
+
+- name: Ensures `~/.config/BetterDiscord/themes` folder exists
+  file:
+    path: "~/.config/BetterDiscord/themes"
+    state: directory
+
+- name: Copy the `nordic.theme.css` file
+  copy:
+    src: nordic.theme.css
+    dest: "~/.config/BetterDiscord/themes"
+    force: yes

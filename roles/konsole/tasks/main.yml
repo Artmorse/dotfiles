@@ -1,0 +1,44 @@
+---
+- name: Install `konsole` package
+  become: yes
+  package: 
+    name: konsole
+    state: latest
+
+
+- name: Ensures `~/.local/share/konsole` folder exists
+  file:
+    path: "~/.local/share/konsole/"
+    state: directory
+
+- name: Copy the `nord.colorscheme` file
+  copy:
+    src: nord.colorscheme
+    dest: "~/.local/share/konsole/"
+
+- name: Deploying `zsh.profile` file
+  template:
+    src: zsh.profile.j2
+    dest: "~/.local/share/konsole/zsh.profile"
+
+
+- name: Copy the `konsolerc` file
+  copy:
+    src: konsolerc
+    dest: "~/.config/konsolerc"
+
+
+# - name: Change the default terminal
+#   become: yes
+#   community.general.alternatives:
+#     name: x-terminal-emulator
+#     path: /usr/bin/konsole
+
+# - name: Change the default application
+#   lineinfile:
+#     path: "~/.config/xfce4/helpers.rc"
+#     line: TerminalEmulator=custom-TerminalEmulator
+#     create: yes
+#     owner: ""{{ ansible_user_id }}""
+#     group: ""{{ ansible_user_id }}""
+#     mode: '0644'

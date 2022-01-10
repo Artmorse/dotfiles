@@ -1,0 +1,10 @@
+---
+- name: Reboot a machine
+  become: yes
+  reboot:
+    msg: "Reboot initiated by Ansible"
+    connect_timeout: 5
+    reboot_timeout: 300
+    pre_reboot_delay: 0
+    post_reboot_delay: 15
+    test_command: uptime

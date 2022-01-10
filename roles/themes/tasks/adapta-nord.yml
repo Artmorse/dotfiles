@@ -1,0 +1,5 @@
+---
+- name: Install `Adapta-Nord` theme package
+  become: yes
+  apt:
+    deb: https://github.com/Adapta-Projects/Adapta-Nord/releases/download/{{ adapta_nord.version }}/Adapta-Nord.deb

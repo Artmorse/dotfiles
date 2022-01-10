@@ -1,0 +1,17 @@
+---
+- name: Install `polybar` package
+  become: yes
+  package: 
+    name: polybar
+    state: latest
+
+
+- name: Download `polybar-nord` repository
+  git:
+    repo: https://github.com/Artmorse/polybar-nord.git
+    dest: ~/.config/polybar
+
+- name: Change `launch.sh` file permissions
+  file:
+    path: ~/.config/polybar/launch.sh
+    mode: '0754'

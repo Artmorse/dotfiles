@@ -1,0 +1,16 @@
+---
+- name: Ensures `~/.docker/{{ container.name }}` folder exists
+  file:
+    path: "~/.docker/{{ container.name }}"
+    state: directory
+
+
+- name: Deploying the `docker-compose` file
+  template:
+    src: docker-compose.yml.j2
+    dest: "~/.docker/{{ container.name }}/docker-compose.yml"
+
+- name: Run the `docker-compose` file
+  community.docker.docker_compose:
+    project_src: "~/.docker/{{ container.name }}"
+    state: present

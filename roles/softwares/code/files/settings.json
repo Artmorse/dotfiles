@@ -1,0 +1,38 @@
+{
+    "workbench.colorTheme": "Nord",
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.fontFamily": "'Caskaydia Cove', 'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true,
+    "editor.cursorBlinking": "expand",
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 2,
+    "snyk.yesWelcomeNotification": false,
+    "tabnine.experimentalAutoImports": true,
+    "autoDocstring.docstringFormat": "sphinx",
+    "peacock.favoriteColors": [
+        {
+            "name": "Nord Frost 1",
+            "value": "#8fbcbb"
+        },
+        {
+            "name": "Nord Frost 2",
+            "value": "#88c0d0"
+        },
+        {
+            "name": "Nord Frost 3",
+            "value": "#81a1c1"
+        },
+        {
+            "name": "Nord Frost 4",
+            "value": "#5e81ac"
+        }
+    ],
+    "peacock.affectSideBarBorder": true,
+    "peacock.affectTabActiveBorder": true,
+    "peacock.surpriseMeFromFavoritesOnly": true,
+    "peacock.surpriseMeOnStartup": true,
+    "workbench.productIconTheme": "material-product-icons"
+}

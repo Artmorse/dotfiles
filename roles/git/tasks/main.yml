@@ -1,0 +1,23 @@
+---
+- name: Ensures folders exists
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "~/Documents/workspace-pro"
+    - "~/Documents/workspace-perso"
+
+
+- name: Deploying `.gitconfig` file into workspaces
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items:
+    - {
+      "src": "gitconfig-wper.j2",
+      "dest": "~/Documents/workspace-perso/.gitconfig"
+    }
+    - {
+      "src": "gitconfig-wpro.j2",
+      "dest": "~/Documents/workspace-pro/.gitconfig"
+    }

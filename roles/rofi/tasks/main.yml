@@ -1,0 +1,33 @@
+---
+- name: Install `rofi` package
+  become: yes
+  package: 
+    name: "rofi"
+    state: latest
+
+
+- name: Ensures rofi configuration folders exists
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+  - ~/.config/rofi
+  - ~/.local/share/rofi/themes/
+
+- name: Copy configuration files
+  copy:
+    src: "{{ item }}"
+    dest: ~/.config/rofi
+  with_items: 
+  - config
+  - launch.sh
+
+- name: Change `launch.sh` file permissions
+  file:
+    path: ~/.config/rofi/launch.sh
+    mode: '0754'
+
+- name: Deploying the rofi theme file
+  template:
+    src: nordic.rasi.j2
+    dest: ~/.local/share/rofi/themes/rofi

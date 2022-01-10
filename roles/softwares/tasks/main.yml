@@ -1,0 +1,93 @@
+---
+#
+# dev
+#
+
+- name: Install `VSCode` software
+  include_role:
+    name: softwares/code
+    apply: 
+      tags: [dev, software, code]
+  when: enable_code | default(False)
+
+- name: Install `dbeaver-ce` and `dbeaver-ee` softwares
+  include_role:
+    name: softwares/dbeaver
+    apply: 
+      tags: [dev, software, dbeaver]
+  when: enable_dbeaver | default(False)
+
+
+- name: Install `postman` software
+  include_role:
+    name: softwares/postman
+    apply: 
+      tags: [dev, software, postman]
+  when: enable_postman | default(False)
+
+
+#
+# media
+#
+
+- name: Install `photoflare` software
+  include_role:
+    name: softwares/photoflare
+    apply: 
+      tags: [media, software, photoflare]
+  when: enable_photoflare | default(False)
+
+
+- name: Install `vlc` software
+  include_role:
+    name: softwares/vlc
+    apply: 
+      tags: [media, software, vlc]
+  when: enable_vlc | default(False)
+
+
+#
+# misc
+#
+
+- name: Install `bitwarden` software
+  include_role:
+    name: softwares/bitwarden
+    apply: 
+      tags: [misc, software, bitwarden]
+  when: enable_bitwarden | default(False)
+
+
+- name: Install `deluge` software
+  include_role:
+    name: softwares/deluge
+    apply: 
+      tags: [misc, software, deluge]
+  when: enable_deluge | default(False)
+
+
+- name: Install `filezilla` software
+  include_role:
+    name: softwares/filezilla
+    apply: 
+      tags: [misc, software, filezilla]
+  when: enable_filezilla | default(False)
+
+
+#
+# communication
+#
+
+- name: Install `discord` software
+  include_role:
+    name: softwares/discord
+    apply: 
+      tags: [communication, software, discord]
+  when: enable_discord | default(False)
+
+- name: Install `slack` software
+  include_role:
+    name: softwares/slack
+    apply: 
+      tags: [communication, software, slack]
+  when: enable_slack | default(False)
