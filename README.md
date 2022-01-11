@@ -27,7 +27,7 @@ ansible-playbook run.yml -K
 There some things to configure manually after the installation.
 
 - the slack nord theme: [follow this guide](https://www.nordtheme.com/ports/slack)
-- the discord nord theme:
+- if the discord nord theme isn't applied:
     1. run discord for the first time
     2. run the command `betterdiscordctl install`
     3. restart discord

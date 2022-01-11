@@ -15,9 +15,9 @@
     dest: /usr/local/bin
     mode: '0775'
 
-# - name: Install `betterdiscord` with `betterdiscordctl`
-#   shell: betterdiscordctl install
-#   ignore_errors: yes
+- name: Install `betterdiscord` with `betterdiscordctl`
+  shell: betterdiscordctl install
+  ignore_errors: yes
 
 
 - name: Ensures betterdiscord configuration folders exists
