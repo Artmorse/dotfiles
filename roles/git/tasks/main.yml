@@ -8,6 +8,11 @@
     - "~/Documents/workspace-perso"
 
 
+- name: Copy `~/.gitconfig` file
+  copy:
+    src: .gitconfig
+    dest: "~"
+
 - name: Deploying `.gitconfig` file into workspaces
   template:
     src: "{{ item.src }}"

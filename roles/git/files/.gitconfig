@@ -1,0 +1,6 @@
+[includeif "gitdir:~/Documents/workspace-pro/"]
+	path = ~/Documents/workspace-pro/.gitconfig
+[includeif "gitdir:~/Documents/workspace-perso/"]
+	path = ~/Documents/workspace-perso/.gitconfig
+[user]
+	useConfigOnly = true
