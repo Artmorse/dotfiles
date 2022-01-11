@@ -30,4 +30,4 @@
 - name: Deploying the rofi theme file
   template:
     src: nordic.rasi.j2
-    dest: ~/.local/share/rofi/themes/rofi
+    dest: ~/.local/share/rofi/themes/nordic.rasi

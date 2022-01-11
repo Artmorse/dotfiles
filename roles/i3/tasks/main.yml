@@ -21,3 +21,9 @@
   template:
     src: i3config.j2
     dest: "~/.config/i3/config"
+
+- name: Copy the `i3-get-windows-criteria` script
+  copy:
+    src: get-window-criteria.sh
+    dest: "~/.config/i3/"
+    mode: '0754'

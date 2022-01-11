@@ -1,0 +1,6 @@
+---
+- name: Install `ristretto` package
+  become: yes
+  package:
+    name: ristretto
+    state: latest

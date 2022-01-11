@@ -17,15 +17,27 @@
 
 # - name: Install `betterdiscord` with `betterdiscordctl`
 #   shell: betterdiscordctl install
+#   ignore_errors: yes
 
 
-- name: Ensures `~/.config/BetterDiscord/themes` folder exists
+- name: Ensures betterdiscord configuration folders exists
   file:
-    path: "~/.config/BetterDiscord/themes"
+    path: "{{ item }}"
     state: directory
+  with_items:
+  - "~/.config/BetterDiscord/themes"
+  - "~/.config/BetterDiscord/data/stable"
 
-- name: Copy the `nordic.theme.css` file
+- name: Copy the betterdiscord configuration files
   copy:
-    src: nordic.theme.css
-    dest: "~/.config/BetterDiscord/themes"
-    force: yes
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items:
+  - {
+    "src": "nordic.theme.css",
+    "dest": "~/.config/BetterDiscord/themes/"
+  }
+  - {
+    "src": "themes.json",
+    "dest": "~/.config/BetterDiscord/data/stable/"
+  }

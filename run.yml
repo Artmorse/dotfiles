@@ -13,112 +13,133 @@
         name: essential
         apply: 
           tags: [essential, common]
+      tags: [essential, common]
 
     - name: install some fonts
       include_role: 
         name: fonts
         apply: 
           tags: [font]
+      tags: [font]
 
     - name: install colorscheme
       include_role:
         name: colorscheme
         apply: 
           tags: [colorscheme, xresources]
+      tags: [colorscheme, xresources]
 
     - name: install some themes
       include_role:
         name: themes
         apply: 
           tags: [theme]
+      tags: [theme]
 
     - name: install some icons
       include_role:
         name: icons
         apply: 
           tags: [theme, icon]
+      tags: [theme, icon]
 
     - name: configure git workspaces
       include_role:
         name: git
         apply: 
           tags: [git]
+      tags: [git]
 
     - name: install docker
       include_role:
         name: docker
         apply: 
           tags: [docker]
+      tags: [docker]
 
     - name: install exa to override `ls`
       include_role:
         name: exa
         apply: 
           tags: [ls]
+      tags: [ls]
 
     - name: configure nano
       include_role:
         name: nano
         apply: 
           tags: [nano]
+      tags: [nano]
 
     - name: configure aliases
       include_role:
         name: alias
         apply: 
           tags: [shell]
+      tags: [shell]
 
     - name: configure bash
       include_role:
         name: bash
         apply: 
           tags: [shell]
+      tags: [shell]
 
     - name: install and configure zsh
       include_role:
         name: zsh
         apply: 
           tags: [shell]
+      tags: [shell]
 
     - name: install and configure konsole
       include_role:
         name: konsole
         apply: 
           tags: [terminal]
+      tags: [terminal]
 
     - name: install feh and upload wallpapers
       include_role:
         name: wallpapers
         apply: 
           tags: [wallpaper, feh]
+      tags: [wallpaper, feh]
 
     - name: install and configure rofi
       include_role:
         name: rofi
         apply: 
           tags: [rofi, menu]
+      tags: [rofi, menu]
 
     - name: configure xrandr
       include_role:
         name: xrandr
         apply: 
           tags: [xrandr, monitors]
+      tags: [xrandr, monitors]
 
     - name: install and configure bar
       include_role:
         name: bars
+        apply: 
+          tags: [bars]
+      tags: [bars]
 
     - name: install and configure i3
       include_role:
         name: i3
         apply: 
           tags: [wm]
+      tags: [wm]
   
     - name: install softwares
       include_role: 
         name: softwares
         apply: 
-          tags: [software]
+          tags: [softwares]
+      tags: [softwares]
 
     - name: reboot the machine
       import_tasks: tasks/reboot.yml
@@ -129,3 +150,4 @@
         name: containers
         apply: 
           tags: [docker, container]
+      tags: [docker, container]

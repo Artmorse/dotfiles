@@ -47,7 +47,7 @@ user:
 #
 
 # dev
-enable_enable_code: true
+enable_code: true
 
 enable_dbeaver: true
 
@@ -55,6 +55,8 @@ enable_postman: true
 
 # media
 enable_photoflare: true
+
+enable_ristretto: true
 
 enable_vlc: true
 

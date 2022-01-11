@@ -7,14 +7,14 @@
   include_role:
     name: softwares/code
     apply: 
-      tags: [dev, software, code]
+      tags: [dev, code]
   when: enable_code | default(False)
 
 - name: Install `dbeaver-ce` and `dbeaver-ee` softwares
   include_role:
     name: softwares/dbeaver
     apply: 
-      tags: [dev, software, dbeaver]
+      tags: [dev, dbeaver]
   when: enable_dbeaver | default(False)
 
 
@@ -22,7 +22,7 @@
   include_role:
     name: softwares/postman
     apply: 
-      tags: [dev, software, postman]
+      tags: [dev, postman]
   when: enable_postman | default(False)
 
 
@@ -34,15 +34,23 @@
   include_role:
     name: softwares/photoflare
     apply: 
-      tags: [media, software, photoflare]
+      tags: [media, photoflare]
   when: enable_photoflare | default(False)
+
+
+- name: Install `ristretto` software
+  include_role:
+    name: softwares/ristretto
+    apply: 
+      tags: [media, ristretto]
+  when: enable_ristretto | default(False)
 
 
 - name: Install `vlc` software
   include_role:
     name: softwares/vlc
     apply: 
-      tags: [media, software, vlc]
+      tags: [media, vlc]
   when: enable_vlc | default(False)
 
 
@@ -54,7 +62,7 @@
   include_role:
     name: softwares/bitwarden
     apply: 
-      tags: [misc, software, bitwarden]
+      tags: [misc, bitwarden]
   when: enable_bitwarden | default(False)
 
 
@@ -62,7 +70,7 @@
   include_role:
     name: softwares/deluge
     apply: 
-      tags: [misc, software, deluge]
+      tags: [misc, deluge]
   when: enable_deluge | default(False)
 
 
@@ -70,7 +78,7 @@
   include_role:
     name: softwares/filezilla
     apply: 
-      tags: [misc, software, filezilla]
+      tags: [misc, filezilla]
   when: enable_filezilla | default(False)
 
 
@@ -82,12 +90,12 @@
   include_role:
     name: softwares/discord
     apply: 
-      tags: [communication, software, discord]
+      tags: [communication, discord]
   when: enable_discord | default(False)
 
 - name: Install `slack` software
   include_role:
     name: softwares/slack
     apply: 
-      tags: [communication, software, slack]
+      tags: [communication, slack]
   when: enable_slack | default(False)
