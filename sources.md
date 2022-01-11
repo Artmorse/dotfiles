@@ -1,5 +1,16 @@
 # Sources
 
+## [Essential](roles/essential)
+
+- [git](https://git-scm.com/)
+- [wget](https://doc.ubuntu-fr.org/wget)
+- [curl](https://curl.se/)
+- [unzip](https://doc.ubuntu-fr.org/zip)
+- [gparted](https://gparted.org/)
+- [htop](https://htop.dev/)
+- [jq](https://stedolan.github.io/jq/)
+- [diodon](https://doc.ubuntu-fr.org/diodon)
+
 ## [Bars](roles/bars)
 
 ### [Polybar](roles/bars/polybar)
