@@ -95,6 +95,10 @@
 
 - [photoflare website](https://photoflare.io/)
 
+#### Ristretto
+
+- [ristretto website](https://doc.ubuntu-fr.org/ristretto)
+
 #### [VLC](roles/softwares/vlc)
 
 - [vlc website](https://www.videolan.org/index.fr.html)
