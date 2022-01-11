@@ -20,6 +20,12 @@ alias cdwper="cd ~/Documents/workspace-perso"
 alias cddk="cd ~/.docker"
 
 #
+# file explorer
+#
+
+alias e="thunar ."
+
+#
 # shortcuts
 #
 

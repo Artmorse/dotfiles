@@ -32,3 +32,17 @@ There some things to configure manually after the installation.
     2. run the command `betterdiscordctl install`
     3. restart discord
 - the polybar's modules configuration: [follow this guide](https://github.com/Artmorse/polybar-nord/blob/master/modules-configuration.md)
+- check the i3 monitor configuration
+    1. list your monitors
+        ```bash
+        xrandr --listmonitors
+        ```
+    2. edit the i3 configuration file ([~/.config/i3/config](~/.config/i3/config))
+        ```config
+        set $monitor_top YOUR_TOP_MONITOR
+        set $monitor_bottom YOUR_BOTTOM_MONITOR
+        ```
+
+## Roadmap :motorway:
+
+- [ ] : variabilize monitor values (like `eDP-1`, `HDMI-1`, `DP-3` ...)
