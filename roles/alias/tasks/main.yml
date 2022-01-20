@@ -3,3 +3,8 @@
   copy:
     src: .aliases
     dest: "~"
+
+- name: Download `.kubectl_aliases` aliases
+  get_url:
+    url: "https://raw.githubusercontent.com/ahmetb/kubectl-aliases/master/.kubectl_aliases"
+    dest: "~/.kubectl_aliases"

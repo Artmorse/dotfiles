@@ -1,8 +1,16 @@
 ---
-- name: Insert/Update `~/.bashrc` configuration
+- name: Insert/Update `~/.bashrc` aliases configuration
   blockinfile:
     path: ~/.bashrc
     block: |
       if [ -f ~/.aliases ]; then
           . ~/.aliases
+      fi
+
+- name: Insert/Update `~/.bashrc` kubectl aliases configuration
+  blockinfile:
+    path: ~/.bashrc
+    block: |
+      if [ -f ~/.kubectl_aliases ]; then
+          . ~/.kubectl_aliases
       fi

@@ -112,3 +112,4 @@ source $ZSH/oh-my-zsh.sh
 
 # aliases
 source $HOME/.aliases
+source $HOME/.kubectl_aliases
