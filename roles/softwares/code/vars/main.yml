@@ -77,3 +77,6 @@ vscode_extension_list:
 
   # rasi
   - dlasagno.rasi
+
+  # pdf
+  - tomoki1207.pdf
