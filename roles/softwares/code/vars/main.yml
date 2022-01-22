@@ -9,6 +9,7 @@ vscode_extension_list:
   - softwaredotcom.swdc-vscode
   - christian-kohler.path-intellisense
   - naumovs.color-highlight
+  - aaron-bond.better-comments
 
   # html/css
   - abusaidm.html-snippets
@@ -80,3 +81,7 @@ vscode_extension_list:
 
   # pdf
   - tomoki1207.pdf
+
+  # groovy
+  - mellowmarshmallow.groovy
+  - marlon407.code-groovy
