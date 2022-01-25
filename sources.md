@@ -1,5 +1,10 @@
 # Sources
 
+## [alias](roles/alias)
+
+- [kubectl-aliases repository](https://github.com/ahmetb/kubectl-aliases)
+- [gitalias repository](https://github.com/GitAlias/gitalias)
+
 ## [Essential](roles/essential)
 
 - [git](https://git-scm.com/)

@@ -4,3 +4,6 @@
 	path = ~/Documents/workspace-perso/.gitconfig
 [user]
 	useConfigOnly = true
+
+[include]
+path = ~/.git_aliases

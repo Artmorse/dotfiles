@@ -8,3 +8,8 @@
   get_url:
     url: "https://raw.githubusercontent.com/ahmetb/kubectl-aliases/master/.kubectl_aliases"
     dest: "~/.kubectl_aliases"
+
+- name: Download `.git_aliases` aliases
+  get_url:
+    url: "https://raw.githubusercontent.com/GitAlias/gitalias/main/gitalias.txt"
+    dest: "~/.git_aliases"
