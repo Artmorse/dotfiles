@@ -46,3 +46,4 @@ There some things to configure manually after the installation.
 ## Roadmap :motorway:
 
 - [ ] : variabilize monitor values (like `eDP-1`, `HDMI-1`, `DP-3` ...)
+- [ ] : create dependencies between roles
