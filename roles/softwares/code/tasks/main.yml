@@ -12,8 +12,7 @@
   ignore_errors: yes
 
 
-- name: Copy the `settings.json` file
-  copy:
-    src: settings.json
+- name: Deploying the `settings.json` file
+  template:
+    src: settings.json.j2
     dest: "~/.config/Code/User/"
-    force: yes
