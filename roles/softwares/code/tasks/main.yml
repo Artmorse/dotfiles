@@ -9,6 +9,7 @@
 - name: Install extensions
   command: code --install-extension {{ item }}
   with_items: "{{ vscode_extension_list }}"
+  ignore_errors: yes
 
 
 - name: Copy the `settings.json` file
