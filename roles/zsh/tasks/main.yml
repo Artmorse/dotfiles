@@ -38,6 +38,11 @@
     - zsh-syntax-highlighting
     - zsh-autosuggestions
 
+- name: Install zsh custom `functions`
+  copy:
+    src: functions.zsh
+    dest: ~/.oh-my-zsh/custom/
+
 
 - name: Copy configuration files
   copy:
