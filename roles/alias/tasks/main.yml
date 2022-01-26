@@ -4,12 +4,20 @@
     src: .aliases
     dest: "~"
 
-- name: Download `.kubectl_aliases` aliases
+- name: Download external aliases file
   get_url:
-    url: "https://raw.githubusercontent.com/ahmetb/kubectl-aliases/master/.kubectl_aliases"
-    dest: "~/.kubectl_aliases"
-
-- name: Download `.git_aliases` aliases
-  get_url:
-    url: "https://raw.githubusercontent.com/GitAlias/gitalias/main/gitalias.txt"
-    dest: "~/.git_aliases"
+    url: {{ item.url }}
+    dest: {{ item.destination }}
+  with_items:
+    - {
+        "url": "https://raw.githubusercontent.com/ahmetb/kubectl-aliases/master/.kubectl_aliases",
+        "destination": "~/.kubectl_aliases"
+      }
+    - {
+        "url": "https://raw.githubusercontent.com/GitAlias/gitalias/main/gitalias.txt",
+        "destination": "~/.git_aliases"
+      }
+    - {
+        "url": "https://raw.githubusercontent.com/zer0beat/terraform-aliases/master/.terraform_aliases",
+        "destination": "~/.terraform_aliases"
+      }
