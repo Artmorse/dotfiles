@@ -1,0 +1,11 @@
+---
+- name: Generate `pro` ssh keypair
+  community.crypto.openssh_keypair:
+    path: "~/.ssh/id_{{ ssh_keys.pro.name }}_{{ ssh_keys.pro.name }}"
+    passphrase: {{ ssh_keys.pro.passphrase }}
+    type: {{ ssh_keys.pro.type }}
+
+- name: Generate `perso` ssh keypair
+  community.crypto.openssh_keypair:
+    path: "~/.ssh/id_{{ ssh_keys.pro.name }}_{{ ssh_keys.pro.name }}"
+    passphrase: {{ ssh_keys.perso.type }}

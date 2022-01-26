@@ -74,3 +74,18 @@ enable_discord: true
 
 enable_slack: true
 
+
+
+#
+# SSH
+#
+
+ssh_keys:
+  perso:
+    type: rsa
+    name: perso
+    passphrase: my_secret_passphare
+  pro:
+    type: rsa
+    name: pro
+    passphrase: my_secret_passphare

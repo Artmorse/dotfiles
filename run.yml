@@ -43,6 +43,13 @@
           tags: [theme, icon]
       tags: [theme, icon]
 
+    - name: configure ssh workspaces
+      include_role:
+        name: ssh
+        apply: 
+          tags: [ssh]
+      tags: [ssh]
+
     - name: configure git workspaces
       include_role:
         name: git
