@@ -67,6 +67,8 @@ enable_deluge: true
 
 enable_filezilla: true
 
+enable_chromium: true
+
 # communication
 enable_discord: true
 

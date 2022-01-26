@@ -82,6 +82,14 @@
   when: enable_filezilla | default(False)
 
 
+- name: Install `chromium` software
+  include_role:
+    name: softwares/chromium
+    apply: 
+      tags: [misc, chromium]
+  when: enable_chromium | default(False)
+
+
 #
 # communication
 #

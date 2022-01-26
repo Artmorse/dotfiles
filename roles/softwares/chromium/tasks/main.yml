@@ -1,0 +1,5 @@
+---
+- name: Install `chromium`
+  become: yes
+  snap:
+    name: chromium
