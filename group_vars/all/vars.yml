@@ -53,6 +53,11 @@ enable_dbeaver: true
 
 enable_postman: true
 
+enable_ngrok: true
+ngrok_download_link: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz
+# log into [ngrok website](https://dashboard.ngrok.com/get-started/your-authtoken) and select the menu *Your Authtoken*
+ngrok_authtoken: YOUR_OWN_NGROK_TOKEN
+
 # media
 enable_photoflare: true
 

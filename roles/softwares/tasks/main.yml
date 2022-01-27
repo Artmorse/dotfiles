@@ -26,6 +26,14 @@
   when: enable_postman | default(False)
 
 
+- name: Install `ngrok` software
+  include_role:
+    name: softwares/ngrok
+    apply: 
+      tags: [dev, ngrok]
+  when: enable_ngrok | default(False)
+
+
 #
 # media
 #

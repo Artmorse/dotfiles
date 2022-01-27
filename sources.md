@@ -105,6 +105,11 @@
 - [postman website](https://www.postman.com/)
 - [postman snapcraft](https://snapcraft.io/postman)
 
+#### [Ngrok](roles/softwares/ngrok)
+
+- [ngrok website](https://ngrok.com/)
+- [ngrok repository](https://github.com/inconshreveable/ngrok)
+
 ### Media
 
 #### [Photoflare](roles/softwares/photoflare)
