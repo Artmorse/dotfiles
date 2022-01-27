@@ -49,6 +49,11 @@
 - [exa website](https://the.exa.website/)
 - [exa repository](https://github.com/ogham/exa)
 
+## [Flameshot](roles/screenshot)
+
+- [flameshot website](https://flameshot.org/)
+- [flameshot repository](https://github.com/flameshot-org/flameshot)
+
 ## [Fonts](roles/fonts)
 
 - [firacode](https://github.com/tonsky/FiraCode)

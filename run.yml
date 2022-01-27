@@ -71,6 +71,13 @@
           tags: [ls]
       tags: [ls]
 
+    - name: install flameshot screenshot software
+      include_role:
+        name: flameshot
+        apply: 
+          tags: [flameshot, screenshot]
+      tags: [flameshot, screenshot]
+
     - name: configure nano
       include_role:
         name: nano

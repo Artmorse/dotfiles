@@ -1,0 +1,5 @@
+flameshot:
+  drawColor: "#00ff00"
+  uiColor: "#8fbcbb"
+  contrastUiColor: "#3b4252"
+  savePath: "~/Pictures/Screenshots"

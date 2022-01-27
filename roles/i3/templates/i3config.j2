@@ -266,3 +266,8 @@ exec --no-startup-id "sleep 0.2 ; bash ~/.config/feh/launch.sh"
 
 # clipboard
 exec --no-startup-id "diodon"
+
+# screenshot
+exec_always --no-startup-id "flameshot"
+bindsym Print exec "flameshot gui"
+bindsym $mod+Print exec "flameshot gui"
