@@ -82,6 +82,9 @@ vscode_extension_list:
   # pdf
   - tomoki1207.pdf
 
+  # go
+  - golang.go
+
   # groovy
   - mellowmarshmallow.groovy
   - marlon407.code-groovy
