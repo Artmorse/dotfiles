@@ -81,6 +81,25 @@
 - [konsole repository](https://github.com/KDE/konsole)
 - [nord-konsole reposiroty](https://github.com/arcticicestudio/nord-konsole)
 
+## [LockScreen](roles/lockscreen)
+
+### i3lock
+
+- [i3lock repository](https://github.com/i3/i3lock)
+
+### i3lock-color
+
+- [i3lock repository](https://github.com/Raymo111/i3lock-color)
+
+### betterlockscreen
+
+- [betterlockscreen repository](hhttps://github.com/betterlockscreen/betterlockscreen)
+
+### slock
+
+- [slock website](https://tools.suckless.org/slock/)
+- [slock patches](https://tools.suckless.org/slock/patches/)
+
 ## [Nano](roles/nano)
 
 - [nanorc repository](https://github.com/scopatz/nanorc)

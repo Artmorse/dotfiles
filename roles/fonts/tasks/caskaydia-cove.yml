@@ -1,7 +1,7 @@
 ---
 - name: Download `caskaydia-cove` font archive
   get_url:
-    url: "https://github.com/ryanoasis/nerd-fonts/releases/download/{{ caskaydia_cove.version }}/CascadiaCode.zip"
+    url: "https://github.com/ryanoasis/nerd-fonts/releases/download/v{{ caskaydia_cove.version }}/CascadiaCode.zip"
     dest: /tmp/caskaydia-cove.zip
 
 - name: Ensures `/tmp/caskaydia-cove` temporary folder exists

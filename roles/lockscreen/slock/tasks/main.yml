@@ -1,0 +1,67 @@
+---
+- name: Install `slock` dependency
+  become: yes
+  package: 
+    name: "{{ item }}"
+    state: latest
+  with_items:
+  - libxrandr-dev
+
+- name: Ensures `/tmp` temporary folder exists
+  file:
+    path: /tmp/
+    state: directory
+
+- name: Download `slock` release
+  get_url:
+    url: "https://dl.suckless.org/tools/slock-{{ slock.version }}.tar.gz"
+    dest: /tmp/slock.tar.gz
+
+- name: Extract `slock` release
+  unarchive:
+    src: /tmp/slock.tar.gz
+    dest: /tmp
+    remote_src: yes
+
+- name: Download `slock` patches
+  get_url:
+    url: "{{ item }}"
+    dest: /tmp/slock-{{ slock.version }}
+  with_items: "{{ slock.patches }}"
+
+- name: Apply patch to multiple files under basedir
+  ansible.posix.patch:
+    src: /tmp/slock-{{ slock.version }}/{{ item.split('/')[-1] }}
+    basedir: /tmp/slock-{{ slock.version }}
+    remote_src: yes
+    strip: 1
+  with_items: "{{ slock.patches }}"
+
+- name: Replace `slock` colors
+  ansible.builtin.lineinfile:
+    path: /tmp/slock-{{ slock.version }}/config.def.h
+    regexp: "^(.*){{ item.string }}(.*)$"
+    line: "        [{{ item.string }}] = \"{{ item.color }}\","
+  with_items:
+    - string: "INIT"
+      color: "#2E3440"
+    - string: "INPUT"
+      color: "#5E81AC"
+    - string: "FAILED"
+      color: "#BF616A"
+    - string: "CAPS"
+      color: "#D08770"
+
+- name: Run 'install' target
+  become: yes
+  community.general.make:
+    chdir: /tmp/slock-{{ slock.version }}
+    target: install
+
+- name: Clean `/tmp` folder
+  file:
+    state: absent
+    path: "{{ item }}"
+  with_items:
+    - /tmp/slock.tar.gz
+    - /tmp/slock-{{ slock.version }}

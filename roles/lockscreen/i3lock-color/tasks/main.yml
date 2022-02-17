@@ -1,0 +1,7 @@
+---
+- name: Install `i3lock-color` release
+  become: yes
+  get_url:
+    url: "https://github.com/Raymo111/i3lock-color/releases/download/{{ i3lockcolor.version }}/i3lock"
+    dest: /usr/local/bin/
+    mode: '0755'
