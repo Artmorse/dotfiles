@@ -1,0 +1,17 @@
+---
+- name: Install `dunst` package
+  become: yes
+  package:
+    name: dunst
+    state: latest
+
+
+- name: Ensures `~/.config/dunst` folder exists
+  file:
+    path: "~/.config/dunst"
+    state: directory
+
+- name: Deploying the `dunstrc` file
+  template:
+    src: dunstrc.j2
+    dest: "~/.config/dunst/dunstrc"

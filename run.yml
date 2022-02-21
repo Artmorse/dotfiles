@@ -1,5 +1,5 @@
 ---
-- hosts: pve
+- hosts: localhost
 
   pre_tasks:
   - name: "Limiting the playbooks execution to Debian distributions."
@@ -42,6 +42,13 @@
         apply: 
           tags: [theme, icon]
       tags: [theme, icon]
+
+    - name: install notifier
+      include_role:
+        name: notifications
+        apply: 
+          tags: [notification]
+      tags: [notification]
 
     - name: configure ssh workspaces
       include_role:

@@ -104,6 +104,21 @@
 
 - [nanorc repository](https://github.com/scopatz/nanorc)
 
+## [Notifications](roles/notifications)
+
+### dunst
+
+- [dunst website](https://dunst-project.org/)
+- [github repository](https://github.com/dunst-project/dunst)
+
+### i3lock
+
+- [i3lock repository](https://github.com/i3/i3lock)
+
+### i3lock-color
+
+- [i3lock repository](https://github.com/Raymo111/i3lock-color)
+
 ## [Rofi](roles/rofi)
 
 - [rofi repository](https://github.com/davatorium/rofi)
