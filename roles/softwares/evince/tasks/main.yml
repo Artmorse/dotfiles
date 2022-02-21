@@ -1,0 +1,6 @@
+---
+- name: Install `evince` package
+  become: yes
+  package:
+    name: evince
+    state: latest
