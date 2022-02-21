@@ -45,6 +45,7 @@ vscode_extension_list:
 
   # themes
   - arcticicestudio.nord-visual-studio-code
+  - huytd.nord-light
   - dline.CobaltNext
   - johnpapa.vscode-peacock
   - pkief.material-product-icons
