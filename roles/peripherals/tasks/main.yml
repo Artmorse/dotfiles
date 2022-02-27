@@ -1,0 +1,8 @@
+---
+
+- name: Install `ckb-next` software
+  include_role:
+    name: peripherals/ckb-next
+    apply: 
+      tags: [peripherals, corsair]
+  when: have_you_a_some_corsair_peripherals | default(False)

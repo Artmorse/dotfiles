@@ -100,6 +100,14 @@
 - [slock website](https://tools.suckless.org/slock/)
 - [slock patches](https://tools.suckless.org/slock/patches/)
 
+### i3lock
+
+- [i3lock repository](https://github.com/i3/i3lock)
+
+### i3lock-color
+
+- [i3lock repository](https://github.com/Raymo111/i3lock-color)
+
 ## [Nano](roles/nano)
 
 - [nanorc repository](https://github.com/scopatz/nanorc)
@@ -111,13 +119,12 @@
 - [dunst website](https://dunst-project.org/)
 - [github repository](https://github.com/dunst-project/dunst)
 
-### i3lock
+## [Peripherals](roles/peripherals)
 
-- [i3lock repository](https://github.com/i3/i3lock)
+###  ckb-next
 
-### i3lock-color
-
-- [i3lock repository](https://github.com/Raymo111/i3lock-color)
+- [ckb-next repository](https://github.com/ckb-next/ckb-next/)
+- [ckb-next ppa](https://launchpad.net/~tatokis/+archive/ubuntu/ckb-next)
 
 ## [Rofi](roles/rofi)
 

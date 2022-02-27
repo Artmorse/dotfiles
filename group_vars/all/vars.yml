@@ -40,7 +40,10 @@ user:
   first_name: Arthur
   last_name: Caron
 
-
+#
+# Peripherals
+#
+have_you_a_some_corsair_peripherals: true
 
 #
 # Enable/Disable: Softwares

@@ -1,0 +1,24 @@
+---
+- name: Add `tatokis/ckb-next` repository from PPA
+  become: yes
+  apt_repository:
+    repo: ppa:tatokis/ckb-next
+
+
+- name: Install `ckb-next` package
+  become: yes
+  package:
+    name: ckb-next
+    state: latest
+
+
+- name: Ensures `~/.config/ckb-next` folder exists
+  file:
+    path: "~/.config/ckb-next"
+    state: directory
+
+- name: Copy the `ckb-next.conf` configuration file
+  copy:
+    src: ckb-next.conf
+    dest: "~/.config/ckb-next/"
+    mode: '0664'
