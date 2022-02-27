@@ -28,6 +28,10 @@ i3:
   bar:
     name: polybar
 
+monitors:
+  - DP-1   # primary
+  - eDP-1  # second
+  - HDMI-1 # third
 
 #
 # User

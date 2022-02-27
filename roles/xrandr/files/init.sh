@@ -6,9 +6,12 @@ if type "xrandr"; then
 
 	echo "${len_monitors} monitor(s) detected"
 
+	# configuration: one below the other
     if [ $((len_monitors)) -eq 2 ]; then
-        # monitor_1 = eDP-1 // monitor_2 = DP-3
         xrandr --output eDP-1 --primary --mode 1920x1080 --pos 760x1440 --rotate normal --output HDMI-1 --mode 3440x1440 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off
+	# configuration: left - center - right
+    elif [ $((len_monitors)) -eq 3 ]; then
+        xrandr --output eDP-1 --mode 1920x1080 --pos 4880x0 --rotate normal --output HDMI-1 --mode 2560x1440 --pos 0x0 --rotate right --output DP-1 --primary --mode 3440x1440 --pos 1440x0 --rotate normal --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off
     fi
 else
 	echo "xrandr not found..."

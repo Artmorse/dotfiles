@@ -118,20 +118,52 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-set $monitor_top HDMI-1
-set $monitor_bottom eDP-1
+{# --------------- #}
+{# -- 1 monitor -- #}
+{# --------------- #}
+{% if monitors|length == 1 %}
+set $primary_monitor {{ monitors[0] }}
 
-# assign workspace to monitor
-workspace $ws1 output $monitor_top # code
-workspace $ws2 output $monitor_top # code
-workspace $ws3 output $monitor_top # code
-workspace $ws4 output $monitor_bottom # web browser
-workspace $ws5 output $monitor_bottom # web browser
-workspace $ws6 output $monitor_bottom # communication
-workspace $ws7 output $monitor_top
-workspace $ws8 output $monitor_bottom
-workspace $ws9 output $monitor_top
-workspace $ws10 output $monitor_bottom
+# assign workspace to the primary monitor
+{% for i in range(1, 11) %}
+workspace $ws{{ i }} output $primary_monitor
+{% endfor %}
+{# ---------------- #}
+{# -- 2 monitors -- #}
+{# ---------------- #}
+{% elif monitors|length == 2 %}
+set $primary_monitor {{ monitors[0] }}
+set $second_monitor {{ monitors[1] }}
+
+# assign workspace to the primary monitor
+{% for i in [1, 2, 3, 7, 9] %}
+workspace $ws{{ i }} output $primary_monitor
+{% endfor %}
+# assign workspace to the second monitor
+{% for i in [4, 5, 6, 8, 10] %}
+workspace $ws{{ i }} output $second_monitor
+{% endfor %}
+{# ---------------- #}
+{# -- 3 monitors -- #}
+{# ---------------- #}
+{% elif monitors|length == 3 %}
+set $primary_monitor {{ monitors[0] }}
+set $second_monitor {{ monitors[1] }}
+set $third_monitor {{ monitors[2] }}
+
+# assign workspace to the primary monitor
+{% for i in [1, 2, 3, 10] %}
+workspace $ws{{ i }} output $primary_monitor
+{% endfor %}
+# assign workspace to the second monitor
+{% for i in [4, 5, 6] %}
+workspace $ws{{ i }} output $second_monitor
+{% endfor %}
+# assign workspace to the third monitor
+{% for i in [7, 8, 9] %}
+workspace $ws{{ i }} output $third_monitor
+{% endfor %}
+{% endif %}
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -219,7 +251,7 @@ bar {
 		-p datetime.format="%H:%m"
 }
 {% elif i3.bar.name == "polybar" %}
-exec_always --no-startup-id "~/.config/polybar/launch.sh"
+exec_always --no-startup-id "~/.config/polybar/launch.sh {{ " ".join(monitors) }}"
 {% endif %}
 
 
