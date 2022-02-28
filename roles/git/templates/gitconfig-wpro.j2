@@ -3,4 +3,4 @@
     name = "{{ user.first_name }} {{ user.last_name }}"
 
 [core]
-    sshCommand = ssh -i ~/.ssh/id_{{ ssh_keys.pro.name }}_{{ ssh_keys.pro.name }} -F /dev/null
+    sshCommand = ssh -i ~/.ssh/id_{{ ssh_keys.pro.type }}_{{ ssh_keys.pro.name }} -F /dev/null

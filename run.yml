@@ -50,6 +50,13 @@
           tags: [notification]
       tags: [notification]
 
+    - name: configure peripherals
+      include_role:
+        name: peripherals
+        apply: 
+          tags: [peripherals]
+      tags: [peripherals]
+
     - name: configure ssh workspaces
       include_role:
         name: ssh

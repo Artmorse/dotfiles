@@ -5,6 +5,10 @@
     name: flameshot
     state: latest
 
+- name: Ensures `~/.config/flameshot` folder exists
+  file:
+    path: ~/.config/flameshot
+    state: directory
 
 - name: Deploying the `flameshot` configuration file
   template:
