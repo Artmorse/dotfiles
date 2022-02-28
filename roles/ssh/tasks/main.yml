@@ -1,11 +1,17 @@
 ---
+- name: Ensures `~/.ssh` folder exists
+  file:
+    path: ~/.ssh
+    state: directory
+
 - name: Generate `pro` ssh keypair
   community.crypto.openssh_keypair:
-    path: "~/.ssh/id_{{ ssh_keys.pro.name }}_{{ ssh_keys.pro.name }}"
-    passphrase: {{ ssh_keys.pro.passphrase }}
-    type: {{ ssh_keys.pro.type }}
+    path: "~/.ssh/id_{{ ssh_keys.pro.type }}_{{ ssh_keys.pro.name }}"
+    type: "{{ ssh_keys.pro.type }}"
+    passphrase: "{{ ssh_keys.pro.passphrase }}"
 
 - name: Generate `perso` ssh keypair
   community.crypto.openssh_keypair:
-    path: "~/.ssh/id_{{ ssh_keys.pro.name }}_{{ ssh_keys.pro.name }}"
-    passphrase: {{ ssh_keys.perso.type }}
+    path: "~/.ssh/id_{{ ssh_keys.perso.type }}_{{ ssh_keys.perso.name }}"
+    type: "{{ ssh_keys.perso.type }}"
+    passphrase: "{{ ssh_keys.perso.passphrase }}"

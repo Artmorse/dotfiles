@@ -13,15 +13,15 @@
     remote_src: yes
 
 
-- name: Ensures `~/.ngrok2` folder exists
+- name: Ensures `~/.ngrok` folder exists
   file:
-    path: ~/.ngrok2
+    path: ~/.ngrok
     state: directory
 
 - name: Deploying the `ngrok` configuration file
   template:
     src: ngrok.yml.j2
-    dest: "~/.ngrok2/ngrok.yml"
+    dest: "~/.ngrok/ngrok.yml"
 
 
 - name: Clean `/tmp` folder

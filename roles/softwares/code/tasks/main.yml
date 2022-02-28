@@ -15,4 +15,4 @@
 - name: Deploying the `settings.json` file
   template:
     src: settings.json.j2
-    dest: "~/.config/Code/User/"
+    dest: "~/.config/Code/User/settings.json"

@@ -6,8 +6,8 @@
 
 - name: Download external aliases file
   get_url:
-    url: {{ item.url }}
-    dest: {{ item.destination }}
+    url: "{{ item.url }}"
+    dest: "{{ item.destination }}"
   with_items:
     - {
         "url": "https://raw.githubusercontent.com/ahmetb/kubectl-aliases/master/.kubectl_aliases",
