@@ -130,6 +130,7 @@
 
 - [rofi repository](https://github.com/davatorium/rofi)
 - [rofi nordic theme repository](https://github.com/undiabler/nord-rofi-theme)
+- [rofi themes repository](https://github.com/yuky2020/rofi-themes)
 
 ## Softwares
 
