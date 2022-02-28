@@ -2,11 +2,11 @@
 vscode_extension_list:
 
   # tools
-  - alefragnani.Bookmarks
-  - genuitecllc.codetogether
+  #- alefragnani.Bookmarks
+  #- genuitecllc.codetogether
   - coenraads.bracket-pair-colorizer
   - adpyke.codesnap
-  - softwaredotcom.swdc-vscode
+  #- softwaredotcom.swdc-vscode
   - christian-kohler.path-intellisense
   - naumovs.color-highlight
   - aaron-bond.better-comments
@@ -35,13 +35,13 @@ vscode_extension_list:
 
   # provider
   - hashicorp.terraform
-  - owenfarrell.vscode-vault
-  - ms-kubernetes-tools.vscode-kubernetes-tools
+  #- owenfarrell.vscode-vault
+  #- ms-kubernetes-tools.vscode-kubernetes-tools
   - snyk-security.snyk-vulnerability-scanner
 
   # docker
   - p1c2u.docker-compose
-  - ms-azuretools.vscode-docker
+  #- ms-azuretools.vscode-docker
 
   # themes
   - arcticicestudio.nord-visual-studio-code
@@ -69,7 +69,7 @@ vscode_extension_list:
   - yzhang.markdown-all-in-one
 
   # languages
-  - TabNine.tabnine-vscode
+  #- TabNine.tabnine-vscode
 
   # csv
   - mechatroner.rainbow-csv
