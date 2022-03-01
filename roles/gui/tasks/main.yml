@@ -1,0 +1,149 @@
+---
+#
+# communication
+#
+
+- name: Install `discord` software
+  include_role:
+    name: gui/discord
+    apply: 
+      tags: [communication, discord]
+  tags: [gui]
+  when: discord.enabled | default(False)
+
+
+- name: Install `slack` software
+  include_role:
+    name: gui/slack
+    apply: 
+      tags: [communication, slack]
+  tags: [gui]
+  when: slack.enabled | default(False)
+
+
+
+#
+# dev
+#
+
+- name: Install `VSCode` software
+  include_role:
+    name: gui/code
+    apply: 
+      tags: [dev, code]
+  tags: [gui]
+  when: code.enabled | default(False)
+
+
+- name: Install `dbeaver-ce` and `dbeaver-ee` softwares
+  include_role:
+    name: gui/dbeaver
+    apply: 
+      tags: [dev, dbeaver]
+  tags: [gui]
+  when: dbeaver.enabled | default(False)
+
+
+- name: Install `lens` software
+  include_role:
+    name: gui/lens
+    apply: 
+      tags: [dev, lens]
+  tags: [gui]
+  when: lens.enabled | default(False)
+
+
+- name: Install `postman` software
+  include_role:
+    name: gui/postman
+    apply: 
+      tags: [dev, postman]
+  tags: [gui]
+  when: postman.enabled | default(False)
+
+
+
+#
+# media
+#
+
+- name: Install `evince` software
+  include_role:
+    name: gui/evince
+    apply: 
+      tags: [media, evince]
+  tags: [gui]
+  when: evince.enabled | default(False)
+
+
+- name: Install `photoflare` software
+  include_role:
+    name: gui/photoflare
+    apply: 
+      tags: [media, photoflare]
+  tags: [gui]
+  when: photoflare.enabled | default(False)
+
+
+- name: Install `ristretto` software
+  include_role:
+    name: gui/ristretto
+    apply: 
+      tags: [media, ristretto]
+  tags: [gui]
+  when: ristretto.enabled | default(False)
+
+
+- name: Install `vlc` software
+  include_role:
+    name: gui/vlc
+    apply: 
+      tags: [media, vlc]
+  tags: [gui]
+  when: vlc.enabled | default(False)
+
+
+
+#
+# misc
+#
+
+- name: Install `bitwarden` software
+  include_role:
+    name: gui/bitwarden
+    apply: 
+      tags: [misc, bitwarden]
+  tags: [gui]
+  when: bitwarden.enabled | default(False)
+
+
+- name: Install `deluge` software
+  include_role:
+    name: gui/deluge
+    apply: 
+      tags: [misc, deluge]
+  tags: [gui]
+  when: deluge.enabled | default(False)
+
+
+- name: Install `filezilla` software
+  include_role:
+    name: gui/filezilla
+    apply: 
+      tags: [misc, filezilla]
+  tags: [gui]
+  when: filezilla.enabled | default(False)
+
+
+
+#
+# webbrowsers
+#
+
+- name: Install `chromium` software
+  include_role:
+    name: gui/chromium
+    apply: 
+      tags: [webbrowsers, chromium]
+  tags: [gui]
+  when: chromium.enabled | default(False)

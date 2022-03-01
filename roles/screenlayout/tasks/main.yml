@@ -1,0 +1,6 @@
+---
+- name: Install `arandr`
+  include_role:
+    name: screenlayout/arandr
+    apply: 
+      tags: [screenlayout, arandr]

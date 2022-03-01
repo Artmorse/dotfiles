@@ -1,0 +1,22 @@
+---
+- name: Install `exa` cli
+  include_role:
+    name: cli/exa
+    apply: 
+      tags: [exa]
+  tags: [cli]
+
+- name: Install `nano` cli
+  include_role:
+    name: cli/nano
+    apply: 
+      tags: [nano]
+  tags: [cli]
+
+- name: Install `ngrok` cli
+  include_role:
+    name: cli/ngrok
+    apply: 
+      tags: [ngrok]
+  tags: [cli]
+  when: ngrok.enabled | default(False)

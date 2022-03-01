@@ -13,6 +13,13 @@ locale: en_US.UTF-8
 
 
 #
+# Bars
+#
+
+bars:
+  choice: polybar # polybar or bumblebee
+
+#
 # Theme
 #
 
@@ -23,10 +30,6 @@ theme:
   name: Nordic-Polar
   icon: 
     name: Papirus-Dark
-
-i3:
-  bar:
-    name: polybar
 
 monitors:
   - DP-1   # primary
@@ -50,45 +53,72 @@ user:
 have_you_a_some_corsair_peripherals: true
 
 #
-# Enable/Disable: Softwares
+# Enable/Disable: CLI
+#
+
+ngrok: 
+  enabled: true
+  download_link: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz
+  authtoken: YOUR_OWN_NGROK_TOKEN # log into [ngrok website](https://dashboard.ngrok.com/get-started/your-authtoken) and select the menu *Your Authtoken*
+
+
+#
+# Enable/Disable: GUI
 #
 
 # dev
-enable_code: true
+code:
+  enabled: true
 
-enable_dbeaver: true
+dbeaver:
+  enabled: true
+  ce:
+    version: 21.3.2
+  ee:
+    version: 21.3.0
 
-enable_postman: true
+lens:
+  enabled: true
 
-enable_ngrok: true
-ngrok_download_link: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz
-# log into [ngrok website](https://dashboard.ngrok.com/get-started/your-authtoken) and select the menu *Your Authtoken*
-ngrok_authtoken: YOUR_OWN_NGROK_TOKEN
-
-enable_lens: true
+postman:
+  enabled: true
 
 # media
-enable_photoflare: true
+evince:
+  enabled: true
 
-enable_ristretto: true
+photoflare:
+  enabled: true
 
-enable_vlc: true
+ristretto:
+  enabled: true
+
+vlc:
+  enabled: true
 
 # misc
-enable_bitwarden: true
+bitwarden:
+  enabled: true
+  version: 1.30.0
 
-enable_deluge: true
+deluge:
+  enabled: true
 
-enable_filezilla: true
+filezilla:
+  enabled: true
 
-enable_chromium: true
-
-enable_evince: true
+# web browsers
+chromium:
+  enabled: true
 
 # communication
-enable_discord: true
+discord:
+  enabled: true
+  version: 0.0.16
 
-enable_slack: true
+slack:
+  enabled: true
+  version: 4.23.0
 
 
 

@@ -1,4 +1,10 @@
 ---
+- name: Install `pip` packages
+  pip: 
+    name: "{{ item }}"
+  with_items:
+  - bcrypt
+
 - name: Ensures `~/.ssh` folder exists
   file:
     path: ~/.ssh

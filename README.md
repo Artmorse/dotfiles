@@ -12,7 +12,6 @@ See the [sources.md](sources.md) file.
 
 ```bash
 ansible-galaxy role install -r requirements.yml
-pip install bcrypt
 ```
 
 ### Run ansible

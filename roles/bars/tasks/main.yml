@@ -3,13 +3,13 @@
   include_role:
     name: bars/bumblebee_status
     apply: 
-      tags: [bar]
-  when: i3.bar.name == 'bumblebee-status' | default(False)
+      tags: [bar, bumblebee-status]
+  when: bars.choice == 'bumblebee-status' | default(False)
 
 
 - name: Install `polybar` bar
   include_role:
     name: bars/polybar
     apply: 
-      tags: [bar]
-  when: i3.bar.name == 'polybar' | default(True)
+      tags: [bar, polybar]
+  when: bars.choice == 'polybar' | default(True)

@@ -1,6 +1,0 @@
----
-- name: run `portainer` service
-  include_role:
-    name: containers/portainer
-    apply: 
-      tags: [container]

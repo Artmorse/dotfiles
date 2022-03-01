@@ -1,0 +1,15 @@
+---
+- name: Install `docker` cli
+  include_role:
+    name: containerization/docker
+    apply:
+      tags: [docker]
+  tags: [docker]
+
+
+- name: Run containers
+  include_role:
+    name: containerization/containers
+    apply:
+      tags: [containers]
+  tags: [containers]

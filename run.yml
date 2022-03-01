@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: pve
 
   pre_tasks:
   - name: "Limiting the playbooks execution to Debian distributions."
@@ -8,174 +8,113 @@
     when: ansible_os_family != "Debian"
 
   tasks:
-    - name: update the system ans install the essential packages
+
+    # * essential
+    - name: update the system and install the essential packages
       include_role:
         name: essential
-        apply: 
-          tags: [essential, common]
-      tags: [essential, common]
 
+
+    # * system customization
     - name: install some fonts
       include_role: 
         name: fonts
-        apply: 
-          tags: [font]
-      tags: [font]
 
     - name: install colorscheme
       include_role:
         name: colorscheme
-        apply: 
-          tags: [colorscheme, xresources]
-      tags: [colorscheme, xresources]
 
     - name: install some themes
       include_role:
         name: themes
-        apply: 
-          tags: [theme]
-      tags: [theme]
 
     - name: install some icons
       include_role:
         name: icons
-        apply: 
-          tags: [theme, icon]
-      tags: [theme, icon]
 
-    - name: install notifier
-      include_role:
-        name: notifications
-        apply: 
-          tags: [notification]
-      tags: [notification]
 
+    # * peripherals customization
     - name: configure peripherals
       include_role:
         name: peripherals
-        apply: 
-          tags: [peripherals]
-      tags: [peripherals]
 
+    - name: configure screenlayout
+      include_role:
+        name: screenlayout
+
+
+    # * workspace
     - name: configure ssh workspaces
       include_role:
         name: ssh
-        apply: 
-          tags: [ssh]
-      tags: [ssh]
 
     - name: configure git workspaces
       include_role:
         name: git
-        apply: 
-          tags: [git]
-      tags: [git]
 
+
+    # * containerization
     - name: install docker
       include_role:
-        name: docker
-        apply: 
-          tags: [docker]
+        name: containerization
       tags: [docker]
 
-    - name: install exa to override `ls`
-      include_role:
-        name: exa
-        apply: 
-          tags: [ls]
-      tags: [ls]
 
-    - name: install flameshot screenshot software
+    # * terminals
+    - name: configure shells
       include_role:
-        name: flameshot
-        apply: 
-          tags: [flameshot, screenshot]
-      tags: [flameshot, screenshot]
+        name: shell
 
-    - name: configure nano
+    - name: install and configure terminals
       include_role:
-        name: nano
-        apply: 
-          tags: [nano]
-      tags: [nano]
+        name: terminal
 
-    - name: configure aliases
+
+    # * interface customization
+    - name: install notifier
       include_role:
-        name: alias
-        apply: 
-          tags: [shell]
-      tags: [shell]
+        name: notifications
 
-    - name: configure bash
-      include_role:
-        name: bash
-        apply: 
-          tags: [shell]
-      tags: [shell]
-
-    - name: install and configure zsh
-      include_role:
-        name: zsh
-        apply: 
-          tags: [shell]
-      tags: [shell]
-
-    - name: install and configure konsole
-      include_role:
-        name: konsole
-        apply: 
-          tags: [terminal]
-      tags: [terminal]
-
-    - name: install feh and upload wallpapers
+    - name: configure wallpapers
       include_role:
         name: wallpapers
-        apply: 
-          tags: [wallpaper, feh]
-      tags: [wallpaper, feh]
 
-    - name: install and configure rofi
+    - name: install and configure menu application
       include_role:
-        name: rofi
-        apply: 
-          tags: [rofi, menu]
-      tags: [rofi, menu]
-
-    - name: configure xrandr
-      include_role:
-        name: xrandr
-        apply: 
-          tags: [xrandr, monitors]
-      tags: [xrandr, monitors]
+        name: menu
 
     - name: install and configure bar
       include_role:
         name: bars
-        apply: 
-          tags: [bars]
-      tags: [bars]
 
-    - name: install and configure i3
+    - name: install and configure window manager
       include_role:
-        name: i3
-        apply: 
-          tags: [wm]
-      tags: [wm]
-  
-    - name: install softwares
-      include_role: 
-        name: softwares
-        apply: 
-          tags: [softwares]
-      tags: [softwares]
+        name: wm
 
+
+    # * applications
+    - name: install screenshot software
+      include_role:
+        name: screenshot
+
+    - name: install CLI applications
+      include_role:
+        name: cli
+  
+    - name: install GUI applications
+      include_role: 
+        name: gui
+      tags: [gui]
+
+
+    # * reboot
     - name: reboot the machine
       import_tasks: tasks/reboot.yml
       tags: [reboot]
   
+
+    # * containers
     - name: run some containers
       include_role: 
-        name: containers
-        apply: 
-          tags: [docker, container]
-      tags: [docker, container]
+        name: containerization
+      tags: [containers]

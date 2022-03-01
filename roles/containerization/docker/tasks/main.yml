@@ -1,5 +1,5 @@
 ---
-- name: Install docker
+- name: Install `docker`
   # become: yes
   include_role:
     name: geerlingguy.docker

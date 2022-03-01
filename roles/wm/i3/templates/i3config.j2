@@ -238,7 +238,7 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-{% if i3.bar.name == "bumblebee-status" %}
+{% if bars.choice == "bumblebee-status" %}
 bar {
 #        status_command i3status
 
@@ -250,7 +250,7 @@ bar {
 		-p nic.format="{ssid} {ip}" \
 		-p datetime.format="%H:%m"
 }
-{% elif i3.bar.name == "polybar" %}
+{% elif bars.choice == "polybar" %}
 exec_always --no-startup-id "~/.config/polybar/launch.sh {{ " ".join(monitors) }}"
 {% endif %}
 

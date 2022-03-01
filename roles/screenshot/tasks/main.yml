@@ -1,0 +1,6 @@
+---
+- name: Install `flameshot`
+  include_role:
+    name: screenshot/flameshot
+    apply: 
+      tags: [screenshot, flameshot]

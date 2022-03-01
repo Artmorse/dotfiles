@@ -1,0 +1,6 @@
+---
+- name: Install `i3`
+  include_role:
+    name: wm/i3
+    apply: 
+      tags: [wm, i3]

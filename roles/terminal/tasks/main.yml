@@ -1,0 +1,6 @@
+---
+- name: Install `konsole`
+  include_role:
+    name: terminal/konsole
+    apply: 
+      tags: [terminal, konsole]
