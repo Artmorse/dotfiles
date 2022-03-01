@@ -105,6 +105,13 @@
       tags: [misc, chromium]
   when: enable_chromium | default(False)
 
+- name: Install `evince` software
+  include_role:
+    name: softwares/evince
+    apply: 
+      tags: [misc, evince]
+  when: enable_evince | default(False)
+
 
 #
 # communication

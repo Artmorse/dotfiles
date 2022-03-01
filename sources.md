@@ -192,6 +192,11 @@
 
 - [filezilla website](https://filezilla-project.org/)
 
+#### [Evince](roles/softwares/evince)
+
+- [filezilla website](https://wiki.gnome.org/Apps/Evince)
+- [evince repository](https://gitlab.gnome.org/GNOME/evince/)
+
 ### Communication
 
 #### [Discord](roles/softwares/discord)
