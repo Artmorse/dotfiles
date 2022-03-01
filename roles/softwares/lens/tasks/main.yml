@@ -1,0 +1,5 @@
+---
+- name: Install `lens` software from the internet
+  become: yes
+  apt:
+    deb: https://api.k8slens.dev/binaries/Lens-5.3.4-latest.20220120.1.amd64.deb

@@ -65,6 +65,8 @@ ngrok_download_link: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd
 # log into [ngrok website](https://dashboard.ngrok.com/get-started/your-authtoken) and select the menu *Your Authtoken*
 ngrok_authtoken: YOUR_OWN_NGROK_TOKEN
 
+enable_lens: true
+
 # media
 enable_photoflare: true
 
@@ -80,6 +82,8 @@ enable_deluge: true
 enable_filezilla: true
 
 enable_chromium: true
+
+enable_evince: true
 
 # communication
 enable_discord: true

@@ -34,6 +34,14 @@
   when: enable_ngrok | default(False)
 
 
+- name: Install `lens` software
+  include_role:
+    name: softwares/lens
+    apply: 
+      tags: [misc, lens]
+  when: enable_lens | default(False)
+
+
 #
 # media
 #

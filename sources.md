@@ -157,6 +157,11 @@
 - [ngrok website](https://ngrok.com/)
 - [ngrok repository](https://github.com/inconshreveable/ngrok)
 
+#### [Lens](roles/softwares/lens)
+
+- [lens website](https://k8slens.dev/)
+- [lens repository](https://github.com/lensapp/lens)
+
 ### Media
 
 #### [Photoflare](roles/softwares/photoflare)
