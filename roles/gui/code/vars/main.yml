@@ -4,7 +4,6 @@ vscode_extension_list:
   # tools
   #- alefragnani.Bookmarks
   #- genuitecllc.codetogether
-  - coenraads.bracket-pair-colorizer
   - adpyke.codesnap
   #- softwaredotcom.swdc-vscode
   - christian-kohler.path-intellisense
