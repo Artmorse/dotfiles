@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=/usr/local/bin/balenaEtcher.AppImage
+Name=BalenaEtcher
+Icon=/usr/share/balenaEtcher/balenaEtcher.png
+Comment=Flash OS images to SD cards & USB drives, safely and easily.

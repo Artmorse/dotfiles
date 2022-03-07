@@ -97,6 +97,10 @@ vlc:
   enabled: true
 
 # misc
+balenaEtcher:
+  enabled: true
+  version: 1.7.7
+
 bitwarden:
   enabled: true
   version: 1.30.0

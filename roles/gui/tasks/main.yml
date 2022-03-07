@@ -108,6 +108,14 @@
 # misc
 #
 
+- name: Install `balenaEtcher` software
+  include_role:
+    name: gui/balenaEtcher
+    apply: 
+      tags: [misc, balenaEtcher]
+  tags: [gui]
+  when: balenaEtcher.enabled | default(False)
+
 - name: Install `bitwarden` software
   include_role:
     name: gui/bitwarden
