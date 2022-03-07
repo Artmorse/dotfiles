@@ -87,6 +87,9 @@ postman:
 evince:
   enabled: true
 
+obsStudio:
+  enabled: true
+
 photoflare:
   enabled: true
 

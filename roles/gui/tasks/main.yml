@@ -76,6 +76,15 @@
   when: evince.enabled | default(False)
 
 
+- name: Install `obs-studio` software
+  include_role:
+    name: gui/obs-studio
+    apply: 
+      tags: [media, obs-studio]
+  tags: [gui]
+  when: obsStudio.enabled | default(False)
+
+
 - name: Install `photoflare` software
   include_role:
     name: gui/photoflare
