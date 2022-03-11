@@ -94,6 +94,10 @@
 - [dbeaver website](https://dbeaver.com/)
 - [dbeaver repository](https://github.com/dbeaver/dbeaver)
 
+#### [jetbrains toolbox](roles/gui/jetbrains-toolbox)
+
+- [jetbrains toolbox website](https://www.jetbrains.com/toolbox-app/)
+
 #### [lens](roles/gui/lens)
 
 - [lens website](https://k8slens.dev/)

@@ -77,6 +77,10 @@ dbeaver:
   ee:
     version: 21.3.0
 
+jetbrainsToolbox: 
+  enabled: true
+  version: 1.22.10970
+
 lens:
   enabled: true
 

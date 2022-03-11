@@ -44,6 +44,15 @@
   when: dbeaver.enabled | default(False)
 
 
+- name: Install `jetbrains-toolbox` software
+  include_role:
+    name: gui/jetbrains-toolbox
+    apply: 
+      tags: [dev, jetbrains-toolbox]
+  tags: [gui]
+  when: jetbrainsToolbox.enabled | default(False)
+
+
 - name: Install `lens` software
   include_role:
     name: gui/lens
