@@ -251,7 +251,7 @@ bar {
 		-p datetime.format="%H:%m"
 }
 {% elif bars.choice == "polybar" %}
-exec_always --no-startup-id "~/.config/polybar/launch.sh {{ " ".join(monitors) }}"
+exec_always --no-startup-id "~/.config/polybar/launch.sh {{ " ".join(['$primary_monitor', '$secondary_monitor', '$third_monitor'][:monitors|length]) }}"
 {% endif %}
 
 
