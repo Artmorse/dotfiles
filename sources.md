@@ -21,11 +21,15 @@
 - [exa website](https://the.exa.website/)
 - [exa repository](https://github.com/ogham/exa)
 
-
 ### [kubectl](roles/cli/kubectl)
 
 - [kubectl repository](https://github.com/kubernetes/kubectl)
 - [kubectl installation](https://kubernetes.io/fr/docs/tasks/tools/install-kubectl/)
+
+### [kubectx](roles/cli/kubectx)
+
+- [kubectx repository](https://github.com/ahmetb/kubectx#manual-installation-macos-and-linux)
+- [kubectx installation](https://github.com/ahmetb/kubectx)
 
 ### [nano](roles/cli/nano)
 

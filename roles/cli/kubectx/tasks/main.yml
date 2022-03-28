@@ -1,0 +1,32 @@
+---
+- name: Download `kubectx` repository
+  become: yes
+  git:
+    repo: https://github.com/ahmetb/kubectx.git
+    dest: /opt/kubectx
+
+- name: Create the symbolic links to the binaries
+  become: yes
+  file:
+    src: /opt/kubectx/{{ item }}
+    dest: /usr/local/bin/{{ item}}
+    state: link
+  with_items:
+    - kubectx
+    - kubens
+
+# Configure the completion with *oh-my-zsh*
+- name: Ensure the folder exists
+  file:
+    path: ~/.oh-my-zsh/completions
+    state: directory
+    mode: '0755'
+
+- name: Create the symbolic links to the completion scripts
+  file:
+    src: /opt/kubectx/completion/_{{ item }}.zsh
+    dest: ~/.oh-my-zsh/completions/{{ item}}.zsh
+    state: link
+  with_items:
+    - kubectx
+    - kubens
