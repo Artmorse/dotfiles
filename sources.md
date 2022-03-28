@@ -21,6 +21,12 @@
 - [exa website](https://the.exa.website/)
 - [exa repository](https://github.com/ogham/exa)
 
+### [kompose](roles/cli/kompose)
+
+- [kompose repository](https://github.com/kubernetes/kompose)
+- [kompose installation](https://kompose.io/installation/)
+- [kompose autocompletion documentation](https://github.com/kubernetes/kompose#shell-autocompletion)
+
 ### [kubectl](roles/cli/kubectl)
 
 - [kubectl repository](https://github.com/kubernetes/kubectl)

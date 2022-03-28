@@ -1,0 +1,5 @@
+---
+- name: Install `kompose` package from the internet
+  become: yes
+  apt:
+    deb: https://github.com/kubernetes/kompose/releases/download/v{{ kompose.version }}/kompose_{{ kompose.version }}_amd64.deb

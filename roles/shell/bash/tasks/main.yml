@@ -14,3 +14,10 @@
       if [ -f ~/.kubectl_aliases ]; then
           . ~/.kubectl_aliases
       fi
+  
+- name: Insert/Update `~/.bashrc` kompose aliases configuration
+  blockinfile:
+    path: ~/.bashrc
+    block: |
+      source <(kompose completion zsh)
+    when: kompose.enabled | default(False)

@@ -6,6 +6,14 @@
       tags: [exa]
   tags: [cli]
 
+- name: Install `kompose` cli
+  include_role:
+    name: cli/kompose
+    apply: 
+      tags: [kompose]
+  tags: [cli]
+  when: kompose.enabled | default(False)
+
 - name: Install `kubectl` cli
   include_role:
     name: cli/kubectl

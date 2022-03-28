@@ -114,3 +114,6 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases
 source $HOME/.kubectl_aliases
 source $HOME/.terraform_aliases
+{% if kompose.enabled == true %}
+source <(kompose completion zsh)
+{% endif %}
