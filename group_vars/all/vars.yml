@@ -61,6 +61,9 @@ ngrok:
   download_link: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz
   authtoken: YOUR_OWN_NGROK_TOKEN # log into [ngrok website](https://dashboard.ngrok.com/get-started/your-authtoken) and select the menu *Your Authtoken*
 
+kubectl:
+  enabled: true
+  version: 1.23.5
 
 #
 # Enable/Disable: GUI
