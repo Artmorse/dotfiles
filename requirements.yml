@@ -2,4 +2,3 @@
 roles:
   - src: geerlingguy.docker
   - src: geerlingguy.pip
-  - src: community.crypto

@@ -12,6 +12,8 @@ See the [sources.md](sources.md) file.
 
 ```bash
 ansible-galaxy role install -r requirements.yml
+
+ansible-galaxy collection install community.crypto
 ```
 
 ### Run ansible
