@@ -1,5 +1,5 @@
 ---
-- hosts: pve
+- hosts: localhost
 
   pre_tasks:
   - name: "Limiting the playbooks execution to Debian distributions."
@@ -57,6 +57,7 @@
     - name: install docker
       include_role:
         name: containerization
+        tasks_from: docker
       tags: [docker]
 
 
@@ -100,7 +101,8 @@
     - name: install CLI applications
       include_role:
         name: cli
-  
+      tags: [cli]  
+
     - name: install GUI applications
       include_role: 
         name: gui
@@ -117,4 +119,5 @@
     - name: run some containers
       include_role: 
         name: containerization
+        tasks_from: containers
       tags: [containers]
