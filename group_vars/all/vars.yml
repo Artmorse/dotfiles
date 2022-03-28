@@ -56,10 +56,8 @@ have_you_a_some_corsair_peripherals: true
 # Enable/Disable: CLI
 #
 
-ngrok: 
+helm:
   enabled: true
-  download_link: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz
-  authtoken: YOUR_OWN_NGROK_TOKEN # log into [ngrok website](https://dashboard.ngrok.com/get-started/your-authtoken) and select the menu *Your Authtoken*
 
 kompose:
   enabled: true
@@ -68,6 +66,11 @@ kompose:
 kubectl:
   enabled: true
   version: 1.23.5
+
+ngrok: 
+  enabled: true
+  download_link: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz
+  authtoken: YOUR_OWN_NGROK_TOKEN # log into [ngrok website](https://dashboard.ngrok.com/get-started/your-authtoken) and select the menu *Your Authtoken*
 
 #
 # Enable/Disable: GUI

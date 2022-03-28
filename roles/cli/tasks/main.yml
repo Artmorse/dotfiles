@@ -6,6 +6,14 @@
       tags: [exa]
   tags: [cli]
 
+- name: Install `helm` cli
+  include_role:
+    name: cli/helm
+    apply: 
+      tags: [helm]
+  tags: [cli]
+  when: helm.enabled | default(False)
+
 - name: Install `kompose` cli
   include_role:
     name: cli/kompose

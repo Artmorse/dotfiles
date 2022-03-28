@@ -15,9 +15,14 @@
           . ~/.kubectl_aliases
       fi
   
-- name: Insert/Update `~/.bashrc` kompose aliases configuration
-  blockinfile:
+- name: Insert/Update `~/.bashrc` helm aliases configuration
+  lineinfile:
     path: ~/.bashrc
-    block: |
-      source <(kompose completion zsh)
+    line: source <(helm completion zsh)
+    when: helm.enabled | default(False)
+  
+- name: Insert/Update `~/.bashrc` kompose aliases configuration
+  lineinfile:
+    path: ~/.bashrc
+    line: source <(kompose completion zsh)
     when: kompose.enabled | default(False)

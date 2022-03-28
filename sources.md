@@ -21,6 +21,12 @@
 - [exa website](https://the.exa.website/)
 - [exa repository](https://github.com/ogham/exa)
 
+### [helm](roles/cli/helm)
+
+- [helm repository](https://github.com/helm/helm)
+- [helm website](https://helm.sh/)
+- [helm autocompletion documentation](https://helm.sh/docs/helm/helm_completion/#see-also)
+
 ### [kompose](roles/cli/kompose)
 
 - [kompose repository](https://github.com/kubernetes/kompose)
