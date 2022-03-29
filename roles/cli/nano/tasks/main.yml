@@ -5,7 +5,7 @@
     name: nano
     state: latest
 
-- name: Download installation script
+- name: Download `nanorc` installation script
   get_url:
     url: "https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh"
     dest: /tmp/setup-nanorc.sh

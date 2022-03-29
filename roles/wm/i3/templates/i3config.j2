@@ -136,11 +136,11 @@ set $primary_monitor {{ monitors[0] }}
 set $second_monitor {{ monitors[1] }}
 
 # assign workspace to the primary monitor
-{% for i in [1, 2, 3, 7, 9] %}
+{% for i in [1, 2, 3, 7, 9, 10] %}
 workspace $ws{{ i }} output $primary_monitor
 {% endfor %}
 # assign workspace to the second monitor
-{% for i in [4, 5, 6, 8, 10] %}
+{% for i in [4, 5, 6, 8] %}
 workspace $ws{{ i }} output $second_monitor
 {% endfor %}
 {# ---------------- #}

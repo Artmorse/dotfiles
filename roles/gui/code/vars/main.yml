@@ -31,6 +31,7 @@ vscode_extension_list:
   - redhat.vscode-yaml
   - wholroyd.jinja
   - ZainChen.json
+  - richie5um2.vscode-statusbar-json-path
 
   # provider
   - hashicorp.terraform
@@ -45,6 +46,7 @@ vscode_extension_list:
   # themes
   - arcticicestudio.nord-visual-studio-code
   - huytd.nord-light
+  - marlosirapuan.nord-deep
   - dline.CobaltNext
   - johnpapa.vscode-peacock
   - pkief.material-product-icons

@@ -32,9 +32,9 @@ theme:
     name: Papirus-Dark
 
 monitors:
-  - DP-1   # primary
+  - DP-2   # primary
   - eDP-1  # second
-  - HDMI-1 # third
+  - DP-1-1 # third
 
 #
 # User
