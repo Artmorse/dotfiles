@@ -52,3 +52,11 @@
       tags: [ngrok]
   tags: [cli]
   when: ngrok.enabled | default(False)
+
+- name: Install `terraform` cli
+  include_role:
+    name: cli/terraform
+    apply: 
+      tags: [terraform]
+  tags: [cli]
+  when: terraform.enabled | default(False)

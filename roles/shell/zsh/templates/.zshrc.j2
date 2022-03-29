@@ -112,11 +112,17 @@ source $ZSH/oh-my-zsh.sh
 
 # aliases
 source $HOME/.aliases
-source $HOME/.kubectl_aliases
-source $HOME/.terraform_aliases
-{% if kompose.enabled == true %}
+
+# completion
+{% if helm.enabled == true %}
 source <(helm completion zsh)
 {% endif %}
 {% if kompose.enabled == true %}
 source <(kompose completion zsh)
+{% endif %}
+{% if kubectl.enabled == true %}
+source $HOME/.kubectl_aliases
+{% endif %}
+{% if terraform.enabled == true %}
+source $HOME/.terraform_aliases
 {% endif %}

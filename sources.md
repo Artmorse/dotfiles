@@ -52,6 +52,12 @@
 - [ngrok website](https://ngrok.com/)
 - [ngrok repository](https://github.com/inconshreveable/ngrok)
 
+### [terraform](roles/cli/terraform)
+
+- [terraform](https://www.terraform.io/)
+- [terraform repository](https://github.com/hashicorp/terraform)
+- [terraform installation](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+
 ## [colorscheme](roles/colorscheme)
 
 - [nordtheme website](https://www.nordtheme.com/)
@@ -243,6 +249,7 @@
 
 - [kubectl-aliases repository](https://github.com/ahmetb/kubectl-aliases)
 - [gitalias repository](https://github.com/GitAlias/gitalias)
+- [terraform-aliases repository](https://github.com/zer0beat/terraform-aliases)
 
 ### [zsh](roles/shell/zsh)
 
