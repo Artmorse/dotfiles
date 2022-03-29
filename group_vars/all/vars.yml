@@ -75,6 +75,9 @@ ngrok:
 terraform:
   enabled: true
 
+vault:
+  enabled: true
+
 #
 # Enable/Disable: GUI
 #

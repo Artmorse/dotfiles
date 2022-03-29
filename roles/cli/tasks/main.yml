@@ -60,3 +60,11 @@
       tags: [terraform]
   tags: [cli]
   when: terraform.enabled | default(False)
+
+- name: Install `vault` cli
+  include_role:
+    name: cli/vault
+    apply: 
+      tags: [vault]
+  tags: [cli]
+  when: vault.enabled | default(False)
