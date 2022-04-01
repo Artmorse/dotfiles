@@ -59,6 +59,9 @@ have_you_a_some_corsair_peripherals: true
 helm:
   enabled: true
 
+k3sup:
+  enabled: true
+
 kompose:
   enabled: true
   version: 1.26.1

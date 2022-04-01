@@ -27,6 +27,10 @@
 - [helm website](https://helm.sh/)
 - [helm autocompletion documentation](https://helm.sh/docs/helm/helm_completion/#see-also)
 
+### [k3sup](roles/k3sup)
+
+- [k3sup repository](https://github.com/alexellis/k3sup)
+
 ### [kompose](roles/cli/kompose)
 
 - [kompose repository](https://github.com/kubernetes/kompose)
