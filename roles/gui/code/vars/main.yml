@@ -9,6 +9,7 @@ vscode_extension_list:
   - christian-kohler.path-intellisense
   - naumovs.color-highlight
   - aaron-bond.better-comments
+  - oderwat.indent-rainbow
 
   # html/css
   - abusaidm.html-snippets
@@ -37,7 +38,7 @@ vscode_extension_list:
   - hashicorp.terraform
   #- owenfarrell.vscode-vault
   #- ms-kubernetes-tools.vscode-kubernetes-tools
-  - snyk-security.snyk-vulnerability-scanner
+  #- snyk-security.snyk-vulnerability-scanner
 
   # docker
   - p1c2u.docker-compose
@@ -68,6 +69,7 @@ vscode_extension_list:
   - marp-team.marp-vscode
   - shd101wyy.markdown-preview-enhanced
   - yzhang.markdown-all-in-one
+  - mushan.vscode-paste-image
 
   # languages
   #- TabNine.tabnine-vscode
@@ -76,7 +78,15 @@ vscode_extension_list:
   - mechatroner.rainbow-csv
 
   # git
-  - eamodio.gitlens
+  #- eamodio.gitlens
+  - mhutchie.git-graph
+
+  # php
+  - bmewburn.vscode-intelephense-client
+  - neilbrayfield.php-docblocker
+  - MehediDracula.php-namespace-resolver
+  - junstyle.php-cs-fixer
+  - mblode.twig-language-2
 
   # rasi
   - dlasagno.rasi
@@ -90,3 +100,9 @@ vscode_extension_list:
   # groovy
   - mellowmarshmallow.groovy
   - marlon407.code-groovy
+
+  # .env
+  - mikestead.dotenv
+
+  # gitlab
+  - GitLab.gitlab-workflow
