@@ -14,19 +14,19 @@
       if [ -f ~/.kubectl_aliases ]; then
           . ~/.kubectl_aliases
       fi
-    when: kubectl.enabled | default(False)
+  when: kubectl.enabled | default(False)
   
 - name: Insert/Update `~/.bashrc` helm aliases configuration
   lineinfile:
     path: ~/.bashrc
     line: source <(helm completion zsh)
-    when: helm.enabled | default(False)
+  when: helm.enabled | default(False)
   
 - name: Insert/Update `~/.bashrc` kompose aliases configuration
   lineinfile:
     path: ~/.bashrc
     line: source <(kompose completion zsh)
-    when: kompose.enabled | default(False)
+  when: kompose.enabled | default(False)
   
 - name: Insert/Update `~/.bashrc` terraform aliases configuration
   blockinfile:
@@ -35,4 +35,4 @@
       if [ -f ~/.terraform_aliases ]; then
           . ~/.terraform_aliases
       fi
-    when: terraform.enabled | default(False)
+  when: terraform.enabled | default(False)
