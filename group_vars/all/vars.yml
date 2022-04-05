@@ -150,6 +150,10 @@ slack:
   enabled: true
   version: 4.23.0
 
+teamviewer:
+  enabled: true
+  version: 15.28.8
+
 
 
 #

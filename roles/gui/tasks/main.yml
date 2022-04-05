@@ -21,6 +21,15 @@
   when: slack.enabled | default(False)
 
 
+- name: Install `teamviewer` software
+  include_role:
+    name: gui/teamviewer
+    apply: 
+      tags: [communication, teamviewer]
+  tags: [gui]
+  when: teamviewer.enabled | default(False)
+
+
 
 #
 # dev

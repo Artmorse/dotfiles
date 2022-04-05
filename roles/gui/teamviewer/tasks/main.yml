@@ -1,0 +1,11 @@
+---
+- name: Install `libminizip1` package
+  become: yes
+  package: 
+    name: libminizip1
+    state: latest
+
+- name: Install `teamviewer` packages from the internet
+  become: yes
+  apt:
+    deb: "https://dl.teamviewer.com/download/linux/version_{{ teamviewer.version.split('.') | first }}x/teamviewer_{{ teamviewer.version }}_amd64.deb"

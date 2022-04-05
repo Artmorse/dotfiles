@@ -113,6 +113,10 @@
 - [nord-slack repository](https://github.com/arcticicestudio/nord-slack)
 - [nord-slack documentation](https://www.nordtheme.com/ports/slack)
 
+#### [teamviewer](roles/gui/teamviewer)
+
+- [teamviewer website](https://www.teamviewer.com/)
+
 ### dev
 
 #### [visual studio code](roles/gui/code)
