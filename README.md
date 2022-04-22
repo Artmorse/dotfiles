@@ -44,8 +44,10 @@ There some things to configure manually after the installation.
         set $monitor_top YOUR_TOP_MONITOR
         set $monitor_bottom YOUR_BOTTOM_MONITOR
         ```
+- configure your printer
 
 ## Roadmap :motorway:
 
 - [ ] : variabilize monitor values (like `eDP-1`, `HDMI-1`, `DP-3` ...)
 - [ ] : create dependencies between roles
+- [ ] : create documentation to explain the printer configuration

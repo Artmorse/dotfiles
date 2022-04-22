@@ -244,6 +244,12 @@
 - [xrandr website](https://doc.ubuntu-fr.org/xrandr)
 - [arandr website](https://christian.amsuess.com/tools/arandr/)
 
+## [printers](roles/printers)
+
+### [epson](roles/printers)
+
+- [epson driver](http://download.ebz.epson.net/dsc/du/02/DriverDownloadInfo.do?LG2=EN&CN2=&DSCMI=134381&DSCCHK=9edfca27f0a940d9e3f3156a3d46047ffbfe6d79)
+
 ## [screenshot](roles/screenshot)
 
 ### [flameshot](roles/screenshot/flameshot)

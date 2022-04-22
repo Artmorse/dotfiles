@@ -36,6 +36,11 @@ monitors:
   - eDP-1  # second
   - DP-1-1 # third
 
+printers:
+  epson: 
+    enabled: true
+    driver_version: 1.7.18
+
 #
 # User
 #

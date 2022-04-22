@@ -33,7 +33,7 @@
         name: icons
 
 
-    # * peripherals customization
+    # * peripherals configuration
     - name: configure peripherals
       include_role:
         name: peripherals
@@ -41,6 +41,10 @@
     - name: configure screenlayout
       include_role:
         name: screenlayout
+
+    - name: configure printer
+      include_role:
+        name: printer
 
 
     # * workspace
@@ -113,7 +117,6 @@
     - name: reboot the machine
       import_tasks: tasks/reboot.yml
       tags: [reboot]
-  
 
     # * containers
     - name: run some containers
