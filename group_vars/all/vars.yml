@@ -90,6 +90,22 @@ vault:
 # Enable/Disable: GUI
 #
 
+# communication
+discord:
+  enabled: true
+  version: 0.0.16
+
+slack:
+  enabled: true
+  version: 4.23.0
+
+teamviewer:
+  enabled: true
+  version: 15.28.8
+
+zoom:
+  enabled: true
+
 # dev
 code:
   enabled: true
@@ -145,19 +161,6 @@ filezilla:
 # web browsers
 chromium:
   enabled: true
-
-# communication
-discord:
-  enabled: true
-  version: 0.0.16
-
-slack:
-  enabled: true
-  version: 4.23.0
-
-teamviewer:
-  enabled: true
-  version: 15.28.8
 
 
 

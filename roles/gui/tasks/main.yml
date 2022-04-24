@@ -30,6 +30,15 @@
   when: teamviewer.enabled | default(False)
 
 
+- name: Install `zoom` software
+  include_role:
+    name: gui/zoom
+    apply: 
+      tags: [communication, zoom]
+  tags: [gui]
+  when: zoom.enabled | default(False)
+
+
 
 #
 # dev

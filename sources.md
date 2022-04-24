@@ -117,6 +117,10 @@
 
 - [teamviewer website](https://www.teamviewer.com/)
 
+#### [zoom](roles/gui/zoom)
+
+- [zoom website](https://www.zoom.com/)
+
 ### dev
 
 #### [visual studio code](roles/gui/code)
