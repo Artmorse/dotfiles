@@ -11,7 +11,7 @@ See the [sources.md](sources.md) file.
 - [x] [Xubuntu 21.04](https://xubuntu.org/news/xubuntu-21-04-released/)
 - [x] [Xubuntu 21.10](https://xubuntu.org/news/xubuntu-21-10-released/)
 - [x] [Xubuntu 22.04](https://xubuntu.org/news/xubuntu-22-04-released/)
-- [ ] [Ubuntu 22.04](https://xubuntu.org/news/xubuntu-22-04-released/)
+- [x] [Ubuntu 22.04](https://ubuntu.com/blog/ubuntu-22-04-lts-released)
 
 ## Usage
 
