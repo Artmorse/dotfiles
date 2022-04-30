@@ -1,6 +1,12 @@
 ---
-- name: Install `arandr`
+# - name: Install `arandr`
+#   include_role:
+#     name: screenlayout/arandr
+#     apply: 
+#       tags: [screenlayout, arandr]
+
+- name: Install `autorandr`
   include_role:
-    name: screenlayout/arandr
+    name: screenlayout/autorandr
     apply: 
-      tags: [screenlayout, arandr]
+      tags: [screenlayout, autorandr]

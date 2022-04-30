@@ -1,0 +1,12 @@
+---
+- name: Install `autorandr` packages
+  become: yes
+  pip: 
+    name: "autorandr"
+
+
+- name: Copy the `autorandr` configurations file
+  copy:
+    src: autorandr
+    dest: "~/.config"
+    force: yes

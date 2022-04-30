@@ -191,8 +191,8 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # assign application to workspace
 # assign [class="jetbrains|Code"] 1
-assign [class="Firefox"] 4
-assign [class="Chromium"] 5
+# assign [class="firefox"] 4
+# assign [class="Chromium"] 5
 assign [class="discord|Slack"] 6
 
 # application always floating
@@ -290,7 +290,8 @@ client.background       $nord4
 
 
 # xrandr
-exec --no-startup-id "bash ~/.screenlayout/init.sh"
+#exec --no-startup-id "bash ~/.screenlayout/init.sh"
+exec_always --no-startup-id "autorandr --change"
 
 
 # wallpapers
