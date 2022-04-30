@@ -1,8 +1,15 @@
 ---
-- name: Add `photoflare` repository from PPA
-  become: yes
-  apt_repository:
-    repo: ppa:photoflare/photoflare-stable
+- block:
+  - name: Add `photoflare` repository from PPA with the current codename
+    become: yes
+    apt_repository:
+      repo: ppa:photoflare/photoflare-stable
+  rescue:
+  - name: Add `photoflare` repository from PPA with the `impish` codename
+    become: yes
+    apt_repository:
+      repo: ppa:photoflare/photoflare-stable
+      codename: impish
 
 
 - name: Install `photoflare` package

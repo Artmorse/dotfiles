@@ -6,6 +6,13 @@
 
 See the [sources.md](sources.md) file.
 
+## OS tested
+
+- [x] [Xubuntu 21.04](https://xubuntu.org/news/xubuntu-21-04-released/)
+- [x] [Xubuntu 21.10](https://xubuntu.org/news/xubuntu-21-10-released/)
+- [x] [Xubuntu 22.04](https://xubuntu.org/news/xubuntu-22-04-released/)
+- [ ] [Ubuntu 22.04](https://xubuntu.org/news/xubuntu-22-04-released/)
+
 ## Usage
 
 ### Install the ansible dependencies
