@@ -1,14 +1,8 @@
 ---
-- name: Download `helm` installation script
-  get_url:
-    url: "https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3"
-    dest: /tmp/get_helm.sh
-    mode: '0700'
+- name: Install `helm` from script
+  include_tasks: from_script.yml
+  when: helm.from_script | default(False)
 
-- name: Execute the `helm` setup file
-  shell: /tmp/get_helm.sh
-
-- name: Clean `/tmp` folder
-  file:
-    state: absent
-    path: /tmp/get_helm.sh
+- name: Install `helm` from package manager
+  include_tasks: from_package_manager.yml
+  when: helm.from_package_manager | default(True)

@@ -63,6 +63,7 @@ have_you_a_some_corsair_peripherals: true
 
 helm:
   enabled: true
+  from_script: false # install helm from package manager or from script
 
 k3sup:
   enabled: true

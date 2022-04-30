@@ -1,0 +1,29 @@
+---
+- name: Install the required packages
+  become: yes
+  package: 
+    name: "apt-transport-https"
+    state: latest
+
+- name: Add the Helm key
+  become: yes
+  apt_key:
+    url: https://baltocdn.com/helm/signing.asc
+    state: present
+
+- name: Add the official Helm Linux repository
+  become: yes
+  apt_repository:
+    repo: deb https://baltocdn.com/helm/stable/debian/ all main
+    state: present
+
+- name: Update aptitude packages
+  become: yes
+  apt:
+    update_cache: yes
+
+- name: Install `helm`
+  become: yes
+  package:
+    name: helm
+    state: present
