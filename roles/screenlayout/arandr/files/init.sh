@@ -8,7 +8,7 @@ if type "xrandr"; then
 
 	# configuration: one below the other
     if [ $((len_monitors)) -eq 2 ]; then
-        xrandr --output eDP-1 --primary --mode 1920x1080 --pos 760x1440 --rotate normal --output HDMI-1 --mode 3440x1440 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off
+        xrandr --output eDP-1 --primary --mode 1920x1080 --pos 4880x740 --rotate normal --output HDMI-1 --off --output DP-1 --mode 3440x1440 --pos 1440x560 --rotate normal --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off --output DP-2-1 --mode 2560x1440 --pos 0x0 --rotate right --output DP-2-2 --off --output DP-2-3 --off
 	# configuration: left - center - right
     elif [ $((len_monitors)) -eq 3 ]; then
         xrandr --output eDP-1 --mode 1920x1080 --pos 4880x0 --rotate normal --output HDMI-1 --mode 2560x1440 --pos 0x0 --rotate right --output DP-1 --primary --mode 3440x1440 --pos 1440x0 --rotate normal --output HDMI-2 --off --output DP-2 --off --output HDMI-3 --off
