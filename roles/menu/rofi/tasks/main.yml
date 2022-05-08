@@ -6,21 +6,15 @@
     state: latest
 
 
-- name: Ensures rofi configuration folders exists
+- name: Ensures rofi configuration folder exists
   file:
-    path: "{{ item }}"
+    path: ~/.config/rofi
     state: directory
-  with_items:
-  - ~/.config/rofi
-  - ~/.local/share/rofi/themes/
 
-- name: Copy configuration files
+- name: Copy launcher script
   copy:
-    src: "{{ item }}"
+    src: launch.sh
     dest: ~/.config/rofi
-  with_items: 
-  - config
-  - launch.sh
 
 - name: Change `launch.sh` file permissions
   file:
@@ -30,4 +24,4 @@
 - name: Deploying the rofi theme file
   template:
     src: nordic.rasi.j2
-    dest: ~/.local/share/rofi/themes/nordic.rasi
+    dest:  ~/.config/rofi/config.rasi

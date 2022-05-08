@@ -3,4 +3,5 @@
   include_role:
     name: menu/rofi
     apply: 
-      tags: [menu, rofi]
+      tags: [menu]
+  tags: [menu]

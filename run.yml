@@ -87,6 +87,7 @@
     - name: install and configure menu application
       include_role:
         name: menu
+      tags: [menu]
 
     - name: install and configure bar
       include_role:
