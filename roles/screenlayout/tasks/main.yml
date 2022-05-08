@@ -3,10 +3,12 @@
   include_role:
     name: screenlayout/arandr
     apply: 
-      tags: [screenlayout, arandr]
+      tags: [arandr]
+  tags: [screenlayout]
 
 - name: Install `autorandr`
   include_role:
     name: screenlayout/autorandr
     apply: 
-      tags: [screenlayout, autorandr]
+      tags: [autorandr]
+  tags: [screenlayout]

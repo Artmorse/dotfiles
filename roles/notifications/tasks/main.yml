@@ -3,4 +3,5 @@
   include_role:
     name: notifications/dunst
     apply: 
-      tags: [notification, dunst]
+      tags: [dunst]
+  tags: [notifications]

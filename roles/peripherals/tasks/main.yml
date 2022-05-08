@@ -4,5 +4,6 @@
   include_role:
     name: peripherals/ckb-next
     apply: 
-      tags: [peripherals, corsair]
+      tags: [corsair]
+  tags: [peripherals]
   when: have_you_a_some_corsair_peripherals | default(False)

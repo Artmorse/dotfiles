@@ -3,4 +3,5 @@
   include_role:
     name: wm/i3
     apply: 
-      tags: [wm, i3]
+      tags: [i3]
+  tags: [wm]

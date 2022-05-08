@@ -3,4 +3,5 @@
   include_role:
     name: screenshot/flameshot
     apply: 
-      tags: [screenshot, flameshot]
+      tags: [flameshot]
+    tags: [screenshot]

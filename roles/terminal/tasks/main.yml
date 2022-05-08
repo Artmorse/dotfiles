@@ -3,4 +3,5 @@
   include_role:
     name: terminal/konsole
     apply: 
-      tags: [terminal, konsole]
+      tags: [konsole]
+  tags: [terminal]

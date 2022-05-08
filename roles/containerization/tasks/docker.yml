@@ -9,8 +9,6 @@
       - "{{ ansible_user_id }}"
 
 
-
-
 - name: Install `pip` packages
   pip: 
     name: "{{ item }}"

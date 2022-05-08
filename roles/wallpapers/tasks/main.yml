@@ -2,12 +2,12 @@
 - name: Upload wallpapers
   include_role:
     name: wallpapers/wallpaper
-    apply: 
-      tags: [wallpaper]
+  tags: [wallpaper]
 
 
 - name: Install and configure `feh` software
   include_role:
     name: wallpapers/feh
     apply: 
-      tags: [wallpaper]
+      tags: [feh]
+  tags: [wallpaper]

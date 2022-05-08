@@ -13,48 +13,74 @@
     - name: update the system and install the essential packages
       include_role:
         name: essential
+        apply: 
+          tags: [essential]
+      tags: [essential]
 
 
     # * system customization
     - name: install some fonts
       include_role: 
         name: fonts
+        apply: 
+          tags: [fonts]
+      tags: [fonts]
 
     - name: install colorscheme
       include_role:
         name: colorscheme
+        apply: 
+          tags: [colorscheme]
+      tags: [colorscheme]
 
     - name: install some themes
       include_role:
         name: themes
+        apply: 
+          tags: [themes]
+      tags: [themes]
 
     - name: install some icons
       include_role:
         name: icons
+        apply: 
+          tags: [icons]
+      tags: [icons]
 
 
     # * peripherals configuration
     - name: configure peripherals
       include_role:
         name: peripherals
+      tags: [peripherals]
 
     - name: configure screenlayout
       include_role:
         name: screenlayout
+      tags: [screenlayout]
 
     - name: configure printer
       include_role:
         name: printer
+        apply: 
+          tags: [printer]
+      tags: [printer]
 
 
     # * workspace
     - name: configure ssh workspaces
       include_role:
         name: ssh
+        apply: 
+          tags: [ssh]
+      tags: [ssh]
 
     - name: configure git workspaces
       include_role:
         name: git
+        apply: 
+          tags: [git]
+      tags: [git]
 
 
     # * containerization
@@ -69,20 +95,24 @@
     - name: configure shells
       include_role:
         name: shell
+      tags: [shell]
 
     - name: install and configure terminals
       include_role:
         name: terminal
+      tags: [terminal]
 
 
     # * interface customization
     - name: install notifier
       include_role:
         name: notifications
+      tags: [notifications]
 
     - name: configure wallpapers
       include_role:
         name: wallpapers
+      tags: [wallpapers]
 
     - name: install and configure menu application
       include_role:
@@ -92,21 +122,24 @@
     - name: install and configure bar
       include_role:
         name: bars
+      tags: [bars]
 
     - name: install and configure window manager
       include_role:
         name: wm
+      tags: [wm]
 
 
     # * applications
     - name: install screenshot software
       include_role:
         name: screenshot
+      tags: [screenshot]
 
     - name: install CLI applications
       include_role:
         name: cli
-      tags: [cli]  
+      tags: [cli]
 
     - name: install GUI applications
       include_role: 

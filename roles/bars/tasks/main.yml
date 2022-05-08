@@ -3,7 +3,8 @@
   include_role:
     name: bars/bumblebee_status
     apply: 
-      tags: [bar, bumblebee-status]
+      tags: [bumblebee-status]
+  tags: [bars]
   when: bars.choice == 'bumblebee-status' | default(False)
 
 
@@ -11,5 +12,6 @@
   include_role:
     name: bars/polybar
     apply: 
-      tags: [bar, polybar]
+      tags: [polybar]
+  tags: [bars]
   when: bars.choice == 'polybar' | default(True)
