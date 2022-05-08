@@ -11,6 +11,11 @@
 #     apply: 
 #       tags: [lockscreen]
 
+- name: Install `xautolock`
+  package:
+    name: xautolock
+    state: latest
+
 - name: Install `slock`
   include_role:
     name: lockscreen/slock

@@ -217,6 +217,10 @@
 - [slock website](https://tools.suckless.org/slock/)
 - [slock patches](https://tools.suckless.org/slock/patches/)
 
+### [xautolok](roles/lockscreen/)
+
+- [xautolock website](https://doc.ubuntu-fr.org/xautolock)
+
 ## [menu](roles/menu)
 
 ### [rofi](roles/menu/rofi)
