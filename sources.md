@@ -125,9 +125,16 @@
 
 #### [visual studio code](roles/gui/code)
 
+##### [vscode](rolges/gui/code)
+
 - [vscode website](https://code.visualstudio.com/)
 - [vscode repository](https://github.com/microsoft/vscode)
 - [code snapcraft](https://snapcraft.io/code)
+
+##### [vscodium](roles/gui/code)
+
+- [vscodium website](https://vscodium.com/)
+- [vscodium repository](https://github.com/VSCodium/vscodium#install-with-snap)
 
 #### [dbeaver](roles/gui/dbeaver)
 

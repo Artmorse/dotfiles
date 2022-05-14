@@ -44,7 +44,7 @@
 # dev
 #
 
-- name: Install `VSCode` software
+- name: Install `VSCode` and `VSCodium` softwares
   include_role:
     name: gui/code
     apply: 

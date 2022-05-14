@@ -1,13 +1,16 @@
 ---
-- name: Install `code`
+- name: Install `code` and `codium`
   become: yes
   snap:
-    name: code
+    name: "{{ item }}"
     classic: yes
+  with_items:
+    - code
+    - codium
 
 
 - name: Install extensions
-  command: code --install-extension {{ item }}
+  command: code --install-extension {{ item }} ; codium --install-extension {{ item }}
   with_items: "{{ vscode_extension_list }}"
   ignore_errors: yes
 
@@ -15,9 +18,15 @@
 - name: Deploying the `settings.json` file
   template:
     src: settings.json.j2
-    dest: "~/.config/Code/User/settings.json"
+    dest: "~/.config/{{ item }}/User/settings.json"
+  with_items:
+    - Code
+    - VSCodium
     
 - name: Copy `keybindings.json` file
   copy:
     src: keybindings.json
-    dest: "~/.config/Code/User/"
+    dest: "~/.config/{{ item }}/User/"
+  with_items:
+    - Code
+    - VSCodium
