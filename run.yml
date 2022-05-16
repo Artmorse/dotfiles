@@ -49,6 +49,13 @@
 
 
     # * peripherals configuration
+    - name: configure audio
+      include_role:
+        name: audio
+        apply: 
+          tags: [audio]
+      tags: [audio]
+
     - name: configure peripherals
       include_role:
         name: peripherals

@@ -1,0 +1,11 @@
+---
+- name: Ensures pulse audio configuration folder exists
+  file:
+    path: ~/.config/pulse
+    state: directory
+
+- name: Deploying the pulse audio init file
+  template:
+    src: init.sh.j2
+    dest:  ~/.config/pulse/init.sh
+  when: audio.pulseaudio.default_device.enabled | default(False)

@@ -1,0 +1,9 @@
+DEVICE_PRODUCT_NAME="{{ audio.pulseaudio.default_device.product.name }}"
+
+pactl set-default-sink $(pactl -f json list sources | sed 's/0,00/0/g; s/,00/0/g' | jq --arg DEVICE_PRODUCT_NAME "${DEVICE_PRODUCT_NAME}" '.[] | select((.properties."device.product.name" == $DEVICE_PRODUCT_NAME) and (.name | startswith("alsa_output"))) | .monitor_source' | sed 's/"//g') 2> /dev/null
+
+if [ $? -eq 0 ]; then
+    notify-send --icon="audio-card" "Default sink changed to: ${DEVICE_PRODUCT_NAME}."
+else
+    notify-send --icon="audio-card" "${DEVICE_PRODUCT_NAME} not found."
+fi

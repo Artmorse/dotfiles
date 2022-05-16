@@ -1,0 +1,7 @@
+---
+- name: Install `pulseaudio` configuration
+  include_role:
+    name: audio/pulseaudio
+    apply: 
+      tags: [pulseaudio]
+  tags: [audio]

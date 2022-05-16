@@ -11,6 +11,15 @@ dns_nameservers: [1.1.1.1]
 
 locale: en_US.UTF-8
 
+#
+# Audio
+#
+audio:
+  pulseaudio:
+    default_device:
+      enabled: true
+      product:
+        name: Scarlett Solo (3rd Gen.)
 
 #
 # Bars

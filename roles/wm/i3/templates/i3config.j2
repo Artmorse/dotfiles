@@ -289,6 +289,10 @@ client.placeholder      #000000 #0c0c0c $nord4  #000000   #0c0c0c
 client.background       $nord4
 
 
+# pulse audio
+exec_always --no-startup-id "bash ~/.config/pulse/init.sh"
+
+
 # xrandr
 #exec --no-startup-id "bash ~/.screenlayout/init.sh"
 exec_always --no-startup-id "autorandr --change"
