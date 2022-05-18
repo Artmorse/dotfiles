@@ -1,12 +1,13 @@
 version: "3"
 
 services:
-  portainer:
+
+  app:
     image: portainer/portainer-ce:latest
-    container_name: {{ container.name }}
+    container_name: {{ containers.portainer.app.name | default('portainer') }}
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ~/.docker/portainer/volumes/data:/data
     restart: unless-stopped
     ports:
-      - {{ container.ports.external }}:9000
+      - {{ containers.portainer.app.ports.external | default(9000) }}:9000

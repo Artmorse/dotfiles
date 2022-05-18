@@ -1,0 +1,33 @@
+version: "3"
+
+# https://github.com/SonarSource/docker-sonarqube/issues/282
+# sudo sysctl -w vm.max_map_count=262144
+
+services:
+
+    app:
+        image: sonarqube:community
+        container_name: {{ containers.sonarqube.app.name | default("sonarqube_app") }}
+        depends_on:
+            - db
+        environment:
+            SONAR_JDBC_URL: jdbc:postgresql://db:5432/sonar
+            SONAR_JDBC_USERNAME: sonar
+            SONAR_JDBC_PASSWORD: sonar
+        volumes:
+            - ~/.docker/sonarqube/volumes/sonarqube/config:/opt/sonarqube/conf
+            - ~/.docker/sonarqube/volumes/sonarqube/data:/opt/sonarqube/data
+            - ~/.docker/sonarqube/volumes/sonarqube/extensions:/opt/sonarqube/extensions
+            - ~/.docker/sonarqube/volumes/sonarqube/logs:/opt/sonarqube/logs
+        ports:
+            - {{ containers.sonarqube.app.ports.external | default(9100) }}:9000
+
+    db:
+        image: postgres:12-alpine
+        container_name: {{ containers.sonarqube.db.name | default("sonarqube_db") }}
+        environment:
+            POSTGRES_USER: sonar
+            POSTGRES_PASSWORD: sonar
+        volumes:
+            - ~/.docker/sonarqube/volumes/postgresql/config:/var/lib/postgresql
+            - ~/.docker/sonarqube/volumes/postgresql/data:/var/lib/postgresql/data

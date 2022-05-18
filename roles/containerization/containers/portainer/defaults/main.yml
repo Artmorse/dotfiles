@@ -1,5 +1,7 @@
 ---
-container: 
-  name: portainer
-  ports: 
-    external: 9000
+containers: 
+  portainer:
+    app:
+      name: portainer
+      ports: 
+        external: 9000

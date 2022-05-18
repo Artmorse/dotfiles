@@ -1,0 +1,23 @@
+---
+- name: Ensures `~/.docker/{{ containers.sonarqube.app.name }}` folder exists
+  file:
+    path: "~/.docker/{{ containers.sonarqube.app.name }}"
+    state: directory
+
+
+- name: Deploying the `docker-compose` file
+  template:
+    src: docker-compose.yml.j2
+    dest: "~/.docker/{{ containers.sonarqube.app.name }}/docker-compose.yml"
+
+- name: Set sysctl variable (sonarqube issue)
+  become: yes
+  sysctl:
+    name: vm.max_map_count
+    value: '262144'
+    state: present
+
+- name: Run the `docker-compose` file
+  community.docker.docker_compose:
+    project_src: "~/.docker/{{ containers.sonarqube.app.name }}"
+    state: present

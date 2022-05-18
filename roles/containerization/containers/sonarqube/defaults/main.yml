@@ -1,0 +1,9 @@
+---
+containers: 
+  sonarqube:
+    app:
+      name: sonarqube
+      ports: 
+        external: 9100
+    db:
+      name: sonarqube_db
