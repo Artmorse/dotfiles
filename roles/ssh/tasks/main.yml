@@ -1,9 +1,7 @@
 ---
-- name: Install `pip` packages
+- name: Install `pip` dependencies
   pip: 
-    name: "{{ item }}"
-  with_items:
-  - bcrypt
+    name: bcrypt
 
 - name: Ensures `~/.ssh` folder exists
   file:
@@ -21,3 +19,8 @@
     path: "~/.ssh/id_{{ ssh_keys.perso.type }}_{{ ssh_keys.perso.name }}"
     type: "{{ ssh_keys.perso.type }}"
     passphrase: "{{ ssh_keys.perso.passphrase }}"
+
+- name: Install `ssh-askpass` packages
+  become: yes
+  package: 
+    name: ssh-askpass
