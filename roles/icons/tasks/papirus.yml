@@ -1,16 +1,4 @@
 ---
-- block:
-  - name: Add `papirus` repository from PPA with the current codename
-    become: yes
-    apt_repository:
-      repo: ppa:papirus/papirus
-  rescue:
-  - name: Add `papirus` repository from PPA with the `impish` codename
-    become: yes
-    apt_repository:
-      repo: ppa:papirus/papirus
-      codename: impish
-
 
 - name: Install `papirus-icon-theme` package
   become: yes

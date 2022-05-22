@@ -238,21 +238,8 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-{% if bars.choice == "bumblebee-status" %}
-bar {
-#        status_command i3status
-
-	position top
-	font pango:{{ font.name }} 11
-	status_command ~/.local/bin/bumblebee-status \
-		-t {{ bumblebee_status.theme }} \
-		-m dnf docker_ps nic battery pasink pasource date datetime \
-		-p nic.format="{ssid} {ip}" \
-		-p datetime.format="%H:%m"
-}
-{% elif bars.choice == "polybar" %}
 exec_always --no-startup-id "~/.config/polybar/launch.sh {{ " ".join(['$primary_monitor', '$secondary_monitor', '$third_monitor'][:monitors|length]) }}"
-{% endif %}
+
 
 
 # i3-gaps

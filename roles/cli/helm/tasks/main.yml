@@ -1,8 +1,0 @@
----
-- name: Install `helm` from script
-  include_tasks: from_script.yml
-  when: helm.from_script | default(False)
-
-- name: Install `helm` from package manager
-  include_tasks: from_package_manager.yml
-  when: helm.from_package_manager | default(True)

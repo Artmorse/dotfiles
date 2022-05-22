@@ -1,5 +1,6 @@
 ---
-- name: Install `snap` package
-  become: yes
-  snap:
-    name: postman
+- name: Install `postman` software
+  kewlfft.aur.aur:
+    use: yay
+    name: postman-bin
+    state: present

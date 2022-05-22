@@ -22,13 +22,6 @@ audio:
         name: Scarlett Solo (3rd Gen.)
 
 #
-# Bars
-#
-
-bars:
-  choice: polybar # polybar or bumblebee
-
-#
 # Theme
 #
 
@@ -67,51 +60,18 @@ user:
 have_you_a_some_corsair_peripherals: true
 
 #
-# Enable/Disable: CLI
-#
-
-helm:
-  enabled: true
-  from_script: false # install helm from package manager or from script
-
-k3sup:
-  enabled: true
-
-kompose:
-  enabled: true
-  version: 1.26.1
-
-kubectl:
-  enabled: true
-  version: 1.23.5
-
-ngrok: 
-  enabled: true
-  download_link: https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.tgz
-  authtoken: YOUR_OWN_NGROK_TOKEN # log into [ngrok website](https://dashboard.ngrok.com/get-started/your-authtoken) and select the menu *Your Authtoken*
-
-terraform:
-  enabled: true
-
-vault:
-  enabled: true
-
-#
 # Enable/Disable: GUI
 #
 
 # communication
 discord:
   enabled: true
-  version: 0.0.17
 
 slack:
   enabled: true
-  version: 4.23.0
 
 teamviewer:
   enabled: true
-  version: 15.28.8
 
 zoom:
   enabled: true
@@ -122,14 +82,9 @@ code:
 
 dbeaver:
   enabled: true
-  ce:
-    version: 22.0.4
-  ee:
-    version: 21.3.0
 
 jetbrainsToolbox: 
   enabled: true
-  version: 1.22.10970
 
 lens:
   enabled: true
@@ -156,11 +111,9 @@ vlc:
 # misc
 balenaEtcher:
   enabled: true
-  version: 1.7.7
 
 bitwarden:
   enabled: true
-  version: 1.30.0
 
 deluge:
   enabled: true

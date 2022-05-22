@@ -1,17 +1,6 @@
 ---
-- name: Install `bumblebee-status` bar
-  include_role:
-    name: bars/bumblebee_status
-    apply: 
-      tags: [bumblebee-status]
-  tags: [bars]
-  when: bars.choice == 'bumblebee-status' | default(False)
-
-
 - name: Install `polybar` bar
   include_role:
     name: bars/polybar
     apply: 
-      tags: [polybar]
-  tags: [bars]
-  when: bars.choice == 'polybar' | default(True)
+      tags: [bar, polybar]

@@ -1,28 +1,6 @@
 ---
-- name: Download `jetbrains-toolbox` archive from the internet
-  get_url:
-    url: "https://download-cdn.jetbrains.com/toolbox/jetbrains-toolbox-{{ jetbrainsToolbox.version }}.tar.gz"
-    dest: /tmp
-    mode: '0755'
-
-- name: Extract `jetbrains-toolbox` files
-  unarchive:
-    src: /tmp/jetbrains-toolbox-{{ jetbrainsToolbox.version }}.tar.gz
-    dest: /tmp
-    remote_src: yes
-
-- name: Move the `jetbrains-toolbox` file
-  become: yes
-  copy:
-    src: "/tmp/jetbrains-toolbox-{{ jetbrainsToolbox.version }}/jetbrains-toolbox"
-    dest: "/usr/local/bin"
-    remote_src: yes
-    mode: '0755'
-
-- name: Clean `/tmp` folder
-  file:
-    state: absent
-    path: "{{ item }}"
-  with_items:
-    - /tmp/jetbrains-toolbox-{{ jetbrainsToolbox.version }}.tar.gz
-    - /tmp/jetbrains-toolbox-{{ jetbrainsToolbox.version }}
+- name: Install `jetbrains-toolbox` software
+  kewlfft.aur.aur:
+    use: yay
+    name: jetbrains-toolbox
+    state: present

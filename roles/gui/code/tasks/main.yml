@@ -1,12 +1,15 @@
 ---
-- name: Install `code` and `codium`
+- name: Install `code` software
   become: yes
-  snap:
-    name: "{{ item }}"
-    classic: yes
-  with_items:
-    - code
-    - codium
+  package:
+    name: code
+    state: latest
+
+- name: Install `codium` software
+  kewlfft.aur.aur:
+    use: yay
+    name: vscodium-bin
+    state: present
 
 
 - name: Install extensions
@@ -14,6 +17,14 @@
   with_items: "{{ vscode_extension_list }}"
   ignore_errors: yes
 
+
+- name: Ensures configuration folders exists
+  file:
+    path: "~/.config/{{ item }}/User/"
+    state: directory
+  with_items:
+    - Code
+    - VSCodium
 
 - name: Deploying the `settings.json` file
   template:

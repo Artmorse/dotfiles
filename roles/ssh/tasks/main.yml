@@ -20,7 +20,8 @@
     type: "{{ ssh_keys.perso.type }}"
     passphrase: "{{ ssh_keys.perso.passphrase }}"
 
-- name: Install `ssh-askpass` packages
-  become: yes
-  package: 
-    name: ssh-askpass
+- name: Install `ssh-askpass` software
+  kewlfft.aur.aur:
+    use: yay
+    name: openssh-askpass
+    state: present

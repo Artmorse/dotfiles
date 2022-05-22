@@ -1,78 +1,51 @@
 ---
-- name: Install `exa` cli
-  include_role:
-    name: cli/exa
-    apply: 
-      tags: [exa]
+
+
+#
+# dev
+#
+
+- name: Install "dev" cli softwares (with `{{ ansible_pkg_mgr }}` package manager)
+  become: yes
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - helm
+    - kompose
+    - kubectl
+    - kubectx
+    - terraform
+    - vault
   tags: [cli]
 
-- name: Install `helm` cli
-  include_role:
-    name: cli/helm
-    apply: 
-      tags: [helm]
-  tags: [cli]
-  when: helm.enabled | default(False)
-
-- name: Install `k3sup` cli
-  include_role:
-    name: cli/k3sup
-    apply: 
-      tags: [k3sup]
-  tags: [cli]
-  when: k3sup.enabled | default(False)
-
-- name: Install `kompose` cli
-  include_role:
-    name: cli/kompose
-    apply: 
-      tags: [kompose]
-  tags: [cli]
-  when: kompose.enabled | default(False)
-
-- name: Install `kubectl` cli
-  include_role:
-    name: cli/kubectl
-    apply: 
-      tags: [kubectl]
-  tags: [cli]
-  when: kubectl.enabled | default(False)
-
-- name: Install `kubectx` cli
-  include_role:
-    name: cli/kubectx
-    apply: 
-      tags: [kubectl, kubectx]
-  tags: [cli]
-  when: kubectl.enabled | default(False)
-
-- name: Install `nano` cli
-  include_role:
-    name: cli/nano
-    apply: 
-      tags: [nano]
+- name: Install "dev" cli softwares (with `yay` package manager)
+  kewlfft.aur.aur:
+    use: yay
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - ngrok
   tags: [cli]
 
-- name: Install `ngrok` cli
-  include_role:
-    name: cli/ngrok
-    apply: 
-      tags: [ngrok]
-  tags: [cli]
-  when: ngrok.enabled | default(False)
 
-- name: Install `terraform` cli
-  include_role:
-    name: cli/terraform
-    apply: 
-      tags: [terraform]
-  tags: [cli]
-  when: terraform.enabled | default(False)
+#
+# misc
+#
 
-- name: Install `vault` cli
-  include_role:
-    name: cli/vault
-    apply: 
-      tags: [vault]
+- name: Install "misc" cli softwares
+  become: yes
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - bat
+    - fzf
+    - exa
+    - nano
+    - ripgrep
+    - procs
+    - zoxide
+    - fd
+    - gfold
   tags: [cli]
-  when: vault.enabled | default(False)

@@ -1,5 +1,6 @@
 ---
-- name: Install `slack` package from the internet
-  become: yes
-  apt:
-    deb: "https://downloads.slack-edge.com/releases/linux/{{ slack.version }}/prod/x64/slack-desktop-{{ slack.version }}-amd64.deb"
+- name: Install `slack` software
+  kewlfft.aur.aur:
+    use: yay
+    name: slack-desktop
+    state: present

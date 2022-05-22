@@ -1,6 +1,6 @@
 ---
-- name: Install `fonts-firacode` package
+- name: Install `ttf-fira-code` package
   become: yes
   package: 
-    name: fonts-firacode 
+    name: ttf-fira-code
     state: latest

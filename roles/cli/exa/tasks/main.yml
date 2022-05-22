@@ -1,6 +1,0 @@
----
-- name: Install `exa` package
-  become: yes
-  package: 
-    name: exa
-    state: latest

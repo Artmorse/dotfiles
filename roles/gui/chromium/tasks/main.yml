@@ -1,5 +1,6 @@
 ---
-- name: Install `chromium`
+- name: Install `chromium` package
   become: yes
-  snap:
+  package: 
     name: chromium
+    state: latest

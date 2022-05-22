@@ -1,11 +1,11 @@
 ---
-- hosts: localhost
+- hosts: "{{ variable_host | default('localhost') }}"
 
   pre_tasks:
-  - name: "Limiting the playbooks execution to Debian distributions."
+  - name: "Limiting the playbooks execution to Archlinux distributions."
     fail:
       msg: "{{ ansible_distribution }} is not supported by these playbooks!"
-    when: ansible_os_family != "Debian"
+    when: ansible_os_family != "Archlinux"
 
   tasks:
 
@@ -65,13 +65,6 @@
       include_role:
         name: screenlayout
       tags: [screenlayout]
-
-    - name: configure printer
-      include_role:
-        name: printer
-        apply: 
-          tags: [printer]
-      tags: [printer]
 
 
     # * workspace
@@ -149,7 +142,7 @@
       tags: [cli]
 
     - name: install GUI applications
-      include_role: 
+      include_role:
         name: gui
       tags: [gui]
 

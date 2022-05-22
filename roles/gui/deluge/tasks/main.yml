@@ -1,19 +1,6 @@
 ---
-- block:
-  - name: Add `deluge` repository from PPA with the current codename
-    become: yes
-    apt_repository:
-      repo: ppa:deluge-team/stable
-  rescue:
-  - name: Add `deluge` repository from PPA with the `impish` codename
-    become: yes
-    apt_repository:
-      repo: ppa:deluge-team/stable
-      codename: impish
-
-
-- name: Install `deluge` package
+- name: Install `deluge` software
   become: yes
-  package: 
+  package:
     name: deluge
     state: latest

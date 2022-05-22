@@ -1,13 +1,11 @@
 ---
-- name: Install `docker`
-  # become: yes
-  include_role:
-    name: geerlingguy.docker
-  vars:
-    - ansible_become: yes
-    - docker_users:
-      - "{{ ansible_user_id }}"
-
+- name: Install `docker` and `docker-compose`
+  become: True
+  package:
+    name:
+      - docker
+      - docker-compose
+    state: present
 
 - name: Install `pip` packages
   pip: 
@@ -15,6 +13,23 @@
   with_items:
   - docker
   - docker-compose
+
+
+- name: Ensure `docker` user are added to the docker group
+  become: yes
+  user:
+    name: "{{ ansible_user_id }}"
+    groups: docker
+    append: True
+
+
+- name: Ensure `docker` is started and enabled at boot
+  become: yes
+  service:
+    name: docker
+    state: started
+    enabled: yes
+  ignore_errors: true
 
 
 - name: Ensures `~/.docker` folder exists

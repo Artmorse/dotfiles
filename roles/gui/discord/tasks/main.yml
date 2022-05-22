@@ -1,23 +1,16 @@
 ---
-- name: Install `discord` package from the internet
+- name: Install `discord` software
   become: yes
-  apt:
-    deb: https://dl.discordapp.net/apps/linux/{{ discord.version }}/discord-{{ discord.version }}.deb
-
-# - name: First discord launch (used for the module installations)
-#   shell: "(cmdpid=$BASHPID; (sleep 20; kill $cmdpid) & exec discord)"
+  package:
+    name: discord
+    state: latest
 
 
-- name: Install `betterdiscordctl`
-  become: yes
-  get_url:
-    url: "https://raw.githubusercontent.com/bb010g/betterdiscordctl/master/betterdiscordctl"
-    dest: /usr/local/bin
-    mode: '0775'
-
-- name: Install `betterdiscord` with `betterdiscordctl`
-  shell: betterdiscordctl install
-  ignore_errors: yes
+- name: Install `betterdiscordctl` software
+  kewlfft.aur.aur:
+    use: yay
+    name: betterdiscordctl
+    state: present
 
 
 - name: Ensures betterdiscord configuration folders exists
