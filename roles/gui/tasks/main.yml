@@ -189,6 +189,15 @@
   when: filezilla.enabled | default(False)
 
 
+- name: Install `rpi-imager` software
+  include_role:
+    name: gui/rpi-imager
+    apply: 
+      tags: [misc, rpiImager]
+  tags: [gui]
+  when: rpiImager.enabled | default(False)
+
+
 
 #
 # webbrowsers

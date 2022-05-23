@@ -194,6 +194,11 @@
 
 - [filezilla website](https://filezilla-project.org/)
 
+#### [rpi-imager](roles/gui/rpi-imager)
+
+- [rpi-imager website](https://www.raspberrypi.com/software/)
+- [rpi-imager repository](https://github.com/raspberrypi/rpi-imager)
+
 ### webbrowsers
 
 #### [chromium](roles/gui/chromium)

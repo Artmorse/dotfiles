@@ -123,6 +123,9 @@ deluge:
 filezilla:
   enabled: true
 
+rpiImager:
+  enabled: true
+
 # web browsers
 chromium:
   enabled: true
