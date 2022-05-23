@@ -141,6 +141,10 @@
 - [dbeaver website](https://dbeaver.com/)
 - [dbeaver repository](https://github.com/dbeaver/dbeaver)
 
+#### [gitfiend](roles/gui/gitfiend)
+
+- [gitfiend website](https://gitfiend.com/)
+
 #### [jetbrains toolbox](roles/gui/jetbrains-toolbox)
 
 - [jetbrains toolbox website](https://www.jetbrains.com/toolbox-app/)

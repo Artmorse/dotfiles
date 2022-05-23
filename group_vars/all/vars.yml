@@ -83,6 +83,8 @@ code:
 dbeaver:
   enabled: true
 
+gitfiend: 
+  enabled: true
 jetbrainsToolbox: 
   enabled: true
 

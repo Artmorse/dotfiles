@@ -62,6 +62,15 @@
   when: dbeaver.enabled | default(False)
 
 
+- name: Install `gitfiend` software
+  include_role:
+    name: gui/gitfiend
+    apply: 
+      tags: [dev, gitfiend]
+  tags: [gui]
+  when: gitfiend.enabled | default(False)
+
+
 - name: Install `jetbrains-toolbox` software
   include_role:
     name: gui/jetbrains-toolbox
