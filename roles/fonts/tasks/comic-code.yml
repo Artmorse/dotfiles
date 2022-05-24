@@ -1,0 +1,52 @@
+---
+- name: Copy `comic-code` font archive
+  copy:
+    src: Comic Code Ligatures Coding Essentials Nerd Font.zip
+    dest: "/tmp/comic-code.zip"
+
+- name: Ensures `/tmp/comic-code` temporary folder exists
+  file:
+    path: /tmp/comic-code/
+    state: directory
+
+- name: Extract `comic-code` font files
+  unarchive:
+    src: /tmp/comic-code.zip
+    dest: /tmp/comic-code/
+    remote_src: yes
+
+- name: Ensures `/usr/share/fonts/opentype/comic-code` folder exists
+  become: yes
+  file:
+    path: /usr/share/fonts/opentype/comic-code/
+    state: directory
+
+- name: Prepare list of `*.otf` files to move
+  find:
+    paths:
+    - "/tmp/comic-code/"
+    patterns: '.*([a-zA-Z]+).otf'
+    file_type: file
+    use_regex: yes
+  register: otf_file_list
+
+- name: Print return information from the previous task
+  debug:
+    msg: "{{ otf_file_list.matched }} files matched."
+
+- name: Move the `*.otf` files
+  become: yes
+  copy:
+    src: "{{ item.path }}"
+    dest: "/usr/share/fonts/opentype/comic-code/"
+    remote_src: yes
+  with_items:
+    - "{{ otf_file_list.files }}"
+
+- name: Clean `/tmp` folder
+  file:
+    state: absent
+    path: "{{ item }}"
+  with_items:
+    - /tmp/comic-code.zip
+    - /tmp/comic-code

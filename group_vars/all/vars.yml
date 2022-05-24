@@ -25,8 +25,10 @@ audio:
 # Theme
 #
 
-font:
-  name: CaskaydiaCove Nerd Font
+fonts:
+  - name: ComicCodeLigatures Nerd Font
+  - name: CaskaydiaCove Nerd Font
+  - name: Fira Code
 
 theme: 
   name: Nordic-Polar
