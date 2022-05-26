@@ -5,3 +5,10 @@
     apply: 
       tags: [pulseaudio]
   tags: [audio]
+
+- name: Install `pasystray` package
+  become: yes
+  package:
+    name: pasystray
+    state: latest
+  tags: [audio, pasystray]

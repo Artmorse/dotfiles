@@ -1,5 +1,14 @@
 # Sources
 
+
+## [audio](roles/audio)
+
+- [pulseaudio archlinux wiki](https://wiki.archlinux.org/title/PulseAudio)
+
+- [pasystray repository](https://github.com/christophgysin/pasystray)
+- [pasystray archlinux package](https://archlinux.org/packages/community/x86_64/pasystray/)
+
+
 ## [bars](roles/bars)
 
 ### [polybar](roles/bars/polybar)
