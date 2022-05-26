@@ -59,6 +59,70 @@ user:
 have_you_a_some_corsair_peripherals: true
 
 #
+# Enable/Disable: CLI
+#
+
+# dev
+helm:
+  enabled: true
+
+jenv:
+  enabled: true
+
+kompose:
+  enabled: true
+
+kubectl:
+  enabled: true
+
+kubectx:
+  enabled: true
+
+pyenv:
+  enabled: true
+
+ngrok:
+  enabled: true
+
+terraform:
+  enabled: true
+
+vault:
+  enabled: true
+
+# utils
+bat:
+  enabled: true
+
+exa:
+  enabled: true
+
+fd:
+  enabled: true
+
+fzf:
+  enabled: true
+
+gfold:
+  enabled: true
+
+gparted:
+  enabled: true
+
+nano:
+  enabled: true
+
+procs:
+  enabled: true
+
+ripgrep:
+  enabled: true
+
+zoxide:
+  enabled: true
+
+
+#
 # Enable/Disable: GUI
 #
 

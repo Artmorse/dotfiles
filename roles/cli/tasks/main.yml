@@ -1,51 +1,161 @@
 ---
-
-
 #
 # dev
 #
 
-- name: Install "dev" cli softwares (with `{{ ansible_pkg_mgr }}` package manager)
+- name: Install `helm` software
   become: yes
   package:
-    name: "{{ item }}"
+    name: helm
     state: latest
-  with_items:
-    - helm
-    - kompose
-    - kubectl
-    - kubectx
-    - terraform
-    - vault
-  tags: [cli]
+  tags: [cli, dev, helm]
+  when: helm.enabled | default(False)
 
-- name: Install "dev" cli softwares (with `yay` package manager)
+- name: Install `jenv` software
+  become: yes
+  package:
+    name: jenv
+    state: latest
+  tags: [cli, dev, jenv]
+  when: jenv.enabled | default(False)
+
+- name: Install `kompose` software
+  become: yes
+  package:
+    name: kompose
+    state: latest
+  tags: [cli, dev, kompose]
+  when: kompose.enabled | default(False)
+
+- name: Install `kubectl` software
+  become: yes
+  package:
+    name: kubectl
+    state: latest
+  tags: [cli, dev, kubectl]
+  when: kubectl.enabled | default(False)
+
+- name: Install `kubectx` software
+  become: yes
+  package:
+    name: kubectx
+    state: latest
+  tags: [cli, dev, kubectx]
+  when: kubectx.enabled | default(False)
+
+- name: Install `pyenv` software
+  become: yes
+  package:
+    name: pyenv
+    state: latest
+  tags: [cli, dev, pyenv]
+  when: pyenv.enabled | default(False)
+
+- name: Install `ngrok` software
   kewlfft.aur.aur:
     use: yay
-    name: "{{ item }}"
+    name: ngrok
     state: present
-  with_items:
-    - ngrok
-  tags: [cli]
+  tags: [cli, dev, ngrok]
+  when: ngrok.enabled | default(False)
 
-
-#
-# misc
-#
-
-- name: Install "misc" cli softwares
+- name: Install `terraform` software
   become: yes
   package:
-    name: "{{ item }}"
+    name: terraform
     state: latest
-  with_items:
-    - bat
-    - fzf
-    - exa
-    - nano
-    - ripgrep
-    - procs
-    - zoxide
-    - fd
-    - gfold
-  tags: [cli]
+  tags: [cli, dev, terraform]
+  when: terraform.enabled | default(False)
+
+- name: Install `vault` software
+  become: yes
+  package:
+    name: vault
+    state: latest
+  tags: [cli, dev, vault]
+  when: vault.enabled | default(False)
+
+
+#
+# utils
+#
+
+- name: Install `bat` software
+  become: yes
+  package:
+    name: bat
+    state: latest
+  tags: [cli, utils, bat]
+  when: bat.enabled | default(False)
+
+- name: Install `exa` software
+  become: yes
+  package:
+    name: exa
+    state: latest
+  tags: [cli, utils, exa]
+  when: exa.enabled | default(False)
+
+- name: Install `fd` software
+  become: yes
+  package:
+    name: fd
+    state: latest
+  tags: [cli, utils, fd]
+  when: fd.enabled | default(False)
+
+- name: Install `fzf` software
+  become: yes
+  package:
+    name: fzf
+    state: latest
+  tags: [cli, utils, fzf]
+  when: fzf.enabled | default(False)
+
+- name: Install `gfold` software
+  become: yes
+  package:
+    name: gfold
+    state: latest
+  tags: [cli, utils, gfold]
+  when: gfold.enabled | default(False)
+
+- name: Install `gparted` software
+  become: yes
+  package:
+    name: gparted
+    state: latest
+  tags: [cli, utils, gparted]
+  when: gparted.enabled | default(False)
+
+- name: Install `nano` software
+  become: yes
+  package:
+    name: nano
+    state: latest
+  tags: [cli, utils, nano]
+  when: nano.enabled | default(False)
+
+- name: Install `procs` software
+  kewlfft.aur.aur:
+    use: yay
+    name: procs
+    state: present
+  tags: [cli, utils, procs]
+  when: procs.enabled | default(False)
+
+- name: Install `ripgrep` software
+  become: yes
+  package:
+    name: ripgrep
+    state: latest
+  tags: [cli, utils, ripgrep]
+  when: ripgrep.enabled | default(False)
+
+- name: Install `zoxide` software
+  become: yes
+  package:
+    name: zoxide
+    state: latest
+  tags: [cli, utils, zoxide]
+  when: zoxide.enabled | default(False)

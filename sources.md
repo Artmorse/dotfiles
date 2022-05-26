@@ -25,51 +25,115 @@
 
 ## [cli](roles/cli)
 
-### [exa](roles/cli/exa)
+### dev
 
-- [exa website](https://the.exa.website/)
-- [exa repository](https://github.com/ogham/exa)
-
-### [helm](roles/cli/helm)
+#### [helm](roles/cli/helm)
 
 - [helm repository](https://github.com/helm/helm)
 - [helm website](https://helm.sh/)
 - [helm autocompletion documentation](https://helm.sh/docs/helm/helm_completion/#see-also)
+- [helm archlinux package](https://archlinux.org/packages/community/x86_64/helm/)
 
-### [k3sup](roles/k3sup)
+#### [jenv](roles/cli/jenv)
 
-- [k3sup repository](https://github.com/alexellis/k3sup)
+- [jenv repository](https://github.com/jenv/jenv)
+- [jenv archlinux package](https://archlinux.org/packages/community/x86_64/jenv/)
 
-### [kompose](roles/cli/kompose)
+#### [kompose](roles/cli/kompose)
 
 - [kompose repository](https://github.com/kubernetes/kompose)
 - [kompose installation](https://kompose.io/installation/)
 - [kompose autocompletion documentation](https://github.com/kubernetes/kompose#shell-autocompletion)
+- [kompose archlinux package](https://archlinux.org/packages/community/x86_64/kompose/)
 
-### [kubectl](roles/cli/kubectl)
+#### [kubectl](roles/cli/kubectl)
 
 - [kubectl repository](https://github.com/kubernetes/kubectl)
 - [kubectl installation](https://kubernetes.io/fr/docs/tasks/tools/install-kubectl/)
+- [kubectl archlinux package](https://archlinux.org/packages/community/x86_64/kubectl/)
 
-### [kubectx](roles/cli/kubectx)
+#### [kubectx](roles/cli/kubectx)
 
 - [kubectx repository](https://github.com/ahmetb/kubectx#manual-installation-macos-and-linux)
 - [kubectx installation](https://github.com/ahmetb/kubectx)
+- [kubectx archlinux package](https://archlinux.org/packages/community/any/kubectx/)
 
-### [nano](roles/cli/nano)
-
-- [nanorc repository](https://github.com/scopatz/nanorc)
-
-### [ngrok](roles/cli/ngrok)
+#### [ngrok](roles/cli/ngrok)
 
 - [ngrok website](https://ngrok.com/)
 - [ngrok repository](https://github.com/inconshreveable/ngrok)
+- [kubectl archlinux package](https://archlinux.org/packages/community/x86_64/kubectl/)
 
-### [terraform](roles/cli/terraform)
+#### [pyenv](roles/cli/pyenv)
+
+- [pyenv repository](https://github.com/pyenv/pyenv)
+- [pyenv archlinux package](https://archlinux.org/packages/community/x86_64/pyenv/)
+
+#### [terraform](roles/cli/terraform)
 
 - [terraform](https://www.terraform.io/)
 - [terraform repository](https://github.com/hashicorp/terraform)
-- [terraform installation](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+- [terraform archlinux package](https://archlinux.org/packages/community/x86_64/terraform/)
+
+#### [vault](roles/cli/vault)
+
+- [vault](https://www.vaultproject.io/)
+- [vault repository](https://github.com/hashicorp/vault)
+- [vault archlinux package](https://archlinux.org/packages/community/x86_64/vault/)
+
+### misc
+
+#### [bat](roles/cli/bat)
+
+- [bat repository](https://github.com/sharkdp/bat)
+- [bat archlinux package](https://archlinux.org/packages/community/x86_64/bat/)
+
+#### [exa](roles/cli/exa)
+
+- [exa website](https://the.exa.website/)
+- [exa repository](https://github.com/ogham/exa)
+- [exa archlinux package](https://archlinux.org/packages/community/x86_64/exa/)
+
+#### [fd](roles/cli/fd)
+
+- [fd repository](https://github.com/sharkdp/fd)
+- [fd archlinux package](https://archlinux.org/packages/community/x86_64/fd/)
+
+#### [fzf](roles/cli/fzf)
+
+- [fzf repository](https://github.com/junegunn/fzf)
+- [fzf archlinux package](https://archlinux.org/packages/community/x86_64/fzf/)
+
+#### [gfold](roles/cli/gfold)
+
+- [gfold repository](https://github.com/nickgerace/gfold)
+- [gfold archlinux package](https://archlinux.org/packages/community/x86_64/gfold/)
+
+#### [gparted](roles/cli/gparted)
+
+- [gparted website](https://gparted.org/)
+- [gparted repository](https://gitlab.gnome.org/GNOME/gparted)
+- [gparted archlinux package](https://archlinux.org/packages/extra/x86_64/gparted/)
+
+#### [nano](roles/cli/nano)
+
+- [nanorc repository](https://github.com/scopatz/nanorc)
+
+#### [procs](roles/cli/procs)
+
+- [procs repository](https://github.com/dalance/procs)
+- [procs archlinux package](https://archlinux.org/packages/community/x86_64/procs/)
+
+#### [ripgrep](roles/cli/fzf)
+
+- [ripgrep repository](https://github.com/BurntSushi/ripgrep)
+- [ripgrep archlinux package](https://archlinux.org/packages/community/x86_64/ripgrep/)
+
+#### [zoxide](roles/cli/zoxide)
+
+- [zoxide repository](https://github.com/ajeetdsouza/zoxide)
+- [zoxide archlinux package](https://archlinux.org/packages/community/x86_64/zoxide/)
+
 
 ## [colorscheme](roles/colorscheme)
 
@@ -93,10 +157,6 @@
 - [wget](https://doc.ubuntu-fr.org/wget)
 - [curl](https://curl.se/)
 - [unzip](https://doc.ubuntu-fr.org/zip)
-- [gparted](https://gparted.org/)
-- [htop](https://htop.dev/)
-- [jq](https://stedolan.github.io/jq/)
-- [diodon](https://doc.ubuntu-fr.org/diodon)
 - [unrar](https://doc.ubuntu-fr.org/rar)
 
 ## [fonts](roles/fonts)
