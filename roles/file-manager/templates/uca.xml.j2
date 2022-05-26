@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>Terminal</icon>
+	<name>Open Terminal Here</name>
+	<unique-id>1652002723279610-1</unique-id>
+	<command>
+    {% if default.terminal == 'konsole' %}
+    konsole --workdir %d
+    {% endif %}
+    </command>
+	<description>Open {{ default.terminal }} on the current directory</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+</actions>

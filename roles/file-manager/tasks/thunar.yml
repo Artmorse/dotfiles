@@ -1,0 +1,30 @@
+---
+- name: Install `thunar` file manager with extensions
+  become: yes
+  package: 
+    name: "{{ item }}"
+    state: latest
+  with_items:
+  - thunar
+  - thunar-archive-plugin
+  - thunar-media-tags-plugin
+
+# - name: Install `thunar` extensions
+#   kewlfft.aur.aur:
+#     use: yay
+#     name: "{{ item }}"
+#     state: present
+#   with_items:
+#   - imdb-thumbnailer
+#   - thunar-custom-actions
+
+
+- name: Ensures `thunar` configuration folder exists
+  file:
+    path: ~/.config/Thunar
+    state: directory
+
+- name: Deploying the `thunar` custom actions file
+  template:
+    src: uca.xml.j2
+    dest:  ~/.config/Thunar/uca.xml

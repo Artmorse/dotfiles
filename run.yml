@@ -47,6 +47,11 @@
           tags: [icons]
       tags: [icons]
 
+    - name: install file manager
+      include_role:
+        name: file-manager
+      tags: [fileManager]
+
 
     # * peripherals configuration
     - name: configure audio

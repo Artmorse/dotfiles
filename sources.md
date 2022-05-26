@@ -175,6 +175,18 @@
 - [yay archlinux package](https://aur.archlinux.org/packages/yay)
 
 
+## [file-manager](roles/file_manager)
+
+### [thunar](roles/file_manager/tasks/thunar.yml)
+
+- [thunar wikipedia](https://wikipedia.org/wiki/Thunar)
+- [thunar archlinux package](https://archlinux.org/packages/extra/x86_64/thunar/)
+- [thunar-archive-plugin archlinux package](https://archlinux.org/packages/extra/x86_64/thunar-archive-plugin/)
+- [thunar-media-tags-plugin archlinux package](https://archlinux.org/packages/extra/x86_64/thunar-media-tags-plugin/)
+- [imdb-thumbnailer archlinux package](https://aur.archlinux.org/packages/imdb-thumbnailer)
+- [thunar-custom-actions archlinux package](https://aur.archlinux.org/packages/thunar-custom-actions)
+
+
 ## [fonts](roles/fonts)
 
 - [nerdfonts](https://www.nerdfonts.com/#home)

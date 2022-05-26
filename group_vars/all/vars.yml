@@ -40,7 +40,11 @@ monitors:
   - eDP-1  # second
   - DP-1-1 # third
 
-default_browser: firefox # firefox or chromium
+default:
+  webbrowser: firefox # firefox or chromium
+  terminal: konsole # konsole
+  file_manager: thunar # thunar
+  bar: polybar # polybar
 
 #
 # User
