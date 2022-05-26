@@ -450,6 +450,7 @@
 ### [zsh](roles/shell/zsh)
 
 - [zsh website](https://doc.ubuntu-fr.org/zsh)
+- [ys theme repository](https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/ys.zsh-theme)
 - [ohmyzsh website](https://ohmyz.sh/)
 - [ohmyzsh repository](https://github.com/ohmyzsh/ohmyzsh)
 - [powerlevel10k repository](https://github.com/romkatv/powerlevel10k)
