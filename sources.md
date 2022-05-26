@@ -233,9 +233,16 @@
 
 ### webbrowsers
 
-#### [chromium](roles/gui/chromium)
+#### [chromium](roles/gui)
 
 - [chromium website](https://www.chromium.org/chromium-projects/)
+- [chromium archlinux package](https://archlinux.org/packages/extra/x86_64/chromium/)
+
+### [firefox](roles/gui)
+
+- [firefox website](https://www.mozilla.org/fr/firefox/new/)
+- [firefox archlinux package](https://archlinux.org/packages/extra/x86_64/firefox/)
+
 
 ## [icons](roles/icons)
 

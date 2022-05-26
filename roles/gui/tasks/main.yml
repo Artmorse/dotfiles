@@ -204,9 +204,17 @@
 #
 
 - name: Install `chromium` software
-  include_role:
-    name: gui/chromium
-    apply: 
-      tags: [webbrowsers, chromium]
-  tags: [gui]
+  become: yes
+  package: 
+    name: chromium
+    state: latest
+  tags: [gui, webbrowsers, chromium]
   when: chromium.enabled | default(False)
+
+- name: Install `firefox` software
+  become: yes
+  package: 
+    name: firefox
+    state: latest
+  tags: [gui, webbrowsers, firefox]
+  when: firefox.enabled | default(False)
