@@ -8,10 +8,7 @@ See the [sources.md](sources.md) file.
 
 ## OS tested
 
-- [x] [Xubuntu 21.04](https://xubuntu.org/news/xubuntu-21-04-released/)
-- [x] [Xubuntu 21.10](https://xubuntu.org/news/xubuntu-21-10-released/)
-- [x] [Xubuntu 22.04](https://xubuntu.org/news/xubuntu-22-04-released/)
-- [x] [Ubuntu 22.04](https://ubuntu.com/blog/ubuntu-22-04-lts-released)
+- [x] [Manjaro-XFCE Minimal 21.2.6](https://manjaro.org/downloads/official/xfce/)
 
 ## Usage
 
@@ -89,10 +86,3 @@ There some things to configure manually after the installation.
         set $monitor_top YOUR_TOP_MONITOR
         set $monitor_bottom YOUR_BOTTOM_MONITOR
         ```
-- configure your printer
-
-## Roadmap :motorway:
-
-- [ ] : variabilize monitor values (like `eDP-1`, `HDMI-1`, `DP-3` ...)
-- [ ] : create dependencies between roles
-- [ ] : create documentation to explain the printer configuration
