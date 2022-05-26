@@ -1,0 +1,12 @@
+---
+- name: Install `jetbrains-mono` font
+  become: yes
+  package: 
+    name: ttf-jetbrains-mono
+    state: latest
+
+- name: Install `jetbrains-mono` nerd font
+  kewlfft.aur.aur:
+    use: yay
+    name: nerd-fonts-jetbrains-mono
+    state: present

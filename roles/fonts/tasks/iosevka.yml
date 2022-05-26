@@ -1,0 +1,6 @@
+---
+- name: Install `iosevka` font
+  become: yes
+  package: 
+    name: ttc-iosevka
+    state: latest

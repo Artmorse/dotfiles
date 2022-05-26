@@ -92,9 +92,41 @@
 
 ## [fonts](roles/fonts)
 
-- [firacode](https://github.com/tonsky/FiraCode)
 - [nerdfonts](https://www.nerdfonts.com/#home)
-- [cascadia-code](https://github.com/microsoft/cascadia-code)
+
+### [cascadia-code](roles/fonts/tasks/cascadia-code.yml)
+
+- [cascadia-code repository](https://github.com/microsoft/cascadia-code)
+- [cascadia-code archlinux package](https://archlinux.org/packages/community/any/ttf-cascadia-code/)
+- [cascadia-code nerd font archlinux package](https://aur.archlinux.org/packages/nerd-fonts-cascadia-code)
+
+### [comic-code](roles/fonts/tasks/comic-code.yml)
+
+- [comic-code website](https://tosche.net/fonts/comic-code)
+
+### [fantasque-sans](roles/fonts/tasks/fantasque-sans.yml)
+
+- [fantasque-sans repository](https://github.com/belluzj/fantasque-sans)
+- [fantasque-sans archlinux package](https://archlinux.org/packages/community/any/ttf-fantasque-sans-mono/)
+- [fantasque-sans nerd font archlinux package](https://aur.archlinux.org/packages/nerd-fonts-fantasque-sans-mono)
+
+### [fira-code](roles/fonts/tasks/fira-code.yml)
+
+- [fira-code repository](https://github.com/tonsky/FiraCode)
+- [fira-code archlinux package](https://archlinux.org/packages/community/any/ttf-fira-code/)
+- [fira-code nerd font archlinux package](https://aur.archlinux.org/packages/nerd-fonts-fira-code)
+
+### [iosevka](roles/fonts/tasks/iosevka.yml)
+
+- [iosevka](https://github.com/be5invis/Iosevka)
+- [iosevka archlinux package](https://archlinux.org/packages/community/any/ttc-iosevka/)
+
+### [jetbrains-mono](roles/fonts/tasks/jetbrains-mono.yml)
+
+- [jetbrains-mono repository](https://github.com/JetBrains/JetBrainsMono)
+- [jetbrains-mono archlinux package](https://archlinux.org/packages/community/any/ttf-jetbrains-mono/)
+- [jetbrains-mono nerd font archlinux package](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono)
+
 
 ## [gui](roles/gui)
 

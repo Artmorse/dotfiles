@@ -1,0 +1,12 @@
+---
+- name: Install `fira-code` font
+  become: yes
+  package: 
+    name: ttf-fira-code
+    state: latest
+
+- name: Install `fira-code` nerd font
+  kewlfft.aur.aur:
+    use: yay
+    name: nerd-fonts-fira-code
+    state: present

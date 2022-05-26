@@ -1,0 +1,12 @@
+---
+- name: Install `cascadia-code` font
+  become: yes
+  package: 
+    name: ttf-cascadia-code
+    state: latest
+
+- name: Install `cascadia-code` nerd font
+  kewlfft.aur.aur:
+    use: yay
+    name: nerd-fonts-cascadia-code
+    state: present

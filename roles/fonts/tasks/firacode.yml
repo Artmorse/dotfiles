@@ -1,6 +1,0 @@
----
-- name: Install `ttf-fira-code` package
-  become: yes
-  package: 
-    name: ttf-fira-code
-    state: latest

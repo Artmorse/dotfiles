@@ -1,0 +1,12 @@
+---
+- name: Install `fantasque-sans` font
+  become: yes
+  package: 
+    name: ttf-fantasque-sans-mono
+    state: latest
+
+- name: Install `fantasque-sans` nerd font
+  kewlfft.aur.aur:
+    use: yay
+    name: nerd-fonts-fantasque-sans-mono
+    state: present
