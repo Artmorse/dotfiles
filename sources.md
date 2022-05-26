@@ -139,17 +139,29 @@
 
 - [nordtheme website](https://www.nordtheme.com/)
 
+
 ## [containerization](roles/containerization)
 
 ### [containers](roles/containerization/containers)
+
+#### [portainer](roles/containerization/containers/portainer)
 
 - [portainer website](https://www.portainer.io/)
 - [portainer image](https://hub.docker.com/r/portainer/portainer-ce)
 - [portainer repository](https://github.com/portainer/portainer)
 
-### [docker](roles/containerization/docker)
+#### [sonarqube](roles/containerization/containers/sonarqube)
+
+- [sonarqube website](https://www.sonarqube.org/)
+- [sonarqube image](https://hub.docker.com/_/sonarqube)
+- [sonarqube repository](https://github.com/SonarSource/sonarqube)
+
+### [docker](roles/containerization/tasks/docker.yml)
 
 - [docker website](https://www.docker.com/)
+- [docker archlinux package](https://archlinux.org/packages/community/x86_64/docker/)
+- [docker-compose archlinux package](https://archlinux.org/packages/community/x86_64/docker-compose/)
+
 
 ## [essential](roles/essential)
 

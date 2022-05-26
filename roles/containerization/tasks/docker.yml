@@ -23,13 +23,11 @@
     append: True
 
 
-- name: Ensure `docker` is started and enabled at boot
+- name: Ensure `docker` is enabled at boot
   become: yes
   service:
     name: docker
-    state: started
     enabled: yes
-  ignore_errors: true
 
 
 - name: Ensures `~/.docker` folder exists
