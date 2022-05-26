@@ -291,7 +291,8 @@
 ### [ckb-next](roles/peripherals/ckb-next)
 
 - [ckb-next repository](https://github.com/ckb-next/ckb-next/)
-- [ckb-next ppa](https://launchpad.net/~tatokis/+archive/ubuntu/ckb-next)
+- [ckb-next archlinux repository](https://aur.archlinux.org/packages/ckb-next)
+
 
 ## [screenlayout](roles/screenlayout)
 
