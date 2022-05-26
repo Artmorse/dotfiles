@@ -404,7 +404,8 @@
 ### [dunst](roles/notifications/dunst)
 
 - [dunst website](https://dunst-project.org/)
-- [github repository](https://github.com/dunst-project/dunst)
+- [dunst repository](https://github.com/dunst-project/dunst)
+- [dunst archlinux repository](https://archlinux.org/packages/community/x86_64/dunst/)
 
 
 ## [peripherals](roles/peripherals)
