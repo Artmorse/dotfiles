@@ -4,4 +4,4 @@
     name: screenshot/flameshot
     apply: 
       tags: [flameshot]
-    tags: [screenshot]
+  tags: [screenshot]

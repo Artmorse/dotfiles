@@ -1,5 +1,0 @@
----
-slock:
-  version: 1.4
-  patches:
-    - https://tools.suckless.org/slock/patches/capscolor/slock-capscolor-20170106-2d2a21a.diff

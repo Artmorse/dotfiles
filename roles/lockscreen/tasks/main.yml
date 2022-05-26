@@ -1,23 +1,13 @@
 ---
-# - name: Install `i3lock-color`
-#   include_role:
-#     name: lockscreen/i3lock-color
-#     apply: 
-#       tags: [lockscreen]
-
-# - name: Install `betterlockscreen`
-#   include_role:
-#     name: lockscreen/betterlockscreen
-#     apply: 
-#       tags: [lockscreen]
 
 - name: Install `xautolock`
   package:
     name: xautolock
     state: latest
+  tags: [lockscreen, xautolock]
 
 - name: Install `slock`
-  include_role:
-    name: lockscreen/slock
-    apply: 
-      tags: [lockscreen]
+  package:
+    name: slock
+    state: latest
+  tags: [lockscreen, slock]

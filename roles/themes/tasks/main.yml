@@ -5,7 +5,11 @@
 
 - name: Install Nordic themes
   include_tasks: nordic.yml
-  loop: "{{ nordic.themes }}"
+  loop: 
+    - Nordic
+    - Nordic-bluish-accent
+    - Nordic-darker
+    - Nordic-Polar
 
 - name: Configure GTK3
   include_tasks: common.yml

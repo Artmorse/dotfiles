@@ -16,6 +16,7 @@
 #     - Papirus
 #     - Papirus-Dark
 
+
 - name: Change the papirus icons color
   become: yes
   command: "papirus-folders -C {{ papirus_color }} --theme {{ item }}"
