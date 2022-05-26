@@ -41,6 +41,8 @@
       - patch
       - make
       - pkgconf
+      - autoconf
+      - automake
     state: latest
 
 

@@ -160,6 +160,7 @@
     state: present
   tags: [gui, misc, balenaEtcher]
   when: balenaEtcher.enabled | default(False)
+  ignore_errors: yes
 
 
 - name: Install `bitwarden` software

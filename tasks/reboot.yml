@@ -1,5 +1,5 @@
 ---
-- name: Reboot a machine
+- name: Reboot the machine
   become: yes
   reboot:
     msg: "Reboot initiated by Ansible"
