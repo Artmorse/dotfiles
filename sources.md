@@ -15,13 +15,9 @@
 
 - [polybar website](https://polybar.github.io/)
 - [polybar repository](https://github.com/polybar/polybar)
+- [polybar archlinux package](https://archlinux.org/packages/community/x86_64/polybar/)
 - [polybar-nord repository](https://github.com/Artmorse/polybar-nord)
 
-### [bumblebee status](roles/bars/bumblebee-status)
-
-- [bumblebee-status repository](https://github.com/tobi-wan-kenobi/bumblebee-status)
-- [bumblebee-status documentation](https://bumblebee-status.readthedocs.io/en/main/)
-- [polybar-nord-theme repository](https://github.com/Yucklys/polybar-nord-theme)
 
 ## [cli](roles/cli)
 
@@ -170,6 +166,14 @@
 - [curl](https://curl.se/)
 - [unzip](https://doc.ubuntu-fr.org/zip)
 - [unrar](https://doc.ubuntu-fr.org/rar)
+
+### package manager
+
+#### yay
+
+- [yay repository](https://github.com/Jguer/yay)
+- [yay archlinux package](https://aur.archlinux.org/packages/yay)
+
 
 ## [fonts](roles/fonts)
 
@@ -360,41 +364,35 @@
 
 ## [icons](roles/icons)
 
-- [papirus gnome-look](https://www.gnome-look.org/p/1166289/)
+- [papirus website](https://www.gnome-look.org/p/1166289/)
 - [papirus-icon-theme repository](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/)
+- [papirus-icon-theme archlinux package](https://archlinux.org/packages/community/any/papirus-icon-theme/)
 - [papirus-folders repository](https://github.com/PapirusDevelopmentTeam/papirus-folders)
 
 - [papirus-nord gnome-look](https://www.gnome-look.org/p/1362603/)
 - [papirus-nord repository](https://github.com/Adapta-Projects/Papirus-Nord)
 
+
 ## [lockscreen](roles/lockscreen)
 
-### i3lock
-
-- [i3lock repository](https://github.com/i3/i3lock)
-
-### [i3lock-color](roles/lockscreen/i3lock-color)
-
-- [i3lock repository](https://github.com/Raymo111/i3lock-color)
-
-### [betterlockscreen](roles/lockscreen/betterlockscreen)
-
-- [betterlockscreen repository](hhttps://github.com/betterlockscreen/betterlockscreen)
-
-### [slock](roles/lockscreen/slock)
+### [slock](roles/lockscreen/)
 
 - [slock website](https://tools.suckless.org/slock/)
 - [slock patches](https://tools.suckless.org/slock/patches/)
+- [slock archlinux repository](https://archlinux.org/packages/community/x86_64/slock/)
 
-### [xautolok](roles/lockscreen/)
+### [xautolock](roles/lockscreen/)
 
 - [xautolock website](https://doc.ubuntu-fr.org/xautolock)
+- [xautolock archlinux repository](https://archlinux.org/packages/community/x86_64/xautolock/)
+
 
 ## [menu](roles/menu)
 
 ### [rofi](roles/menu/rofi)
 
 - [rofi repository](https://github.com/davatorium/rofi)
+- [rofi archlinux repository](https://archlinux.org/packages/community/x86_64/rofi/)
 - [rofi nordic theme repository](https://github.com/undiabler/nord-rofi-theme)
 - [rofi themes repository](https://github.com/yuky2020/rofi-themes)
 
@@ -418,16 +416,19 @@
 
 ## [screenlayout](roles/screenlayout)
 
+- [xrandr archlinux wiki](https://wiki.archlinux.org/title/xrandr)
+
 ### [arandr](roles/screenlayout/arandr)
 
-- [xrandr website](https://doc.ubuntu-fr.org/xrandr)
 - [arandr website](https://christian.amsuess.com/tools/arandr/)
+- [arandr repository](https://gitlab.com/arandr/arandr)
+- [arandr archlinux repository](https://archlinux.org/packages/community/any/arandr/)
 
-## [printers](roles/printers)
+### [autorandr](roles/screenlayout/autorandr)
 
-### [epson](roles/printers)
+- [autorandr repository](https://github.com/phillipberndt/autorandr)
+- [autorandr archlinux repository](https://archlinux.org/packages/community/any/autorandr/)
 
-- [epson driver](http://download.ebz.epson.net/dsc/du/02/DriverDownloadInfo.do?LG2=EN&CN2=&DSCMI=134381&DSCCHK=9edfca27f0a940d9e3f3156a3d46047ffbfe6d79)
 
 ## [screenshot](roles/screenshot)
 
@@ -435,6 +436,8 @@
 
 - [flameshot website](https://flameshot.org/)
 - [flameshot repository](https://github.com/flameshot-org/flameshot)
+- [flameshot archlinux repository](https://archlinux.org/packages/community/x86_64/flameshot/)
+
 
 ## [shell](roles/shell)
 
@@ -451,34 +454,38 @@
 - [ohmyzsh repository](https://github.com/ohmyzsh/ohmyzsh)
 - [powerlevel10k repository](https://github.com/romkatv/powerlevel10k)
 
+
 ## [terminal](roles/terminal)
 
 ### [konsole](roles/terminal/konsole)
 
 - [konsole website](https://konsole.kde.org/)
 - [konsole repository](https://github.com/KDE/konsole)
-- [nord-konsole reposiroty](https://github.com/arcticicestudio/nord-konsole)
+- [konsole archlinux repository](https://archlinux.org/packages/extra/x86_64/konsole/)
+- [nord-konsole repository](https://github.com/arcticicestudio/nord-konsole)
 
 
 ## [themes](roles/themes)
 
 ### [nordic themes](roles/themes)
 
-- [gnome-look](https://www.gnome-look.org/p/1267246/)
-- [github](https://www.gnome-look.org/p/1267246/)
-- [nord-konsole](https://github.com/arcticicestudio/nord-konsole)
+- [nordic website](https://www.gnome-look.org/p/1267246/)
+- [nordic repository](https://github.com/EliverLara/Nordic)
 
 ### [adapta-nord](roles/themes)
 
-- [gnome-look](https://www.xfce-look.org/p/1354255/)
-- [github](https://github.com/Joshaby/Adapta-Nord)
+- [adapta-nord website](https://www.xfce-look.org/p/1354255/)
+- [adapta-nord repository](https://github.com/Joshaby/Adapta-Nord)
+- [adapta-gtk-theme archlinux repository](https://archlinux.org/packages/community/any/adapta-gtk-theme/)
+
 
 ## [wallpapers](roles/wallpapers)
 
 ### [feh](roles/wallpapers/feh)
 
-- [feh github](https://github.com/derf/feh)
 - [feh website](https://feh.finalrewind.org/)
+- [feh repository](https://github.com/derf/feh)
+- [feh archlinux repository](https://archlinux.org/packages/extra/x86_64/feh/)
 
 ## [wm](roles/wm)
 
@@ -487,3 +494,4 @@
 - [i3 website](https://i3wm.org/)
 - [i3 repository](https://github.com/i3/i3)
 - [i3-gaps repository](https://github.com/Airblader/i3)
+- [i3-gaps archlinux repository](https://archlinux.org/packages/community/x86_64/i3-gaps/)
