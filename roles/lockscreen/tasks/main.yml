@@ -1,12 +1,14 @@
 ---
-
 - name: Install `xautolock`
+  become: yes
   package:
     name: xautolock
     state: latest
   tags: [lockscreen, xautolock]
 
+
 - name: Install `slock`
+  become: yes
   package:
     name: slock
     state: latest

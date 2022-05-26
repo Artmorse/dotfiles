@@ -109,6 +109,11 @@
         name: notifications
       tags: [notifications]
 
+    - name: install lockscreen
+      include_role:
+        name: lockscreen
+      tags: [lockscreen]
+
     - name: configure wallpapers
       include_role:
         name: wallpapers
