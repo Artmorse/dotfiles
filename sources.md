@@ -215,102 +215,135 @@
 
 #### [discord](roles/gui/discord)
 
+- [discord website](https://discord.com/)
+- [discord archlinux package](https://archlinux.org/packages/community/x86_64/discord/)
+
 - [nordic betterdiscord theme](https://betterdiscord.app/theme/Nordic)
 - [betterdiscord repository](https://github.com/BetterDiscord/BetterDiscord)
 - [betterdiscordctl repository](https://github.com/bb010g/betterdiscordctl)
-- [install betterdiscord on linux](https://gist.github.com/ObserverOfTime/d7e60eb9aa7fe837545c8cb77cf31172)
+- [betterdiscordctl archlinux package](https://aur.archlinux.org/packages/betterdiscordctl)
 
-#### [slack](roles/gui/slack)
+#### [slack](roles/gui)
 
 - [slack website](https://slack.com)
+- [slack archlinux package](https://aur.archlinux.org/packages/slack-desktop)
 - [nord-slack repository](https://github.com/arcticicestudio/nord-slack)
 - [nord-slack documentation](https://www.nordtheme.com/ports/slack)
 
-#### [teamviewer](roles/gui/teamviewer)
+#### [teamviewer](roles/gui)
 
 - [teamviewer website](https://www.teamviewer.com/)
+- [teamviewer archlinux package](https://aur.archlinux.org/packages/teamviewer)
 
-#### [zoom](roles/gui/zoom)
+#### [zoom](roles/gui)
 
 - [zoom website](https://www.zoom.com/)
+- [zoom archlinux package](https://aur.archlinux.org/packages/zoom)
 
 ### dev
 
 #### [visual studio code](roles/gui/code)
 
-##### [vscode](rolges/gui/code)
+##### [vscode](roles/gui/code)
 
 - [vscode website](https://code.visualstudio.com/)
 - [vscode repository](https://github.com/microsoft/vscode)
-- [code snapcraft](https://snapcraft.io/code)
+- [vscode archlinux package](https://aur.archlinux.org/packages/visual-studio-code-bin)
 
 ##### [vscodium](roles/gui/code)
 
 - [vscodium website](https://vscodium.com/)
 - [vscodium repository](https://github.com/VSCodium/vscodium#install-with-snap)
+- [vscodium archlinux package](https://aur.archlinux.org/packages/codium)
 
-#### [dbeaver](roles/gui/dbeaver)
+#### [dbeaver](roles/gui)
 
 - [dbeaver website](https://dbeaver.com/)
 - [dbeaver repository](https://github.com/dbeaver/dbeaver)
+- [dbeaver archlinux package](https://archlinux.org/packages/community/x86_64/dbeaver/)
 
-#### [gitfiend](roles/gui/gitfiend)
+#### [gitfiend](roles/gui)
 
 - [gitfiend website](https://gitfiend.com/)
+- [gitfiend archlinux package](https://aur.archlinux.org/packages/gitfiend)
 
-#### [jetbrains toolbox](roles/gui/jetbrains-toolbox)
+#### [jetbrains toolbox](roles/gui)
 
 - [jetbrains toolbox website](https://www.jetbrains.com/toolbox-app/)
+- [jetbrains archlinux package](https://aur.archlinux.org/packages/jetbrains-toolbox)
 
-#### [lens](roles/gui/lens)
+#### [lens](roles/gui)
 
 - [lens website](https://k8slens.dev/)
 - [lens repository](https://github.com/lensapp/lens)
+- [lens archlinux package](https://aur.archlinux.org/packages/lens)
 
-#### [postman](roles/gui/postman)
+#### [postman](roles/gui)
 
 - [postman website](https://www.postman.com/)
-- [postman snapcraft](https://snapcraft.io/postman)
+- [postman archlinux package](https://aur.archlinux.org/packages/postman)
 
 ### media
 
-#### [evince](roles/gui/evince)
+#### [evince](roles/gui)
 
 - [evince website](https://wiki.gnome.org/Apps/Evince)
 - [evince repository](https://gitlab.gnome.org/GNOME/evince/)
+- [evince archlinux package](https://archlinux.org/packages/extra/x86_64/evince/)
 
-#### [photoflare](roles/gui/photoflare)
+#### [obs-studio](roles/gui)
+
+- [obs-studio website](https://obsproject.com/fr/download)
+- [obs-studio repository](https://github.com/obsproject/obs-studio)
+- [obs-studio archlinux package](https://archlinux.org/packages/community/x86_64/obs-studio/)
+
+#### [photoflare](roles/gui)
 
 - [photoflare website](https://photoflare.io/)
+- [photoflare repository](https://github.com/PhotoFlare/photoflare)
+- [photoflare archlinux package](https://archlinux.org/packages/community/x86_64/photoflare/)
 
-#### [ristretto](roles/gui/ristretto)
+#### [ristretto](roles/gui)
 
 - [ristretto website](https://doc.ubuntu-fr.org/ristretto)
+- [ristretto repository](https://gitlab.xfce.org/apps/ristretto)
+- [ristretto archlinux package](https://archlinux.org/packages/extra/x86_64/ristretto/)
 
-#### [vlc](roles/gui/vlc)
+#### [vlc](roles/gui)
 
 - [vlc website](https://www.videolan.org/index.fr.html)
+- [vlc archlinux package](https://archlinux.org/packages/extra/x86_64/vlc/)
 
 ### misc
 
-#### [bitwarden](roles/gui/bitwarden)
+#### [balena-etcher](roles/gui)
 
-- [bitwarden on github](https://github.com/bitwarden)
+- [balena-etcher website](https://www.balena.io/etcher/)
+- [balena-etcher repository](https://github.com/balena-io/etcher)
+- [balena-etcher archlinux package](https://aur.archlinux.org/packages/balena-etcher)
+
+#### [bitwarden](roles/gui)
+
 - [bitwarden website](https://bitwarden.com/)
+- [bitwarden repository](https://github.com/bitwarden)
+- [bitwarden archlinux package](https://archlinux.org/packages/community/x86_64/bitwarden/)
 
-#### [deluge](roles/gui/deluge)
+#### [deluge](roles/gui)
 
 - [deluge website](https://deluge-torrent.org/)
 - [deluge repository](https://github.com/deluge-torrent/deluge)
+- [deluge archlinux package](https://archlinux.org/packages/extra/any/deluge-gtk/)
 
-#### [filezilla](roles/gui/filezilla)
+#### [filezilla](roles/gui)
 
 - [filezilla website](https://filezilla-project.org/)
+- [filezilla archlinux package](https://archlinux.org/packages/community/x86_64/filezilla/)
 
-#### [rpi-imager](roles/gui/rpi-imager)
+#### [rpi-imager](roles/gui)
 
 - [rpi-imager website](https://www.raspberrypi.com/software/)
 - [rpi-imager repository](https://github.com/raspberrypi/rpi-imager)
+- [rpi-imager archlinux package](https://aur.archlinux.org/packages/rpi-imager)
 
 ### webbrowsers
 

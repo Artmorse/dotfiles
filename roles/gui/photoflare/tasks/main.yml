@@ -1,6 +1,0 @@
----
-- name: Install `photoflare` package
-  become: yes
-  package: 
-    name: photoflare
-    state: latest

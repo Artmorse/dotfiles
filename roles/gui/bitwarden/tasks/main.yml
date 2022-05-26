@@ -1,6 +1,0 @@
----
-- name: Install `bitwarden` software
-  become: yes
-  package:
-    name: bitwarden
-    state: latest

@@ -1,6 +1,0 @@
----
-- name: Install `obs-studio` package
-  become: yes
-  package: 
-    name: obs-studio
-    state: latest

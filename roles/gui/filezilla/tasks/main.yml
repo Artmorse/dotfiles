@@ -1,6 +1,0 @@
----
-- name: Install `filezilla` package
-  become: yes
-  package: 
-    name: filezilla
-    state: latest

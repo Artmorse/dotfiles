@@ -1,6 +1,0 @@
----
-- name: Install `dbeaver` software
-  become: yes
-  package:
-    name: dbeaver
-    state: latest

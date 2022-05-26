@@ -1,6 +1,0 @@
----
-- name: Install `teamviewer` software
-  kewlfft.aur.aur:
-    use: yay
-    name: teamviewer
-    state: present

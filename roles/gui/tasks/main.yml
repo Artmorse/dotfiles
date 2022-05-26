@@ -13,29 +13,29 @@
 
 
 - name: Install `slack` software
-  include_role:
-    name: gui/slack
-    apply: 
-      tags: [communication, slack]
-  tags: [gui]
+  kewlfft.aur.aur:
+    use: yay
+    name: slack-desktop
+    state: present
+  tags: [gui, communication, slack]
   when: slack.enabled | default(False)
 
 
 - name: Install `teamviewer` software
-  include_role:
-    name: gui/teamviewer
-    apply: 
-      tags: [communication, teamviewer]
-  tags: [gui]
+  kewlfft.aur.aur:
+    use: yay
+    name: teamviewer
+    state: present
+  tags: [gui, communication, teamviewer]
   when: teamviewer.enabled | default(False)
 
 
 - name: Install `zoom` software
-  include_role:
-    name: gui/zoom
-    apply: 
-      tags: [communication, zoom]
-  tags: [gui]
+  kewlfft.aur.aur:
+    use: yay
+    name: zoom
+    state: present
+  tags: [gui, communication, zoom]
   when: zoom.enabled | default(False)
 
 
@@ -54,47 +54,47 @@
 
 
 - name: Install `dbeaver` software
-  include_role:
-    name: gui/dbeaver
-    apply: 
-      tags: [dev, dbeaver]
-  tags: [gui]
+  become: yes
+  package:
+    name: dbeaver
+    state: latest
+  tags: [gui, dev, dbeaver]
   when: dbeaver.enabled | default(False)
 
 
 - name: Install `gitfiend` software
-  include_role:
-    name: gui/gitfiend
-    apply: 
-      tags: [dev, gitfiend]
-  tags: [gui]
+  kewlfft.aur.aur:
+    use: yay
+    name: gitfiend
+    state: present
+  tags: [gui, dev, gitfiend]
   when: gitfiend.enabled | default(False)
 
 
 - name: Install `jetbrains-toolbox` software
-  include_role:
-    name: gui/jetbrains-toolbox
-    apply: 
-      tags: [dev, jetbrainsToolbox]
-  tags: [gui]
+  kewlfft.aur.aur:
+    use: yay
+    name: jetbrains-toolbox
+    state: present
+  tags: [gui, dev, jetbrainsToolbox]
   when: jetbrainsToolbox.enabled | default(False)
 
 
 - name: Install `lens` software
-  include_role:
-    name: gui/lens
-    apply: 
-      tags: [dev, lens]
-  tags: [gui]
+  kewlfft.aur.aur:
+    use: yay
+    name: lens-bin
+    state: present
+  tags: [gui, dev, lens]
   when: lens.enabled | default(False)
 
 
 - name: Install `postman` software
-  include_role:
-    name: gui/postman
-    apply: 
-      tags: [dev, postman]
-  tags: [gui]
+  kewlfft.aur.aur:
+    use: yay
+    name: postman-bin
+    state: present
+  tags: [gui, dev, postman]
   when: postman.enabled | default(False)
 
 
@@ -104,47 +104,47 @@
 #
 
 - name: Install `evince` software
-  include_role:
-    name: gui/evince
-    apply: 
-      tags: [media, evince]
-  tags: [gui]
+  become: yes
+  package:
+    name: evince
+    state: latest
+  tags: [gui, media, evince]
   when: evince.enabled | default(False)
 
 
 - name: Install `obs-studio` software
-  include_role:
-    name: gui/obs-studio
-    apply: 
-      tags: [media, obs-studio]
-  tags: [gui]
+  become: yes
+  package: 
+    name: obs-studio
+    state: latest
+  tags: [gui, media, obs-studio]
   when: obsStudio.enabled | default(False)
 
 
 - name: Install `photoflare` software
-  include_role:
-    name: gui/photoflare
-    apply: 
-      tags: [media, photoflare]
-  tags: [gui]
+  become: yes
+  package: 
+    name: photoflare
+    state: latest
+  tags: [gui, media, photoflare]
   when: photoflare.enabled | default(False)
 
 
 - name: Install `ristretto` software
-  include_role:
-    name: gui/ristretto
-    apply: 
-      tags: [media, ristretto]
-  tags: [gui]
+  become: yes
+  package:
+    name: ristretto
+    state: latest
+  tags: [gui, media, ristretto]
   when: ristretto.enabled | default(False)
 
 
 - name: Install `vlc` software
-  include_role:
-    name: gui/vlc
-    apply: 
-      tags: [media, vlc]
-  tags: [gui]
+  become: yes
+  package: 
+    name: vlc
+    state: latest
+  tags: [gui, media, vlc]
   when: vlc.enabled | default(False)
 
 
@@ -154,47 +154,47 @@
 #
 
 - name: Install `balena-etcher` software
-  include_role:
-    name: gui/balena-etcher
-    apply: 
-      tags: [misc, balenaEtcher]
-  tags: [gui]
+  kewlfft.aur.aur:
+    use: yay
+    name: balena-etcher
+    state: present
+  tags: [gui, misc, balenaEtcher]
   when: balenaEtcher.enabled | default(False)
 
 
 - name: Install `bitwarden` software
-  include_role:
-    name: gui/bitwarden
-    apply: 
-      tags: [misc, bitwarden]
-  tags: [gui]
+  become: yes
+  package:
+    name: bitwarden
+    state: latest
+  tags: [gui, misc, bitwarden]
   when: bitwarden.enabled | default(False)
 
 
 - name: Install `deluge` software
-  include_role:
-    name: gui/deluge
-    apply: 
-      tags: [misc, deluge]
-  tags: [gui]
+  become: yes
+  package:
+    name: deluge-gtk
+    state: latest
+  tags: [gui, misc, deluge]
   when: deluge.enabled | default(False)
 
 
 - name: Install `filezilla` software
-  include_role:
-    name: gui/filezilla
-    apply: 
-      tags: [misc, filezilla]
-  tags: [gui]
+  become: yes
+  package: 
+    name: filezilla
+    state: latest
+  tags: [gui, misc, filezilla]
   when: filezilla.enabled | default(False)
 
 
 - name: Install `rpi-imager` software
-  include_role:
-    name: gui/rpi-imager
-    apply: 
-      tags: [misc, rpiImager]
-  tags: [gui]
+  kewlfft.aur.aur:
+    use: yay
+    name: rpi-imager
+    state: present
+  tags: [gui, misc, rpiImager]
   when: rpiImager.enabled | default(False)
 
 

@@ -1,9 +1,9 @@
 ---
 - name: Install `code` software
-  become: yes
-  package:
-    name: code
-    state: latest
+  kewlfft.aur.aur:
+    use: yay
+    name: visual-studio-code-bin
+    state: present
 
 - name: Install `codium` software
   kewlfft.aur.aur:

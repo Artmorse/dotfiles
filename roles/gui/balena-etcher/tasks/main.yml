@@ -1,6 +1,0 @@
----
-- name: Install `balena-etcher` software
-  kewlfft.aur.aur:
-    use: yay
-    name: balena-etcher
-    state: present

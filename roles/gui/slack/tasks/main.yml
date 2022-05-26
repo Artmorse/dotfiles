@@ -1,6 +1,0 @@
----
-- name: Install `slack` software
-  kewlfft.aur.aur:
-    use: yay
-    name: slack-desktop
-    state: present
