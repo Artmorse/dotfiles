@@ -61,6 +61,13 @@
           tags: [audio]
       tags: [audio]
 
+    - name: configure brightness
+      include_role:
+        name: brightness
+        apply: 
+          tags: [brightness]
+      tags: [brightness]
+
     - name: configure peripherals
       include_role:
         name: peripherals

@@ -1,0 +1,19 @@
+---
+- name: Install `brightnessctl` package
+  become: yes
+  package:
+    name: brightnessctl
+    state: latest
+
+- name: Copy `backlight.rules` file
+  become: yes
+  copy:
+    src: backlight.rules
+    dest: /etc/udev/rules.d/
+
+- name: Ensure user are added to the video group
+  become: yes
+  user:
+    name: "{{ ansible_user_id }}"
+    groups: video
+    append: True

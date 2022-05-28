@@ -15,7 +15,7 @@
   - docker-compose
 
 
-- name: Ensure `docker` user are added to the docker group
+- name: Ensure user are added to the docker group
   become: yes
   user:
     name: "{{ ansible_user_id }}"
