@@ -35,6 +35,11 @@
 - [jenv repository](https://github.com/jenv/jenv)
 - [jenv archlinux package](https://archlinux.org/packages/community/x86_64/jenv/)
 
+#### [jq](roles/cli/jq)
+
+- [jq repository](https://github.com/stedolan/jq)
+- [jq archlinux package](https://archlinux.org/packages/community/x86_64/jq/)
+
 #### [kompose](roles/cli/kompose)
 
 - [kompose repository](https://github.com/kubernetes/kompose)

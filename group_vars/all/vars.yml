@@ -73,6 +73,9 @@ helm:
 jenv:
   enabled: true
 
+jq:
+  enabled: true
+
 kompose:
   enabled: true
 

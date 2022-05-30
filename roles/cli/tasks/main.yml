@@ -19,6 +19,14 @@
   tags: [cli, dev, jenv]
   when: jenv.enabled | default(False)
 
+- name: Install `jq` software
+  become: yes
+  package:
+    name: jq
+    state: latest
+  tags: [cli, dev, jq]
+  when: jq.enabled | default(False)
+
 - name: Install `kompose` software
   become: yes
   package:
