@@ -1,0 +1,28 @@
+---
+- name: Install `pyenv` package and dependencies
+  become: yes
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+  - pyenv
+  - libffi
+
+
+- name: Install python 3.10.4 with pyenv
+  shell:
+    cmd: pyenv install 3.10.4
+
+
+- name: Configure pyenv in shells
+  blockinfile:
+    path: "{{ item }}"
+    block: |
+      export PYENV_ROOT="$HOME/.pyenv"
+      command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+      eval "$(pyenv init -)"
+  with_items:
+  - ~/.zshrc
+  - ~/.bashrc
+  - ~/.profile
+  - ~/.bash_profile

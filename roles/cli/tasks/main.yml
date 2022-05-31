@@ -52,11 +52,11 @@
   when: kubectx.enabled | default(False)
 
 - name: Install `pyenv` software
-  become: yes
-  package:
-    name: pyenv
-    state: latest
-  tags: [cli, dev, pyenv]
+  include_role:
+    name: cli/pyenv
+    apply:
+      tags: [dev, pyenv]
+  tags: [cli]
   when: pyenv.enabled | default(False)
 
 - name: Install `ngrok` software
