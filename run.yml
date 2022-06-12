@@ -68,6 +68,13 @@
           tags: [brightness]
       tags: [brightness]
 
+    - name: configure bluetooth
+      include_role:
+        name: bluetooth
+        apply: 
+          tags: [bluetooth]
+      tags: [bluetooth]
+
     - name: configure peripherals
       include_role:
         name: peripherals

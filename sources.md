@@ -19,6 +19,12 @@
 - [polybar-nord repository](https://github.com/Artmorse/polybar-nord)
 
 
+## [bluetooth](roles/bluetooth)
+
+- [blueman repository](https://github.com/blueman-project/blueman)
+- [blueman archlinux package](https://archlinux.org/packages/community/x86_64/blueman/)
+
+
 ## [cli](roles/cli)
 
 ### dev
