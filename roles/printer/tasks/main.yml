@@ -1,0 +1,27 @@
+---
+- name: Install the required packages
+  become: yes
+  package: 
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - cups
+    - system-config-printer
+
+
+- name: Ensure `cups` is enabled at boot
+  become: yes
+  service:
+    name: cups
+    enabled: yes
+
+
+- name: Install EPSON drivers
+  kewlfft.aur.aur:
+    use: yay
+    name: "{{ item }}"
+    state: present
+  with_items:
+  - epson-inkjet-printer-escpr2
+  - epson-inkjet-printer-escpr
+  when: have_you_an_epson_printer | default(False)

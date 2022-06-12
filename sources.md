@@ -437,6 +437,19 @@
 - [ckb-next archlinux repository](https://aur.archlinux.org/packages/ckb-next)
 
 
+## [printers](roles/printers)
+
+- [cups repository](https://github.com/OpenPrinting/cups)
+- [cups website](https://openprinting.github.io/cups/)
+- [cups archlinux repository](https://archlinux.org/packages/extra/x86_64/cups/)
+
+- [system-config-printer repository](https://github.com/OpenPrinting/system-config-printer)
+- [system-config-printer archlinux repository](https://archlinux.org/packages/extra/x86_64/system-config-printer/)
+
+- [epson-inkjet-printer-escpr archlinux repository](https://aur.archlinux.org/packages/epson-inkjet-printer-escpr)
+- [epson-inkjet-printer-escpr2 archlinux repository](https://aur.archlinux.org/packages/epson-inkjet-printer-escpr2)
+
+
 ## [screenlayout](roles/screenlayout)
 
 - [xrandr archlinux wiki](https://wiki.archlinux.org/title/xrandr)

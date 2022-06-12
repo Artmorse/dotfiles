@@ -80,6 +80,11 @@
         name: peripherals
       tags: [peripherals]
 
+    - name: configure printers
+      include_role:
+        name: printers
+      tags: [printers]
+
     - name: configure screenlayout
       include_role:
         name: screenlayout

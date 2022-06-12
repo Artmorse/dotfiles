@@ -61,6 +61,7 @@ user:
 # Peripherals
 #
 have_you_a_some_corsair_peripherals: true
+have_you_an_epson_printer: true
 
 #
 # Enable/Disable: CLI
