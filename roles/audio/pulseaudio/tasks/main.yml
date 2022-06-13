@@ -8,4 +8,5 @@
   template:
     src: init.sh.j2
     dest:  ~/.config/pulse/init.sh
+    mode: '744'
   when: audio.pulseaudio.default_device.enabled | default(False)

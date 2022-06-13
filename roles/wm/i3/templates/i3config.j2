@@ -125,46 +125,46 @@ set $ws10 "10"
 {# -- 1 monitor -- #}
 {# --------------- #}
 {% if monitors|length == 1 %}
-set $primary_monitor {{ monitors[0] }}
+set $monitor_1 {{ monitors[0] }}
 
 # assign workspace to the primary monitor
 {% for i in range(1, 11) %}
-workspace $ws{{ i }} output $primary_monitor
+workspace $ws{{ i }} output $monitor_1
 {% endfor %}
 {# ---------------- #}
 {# -- 2 monitors -- #}
 {# ---------------- #}
 {% elif monitors|length == 2 %}
-set $primary_monitor {{ monitors[0] }}
-set $second_monitor {{ monitors[1] }}
+set $monitor_1 {{ monitors[0] }}
+set $monitor_2 {{ monitors[1] }}
 
 # assign workspace to the primary monitor
 {% for i in [1, 2, 3, 7, 9, 10] %}
-workspace $ws{{ i }} output $primary_monitor
+workspace $ws{{ i }} output $monitor_1
 {% endfor %}
 # assign workspace to the second monitor
 {% for i in [4, 5, 6, 8] %}
-workspace $ws{{ i }} output $second_monitor
+workspace $ws{{ i }} output $monitor_2
 {% endfor %}
 {# ---------------- #}
 {# -- 3 monitors -- #}
 {# ---------------- #}
 {% elif monitors|length == 3 %}
-set $primary_monitor {{ monitors[0] }}
-set $second_monitor {{ monitors[1] }}
-set $third_monitor {{ monitors[2] }}
+set $monitor_1 {{ monitors[0] }}
+set $monitor_2 {{ monitors[1] }}
+set $monitor_3 {{ monitors[2] }}
 
 # assign workspace to the primary monitor
 {% for i in [1, 2, 3, 10] %}
-workspace $ws{{ i }} output $primary_monitor
+workspace $ws{{ i }} output $monitor_1
 {% endfor %}
 # assign workspace to the second monitor
 {% for i in [4, 5, 6] %}
-workspace $ws{{ i }} output $second_monitor
+workspace $ws{{ i }} output $monitor_2
 {% endfor %}
 # assign workspace to the third monitor
 {% for i in [7, 8, 9] %}
-workspace $ws{{ i }} output $third_monitor
+workspace $ws{{ i }} output $monitor_3
 {% endfor %}
 {% endif %}
 
@@ -242,7 +242,7 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-exec_always --no-startup-id "~/.config/polybar/launch.sh {{ " ".join(['$primary_monitor', '$secondary_monitor', '$third_monitor'][:monitors|length]) }}"
+exec_always --no-startup-id "~/.config/polybar/launch.sh {{ " ".join(['$monitor_1', '$monitor_2', '$monitor_3'][:monitors|length]) }}"
 
 
 
