@@ -20,8 +20,19 @@
     type: "{{ ssh_keys.perso.type }}"
     passphrase: "{{ ssh_keys.perso.passphrase }}"
 
-- name: Install `ssh-askpass` software
-  kewlfft.aur.aur:
-    use: yay
-    name: openssh-askpass
+
+- name: "Installing `lxqt-openssh-askpass`"
+  become: yes
+  package:
+    name: lxqt-openssh-askpass
     state: present
+
+- name: Create a symbolic link to `lxqt-openssh-askpass`
+  become: True
+  file:
+    src: /usr/bin/lxqt-openssh-askpass
+    dest: /usr/lib/ssh/ssh-askpass
+    mode: '755'
+    state: link
+
+
