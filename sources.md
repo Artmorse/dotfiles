@@ -374,6 +374,11 @@
 
 ### music
 
+#### [easyeffects](roles/cli/easyeffects)
+
+- [easyeffects repository](https://github.com/wwmm/easyeffects)
+- [easyeffects archlinux package](https://archlinux.org/packages/community/x86_64/easyeffects/)
+
 #### [spotify](roles/cli/spotify)
 
 - [spotify archlinux package](https://aur.archlinux.org/packages/spotify)

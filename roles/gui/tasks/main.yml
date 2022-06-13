@@ -205,6 +205,15 @@
 #
 
 
+- name: Install `easyeffects` software
+  become: yes
+  package: 
+    name: easyeffects
+    state: latest
+  tags: [gui, music, easyeffects]
+  when: easyeffects.enabled | default(False)
+
+
 - name: Install `spotify` software
   include_role:
     name: gui/spotify

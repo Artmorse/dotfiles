@@ -199,6 +199,9 @@ rpiImager:
   enabled: true
 
 # misc
+easyeffects:
+  enabled: true
+
 spotify:
   enabled: true
   spicetify:
