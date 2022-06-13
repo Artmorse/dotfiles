@@ -198,6 +198,13 @@ filezilla:
 rpiImager:
   enabled: true
 
+# misc
+spotify:
+  enabled: true
+  spicetify:
+    theme: Sleek
+    colorscheme: Nord
+
 # web browsers
 chromium:
   enabled: true

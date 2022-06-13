@@ -372,6 +372,17 @@
 - [rpi-imager repository](https://github.com/raspberrypi/rpi-imager)
 - [rpi-imager archlinux package](https://aur.archlinux.org/packages/rpi-imager)
 
+### music
+
+#### [spotify](roles/cli/spotify)
+
+- [spotify archlinux package](https://aur.archlinux.org/packages/spotify)
+- [spicetify repository](https://github.com/spicetify/spicetify-cli)
+- [spicetify archlinux package](https://aur.archlinux.org/packages/spicetify-cli)
+- [spicetify-themes repository](https://github.com/spicetify/spicetify-themes)
+- [spicetify themes](https://github.com/spicetify/spicetify-themes/blob/master/THEMES.md)
+- [Spotify installed from AUR](https://spicetify.app/docs/advanced-usage/installation#spotify-installed-from-aur)
+
 ### webbrowsers
 
 #### [chromium](roles/gui)

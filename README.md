@@ -75,6 +75,10 @@ There some things to configure manually after the installation.
     1. run discord for the first time
     2. run the command `betterdiscordctl install`
     3. restart discord
+- configure spotify:
+    1. run spotify for the first time
+    2. run the command `spicetify backup apply`
+    3. restart spotify
 - the polybar's modules configuration: [follow this guide](https://github.com/Artmorse/polybar-nord/blob/master/modules-configuration.md)
 - check the i3 monitor configuration
     1. list your monitors

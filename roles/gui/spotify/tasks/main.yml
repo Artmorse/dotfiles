@@ -1,0 +1,26 @@
+---
+- name: Install `spotify` and `spicetify` software
+  kewlfft.aur.aur:
+    use: yay
+    name: "{{ item }}"
+    state: present
+  with_items:
+  - spotify
+  - spicetify-cli
+
+- name: Install spicetify themes
+  git:
+    repo: https://github.com/spicetify/spicetify-themes.git
+    dest: ~/.config/spicetify/Themes
+
+# - name: Configure the spicetify theme
+#   shell: |
+#     spicetify config current_theme {{ spotify.spicetify.theme }}
+#     spicetify config color_scheme {{ spotify.spicetify.colorscheme }}
+#     spicetify backup apply
+
+
+- name: Deploying the spicetify configuration file
+  template:
+    src: config-xpui.ini
+    dest: ~/.config/spicetify/config-xpui.ini

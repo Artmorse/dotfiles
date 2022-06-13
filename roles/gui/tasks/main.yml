@@ -201,6 +201,21 @@
 
 
 #
+# music
+#
+
+
+- name: Install `spotify` software
+  include_role:
+    name: gui/spotify
+    apply: 
+      tags: [music, spotify]
+  tags: [gui]
+  when: spotify.enabled | default(False)
+
+
+
+#
 # webbrowsers
 #
 
