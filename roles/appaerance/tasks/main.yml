@@ -20,6 +20,13 @@
       tags: [appaerance, icons]
   tags: [appaerance]
 
+- name: Install cursors
+  include_role:
+    name: appaerance/roles/cursors
+    apply: 
+      tags: [appaerance, cursors]
+  tags: [cursors]
+
 - name: Install fonts
   include_role:
     name: appaerance/roles/fonts

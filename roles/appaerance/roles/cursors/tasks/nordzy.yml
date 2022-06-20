@@ -1,0 +1,14 @@
+---
+- name: Download `Nordzy-cursors` repository
+  git:
+    repo: https://github.com/alvatip/Nordzy-cursors.git
+    dest: /tmp
+
+- name: Install `Nordy-cursors`
+  shell:
+    cmd: /tmp/Nordzy-cursors/install.sh
+
+- name: Clean `/tmp` folder
+  file:
+    state: absent
+    path: "/tmp/Nordzy-cursors"

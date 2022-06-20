@@ -6,6 +6,12 @@
 
 - [nordtheme website](https://www.nordtheme.com/)
 
+### [cursors](roles/appearance/roles/cursors)
+
+#### [Nordzy-cursors](roles/appearance/roles/cursors)
+
+- [Nordzy-cursors repository](https://github.com/alvatip/Nordzy-cursors.git)
+
 ### [fonts](roles/appearance/roles/fonts)
 
 - [nerdfonts](https://www.nerdfonts.com/#home)

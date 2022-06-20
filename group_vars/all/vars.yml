@@ -33,6 +33,8 @@ appearance:
     name: Nordic-Polar
   icon: 
     name: Papirus-Dark
+  cursor:
+    name: Nordzy-cursors
   fonts:
     - ComicCodeLigatures Nerd Font
     - CaskaydiaCove Nerd Font
