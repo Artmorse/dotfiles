@@ -554,7 +554,14 @@
 
 ## [terminal](roles/terminal)
 
-### [konsole](roles/terminal/konsole)
+### [alacritty](roles/terminal/roles/alacritty)
+
+- [alacritty website](https://alacritty.org/)
+- [alacritty repository](https://github.com/alacritty/alacritty)
+- [alacritty archlinux repository](https://archlinux.org/packages/community/x86_64/alacritty/)
+- [nord-alacritty repository](https://github.com/arcticicestudio/nord-alacritty)
+
+### [konsole](roles/terminal/roles/konsole)
 
 - [konsole website](https://konsole.kde.org/)
 - [konsole repository](https://github.com/KDE/konsole)

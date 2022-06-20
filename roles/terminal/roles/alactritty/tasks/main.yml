@@ -1,0 +1,22 @@
+---
+- name: Install `alacritty` package
+  become: yes
+  package: 
+    name: alacritty
+    state: latest
+
+
+- name: Ensures `~/.config/alacritty` folder exists
+  file:
+    path: "~/.config/alacritty/"
+    state: directory
+
+- name: Copy the nord theme file
+  copy:
+    src: nord.yml
+    dest: "~/.config/alacritty/"
+
+- name: Deploying configuration file
+  template:
+    src: alacritty.yml.j2
+    dest: "~/.config/alacritty/alacritty.yml"

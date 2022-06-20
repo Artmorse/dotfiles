@@ -1,7 +1,14 @@
 ---
+- name: Install `alacritty`
+  include_role:
+    name: terminal/roles/alacritty
+    apply: 
+      tags: [alacritty]
+  tags: [terminal]
+
 - name: Install `konsole`
   include_role:
-    name: terminal/konsole
+    name: terminal/roles/konsole
     apply: 
       tags: [konsole]
   tags: [terminal]
