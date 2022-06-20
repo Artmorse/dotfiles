@@ -22,18 +22,21 @@ audio:
         name: Scarlett Solo (3rd Gen.)
 
 #
-# Theme
 #
 
-fonts:
-  - ComicCodeLigatures Nerd Font
-  - CaskaydiaCove Nerd Font
-  - Fira Code
+#
+# Appearance
+#
 
-theme: 
-  name: Nordic-Polar
+appearance:
+  theme: 
+    name: Nordic-Polar
   icon: 
     name: Papirus-Dark
+  fonts:
+    - ComicCodeLigatures Nerd Font
+    - CaskaydiaCove Nerd Font
+    - Fira Code
 
 monitors:
   - DP-2   # primary

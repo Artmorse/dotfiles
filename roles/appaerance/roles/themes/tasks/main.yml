@@ -1,5 +1,4 @@
 ---
-
 - name: Install Adapta Nord themes
   include_tasks: adapta-nord.yml
 
@@ -10,6 +9,3 @@
     - Nordic-bluish-accent
     - Nordic-darker
     - Nordic-Polar
-
-- name: Configure GTK3
-  include_tasks: common.yml

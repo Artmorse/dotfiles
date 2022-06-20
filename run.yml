@@ -19,33 +19,12 @@
 
 
     # * system customization
-    - name: install some fonts
-      include_role: 
-        name: fonts
-        apply: 
-          tags: [fonts]
-      tags: [fonts]
-
-    - name: install colorscheme
+    - name: configure the system appearance
       include_role:
-        name: colorscheme
+        name: appearance
         apply: 
-          tags: [colorscheme]
-      tags: [colorscheme]
-
-    - name: install some themes
-      include_role:
-        name: themes
-        apply: 
-          tags: [themes]
-      tags: [themes]
-
-    - name: install some icons
-      include_role:
-        name: icons
-        apply: 
-          tags: [icons]
-      tags: [icons]
+          tags: [appearance]
+      tags: [appearance]
 
     - name: install file manager
       include_role:

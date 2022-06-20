@@ -1,5 +1,70 @@
 # Sources
 
+## [appearance](roles/appearance)
+
+### [colorscheme](roles/appearance/roles/colorscheme)
+
+- [nordtheme website](https://www.nordtheme.com/)
+
+### [fonts](roles/appearance/roles/fonts)
+
+- [nerdfonts](https://www.nerdfonts.com/#home)
+
+#### [cascadia-code](roles/fonts/tasks/cascadia-code.yml)
+
+- [cascadia-code repository](https://github.com/microsoft/cascadia-code)
+- [cascadia-code archlinux package](https://archlinux.org/packages/community/any/ttf-cascadia-code/)
+- [cascadia-code nerd font archlinux package](https://aur.archlinux.org/packages/nerd-fonts-cascadia-code)
+
+#### [comic-code](roles/fonts/tasks/comic-code.yml)
+
+- [comic-code website](https://tosche.net/fonts/comic-code)
+
+#### [fantasque-sans](roles/fonts/tasks/fantasque-sans.yml)
+
+- [fantasque-sans repository](https://github.com/belluzj/fantasque-sans)
+- [fantasque-sans archlinux package](https://archlinux.org/packages/community/any/ttf-fantasque-sans-mono/)
+- [fantasque-sans nerd font archlinux package](https://aur.archlinux.org/packages/nerd-fonts-fantasque-sans-mono)
+
+#### [fira-code](roles/fonts/tasks/fira-code.yml)
+
+- [fira-code repository](https://github.com/tonsky/FiraCode)
+- [fira-code archlinux package](https://archlinux.org/packages/community/any/ttf-fira-code/)
+- [fira-code nerd font archlinux package](https://aur.archlinux.org/packages/nerd-fonts-fira-code)
+
+#### [iosevka](roles/fonts/tasks/iosevka.yml)
+
+- [iosevka](https://github.com/be5invis/Iosevka)
+- [iosevka archlinux package](https://archlinux.org/packages/community/any/ttc-iosevka/)
+
+#### [jetbrains-mono](roles/fonts/tasks/jetbrains-mono.yml)
+
+- [jetbrains-mono repository](https://github.com/JetBrains/JetBrainsMono)
+- [jetbrains-mono archlinux package](https://archlinux.org/packages/community/any/ttf-jetbrains-mono/)
+- [jetbrains-mono nerd font archlinux package](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono)
+
+### [icons](roles/icons)
+
+- [papirus website](https://www.gnome-look.org/p/1166289/)
+- [papirus-icon-theme repository](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/)
+- [papirus-icon-theme archlinux package](https://archlinux.org/packages/community/any/papirus-icon-theme/)
+- [papirus-folders repository](https://github.com/PapirusDevelopmentTeam/papirus-folders)
+
+- [papirus-nord gnome-look](https://www.gnome-look.org/p/1362603/)
+- [papirus-nord repository](https://github.com/Adapta-Projects/Papirus-Nord)
+
+### [themes](roles/themes)
+
+#### [nordic themes](roles/themes)
+
+- [nordic website](https://www.gnome-look.org/p/1267246/)
+- [nordic repository](https://github.com/EliverLara/Nordic)
+
+#### [adapta-nord](roles/themes)
+
+- [adapta-nord website](https://www.xfce-look.org/p/1354255/)
+- [adapta-nord repository](https://github.com/Joshaby/Adapta-Nord)
+- [adapta-gtk-theme archlinux repository](https://archlinux.org/packages/community/any/adapta-gtk-theme/)
 
 ## [audio](roles/audio)
 
@@ -142,11 +207,6 @@
 - [zoxide archlinux package](https://archlinux.org/packages/community/x86_64/zoxide/)
 
 
-## [colorscheme](roles/colorscheme)
-
-- [nordtheme website](https://www.nordtheme.com/)
-
-
 ## [containerization](roles/containerization)
 
 ### [containers](roles/containerization/containers)
@@ -196,44 +256,6 @@
 - [thunar-media-tags-plugin archlinux package](https://archlinux.org/packages/extra/x86_64/thunar-media-tags-plugin/)
 - [imdb-thumbnailer archlinux package](https://aur.archlinux.org/packages/imdb-thumbnailer)
 - [thunar-custom-actions archlinux package](https://aur.archlinux.org/packages/thunar-custom-actions)
-
-
-## [fonts](roles/fonts)
-
-- [nerdfonts](https://www.nerdfonts.com/#home)
-
-### [cascadia-code](roles/fonts/tasks/cascadia-code.yml)
-
-- [cascadia-code repository](https://github.com/microsoft/cascadia-code)
-- [cascadia-code archlinux package](https://archlinux.org/packages/community/any/ttf-cascadia-code/)
-- [cascadia-code nerd font archlinux package](https://aur.archlinux.org/packages/nerd-fonts-cascadia-code)
-
-### [comic-code](roles/fonts/tasks/comic-code.yml)
-
-- [comic-code website](https://tosche.net/fonts/comic-code)
-
-### [fantasque-sans](roles/fonts/tasks/fantasque-sans.yml)
-
-- [fantasque-sans repository](https://github.com/belluzj/fantasque-sans)
-- [fantasque-sans archlinux package](https://archlinux.org/packages/community/any/ttf-fantasque-sans-mono/)
-- [fantasque-sans nerd font archlinux package](https://aur.archlinux.org/packages/nerd-fonts-fantasque-sans-mono)
-
-### [fira-code](roles/fonts/tasks/fira-code.yml)
-
-- [fira-code repository](https://github.com/tonsky/FiraCode)
-- [fira-code archlinux package](https://archlinux.org/packages/community/any/ttf-fira-code/)
-- [fira-code nerd font archlinux package](https://aur.archlinux.org/packages/nerd-fonts-fira-code)
-
-### [iosevka](roles/fonts/tasks/iosevka.yml)
-
-- [iosevka](https://github.com/be5invis/Iosevka)
-- [iosevka archlinux package](https://archlinux.org/packages/community/any/ttc-iosevka/)
-
-### [jetbrains-mono](roles/fonts/tasks/jetbrains-mono.yml)
-
-- [jetbrains-mono repository](https://github.com/JetBrains/JetBrainsMono)
-- [jetbrains-mono archlinux package](https://archlinux.org/packages/community/any/ttf-jetbrains-mono/)
-- [jetbrains-mono nerd font archlinux package](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono)
 
 
 ## [gui](roles/gui)
@@ -401,17 +423,6 @@
 - [firefox archlinux package](https://archlinux.org/packages/extra/x86_64/firefox/)
 
 
-## [icons](roles/icons)
-
-- [papirus website](https://www.gnome-look.org/p/1166289/)
-- [papirus-icon-theme repository](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/)
-- [papirus-icon-theme archlinux package](https://archlinux.org/packages/community/any/papirus-icon-theme/)
-- [papirus-folders repository](https://github.com/PapirusDevelopmentTeam/papirus-folders)
-
-- [papirus-nord gnome-look](https://www.gnome-look.org/p/1362603/)
-- [papirus-nord repository](https://github.com/Adapta-Projects/Papirus-Nord)
-
-
 ## [lockscreen](roles/lockscreen)
 
 ### [slock](roles/lockscreen/)
@@ -518,19 +529,8 @@
 - [nord-konsole repository](https://github.com/arcticicestudio/nord-konsole)
 
 
-## [themes](roles/themes)
 
 ### [nordic themes](roles/themes)
-
-- [nordic website](https://www.gnome-look.org/p/1267246/)
-- [nordic repository](https://github.com/EliverLara/Nordic)
-
-### [adapta-nord](roles/themes)
-
-- [adapta-nord website](https://www.xfce-look.org/p/1354255/)
-- [adapta-nord repository](https://github.com/Joshaby/Adapta-Nord)
-- [adapta-gtk-theme archlinux repository](https://archlinux.org/packages/community/any/adapta-gtk-theme/)
-
 
 ## [wallpapers](roles/wallpapers)
 

@@ -1,0 +1,39 @@
+---
+- name: Install colorscheme
+  include_role:
+    name: appaerance/roles/colorscheme
+    apply: 
+      tags: [appaerance, colorscheme]
+  tags: [appaerance]
+
+- name: Install themes
+  include_role:
+    name: appaerance/roles/themes
+    apply: 
+      tags: [appaerance, themes]
+  tags: [appaerance]
+
+- name: Install icons
+  include_role:
+    name: appaerance/roles/icons
+    apply: 
+      tags: [appaerance, icons]
+  tags: [appaerance]
+
+- name: Install fonts
+  include_role:
+    name: appaerance/roles/fonts
+    apply: 
+      tags: [appaerance, fonts]
+  tags: [appaerance]
+
+
+- name: Ensures `~/.config/gtk-3.0` folder exists
+  file:
+    path: "~/.config/gtk-3.0"
+    state: directory
+
+- name: Deploying the `gtk-3.0` settings file
+  template:
+    src: gtk3settings.ini.j2
+    dest: "~/.config/gtk-3.0/settings.ini"
