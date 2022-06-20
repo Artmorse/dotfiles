@@ -143,6 +143,9 @@ zoxide:
 discord:
   enabled: true
 
+mailspring:
+  enabled: true
+
 slack:
   enabled: true
 
@@ -198,6 +201,9 @@ deluge:
   enabled: true
 
 filezilla:
+  enabled: true
+
+qalculate:
   enabled: true
 
 rpiImager:

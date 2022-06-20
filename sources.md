@@ -268,7 +268,7 @@
 
 ### communication
 
-#### [discord](roles/gui/discord)
+#### [discord](roles/gui/roles/discord)
 
 - [discord website](https://discord.com/)
 - [discord archlinux package](https://archlinux.org/packages/community/x86_64/discord/)
@@ -277,6 +277,13 @@
 - [betterdiscord repository](https://github.com/BetterDiscord/BetterDiscord)
 - [betterdiscordctl repository](https://github.com/bb010g/betterdiscordctl)
 - [betterdiscordctl archlinux package](https://aur.archlinux.org/packages/betterdiscordctl)
+
+#### [mailspring](roles/gui/roles/mailspring)
+
+- [mailspring website](https://getmailspring.com/)
+- [mailspring archlinux package](https://aur.archlinux.org/packages/mailspring)
+- [mailspring repository](https://github.com/Foundry376/Mailspring)
+- [mailspring nord-theme repository](https://github.com/faraadi/mailspring-nord-theme)
 
 #### [slack](roles/gui)
 
@@ -297,15 +304,15 @@
 
 ### dev
 
-#### [visual studio code](roles/gui/code)
+#### [visual studio code](roles/gui/roles/code)
 
-##### [vscode](roles/gui/code)
+##### [vscode](roles/gui/roles/code)
 
 - [vscode website](https://code.visualstudio.com/)
 - [vscode repository](https://github.com/microsoft/vscode)
 - [vscode archlinux package](https://aur.archlinux.org/packages/visual-studio-code-bin)
 
-##### [vscodium](roles/gui/code)
+##### [vscodium](roles/gui/roles/code)
 
 - [vscodium website](https://vscodium.com/)
 - [vscodium repository](https://github.com/VSCodium/vscodium#install-with-snap)
@@ -394,6 +401,10 @@
 - [filezilla website](https://filezilla-project.org/)
 - [filezilla archlinux package](https://archlinux.org/packages/community/x86_64/filezilla/)
 
+#### [qalculate](roles/gui)
+
+- [qalculate archlinux package](https://archlinux.org/packages/extra/x86_64/qalculate-gtk/)
+
 #### [rpi-imager](roles/gui)
 
 - [rpi-imager website](https://www.raspberrypi.com/software/)
@@ -402,12 +413,12 @@
 
 ### music
 
-#### [easyeffects](roles/cli/easyeffects)
+#### [easyeffects](roles/gui)
 
 - [easyeffects repository](https://github.com/wwmm/easyeffects)
 - [easyeffects archlinux package](https://archlinux.org/packages/community/x86_64/easyeffects/)
 
-#### [spotify](roles/cli/spotify)
+#### [spotify](roles/gui/roles/spotify)
 
 - [spotify archlinux package](https://aur.archlinux.org/packages/spotify)
 - [spicetify repository](https://github.com/spicetify/spicetify-cli)

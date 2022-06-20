@@ -1,0 +1,17 @@
+---
+- name: Install `mailspring` software
+  kewlfft.aur.aur:
+    use: yay
+    name: mailspring
+    state: present
+
+
+- name: Ensures `~/.config/Mailspring/packages/` folder exists
+  file:
+    path: ~/.config/Mailspring/packages/
+    state: directory
+
+- name: Download `mailspring-nord-theme` repository
+  git:
+    repo: https://github.com/faraadi/mailspring-nord-theme
+    dest: ~/.config/Mailspring/packages/mailspring-nord-theme

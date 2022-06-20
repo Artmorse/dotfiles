@@ -5,11 +5,20 @@
 
 - name: Install `discord` software
   include_role:
-    name: gui/discord
+    name: gui/roles/discord
     apply: 
       tags: [communication, discord]
   tags: [gui]
   when: discord.enabled | default(False)
+
+
+- name: Install `mailspring` software
+  include_role:
+    name: gui/roles/mailspring
+    apply: 
+      tags: [communication, mailspring]
+  tags: [gui]
+  when: mailspring.enabled | default(False)
 
 
 - name: Install `slack` software
@@ -46,7 +55,7 @@
 
 - name: Install `VSCode` and `VSCodium` softwares
   include_role:
-    name: gui/code
+    name: gui/roles/code
     apply: 
       tags: [dev, code]
   tags: [gui]
@@ -190,6 +199,15 @@
   when: filezilla.enabled | default(False)
 
 
+- name: Install `qalculate` software
+  become: yes
+  package: 
+    name: qalculate-gtk
+    state: latest
+  tags: [gui, misc, qalculate]
+  when: qalculate.enabled | default(False)
+
+
 - name: Install `rpi-imager` software
   kewlfft.aur.aur:
     use: yay
@@ -216,7 +234,7 @@
 
 - name: Install `spotify` software
   include_role:
-    name: gui/spotify
+    name: gui/roles/spotify
     apply: 
       tags: [music, spotify]
   tags: [gui]
