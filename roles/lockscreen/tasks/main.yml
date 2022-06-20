@@ -6,10 +6,9 @@
     state: latest
   tags: [lockscreen, xautolock]
 
-
 - name: Install `slock`
-  become: yes
-  package:
-    name: slock
-    state: latest
-  tags: [lockscreen, slock]
+  include_role:
+    name: lockscreen/roles/slock
+    apply: 
+      tags: [lockscreen, slock]
+  tags: [lockscreen]

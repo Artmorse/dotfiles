@@ -458,7 +458,7 @@
 
 ## [lockscreen](roles/lockscreen)
 
-### [slock](roles/lockscreen/)
+### [slock](roles/lockscreen/roles/slock)
 
 - [slock website](https://tools.suckless.org/slock/)
 - [slock patches](https://tools.suckless.org/slock/patches/)

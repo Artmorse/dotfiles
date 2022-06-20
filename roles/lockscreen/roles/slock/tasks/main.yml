@@ -1,0 +1,56 @@
+---
+# - name: Install `slock`
+#   become: yes
+#   package:
+#     name: slock
+#     state: latest
+#   tags: [lockscreen, slock]
+
+- name: Clone `slock` repository
+  git:
+    repo: https://git.suckless.org/slock
+    dest: /tmp/slock
+
+
+- name: Download `slock` capscolor patch
+  get_url:
+    url: https://tools.suckless.org/slock/patches/capscolor/slock-capscolor-20170106-2d2a21a.diff
+    dest: /tmp/slock/slock-capscolor.diff
+
+- name: Apply `slock` capscolor patch
+  patch:
+    src: /tmp/slock/slock-capscolor.diff
+    basedir: /tmp/slock
+    strip: 1
+
+- name: Remove patch files
+  file:
+    path: "{{ item }}"
+    state: absent
+  with_items:
+  - /tmp/slock/slock-capscolor.diff
+
+
+- name: Update config.def.h file
+  replace:
+    path: /tmp/slock/config.def.h
+    regexp: "{{ item.from }}"
+    replace: "{{ item.to }}"
+  with_items:
+  - {'from': "nobody", 'to': "{{ ansible_user_id }}"}
+  - {'from': "nogroup", 'to': "{{ ansible_user_id }}"}
+  # - {'from': "black", 'to': "#2E3440"} # INIT: nord0
+  - {'from': "#005577", 'to': "#81A1C1"} # INPUT: nord9
+  - {'from': "#CC3333", 'to': "#BF616A"} # FAILED: nord11
+  - {'from': "red", 'to': "#D08770"} # CAPS: nord12
+
+- name: Install `slock`
+  become: yes
+  make:
+    chdir: /tmp/slock
+    target: install
+
+- name: Clean `/tmp` folder
+  file:
+    state: absent
+    path: /tmp/slock
