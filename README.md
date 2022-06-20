@@ -15,9 +15,17 @@ See the [sources.md](sources.md) file.
 ### Install the ansible dependencies
 
 ```bash
-ansible-galaxy role install -r requirements.yml
+ansible-galaxy role install geerlingguy.docker
+ansible-galaxy role install geerlingguy.pip
 
 ansible-galaxy collection install community.crypto
+ansible-galaxy collection install kewlfft.aur
+```
+
+## Local installation
+
+```bash
+bash ./setup.sh
 ```
 
 ### Run ansible
@@ -71,7 +79,7 @@ ansible-playbook run.yml -K --tags=cli,kubectl
 There some things to configure manually after the installation.
 
 - the slack nord theme: [follow this guide](https://www.nordtheme.com/ports/slack)
-- if the discord nord theme isn't applied:
+- configure discord:
     1. run discord for the first time
     2. run the command `betterdiscordctl install`
     3. restart discord
@@ -79,14 +87,4 @@ There some things to configure manually after the installation.
     1. run spotify for the first time
     2. run the command `spicetify backup apply`
     3. restart spotify
-- the polybar's modules configuration: [follow this guide](https://github.com/Artmorse/polybar-nord/blob/master/modules-configuration.md)
-- check the i3 monitor configuration
-    1. list your monitors
-        ```bash
-        xrandr --listmonitors
-        ```
-    2. edit the i3 configuration file ([~/.config/i3/config](~/.config/i3/config))
-        ```config
-        set $monitor_top YOUR_TOP_MONITOR
-        set $monitor_bottom YOUR_BOTTOM_MONITOR
-        ```
+- sign in into firefox
