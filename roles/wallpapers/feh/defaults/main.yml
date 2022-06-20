@@ -1,6 +1,0 @@
----
-# the wallpaper order is important, it's used for the monitor order
-# get the filename into the roles/wallpaper/wallpaper/files folder
-wallpapers:
-  - "{{ wallpapers_directory }}/wp5214877-walrus-wallpapers.jpg"
-  - "{{ wallpapers_directory }}/clay-banks-erurwRLJ44A-unsplash.jpg"

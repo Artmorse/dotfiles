@@ -569,12 +569,12 @@
 - [nord-konsole repository](https://github.com/arcticicestudio/nord-konsole)
 
 
-
-### [nordic themes](roles/themes)
-
 ## [wallpapers](roles/wallpapers)
 
-### [feh](roles/wallpapers/feh)
+### [nordic themes](roles/themes)
+- [nordic wallpapers](https://github.com/linuxdotexe/nordic-wallpapers)
+
+### [feh](roles/wallpapers/roles/feh)
 
 - [feh website](https://feh.finalrewind.org/)
 - [feh repository](https://github.com/derf/feh)

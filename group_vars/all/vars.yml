@@ -43,6 +43,15 @@ appearance:
     theme:
       name: Graphite-nord
 
+# the wallpaper order is important, it's used for the monitor order
+# get the filename into the roles/wallpaper/files folder
+wallpapers:
+  directory: ~/.wallpapers
+  files:
+    - "wp5214877-walrus-wallpapers.jpg"
+    - "clay-banks-erurwRLJ44A-unsplash.jpg"
+  mode: nordic # nordic or classic
+
 
 monitors:
   - DP-2   # primary
@@ -54,6 +63,7 @@ default:
   terminal: konsole # konsole
   file_manager: thunar # thunar
   bar: polybar # polybar
+  image: ristretto
 
 #
 # User

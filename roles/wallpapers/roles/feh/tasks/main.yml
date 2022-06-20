@@ -11,14 +11,14 @@
     path: "~/.config/feh"
     state: directory
 
-- name: Check wallpapers
-  fail:
-    msg: "Warning: no wallpapers have been selected."
-  when: wallpapers is undefined or wallpapers|length == 0
-  ignore_errors: True
-
 - name: Deploying the `launch.sh` file
   template:
     src: launch.sh.j2
-    dest: "~/.config/feh/launch.sh"
+    dest: ~/.config/feh/launch.sh
+    mode: '0754'
+
+- name: Copy `blacklist.txt` file
+  copy:
+    src: blacklist.txt
+    dest: ~/.config/feh/blacklist.txt
     mode: '0754'

@@ -1,13 +1,25 @@
 ---
-- name: Upload wallpapers
-  include_role:
-    name: wallpapers/wallpaper
-  tags: [wallpaper]
+- name: Ensures `{{ wallpapers.directory }}` folder exists
+  file:
+    path: "{{ wallpapers.directory }}"
+    state: directory
 
+- name: Copy the wallpapers
+  copy:
+    src: "{{ item }}"
+    dest: "{{ wallpapers.directory }}"
+  with_fileglob:
+    - "roles/wallpapers/files/*.jpg"
+    - "roles/wallpapers/files/*.png"
+
+- name: Download `nordic-wallpapers` repository
+  git:
+    repo: https://github.com/linuxdotexe/nordic-wallpapers.git
+    dest: "{{ wallpapers.directory }}/nordic"
 
 - name: Install and configure `feh` software
   include_role:
-    name: wallpapers/feh
+    name: wallpapers/roles/feh
     apply: 
       tags: [feh]
   tags: [wallpaper]
