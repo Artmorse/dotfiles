@@ -41,10 +41,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec {{ default.terminal }}
+bindsym $mod+Return exec {{ default.terminal.name }}
 
 # start a file manager
-bindsym $mod+Ctrl+Return exec {{ default.file }}
+bindsym $mod+Ctrl+Return exec {{ default.file.name }}
 
 # kill focused window
 bindsym $mod+Shift+q kill

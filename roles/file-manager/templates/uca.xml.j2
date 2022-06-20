@@ -5,11 +5,13 @@
 	<name>Open Terminal Here</name>
 	<unique-id>1652002723279610-1</unique-id>
 	<command>
-    {% if default.terminal == 'konsole' %}
+    {% if default.terminal.name == 'konsole' %}
     konsole --workdir %d
+    {% elif default.terminal.name == 'alacritty' %}
+    alacritty --working-directory %d
     {% endif %}
     </command>
-	<description>Open {{ default.terminal }} on the current directory</description>
+	<description>Open {{ default.terminal.name }} on the current directory</description>
 	<patterns>*</patterns>
 	<startup-notify/>
 	<directories/>

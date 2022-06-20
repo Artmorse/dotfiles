@@ -1,0 +1,11 @@
+[Default Applications]
+image/jpeg={{ default.image.desktop }};
+image/png={{ default.image.desktop }};
+image/svg+xml={{ default.image.desktop }};
+text/*={{ default.text.desktop }};
+text/html={{ default.webbrowser.desktop }};
+video/*={{ default.video.desktop }};
+x-scheme-handler/http={{ default.webbrowser.desktop }};
+x-scheme-handler/https={{ default.webbrowser.desktop }};
+x-scheme-handler/mailspring={{ default.mail.desktop }};
+x-scheme-handler/terminal={{ default.terminal.desktop }};

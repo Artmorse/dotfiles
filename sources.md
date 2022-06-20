@@ -244,6 +244,14 @@
 - [docker-compose archlinux package](https://archlinux.org/packages/community/x86_64/docker-compose/)
 
 
+## [default-applications](roles/default-applications)
+
+- [Arch Linux Wiki Default applications](https://wiki.archlinux.org/title/default_applications)
+
+- [handlr repository](https://github.com/chmln/handlr)
+- [handlr archlinux package](https://archlinux.org/packages/community/x86_64/handlr/)
+
+
 ## [display-manager](roles/display-manager)
 
 - [Arch Linux Wiki Display Manager](https://wiki.archlinux.org/title/display_manager)

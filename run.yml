@@ -132,6 +132,11 @@
         name: menu
       tags: [menu]
 
+    - name: install and configure the default applications
+      include_role:
+        name: defaultApplications
+      tags: [defaultApplications]
+
     - name: install and configure bar
       include_role:
         name: bars

@@ -59,13 +59,34 @@ wallpapers:
   mode: nordic # nordic or classic
 
 
+#
+# Default applications
+#
 
 default:
-  webbrowser: firefox # firefox or chromium
-  terminal: konsole # konsole
-  file_manager: thunar # thunar
-  bar: polybar # polybar
-  image: ristretto
+  webbrowser: # firefox or chromium
+    name: firefox
+    desktop: firefox.desktop
+  terminal: # konsole
+    name: konsole
+    desktop: org.kde.konsole.desktop
+  file: # thunar
+    name: thunar
+    desktop: thunar.desktop
+  bar: # polybar
+    name: polybar
+  image: # ristretto
+    name: ristretto
+    desktop: org.xfce.ristretto.desktop
+  mail: # mailspring
+    name: mailspring
+    desktop: Mailspring.desktop
+  text:
+    name: vscode
+    desktop: visual-studio-code.desktop
+  video:
+    name: vlc
+    desktop: vlc.desktop
 
 #
 # User
