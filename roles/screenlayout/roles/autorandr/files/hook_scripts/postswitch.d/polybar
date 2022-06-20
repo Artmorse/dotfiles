@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# autorandr hook scripts documentation
+# https://github.com/phillipberndt/autorandr#hook-scripts
+
+
+line_number_primary=`grep -n "primary" ${AUTORANDR_PROFILE_FOLDER}/config | awk -F ':' '{printf $1}'`
+line_number_before_primary=`expr ${line_number_primary} - 1`
+primary_screen=`head ${AUTORANDR_PROFILE_FOLDER}/config -n ${line_number_before_primary} | grep "output" | tail -n 1 | awk -F ' ' '{printf $NF}'`
+
+echo "The primary screen is: ${primary_screen}"
+
+screen_order=(${primary_screen})
+
+IFS=':' ; read -ra screens <<< ${AUTORANDR_MONITORS}
+for screen in ${screens[@]};
+do
+    if [ ${screen} != ${primary_screen} ]; then
+        screen_order+=(${screen})
+    fi
+done
+
+bash ~/.config/polybar/launch.sh ${screen_order[@]}
+
+# case ${AUTORANDR_CURRENT_PROFILE} in
+
+#     "desktop")
+#         bash ~/.config/polybar/launch.sh ${screen_order[@]}
+#         ;;
+
+#     "laptop")
+#         bash ~/.config/polybar/launch.sh eDP-1
+#         ;;
+# esac

@@ -1,14 +1,13 @@
 ---
-- name: Install `arandr`
-  include_role:
-    name: screenlayout/arandr
-    apply: 
-      tags: [arandr]
-  tags: [screenlayout]
+- name: Install `arandr` packages
+  become: yes
+  package: 
+    name: "arandr"
+    state: latest
 
 - name: Install `autorandr`
   include_role:
-    name: screenlayout/autorandr
+    name: screenlayout/roles/autorandr
     apply: 
       tags: [autorandr]
   tags: [screenlayout]

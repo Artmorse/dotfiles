@@ -514,16 +514,17 @@
 
 - [xrandr archlinux wiki](https://wiki.archlinux.org/title/xrandr)
 
-### [arandr](roles/screenlayout/arandr)
+### [arandr](roles/screenlayout)
 
 - [arandr website](https://christian.amsuess.com/tools/arandr/)
 - [arandr repository](https://gitlab.com/arandr/arandr)
 - [arandr archlinux repository](https://archlinux.org/packages/community/any/arandr/)
 
-### [autorandr](roles/screenlayout/autorandr)
+### [autorandr](roles/screenlayout/roles/autorandr)
 
 - [autorandr repository](https://github.com/phillipberndt/autorandr)
 - [autorandr archlinux repository](https://archlinux.org/packages/community/any/autorandr/)
+- [autorandr hook scripts documentation](https://github.com/phillipberndt/autorandr#hook-scripts)
 
 
 ## [screenshot](roles/screenshot)
@@ -580,9 +581,10 @@
 - [feh repository](https://github.com/derf/feh)
 - [feh archlinux repository](https://archlinux.org/packages/extra/x86_64/feh/)
 
+
 ## [wm](roles/wm)
 
-### [i3](roles/wm/i3)
+### [i3](roles/wm/roles/i3)
 
 - [i3 website](https://i3wm.org/)
 - [i3 repository](https://github.com/i3/i3)

@@ -7,6 +7,13 @@
 
 - name: Copy the `autorandr` configurations file
   copy:
-    src: autorandr
+    src: configurations
     dest: "~/.config"
+    force: yes
+
+- name: Copy the `autorandr` hook scripts file
+  copy:
+    src: hook_scripts
+    dest: "~/.config"
+    mode: '755'
     force: yes
