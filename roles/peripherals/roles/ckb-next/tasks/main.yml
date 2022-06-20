@@ -16,3 +16,10 @@
     src: ckb-next.conf
     dest: "~/.config/ckb-next/"
     mode: '0664'
+
+- name: Ensure `ckb-next-daemon` is enabled
+  become: yes
+  service:
+    name: ckb-next-daemon
+    enabled: yes
+    state: started

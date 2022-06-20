@@ -51,14 +51,6 @@
   tags: [cli, dev, kubectx]
   when: kubectx.enabled | default(False)
 
-- name: Install `pyenv` software
-  include_role:
-    name: cli/pyenv
-    apply:
-      tags: [dev, pyenv]
-  tags: [cli]
-  when: pyenv.enabled | default(False)
-
 - name: Install `ngrok` software
   kewlfft.aur.aur:
     use: yay
@@ -66,6 +58,14 @@
     state: present
   tags: [cli, dev, ngrok]
   when: ngrok.enabled | default(False)
+
+- name: Install `pyenv` software
+  include_role:
+    name: cli/roles/pyenv
+    apply:
+      tags: [dev, pyenv]
+  tags: [cli]
+  when: pyenv.enabled | default(False)
 
 - name: Install `terraform` software
   become: yes

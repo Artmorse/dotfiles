@@ -1,21 +1,21 @@
 ---
 - name: Configure `bash`
   include_role:
-    name: shell/bash
+    name: shell/roles/bash
     apply: 
       tags: [bash]
   tags: [shell]
 
 - name: Install and configure `zsh`
   include_role:
-    name: shell/zsh
+    name: shell/roles/zsh
     apply: 
       tags: [zsh]
   tags: [shell]
 
 - name: Configure aliases
   include_role:
-    name: shell/alias
+    name: shell/roles/alias
     apply: 
       tags: [alias]
   tags: [shell]

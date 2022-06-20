@@ -72,17 +72,20 @@
 - [adapta-nord repository](https://github.com/Joshaby/Adapta-Nord)
 - [adapta-gtk-theme archlinux repository](https://archlinux.org/packages/community/any/adapta-gtk-theme/)
 
-## [audio](roles/audio)
 
-- [pulseaudio archlinux wiki](https://wiki.archlinux.org/title/PulseAudio)
+## [audio](roles/audio)
 
 - [pasystray repository](https://github.com/christophgysin/pasystray)
 - [pasystray archlinux package](https://archlinux.org/packages/community/x86_64/pasystray/)
 
+### [pulseaudio](roles/audio/roles/pulseaudio)
+
+- [pulseaudio archlinux wiki](https://wiki.archlinux.org/title/PulseAudio)
+
 
 ## [bars](roles/bars)
 
-### [polybar](roles/bars/polybar)
+### [polybar](roles/bars/roles/polybar)
 
 - [polybar website](https://polybar.github.io/)
 - [polybar repository](https://github.com/polybar/polybar)
@@ -105,60 +108,60 @@
 
 ### dev
 
-#### [helm](roles/cli/helm)
+#### [helm](roles/cli)
 
 - [helm repository](https://github.com/helm/helm)
 - [helm website](https://helm.sh/)
 - [helm autocompletion documentation](https://helm.sh/docs/helm/helm_completion/#see-also)
 - [helm archlinux package](https://archlinux.org/packages/community/x86_64/helm/)
 
-#### [jenv](roles/cli/jenv)
+#### [jenv](roles/cli)
 
 - [jenv repository](https://github.com/jenv/jenv)
 - [jenv archlinux package](https://archlinux.org/packages/community/x86_64/jenv/)
 
-#### [jq](roles/cli/jq)
+#### [jq](roles/cli)
 
 - [jq repository](https://github.com/stedolan/jq)
 - [jq archlinux package](https://archlinux.org/packages/community/x86_64/jq/)
 
-#### [kompose](roles/cli/kompose)
+#### [kompose](roles/cli)
 
 - [kompose repository](https://github.com/kubernetes/kompose)
 - [kompose installation](https://kompose.io/installation/)
 - [kompose autocompletion documentation](https://github.com/kubernetes/kompose#shell-autocompletion)
 - [kompose archlinux package](https://archlinux.org/packages/community/x86_64/kompose/)
 
-#### [kubectl](roles/cli/kubectl)
+#### [kubectl](roles/cli)
 
 - [kubectl repository](https://github.com/kubernetes/kubectl)
 - [kubectl installation](https://kubernetes.io/fr/docs/tasks/tools/install-kubectl/)
 - [kubectl archlinux package](https://archlinux.org/packages/community/x86_64/kubectl/)
 
-#### [kubectx](roles/cli/kubectx)
+#### [kubectx](roles/cli)
 
 - [kubectx repository](https://github.com/ahmetb/kubectx#manual-installation-macos-and-linux)
 - [kubectx installation](https://github.com/ahmetb/kubectx)
 - [kubectx archlinux package](https://archlinux.org/packages/community/any/kubectx/)
 
-#### [ngrok](roles/cli/ngrok)
+#### [ngrok](roles/cli)
 
 - [ngrok website](https://ngrok.com/)
 - [ngrok repository](https://github.com/inconshreveable/ngrok)
 - [kubectl archlinux package](https://archlinux.org/packages/community/x86_64/kubectl/)
 
-#### [pyenv](roles/cli/pyenv)
+#### [pyenv](roles/cli/roles/pyenv)
 
 - [pyenv repository](https://github.com/pyenv/pyenv)
 - [pyenv archlinux package](https://archlinux.org/packages/community/x86_64/pyenv/)
 
-#### [terraform](roles/cli/terraform)
+#### [terraform](roles/cli)
 
 - [terraform](https://www.terraform.io/)
 - [terraform repository](https://github.com/hashicorp/terraform)
 - [terraform archlinux package](https://archlinux.org/packages/community/x86_64/terraform/)
 
-#### [vault](roles/cli/vault)
+#### [vault](roles/cli)
 
 - [vault](https://www.vaultproject.io/)
 - [vault repository](https://github.com/hashicorp/vault)
@@ -166,53 +169,53 @@
 
 ### misc
 
-#### [bat](roles/cli/bat)
+#### [bat](roles/cli)
 
 - [bat repository](https://github.com/sharkdp/bat)
 - [bat archlinux package](https://archlinux.org/packages/community/x86_64/bat/)
 
-#### [exa](roles/cli/exa)
+#### [exa](roles/cli)
 
 - [exa website](https://the.exa.website/)
 - [exa repository](https://github.com/ogham/exa)
 - [exa archlinux package](https://archlinux.org/packages/community/x86_64/exa/)
 
-#### [fd](roles/cli/fd)
+#### [fd](roles/cli)
 
 - [fd repository](https://github.com/sharkdp/fd)
 - [fd archlinux package](https://archlinux.org/packages/community/x86_64/fd/)
 
-#### [fzf](roles/cli/fzf)
+#### [fzf](roles/cli)
 
 - [fzf repository](https://github.com/junegunn/fzf)
 - [fzf archlinux package](https://archlinux.org/packages/community/x86_64/fzf/)
 
-#### [gfold](roles/cli/gfold)
+#### [gfold](roles/cli)
 
 - [gfold repository](https://github.com/nickgerace/gfold)
 - [gfold archlinux package](https://archlinux.org/packages/community/x86_64/gfold/)
 
-#### [gparted](roles/cli/gparted)
+#### [gparted](roles/cli)
 
 - [gparted website](https://gparted.org/)
 - [gparted repository](https://gitlab.gnome.org/GNOME/gparted)
 - [gparted archlinux package](https://archlinux.org/packages/extra/x86_64/gparted/)
 
-#### [nano](roles/cli/nano)
+#### [nano](roles/cli)
 
 - [nanorc repository](https://github.com/scopatz/nanorc)
 
-#### [procs](roles/cli/procs)
+#### [procs](roles/cli)
 
 - [procs repository](https://github.com/dalance/procs)
 - [procs archlinux package](https://archlinux.org/packages/community/x86_64/procs/)
 
-#### [ripgrep](roles/cli/fzf)
+#### [ripgrep](roles/cli)
 
 - [ripgrep repository](https://github.com/BurntSushi/ripgrep)
 - [ripgrep archlinux package](https://archlinux.org/packages/community/x86_64/ripgrep/)
 
-#### [zoxide](roles/cli/zoxide)
+#### [zoxide](roles/cli)
 
 - [zoxide repository](https://github.com/ajeetdsouza/zoxide)
 - [zoxide archlinux package](https://archlinux.org/packages/community/x86_64/zoxide/)
@@ -220,15 +223,15 @@
 
 ## [containerization](roles/containerization)
 
-### [containers](roles/containerization/containers)
+### [containers](roles/containerization/roles)
 
-#### [portainer](roles/containerization/containers/portainer)
+#### [portainer](roles/containerization/roles/portainer)
 
 - [portainer website](https://www.portainer.io/)
 - [portainer image](https://hub.docker.com/r/portainer/portainer-ce)
 - [portainer repository](https://github.com/portainer/portainer)
 
-#### [sonarqube](roles/containerization/containers/sonarqube)
+#### [sonarqube](roles/containerization/roles/sonarqube)
 
 - [sonarqube website](https://www.sonarqube.org/)
 - [sonarqube image](https://hub.docker.com/_/sonarqube)
@@ -477,7 +480,7 @@
 
 ## [menu](roles/menu)
 
-### [rofi](roles/menu/rofi)
+### [rofi](roles/menu/roles/rofi)
 
 - [rofi repository](https://github.com/davatorium/rofi)
 - [rofi archlinux repository](https://archlinux.org/packages/community/x86_64/rofi/)
@@ -496,7 +499,7 @@
 
 ## [peripherals](roles/peripherals)
 
-### [ckb-next](roles/peripherals/ckb-next)
+### [ckb-next](roles/peripherals/roles/ckb-next)
 
 - [ckb-next repository](https://github.com/ckb-next/ckb-next/)
 - [ckb-next archlinux repository](https://aur.archlinux.org/packages/ckb-next)
@@ -534,7 +537,7 @@
 
 ## [screenshot](roles/screenshot)
 
-### [flameshot](roles/screenshot/flameshot)
+### [flameshot](roles/screenshot/roles/flameshot)
 
 - [flameshot website](https://flameshot.org/)
 - [flameshot repository](https://github.com/flameshot-org/flameshot)
@@ -543,13 +546,13 @@
 
 ## [shell](roles/shell)
 
-### [alias](roles/shell/alias)
+### [alias](roles/shell/roles/alias)
 
 - [kubectl-aliases repository](https://github.com/ahmetb/kubectl-aliases)
 - [gitalias repository](https://github.com/GitAlias/gitalias)
 - [terraform-aliases repository](https://github.com/zer0beat/terraform-aliases)
 
-### [zsh](roles/shell/zsh)
+### [zsh](roles/shell/roles/zsh)
 
 - [zsh website](https://doc.ubuntu-fr.org/zsh)
 - [ys theme repository](https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/ys.zsh-theme)

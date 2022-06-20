@@ -1,7 +1,7 @@
 ---
 - name: install `dunst`
   include_role:
-    name: notifications/dunst
+    name: notifications/roles/dunst
     apply: 
       tags: [dunst]
   tags: [notifications]

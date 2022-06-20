@@ -1,6 +1,6 @@
 ---
 - name: Install `polybar` bar
   include_role:
-    name: bars/polybar
+    name: bars/roles/polybar
     apply: 
       tags: [bar, polybar]

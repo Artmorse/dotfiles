@@ -2,7 +2,7 @@
 
 - name: Install `ckb-next` software
   include_role:
-    name: peripherals/ckb-next
+    name: peripherals/roles/ckb-next
     apply: 
       tags: [corsair]
   tags: [peripherals]
