@@ -309,3 +309,7 @@ exec --no-startup-id "mailspring --background"
 
 # polybar (managed throught autorandr)
 # exec_always --no-startup-id "sleep 2 ; ~/.config/polybar/launch.sh $monitor_1 $monitor_2 $monitor_3"
+
+# brightness
+bindsym $mod+F6 exec brightnessctl set 5%-
+bindsym $mod+F7 exec brightnessctl set +5%

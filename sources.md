@@ -96,6 +96,11 @@
 - [blueman archlinux package](https://archlinux.org/packages/community/x86_64/blueman/)
 
 
+## [brightness](roles/brightness)
+
+- [brightness archlinux package](https://archlinux.org/packages/community/x86_64/brightnessctl/)
+
+
 ## [cli](roles/cli)
 
 ### dev
