@@ -1,0 +1,31 @@
+---
+- name: Download `sddm-graphite-nord-theme` repository
+  git:
+    repo: https://github.com/Artmorse/sddm-graphite-nord-theme
+    dest: /tmp
+
+- name: Copy the `Graphite-nord` theme
+  become: True
+  copy:
+    src: /tmp/sddm-graphite-nord-theme/Graphite-nord
+    dest: /usr/share/sddm/themes
+    remote_src: yes
+
+- name: Clean `/tmp` folder
+  file:
+    state: absent
+    path: "/tmp/sddm-graphite-nord-theme"
+
+- name: Update theme in sddm configuration
+  become: True
+  lineinfile:
+    path: /etc/sddm.conf.d/theme.conf
+    regexp: '^Current='
+    line: Current={{ appearance.display_manager.theme.name }}
+
+- name: Update cursor in sddm configuration
+  become: True
+  lineinfile:
+    path: /etc/sddm.conf.d/theme.conf
+    regexp: '^CursorTheme='
+    line: CursorTheme={{ appearance.cursor.name }}

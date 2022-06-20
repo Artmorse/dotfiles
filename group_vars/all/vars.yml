@@ -39,6 +39,10 @@ appearance:
     - ComicCodeLigatures Nerd Font
     - CaskaydiaCove Nerd Font
     - Fira Code
+  display_manager:
+    theme:
+      name: Graphite-nord
+
 
 monitors:
   - DP-2   # primary

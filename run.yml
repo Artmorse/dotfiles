@@ -117,6 +117,11 @@
         name: lockscreen
       tags: [lockscreen]
 
+    - name: install display-manager
+      include_role:
+        name: display-manager
+      tags: [display-manager]
+
     - name: configure wallpapers
       include_role:
         name: wallpapers

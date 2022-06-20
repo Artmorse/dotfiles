@@ -236,6 +236,22 @@
 - [docker-compose archlinux package](https://archlinux.org/packages/community/x86_64/docker-compose/)
 
 
+## [display-manager](roles/display-manager)
+
+- [Arch Linux Wiki Display Manager](https://wiki.archlinux.org/title/display_manager)
+
+### [lightdm](roles/display-manager/)
+
+- [lightdm repository](https://github.com/canonical/lightdm)
+- [lightdm archlinux package](https://archlinux.org/packages/extra/x86_64/lightdm/)
+
+### [sddm](roles/display-manager/roles/sddm/)
+
+- [sddm repository](https://github.com/sddm/sddm)
+- [sddm archlinux package](https://archlinux.org/packages/extra/x86_64/sddm/)
+- [Graphite-kde-theme repository]([Graphite-kde-theme](https://github.com/vinceliuice/Graphite-kde-theme))
+
+
 ## [essential](roles/essential)
 
 - [git](https://git-scm.com/)

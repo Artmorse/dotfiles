@@ -1,0 +1,5 @@
+---
+
+- include_tasks: installation.yml
+
+- include_tasks: theme.yml
