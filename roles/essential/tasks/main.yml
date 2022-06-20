@@ -75,8 +75,8 @@
 
 - name: Restart `timesyncd` service
   become: yes
-  systemd:
-    name: systemd-timesyncd.service
+  service:
+    name: systemd-timesyncd
     state: restarted
 
 #

@@ -577,7 +577,6 @@
 
 ## [wallpapers](roles/wallpapers)
 
-### [nordic themes](roles/themes)
 - [nordic wallpapers](https://github.com/linuxdotexe/nordic-wallpapers)
 
 ### [feh](roles/wallpapers/roles/feh)

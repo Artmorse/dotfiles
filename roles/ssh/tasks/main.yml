@@ -21,7 +21,7 @@
     passphrase: "{{ ssh_keys.perso.passphrase }}"
 
 
-- name: "Installing `lxqt-openssh-askpass`"
+- name: Install `lxqt-openssh-askpass`
   become: yes
   package:
     name: lxqt-openssh-askpass

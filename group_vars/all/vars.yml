@@ -12,7 +12,7 @@ dns_nameservers: [1.1.1.1]
 locale: en_US.UTF-8
 
 #
-# Audio
+# Audio configuration
 #
 audio:
   pulseaudio:
@@ -22,7 +22,13 @@ audio:
         name: Scarlett Solo (3rd Gen.)
 
 #
+# Monitor configuration
 #
+
+monitors:
+  - DP-2   # primary
+  - eDP-1  # second
+  - DP-1-1 # third
 
 #
 # Appearance
@@ -53,10 +59,6 @@ wallpapers:
   mode: nordic # nordic or classic
 
 
-monitors:
-  - DP-2   # primary
-  - eDP-1  # second
-  - DP-1-1 # third
 
 default:
   webbrowser: firefox # firefox or chromium

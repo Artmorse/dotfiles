@@ -1,12 +1,12 @@
 ---
-- name: "Installing `blueman`"
+- name: Install `blueman`
   become: yes
   package:
     name:
       - blueman
     state: present
 
-- name: "Enabling automatic sound switch to connected bluetooth devices"
+- name: Enabling automatic sound switch to connected bluetooth devices
   become: yes
   lineinfile:
     path: /etc/pulse/default.pa
