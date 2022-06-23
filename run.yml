@@ -93,6 +93,12 @@
         tasks_from: docker
       tags: [docker]
 
+    # * virtualization
+    - name: install virt-manager and dependencies
+      include_role:
+        name: virtualization
+      tags: [virtualization]
+
 
     # * terminals
     - name: configure shells

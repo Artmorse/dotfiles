@@ -1,0 +1,32 @@
+---
+- name: Install virtualiation dependencies
+  become: True
+  package:
+    name: "{{ item }}"
+  with_items:
+  - qemu-full
+  - libvirt
+  - qemu-guest-agent
+  - ebtables
+  - iptables
+  - libguestfs
+  - virt-manager
+
+- name: Start and Enable virtualization services
+  become: True
+  service:
+    name: systemd-timesyncd
+    state: started
+    enabled: yes
+  with_items:
+  - virtqemud
+  - libvirtd
+  - virtnetworkd
+  - virtstoraged
+
+- name: Ensure user are added to the libvirtd group
+  become: True
+  user:
+    name: "{{ ansible_user_id }}"
+    groups: libvirtd
+    append: True

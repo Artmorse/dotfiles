@@ -592,6 +592,37 @@
 - [nord-konsole repository](https://github.com/arcticicestudio/nord-konsole)
 
 
+## [virtualization](roles/virtualization)
+
+### [kvm](roles/virtualization)
+
+- [kvm website](https://www.linux-kvm.org/page/Main_Page)
+- [kvm wikipedia](https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine)
+- [kvm archlinux wiki](https://wiki.archlinux.org/title/KVM)
+
+### [qemu](roles/virtualization)
+
+- [qemu website](https://www.qemu.org/)
+- [qemu wikipedia](https://en.wikipedia.org/wiki/QEMU)
+- [qemu repository](https://gitlab.com/qemu-project/qemu)
+- [qemu archlinux wiki](https://wiki.archlinux.org/title/QEMU)
+- [qemu-guest-agent archlinux repository](https://archlinux.org/packages/extra/x86_64/qemu-guest-agent/)
+- [qemu-full archlinux repository](https://archlinux.org/packages/extra/x86_64/qemu-full/)
+
+### [libvirt](roles/virtualization)
+
+- [libvirt website](https://libvirt.org/)
+- [libvirt wikipedia](https://en.wikipedia.org/wiki/Libvirt)
+- [libvirt archlinux wiki](https://wiki.archlinux.org/title/Libvirt)
+- [libvirt archlinux repository](https://archlinux.org/packages/community/x86_64/libvirt/)
+
+### [virt-manager](roles/virtualization)
+
+- [virt-manager website](https://virt-manager.org/)
+- [virt-manager archlinux wiki](https://wiki.archlinux.org/title/Virt-Manager)
+- [virt-manager archlinux repository](https://archlinux.org/packages/community/any/virt-manager/)
+
+
 ## [wallpapers](roles/wallpapers)
 
 - [nordic wallpapers](https://github.com/linuxdotexe/nordic-wallpapers)
