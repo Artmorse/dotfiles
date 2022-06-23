@@ -155,6 +155,12 @@
 - [pyenv repository](https://github.com/pyenv/pyenv)
 - [pyenv archlinux package](https://archlinux.org/packages/community/x86_64/pyenv/)
 
+#### [sonar-scanner](roles/cli/roles/sonar-scanner)
+
+- [sonar-scanner repository](https://github.com/SonarSource/sonar-scanner-cli)
+- [sonar-scanner documentation](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/)
+- [sonar-scanner archlinux package](https://aur.archlinux.org/packages/sonar-scanner)
+
 #### [terraform](roles/cli)
 
 - [terraform](https://www.terraform.io/)

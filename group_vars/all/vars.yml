@@ -128,10 +128,13 @@ kubectl:
 kubectx:
   enabled: true
 
+ngrok:
+  enabled: true
+
 pyenv:
   enabled: true
 
-ngrok:
+sonarScanner:
   enabled: true
 
 terraform:

@@ -67,6 +67,14 @@
   tags: [cli]
   when: pyenv.enabled | default(False)
 
+- name: Install `sonar-scanner` software
+  include_role:
+    name: cli/roles/sonar-scanner
+    apply:
+      tags: [dev, sonar-scanner]
+  tags: [cli]
+  when: sonarScanner.enabled | default(False)
+
 - name: Install `terraform` software
   become: yes
   package:
