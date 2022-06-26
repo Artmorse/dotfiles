@@ -1,6 +1,6 @@
 ---
 - name: Install `handlr` application
-  become: yes
+  become: True
   package: 
     name: handlr
     state: latest

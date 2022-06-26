@@ -7,11 +7,6 @@
 
 # Terminate already running bar instances
 
-# process=(`ps -aux | grep feh | grep -v grep | awk '{print $2}'`)
-# process_number=`echo ${#process[@]}`
-# head_n=`expr ${process_number} - 2`
-# ps -ef | grep feh | grep -v grep | awk '{print $2}' | head -n ${head_n} | xargs kill
-
 process=(`ps -aux | grep feh | grep -v grep | awk '{print $2}'`)
 for pid in $process; do
 	if [ $pid -ne $BASHPID ]; then

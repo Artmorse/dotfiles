@@ -2,7 +2,7 @@
 - name: Download `Nordzy-cursors` repository
   git:
     repo: https://github.com/alvatip/Nordzy-cursors.git
-    dest: /tmp
+    dest: /tmp/Nordzy-cursors
 
 - name: Install `Nordy-cursors`
   shell:

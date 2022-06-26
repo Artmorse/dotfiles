@@ -7,7 +7,6 @@
   - qemu-full
   - libvirt
   - qemu-guest-agent
-  - ebtables
   - iptables
   - libguestfs
   - virt-manager

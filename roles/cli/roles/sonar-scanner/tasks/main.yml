@@ -1,7 +1,7 @@
 ---
 - name: Install sonar-scanner package
-  become: yes
-  package:
+  kewlfft.aur.aur:
+    use: yay
     name: sonar-scanner
     state: latest
 

@@ -1,5 +1,58 @@
 ---
+- name: Install sddm
+  become: True
+  package:
+    name: sddm
+    state: present
 
-- include_tasks: installation.yml
+- name: Install sddm dependencies
+  become: True
+  package:
+    name: plasma-sdk
+    state: present
 
-- include_tasks: theme.yml
+- name: Create a symbolic link to `sddm`
+  become: True
+  file:
+    src: /usr/lib/systemd/system/sddm.service
+    dest: /etc/systemd/system/display-manager.service
+    mode: '777'
+    state: link
+    force: True
+
+- name: Ensure `sddm` is enabled at boot
+  become: True
+  service:
+    name: sddm
+    enabled: yes
+
+
+- name: Download `sddm-graphite-nord-theme` repository
+  git:
+    repo: https://github.com/Artmorse/sddm-graphite-nord-theme
+    dest: /tmp/sddm-graphite-nord-theme
+
+- name: Copy the `Graphite-nord` theme
+  become: True
+  copy:
+    src: /tmp/sddm-graphite-nord-theme/Graphite-nord
+    dest: /usr/share/sddm/themes
+    remote_src: yes
+
+- name: Clean `/tmp` folder
+  file:
+    state: absent
+    path: "/tmp/sddm-graphite-nord-theme"
+
+- name: Ensures `/etc/sddm.conf.d/` temporary folder exists
+  become: True
+  file:
+    path: /etc/sddm.conf.d/
+    state: directory
+
+- name: Deploying the sddm theme configuration file
+  become: True
+  template:
+    src: theme.conf.j2
+    dest:  /etc/sddm.conf.d/theme.conf
+    mode: '644'

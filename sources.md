@@ -271,6 +271,7 @@
 
 - [sddm repository](https://github.com/sddm/sddm)
 - [sddm archlinux package](https://archlinux.org/packages/extra/x86_64/sddm/)
+- [plasma-sdk archlinux package](https://archlinux.org/packages/extra/x86_64/plasma-sdk/)
 - [Graphite-kde-theme repository]([Graphite-kde-theme](https://github.com/vinceliuice/Graphite-kde-theme))
 
 

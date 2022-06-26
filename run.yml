@@ -61,7 +61,7 @@
 
     - name: configure printers
       include_role:
-        name: printers
+        name: printer
       tags: [printers]
 
     - name: configure screenlayout
@@ -126,7 +126,7 @@
     - name: install display-manager
       include_role:
         name: display-manager
-      tags: [display-manager]
+      tags: [displayManager]
 
     - name: configure wallpapers
       include_role:
@@ -140,7 +140,7 @@
 
     - name: install and configure the default applications
       include_role:
-        name: defaultApplications
+        name: default-applications
       tags: [defaultApplications]
 
     - name: install and configure bar
