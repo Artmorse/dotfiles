@@ -12,4 +12,4 @@ ansible-galaxy role install geerlingguy.pip
 ansible-galaxy collection install community.crypto
 ansible-galaxy collection install kewlfft.aur
 
-ansible-playbook -K run.yml
+ansible-playbook -K ~/dotfiles-manjaro/run.yml
