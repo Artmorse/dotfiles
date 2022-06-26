@@ -1,38 +1,38 @@
 ---
 - name: Install colorscheme
   include_role:
-    name: appaerance/roles/colorscheme
+    name: appearance/roles/colorscheme
     apply: 
-      tags: [appaerance, colorscheme]
-  tags: [appaerance]
+      tags: [appearance, colorscheme]
+  tags: [appearance]
 
 - name: Install themes
   include_role:
-    name: appaerance/roles/themes
+    name: appearance/roles/themes
     apply: 
-      tags: [appaerance, themes]
-  tags: [appaerance]
+      tags: [appearance, themes]
+  tags: [appearance]
 
 - name: Install icons
   include_role:
-    name: appaerance/roles/icons
+    name: appearance/roles/icons
     apply: 
-      tags: [appaerance, icons]
-  tags: [appaerance]
+      tags: [appearance, icons]
+  tags: [appearance]
 
 - name: Install cursors
   include_role:
-    name: appaerance/roles/cursors
+    name: appearance/roles/cursors
     apply: 
-      tags: [appaerance, cursors]
+      tags: [appearance, cursors]
   tags: [cursors]
 
 - name: Install fonts
   include_role:
-    name: appaerance/roles/fonts
+    name: appearance/roles/fonts
     apply: 
-      tags: [appaerance, fonts]
-  tags: [appaerance]
+      tags: [appearance, fonts]
+  tags: [appearance]
 
 
 - name: Ensures `~/.config/gtk-3.0` folder exists
