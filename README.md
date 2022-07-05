@@ -24,6 +24,8 @@ ansible-galaxy collection install kewlfft.aur
 
 ## Local installation
 
+1. Configure the [group_vars.yml](https://gitlab.lemorse.tech/LeMomorse/dotfiles-manjaro/-/blob/master/group_vars/all/vars.yml) file.
+2. Run the script to run the local installation.
 ```bash
 bash ./setup.sh
 ```
