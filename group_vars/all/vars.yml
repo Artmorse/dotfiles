@@ -276,8 +276,8 @@ ssh_keys:
   perso:
     type: rsa
     name: perso
-    passphrase: my_secret_passphare
+    passphrase: my_secret_passphrase
   pro:
     type: rsa
     name: pro
-    passphrase: my_secret_passphare
+    passphrase: my_secret_passphrase
