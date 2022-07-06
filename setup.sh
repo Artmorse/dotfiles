@@ -12,4 +12,7 @@ ansible-galaxy role install geerlingguy.pip
 ansible-galaxy collection install community.crypto
 ansible-galaxy collection install kewlfft.aur
 
-ansible-playbook -K ~/dotfiles-manjaro/run.yml
+echo -e "You need to update your group variables before continue!\t`nano ~/dotfiles-manjaro/group_vars/all/vars.yml`\n"
+echo -e "Then run ansible with: `ansible-playbook -K ~/dotfiles-manjaro/run.yml`"
+
+# ansible-playbook -K ~/dotfiles-manjaro/run.yml
