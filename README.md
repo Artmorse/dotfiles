@@ -91,3 +91,4 @@ There some things to configure manually after the installation.
     2. run the command `spicetify backup apply`
     3. restart spotify
 - sign in into firefox
+- configure the printer at [localhost:631/admin](http://localhost:631/admin)
