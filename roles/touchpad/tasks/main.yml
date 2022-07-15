@@ -1,0 +1,23 @@
+---
+    - name: Install libinput and dependencies
+      become: yes
+      package: 
+        name: 
+        - libinput
+        - xf86-input-libinput
+        - xorg-xinput
+        state: latest
+    
+    - name: Configure touchpad props
+      shell: |
+        xinput set-prop "{{  }}" "libinput Tapping Enabled" 1
+        xinput set-prop "{{  }}" "libinput Accel Speed" 0.5
+    # "DLL0945:00 04F3:311C Touchpad"
+    
+    - name: Install gestures softwares
+      become: yes
+      package: 
+        name:
+        - libinput-gestures
+        - gestures
+        state: latest

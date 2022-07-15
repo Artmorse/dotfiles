@@ -155,6 +155,11 @@
 - [pyenv repository](https://github.com/pyenv/pyenv)
 - [pyenv archlinux package](https://archlinux.org/packages/community/x86_64/pyenv/)
 
+#### [quarkus](roles/cli)
+
+- [quarkus repository](https://github.com/quarkusio/quarkus)
+- [quarkus website](https://quarkus.io/)
+
 #### [sonar-scanner](roles/cli/roles/sonar-scanner)
 
 - [sonar-scanner repository](https://github.com/SonarSource/sonar-scanner-cli)

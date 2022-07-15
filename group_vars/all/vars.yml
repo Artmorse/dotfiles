@@ -137,6 +137,9 @@ ngrok:
 pyenv:
   enabled: true
 
+quarkus:
+  enabled: true
+
 sonarScanner:
   enabled: true
 
