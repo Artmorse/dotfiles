@@ -30,6 +30,7 @@
     repo: https://github.com/romkatv/powerlevel10k.git
     dest: ~/.oh-my-zsh/themes/powerlevel10k
 
+
 - name: Install zsh plugins
   git:
     repo: https://github.com/zsh-users/{{ item }}.git
@@ -42,6 +43,19 @@
   copy:
     src: functions.zsh
     dest: ~/.oh-my-zsh/custom/
+
+
+- name: Install zsh `spaceship-prompt` theme
+  git:
+    repo: https://github.com/spaceship-prompt/spaceship-prompt.git
+    dest: ~/.oh-my-zsh/custom/themes/spaceship-prompt
+
+- name: Create a symbolic link to `spaceship-prompt` theme
+  file:
+    src: ~/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme
+    dest: ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme
+    mode: '766'
+    state: link
 
 
 - name: Copy `.p10k.zsh` file

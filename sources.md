@@ -571,6 +571,8 @@
 
 - [zsh website](https://doc.ubuntu-fr.org/zsh)
 - [ys theme repository](https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/ys.zsh-theme)
+- [spaceship-prompt theme repository](https://github.com/spaceship-prompt/spaceship-prompt)
+- [spaceship-prompt theme website](https://spaceship-prompt.sh/)
 - [ohmyzsh website](https://ohmyz.sh/)
 - [ohmyzsh repository](https://github.com/ohmyzsh/ohmyzsh)
 - [powerlevel10k repository](https://github.com/romkatv/powerlevel10k)

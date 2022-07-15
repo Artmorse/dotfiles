@@ -48,6 +48,9 @@ appearance:
   display_manager:
     theme:
       name: Graphite-nord
+  shell:
+    prompt:
+      name: spaceship # ys
 
 # the wallpaper order is important, it's used for the monitor order
 # get the filename into the roles/wallpaper/files folder
