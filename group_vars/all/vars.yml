@@ -71,8 +71,8 @@ default:
     name: firefox
     desktop: firefox.desktop
   terminal: # konsole
-    name: konsole
-    desktop: org.kde.konsole.desktop
+    name: alacritty
+    desktop: Alacritty.desktop
   file: # thunar
     name: thunar
     desktop: thunar.desktop
