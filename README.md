@@ -81,6 +81,7 @@ ansible-playbook run.yml -K --tags=cli,kubectl
 There some things to configure manually after the installation.
 
 - the slack nord theme: [follow this guide](https://www.nordtheme.com/ports/slack)
+- sign in into mailspring
 - configure discord:
     1. run discord for the first time
     2. run the command `betterdiscordctl install`
