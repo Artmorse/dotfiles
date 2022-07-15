@@ -8,6 +8,7 @@
   - thunar
   - thunar-archive-plugin
   - thunar-media-tags-plugin
+  - thunar-volman
 
 # - name: Install `thunar` extensions
 #   kewlfft.aur.aur:

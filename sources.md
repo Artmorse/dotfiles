@@ -299,6 +299,7 @@
 - [thunar archlinux package](https://archlinux.org/packages/extra/x86_64/thunar/)
 - [thunar-archive-plugin archlinux package](https://archlinux.org/packages/extra/x86_64/thunar-archive-plugin/)
 - [thunar-media-tags-plugin archlinux package](https://archlinux.org/packages/extra/x86_64/thunar-media-tags-plugin/)
+- [thunar-volman archlinux package](https://archlinux.org/packages/extra/x86_64/thunar-volman/)
 - [imdb-thumbnailer archlinux package](https://aur.archlinux.org/packages/imdb-thumbnailer)
 - [thunar-custom-actions archlinux package](https://aur.archlinux.org/packages/thunar-custom-actions)
 
