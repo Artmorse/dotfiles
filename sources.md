@@ -173,7 +173,7 @@
 - [vault repository](https://github.com/hashicorp/vault)
 - [vault archlinux package](https://archlinux.org/packages/community/x86_64/vault/)
 
-### misc
+### utils
 
 #### [bat](roles/cli)
 
@@ -225,6 +225,13 @@
 
 - [zoxide repository](https://github.com/ajeetdsouza/zoxide)
 - [zoxide archlinux package](https://archlinux.org/packages/community/x86_64/zoxide/)
+
+### misc
+
+#### [imagemagick](roles/cli)
+
+- [imagemagick repository](https://github.com/ImageMagick/ImageMagick)
+- [imagemagick archlinux package](https://archlinux.org/packages/extra/x86_64/imagemagick/)
 
 
 ## [containerization](roles/containerization)

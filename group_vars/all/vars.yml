@@ -177,6 +177,10 @@ ripgrep:
 zoxide:
   enabled: true
 
+# misc
+imagemagick:
+  enabled: true
+
 
 #
 # Enable/Disable: GUI

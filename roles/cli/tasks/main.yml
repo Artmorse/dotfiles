@@ -175,3 +175,16 @@
     state: latest
   tags: [cli, utils, zoxide]
   when: zoxide.enabled | default(False)
+
+
+#
+# misc
+#
+
+- name: Install `imagemagick` software
+  become: yes
+  package:
+    name: imagemagick
+    state: latest
+  tags: [cli, utils, imagemagick]
+  when: imagemagick.enabled | default(False)

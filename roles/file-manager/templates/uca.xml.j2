@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
-<action>
-	<icon>Terminal</icon>
-	<name>Open Terminal Here</name>
-	<unique-id>1652002723279610-1</unique-id>
-	<command>
-    {% if default.terminal.name == 'konsole' %}
-    konsole --workdir %d
-    {% elif default.terminal.name == 'alacritty' %}
-    alacritty --working-directory %d
-    {% endif %}
-    </command>
-	<description>Open {{ default.terminal.name }} on the current directory</description>
-	<patterns>*</patterns>
-	<startup-notify/>
-	<directories/>
-</action>
+	<action>
+		<icon>Terminal</icon>
+		<name>Open Terminal Here</name>
+		<unique-id>1652002723279610-1</unique-id>
+		<command>
+		{% if default.terminal.name == 'konsole' %}
+		konsole --workdir %d
+		{% elif default.terminal.name == 'alacritty' %}
+		alacritty --working-directory %d
+		{% endif %}
+		</command>
+		<description>Open {{ default.terminal.name }} on the current directory</description>
+		<patterns>*</patterns>
+		<startup-notify/>
+		<directories/>
+	</action>
+	<action>
+		<icon>multimedia-photo-viewer</icon>
+		<name>Resize image to 64x64</name>
+		<unique-id>1657900784554050-1</unique-id>
+		<command>convert -resize 64x64 %f %d/$(echo %n | cut -d &apos;.&apos; -f 1)-64x64.$(echo %n | rev | cut -d &apos;.&apos; -f 1 | rev)</command>
+		<description>Resize the image to 64x64.</description>
+		<patterns>*</patterns>
+		<startup-notify/>
+		<image-files/>
+	</action>
+	<action>
+		<icon>multimedia-photo-viewer</icon>
+		<name>Resize image to 256x256</name>
+		<unique-id>1657900784554051-1</unique-id>
+		<command>convert -resize 256x256 %f %d/$(echo %n | cut -d &apos;.&apos; -f 1)-256x256.$(echo %n | rev | cut -d &apos;.&apos; -f 1 | rev)</command>
+		<description>Resize the image to 256x256.</description>
+		<patterns>*</patterns>
+		<startup-notify/>
+		<image-files/>
+	</action>
 </actions>
