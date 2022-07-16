@@ -92,3 +92,5 @@ There some things to configure manually after the installation.
     3. restart spotify
 - sign in into firefox
 - configure the printer at [localhost:631/admin](http://localhost:631/admin)
+- install [IntelliJ IDEA Community Edition](https://www.jetbrains.com/fr-fr/idea/) with [JetBrains Toolbox](https://www.jetbrains.com/fr-fr/lp/toolbox/).
+  - configure the IDE settings: *File* > *Manage IDE Settings* > *Settings repository ...* and follow the instructions
