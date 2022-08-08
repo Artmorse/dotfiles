@@ -57,6 +57,11 @@
     mode: '766'
     state: link
 
+- name: Copy the `spaceship-prompt` configuration
+  copy:
+    src: starship.toml
+    dest: "~/.config"
+
 
 - name: Copy `.p10k.zsh` file
   copy:
