@@ -1,0 +1,15 @@
+---
+- name: Install libinput and dependencies
+  become: yes
+  package: 
+    name: 
+    - libinput
+    - xf86-input-libinput
+    - xorg-xinput
+    state: latest
+
+- name: Configure touchpad props
+  shell: |
+    xinput set-prop "{{ touchpad.device }}" "libinput Tapping Enabled" 1
+    xinput set-prop "{{ touchpad.device }}" "libinput Accel Speed" 0.5
+  when: touchpad.is_present | default(False)

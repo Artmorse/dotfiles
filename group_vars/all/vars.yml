@@ -22,6 +22,14 @@ audio:
         name: Scarlett Solo (3rd Gen.)
 
 #
+# Touchpad configuration
+#
+touchpad:
+  is_present: true
+  # xinput list | grep Touchpad
+  device: DLL0945:00 04F3:311C
+
+#
 # Monitor configuration
 #
 

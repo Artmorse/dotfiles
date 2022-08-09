@@ -128,6 +128,11 @@
         name: display-manager
       tags: [displayManager]
 
+    - name: install touchpad
+      include_role:
+        name: touchpad
+      tags: [touchpad]
+
     - name: configure wallpapers
       include_role:
         name: wallpapers

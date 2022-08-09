@@ -608,6 +608,25 @@
 - [nord-konsole repository](https://github.com/arcticicestudio/nord-konsole)
 
 
+## [touchpad](roles/touchpad)
+
+### [libinput](roles/touchpad/roles/libinput)
+
+- [libinput website](https://freedesktop.org/wiki/Software/libinput/)
+- [libinput archlinux wiki](https://wiki.archlinux.org/title/libinput)
+- [libinput archlinux repository](https://archlinux.org/packages/extra/x86_64/libinput/)
+
+### [touchegg](roles/touchpad/roles/touchegg)
+
+- [touchegg archlinux wiki](https://wiki.archlinux.org/title/touchegg)
+
+- [touchegg repository](https://github.com/JoseExposito/touchegg/)
+- [touchegg archlinux repository](https://aur.archlinux.org/packages/touchegg)
+
+- [touché repository](https://github.com/JoseExposito/touche)
+- [touché archlinux repository](https://aur.archlinux.org/packages/touche)
+
+
 ## [virtualization](roles/virtualization)
 
 ### [kvm](roles/virtualization)
