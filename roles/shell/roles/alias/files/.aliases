@@ -32,3 +32,8 @@ alias e="thunar ."
 alias tf="terraform"
 alias k="kubectl"
 alias d="docker"
+
+#
+# other
+#
+alias btop="bpytop"

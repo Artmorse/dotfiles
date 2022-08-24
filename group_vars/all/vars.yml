@@ -161,6 +161,9 @@ vault:
 bat:
   enabled: true
 
+bpytop:
+  enabled: true
+
 exa:
   enabled: true
 
