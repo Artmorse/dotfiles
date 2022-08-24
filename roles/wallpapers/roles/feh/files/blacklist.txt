@@ -27,9 +27,11 @@ ign_blue_chains.png
 ign_blue_red_blue_blond.png
 ign_chainsaw-man.png
 ign_chineseIG.png
+ign_circuit.png
 ign_driving.png
 ign_duaAnime.png
-ign_dudeOnBuilding.png
+ign_dudeOnBuilding3.png
+ign_farFromTomorrow.jpg
 ign_girl_gun.png
 ign_girlWithHeadphones.png
 ign_grung_green_yellow_refd.png
@@ -52,6 +54,7 @@ ign_unsplash42.png
 ign_unsplash47.png
 ign_vader.png
 ign_venom.jpg
+ign_waifu.png
 ign_wave.png
 ign_wild_fish.png
 ign_witch.png
