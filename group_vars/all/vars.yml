@@ -258,6 +258,11 @@ balenaEtcher:
 bitwarden:
   enabled: true
 
+cura:
+  enabled: true
+  additionnal_profiles:
+  - wanhao-france-d12
+
 deluge:
   enabled: true
 

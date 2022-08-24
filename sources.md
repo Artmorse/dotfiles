@@ -442,6 +442,14 @@
 - [bitwarden repository](https://github.com/bitwarden)
 - [bitwarden archlinux package](https://archlinux.org/packages/community/x86_64/bitwarden/)
 
+#### [cura](roles/gui)
+
+- [cura website](https://ultimaker.com/software/ultimaker-cura)
+- [cura repository](https://github.com/Ultimaker/Cura)
+- [cura archlinux package](https://aur.archlinux.org/packages/cura-appimage-bin)
+
+- [wanhao france - get started documentation](https://www.wanhaofrance.com/pages/wanhao-duplicator-12-d12-230-300)
+
 #### [deluge](roles/gui)
 
 - [deluge website](https://deluge-torrent.org/)

@@ -30,7 +30,7 @@
     recurse: yes
   register: otf_file_list
 
-- name: Print return information from the previous task
+- name: Print the informations from the previous task
   debug:
     msg: "{{ otf_file_list.matched }} files matched."
 

@@ -1,0 +1,32 @@
+---
+- name: Get cura's version
+  find:
+    paths: ~/.local/share/cura
+    file_type: directory
+  register: cura_version
+
+- name: Print the informations from the previous task
+  debug:
+    msg: "{{ cura_version }}"
+
+
+# https://www.wanhaofrance.com/pages/wanhao-duplicator-12-d12-230-300
+- name: Download the cura's profiles for the Wanhao France D12-230
+  get_url:
+    url: "https://www.dropbox.com/sh/55mv5943biz4wo6/AAA1G37z_IJ44zxq281LSZaxa?dl=1"
+    dest: "/tmp/wanhao-france-d12-profiles.zip"
+  when: cura_version.matched != 0
+
+- name: Extract the cura's profiles for the Wanhao France D12
+  unarchive:
+    src: /tmp/wanhao-france-d12-profiles.zip
+    dest: "{{ cura_version.files[-1].path }}"
+    remote_src: yes
+  ignore_errors: yes
+  when: cura_version.matched != 0
+
+- name: Clean `/tmp` folder
+  file:
+    state: absent
+    path: /tmp/wanhao-france-d12-profiles.zip
+  when: cura_version.matched != 0

@@ -1,0 +1,17 @@
+---
+- name: Install `cura` software
+  kewlfft.aur.aur:
+    use: yay
+    name: cura-appimage-bin
+    state: present
+
+- name: Install `cura` dependencies
+  become: yes
+  package:
+    name: protobuf
+    state: latest
+
+
+- name: Install the cura's profiles for the Wanhao France D12-230
+  include_tasks: wanhao-france-d12-profiles.yml
+  when: "'wanhao-france-d12' in cura.additionnal_profiles"

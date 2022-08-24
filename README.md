@@ -94,3 +94,7 @@ There some things to configure manually after the installation.
 - configure the printer at [localhost:631/admin](http://localhost:631/admin)
 - install [IntelliJ IDEA Community Edition](https://www.jetbrains.com/fr-fr/idea/) with [JetBrains Toolbox](https://www.jetbrains.com/fr-fr/lp/toolbox/).
   - configure the IDE settings: *File* > *Manage IDE Settings* > *Settings repository ...* and follow the instructions
+  - configure the Wanhao France D12 profiles on Cura:
+    1. run cura for the first time
+    2. run the command `ansible-playbook run.yml -K --tags=gui,cura`
+    3. restart cura
