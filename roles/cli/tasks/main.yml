@@ -104,6 +104,14 @@
   tags: [cli, utils, bat]
   when: bat.enabled | default(False)
 
+- name: Install `bpytop` software
+  become: yes
+  package:
+    name: bpytop
+    state: latest
+  tags: [cli, utils, bpytop]
+  when: bpytop.enabled | default(False)
+
 - name: Install `exa` software
   become: yes
   package:
@@ -187,4 +195,3 @@
     name: imagemagick
     state: latest
   tags: [cli, utils, imagemagick]
-  when: imagemagick.enabled | default(False)
