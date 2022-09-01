@@ -27,6 +27,7 @@
     name: slack-desktop
     state: present
   tags: [communication, slack]
+  retries: 2
   when: slack.enabled | default(False)
 
 
@@ -36,6 +37,7 @@
     name: teamviewer
     state: present
   tags: [communication, teamviewer]
+  retries: 2
   when: teamviewer.enabled | default(False)
 
 
@@ -45,6 +47,7 @@
     name: zoom
     state: present
   tags: [communication, zoom]
+  retries: 2
   when: zoom.enabled | default(False)
 
 
@@ -77,6 +80,7 @@
     name: gitfiend
     state: present
   tags: [dev, gitfiend]
+  retries: 2
   when: gitfiend.enabled | default(False)
 
 
@@ -86,6 +90,7 @@
     name: jetbrains-toolbox
     state: present
   tags: [dev, jetbrainsToolbox]
+  retries: 2
   when: jetbrainsToolbox.enabled | default(False)
 
 
@@ -95,6 +100,7 @@
     name: lens-bin
     state: present
   tags: [dev, lens]
+  retries: 2
   when: lens.enabled | default(False)
 
 
@@ -104,6 +110,7 @@
     name: postman-bin
     state: present
   tags: [dev, postman]
+  retries: 2
   when: postman.enabled | default(False)
 
 
@@ -168,8 +175,8 @@
     name: balena-etcher
     state: present
   tags: [misc, balenaEtcher]
+  retries: 2
   when: balenaEtcher.enabled | default(False)
-  ignore_errors: yes
 
 
 - name: Install `bitwarden` software
@@ -223,6 +230,7 @@
     name: rpi-imager
     state: present
   tags: [misc, rpiImager]
+  retries: 2
   when: rpiImager.enabled | default(False)
 
 

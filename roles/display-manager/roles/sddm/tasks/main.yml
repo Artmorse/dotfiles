@@ -25,6 +25,8 @@
   service:
     name: sddm
     enabled: yes
+  retries: 5
+  delay: 3
 
 
 - name: Download `sddm-graphite-nord-theme` repository

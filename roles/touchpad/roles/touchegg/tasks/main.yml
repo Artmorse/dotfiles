@@ -13,7 +13,7 @@
     src: "{{ item }}"
     dest: ~/.config/touchegg/
   with_items:
-    - touch.sh
+    - touche.sh
     - touchegg.conf
 
 - name: Ensure `touchegg` is enabled

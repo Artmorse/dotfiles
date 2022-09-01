@@ -22,7 +22,7 @@
 - name: Start and Enable virtualization services
   become: True
   service:
-    name: systemd-timesyncd
+    name: "{{ item }}"
     state: started
     enabled: yes
   with_items:
@@ -35,9 +35,9 @@
   become: True
   command: virsh net-autostart default
 
-- name: Ensure user are added to the libvirtd group
+- name: Ensure user are added to the libvirt group
   become: True
   user:
     name: "{{ ansible_user_id }}"
-    groups: libvirtd
+    groups: libvirt
     append: True

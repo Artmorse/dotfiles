@@ -57,6 +57,7 @@
     name: ngrok
     state: present
   tags: [cli, dev, ngrok]
+  retries: 2
   when: ngrok.enabled | default(False)
 
 - name: Install `pyenv` software
@@ -174,6 +175,7 @@
     name: procs
     state: present
   tags: [cli, utils, procs]
+  retries: 2
   when: procs.enabled | default(False)
 
 - name: Install `ripgrep` software
@@ -203,3 +205,4 @@
     name: imagemagick
     state: latest
   tags: [cli, utils, imagemagick]
+  when: imagemagick.enabled | default(False)

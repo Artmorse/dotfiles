@@ -65,7 +65,7 @@ nfs:
 
 appearance:
   theme: 
-    name: Nordic-Polar
+    name: Nordic-bluish-accent
   icon: 
     name: Papirus-Dark
   cursor:

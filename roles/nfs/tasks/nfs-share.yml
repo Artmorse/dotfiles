@@ -3,7 +3,7 @@
   become: True
   template:
     src: service.mount.j2
-    dest: /etc/systemd/system/service-{{ item.name }}.mount
+    dest: /etc/systemd/system/mnt-{{ item.name }}.mount
 
 - name: Ensure folder exists
   become: True
