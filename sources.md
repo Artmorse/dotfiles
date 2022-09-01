@@ -637,6 +637,13 @@
 
 ## [virtualization](roles/virtualization)
 
+### [cockpit](roles/virtualization)
+
+- [cockpit website](https://cockpit-project.org/)
+- [cockpit archlinux repository](https://archlinux.org/packages/community/x86_64/cockpit/)
+- [cockpit-machines archlinux repository](https://archlinux.org/packages/community/x86_64/cockpit-machines/)
+- [cockpit archlinux wiki](https://wiki.archlinux.org/title/Cockpit)
+
 ### [kvm](roles/virtualization)
 
 - [kvm website](https://www.linux-kvm.org/page/Main_Page)

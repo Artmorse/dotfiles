@@ -1,5 +1,5 @@
 ---
-- name: Install virtualiation dependencies
+- name: Install virtualization dependencies
   become: True
   package:
     name: "{{ item }}"
@@ -9,7 +9,15 @@
   - qemu-guest-agent
   - iptables
   - libguestfs
+
+- name: Install virtualization frontends (virt-manager and cockpit) dependencies
+  become: True
+  package:
+    name: "{{ item }}"
+  with_items:
   - virt-manager
+  - cockpit
+  - cockpit-machines
 
 - name: Start and Enable virtualization services
   become: True
@@ -22,6 +30,10 @@
   - libvirtd
   - virtnetworkd
   - virtstoraged
+
+- name: Autostart the default network
+  become: True
+  command: virsh net-autostart default
 
 - name: Ensure user are added to the libvirtd group
   become: True
