@@ -39,6 +39,27 @@ monitors:
   - DP-1-1 # third
 
 #
+# NFS configuration
+#
+nfs:
+  - name: nas-downloads
+    who: 192.168.10.9
+    what: /volume1/downloads
+    where: /mnt/nas/downloads
+  - name: nas-games
+    who: 192.168.10.9
+    what: /volume1/games
+    where: /mnt/nas/games
+  - name: nas-videos
+    who: 192.168.10.9
+    what: /volume1/videos
+    where: /mnt/nas/videos
+  - name: nas-musics
+    who: 192.168.10.9
+    what: /volume1/musics
+    where: /mnt/nas/musics
+
+#
 # Appearance
 #
 

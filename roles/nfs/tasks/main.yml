@@ -1,0 +1,10 @@
+---
+- name: Install `nfs-utils`
+  become: yes
+  package:
+    name: nfs-utils
+    state: latest
+
+- name: Configure NFS shares
+  include_tasks: nfs-share.yml
+  loop: "{{ nfs }}"

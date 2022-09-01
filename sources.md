@@ -524,6 +524,14 @@
 - [rofi themes repository](https://github.com/yuky2020/rofi-themes)
 
 
+## [nfs](roles/nfs)
+
+### [nfs](roles/nfs)
+
+- [nfs-utils archlinux repository](https://archlinux.org/packages/core/x86_64/nfs-utils/)
+- [nfs archlinux wiki](https://wiki.archlinux.org/title/NFS)
+
+
 ## [notifications](roles/notifications)
 
 ### [dunst](roles/notifications/dunst)

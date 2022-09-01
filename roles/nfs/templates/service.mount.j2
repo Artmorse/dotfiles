@@ -1,0 +1,16 @@
+[Unit]
+Description=Mount {{ item.name }} folder at boot
+
+[Mount]
+What={{ item.who }}:{{ item.what }}
+Where={{ item.where }}
+Options=vers=4,{% if item.read_only | default(False) %}ro{% else %}rw{% endif %}
+
+Type=nfs
+TimeoutSec=30
+
+[Service]
+Exec=chmod 755 {{ item.where }}
+
+[Install]
+WantedBy=multi-user.target

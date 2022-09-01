@@ -165,6 +165,13 @@
         name: screenshot
       tags: [screenshot]
 
+    - name: install and configure nfs
+      include_role:
+        name: nfs
+        apply: 
+          tags: [nfs]
+      tags: [nfs]
+
     - name: install CLI applications
       include_role:
         name: cli
