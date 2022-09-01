@@ -112,6 +112,14 @@
   tags: [cli, utils, bpytop]
   when: bpytop.enabled | default(False)
 
+- name: Install `dig` software
+  become: yes
+  package:
+    name: bind
+    state: latest
+  tags: [cli, dev, dig]
+  when: dig.enabled | default(False)
+
 - name: Install `exa` software
   become: yes
   package:
