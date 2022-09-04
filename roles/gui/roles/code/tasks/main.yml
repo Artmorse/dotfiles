@@ -1,4 +1,10 @@
 ---
+- name: Install `code` dependencies
+  become: yes
+  package:
+    name: xclip
+    state: latest
+
 - name: Install `code` software
   kewlfft.aur.aur:
     use: yay
