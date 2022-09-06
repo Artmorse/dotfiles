@@ -122,6 +122,9 @@ source <(helm completion zsh)
 {% if kompose.enabled == true %}
 source <(kompose completion zsh)
 {% endif %}
+{% if kind.enabled == true %}
+source <(kind completion zsh)
+{% endif %}
 {% if kubectl.enabled == true %}
 source $HOME/.kubectl_aliases
 {% endif %}

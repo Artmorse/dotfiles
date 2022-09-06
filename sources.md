@@ -125,6 +125,12 @@
 - [jq repository](https://github.com/stedolan/jq)
 - [jq archlinux package](https://archlinux.org/packages/community/x86_64/jq/)
 
+#### [kind](roles/cli)
+
+- [kind website](https://kind.sigs.k8s.io/)
+- [kind repository](https://github.com/kubernetes-sigs/kind)
+- [kind archlinux package](https://aur.archlinux.org/packages/kind)
+
 #### [kompose](roles/cli)
 
 - [kompose repository](https://github.com/kubernetes/kompose)

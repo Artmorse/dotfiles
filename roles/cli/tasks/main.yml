@@ -27,6 +27,15 @@
   tags: [cli, dev, jq]
   when: jq.enabled | default(False)
 
+- name: Install `kind` software
+  kewlfft.aur.aur:
+    use: yay
+    name: kind
+    state: present
+  tags: [cli, dev, kind]
+  retries: 2
+  when: kind.enabled | default(False)
+
 - name: Install `kompose` software
   become: yes
   package:

@@ -19,13 +19,13 @@
 - name: Insert/Update `~/.bashrc` helm aliases configuration
   lineinfile:
     path: ~/.bashrc
-    line: source <(helm completion zsh)
+    line: source <(helm completion bash)
   when: helm.enabled | default(False)
   
 - name: Insert/Update `~/.bashrc` kompose aliases configuration
   lineinfile:
     path: ~/.bashrc
-    line: source <(kompose completion zsh)
+    line: source <(kompose completion bash)
   when: kompose.enabled | default(False)
   
 - name: Insert/Update `~/.bashrc` terraform aliases configuration
@@ -36,3 +36,9 @@
           . ~/.terraform_aliases
       fi
   when: terraform.enabled | default(False)
+
+- name: Insert/Update `~/.bashrc` kind aliases configuration
+  lineinfile:
+    path: ~/.bashrc
+    line: source <(kind completion bash)
+  when: kind.enabled | default(False)

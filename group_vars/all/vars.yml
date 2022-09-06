@@ -151,6 +151,9 @@ jenv:
 jq:
   enabled: true
 
+kind:
+  enabled: true
+
 kompose:
   enabled: true
 
