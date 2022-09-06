@@ -27,6 +27,14 @@
   tags: [cli, dev, jq]
   when: jq.enabled | default(False)
 
+- name: Install `k9s` software
+  become: yes
+  package:
+    name: k9s
+    state: latest
+  tags: [cli, dev, k9s]
+  when: k9s.enabled | default(False)
+
 - name: Install `kind` software
   kewlfft.aur.aur:
     use: yay

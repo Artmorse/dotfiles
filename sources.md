@@ -125,6 +125,12 @@
 - [jq repository](https://github.com/stedolan/jq)
 - [jq archlinux package](https://archlinux.org/packages/community/x86_64/jq/)
 
+#### [k9s](roles/cli)
+
+- [k9s website](https://k9scli.io/)
+- [k9s repository](https://github.com/derailed/k9s)
+- [k9s archlinux package](https://archlinux.org/packages/community/x86_64/k9s/)
+
 #### [kind](roles/cli)
 
 - [kind website](https://kind.sigs.k8s.io/)
