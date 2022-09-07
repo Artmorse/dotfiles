@@ -15,3 +15,14 @@
   file:
     path: ~/.config/polybar/launch.sh
     mode: '0754'
+
+- name: Get scripts files
+  find:
+    paths: ~/.config/polybar/scripts
+  register: polybar_scripts
+
+- name: Change scripts files permissions
+  file:
+    path: "{{ item }}"
+    mode: '0754'
+  with_items: "{{ polybar_scripts.files | map(attribute='path') }}"
