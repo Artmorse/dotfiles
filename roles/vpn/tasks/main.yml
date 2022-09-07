@@ -1,0 +1,8 @@
+---
+- name: Install `openvpn` software
+  include_role:
+    name: vpn/roles/openvpn
+    apply: 
+      tags: [openvpn]
+  tags: [openvpn]
+  when: vpn == 'openvpn'

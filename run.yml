@@ -172,6 +172,11 @@
           tags: [nfs]
       tags: [nfs]
 
+    - name: install vpn
+      include_role:
+        name: vpn
+      tags: [vpn]
+
     - name: install CLI applications
       include_role:
         name: cli

@@ -693,6 +693,14 @@
 - [virt-manager archlinux repository](https://archlinux.org/packages/community/any/virt-manager/)
 
 
+## [vpn](roles/vpn)
+
+- [openvpn archlinux wiki](https://wiki.archlinux.org/title/OpenVPN)
+- [openvpn website](https://openvpn.net/)
+- [openvpn archlinux repository](https://archlinux.org/packages/extra/x86_64/openvpn/)
+- [networkmanager-openvpn archlinux repository](https://archlinux.org/packages/extra/x86_64/networkmanager-openvpn/)
+
+
 ## [wallpapers](roles/wallpapers)
 
 - [nordic wallpapers](https://github.com/linuxdotexe/nordic-wallpapers)

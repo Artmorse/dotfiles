@@ -1,0 +1,9 @@
+---
+- name: Install `openvpn` package and dependencies
+  become: yes
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - networkmanager-openvpn
+    - openvpn
