@@ -26,3 +26,9 @@
     path: "{{ item }}"
     mode: '0754'
   with_items: "{{ polybar_scripts.files | map(attribute='path') }}"
+
+- name: Configure scripts secrets
+  lineinfile:
+    path: ~/.config/polybar/scripts/get_weather.sh
+    regexp: '^OPENWEATHER_API_KEY='
+    line: OPENWEATHER_API_KEY="{{ secrets.OPENWEATHER_API_KEY }}"
