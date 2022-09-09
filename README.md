@@ -9,77 +9,69 @@ See the [sources.md](sources.md) file.
 ## OS tested
 
 - [x] [Manjaro-XFCE Minimal 21.2.6](https://manjaro.org/downloads/official/xfce/)
+- [x] [Manjaro-XFCE Minimal 21.3.7](https://manjaro.org/downloads/official/xfce/)
 
-## Usage
+## Steps
 
-### Install the ansible dependencies
+### Backup your current machine
 
-```bash
-ansible-galaxy role install geerlingguy.docker
-ansible-galaxy role install geerlingguy.pip
+The `BACKUP_DEVICE_PATH` is the path to the root of your connected device (external hard drive ; for example: `/run/media/arthurc/backup`).
 
-ansible-galaxy collection install community.crypto
-ansible-galaxy collection install kewlfft.aur
-```
+- create the backup folder on the external device
+  ```bash
+  export BACKUP_DEVICE_PATH="/run/media/arthurc/backup"
+  export BACKUP_FOLDER_PATH=${BACKUP_DEVICE_PATH}/lartop-xps/$(date +"%Y-%m-%d")
+  mkdir -p $BACKUP_FOLDER_PATH
+  ```
+- clean your git repositories
+  1. clone the [git-cleaner repository](https://gitlab.lemorse.tech/LeMomorse/git-cleaner) in your *~/Documents/workspace-perso* folder
+    ```bash
+    cdwper
+    git clone ssh://git@gitlab.lemorse.tech:2223/LeMomorse/git-cleaner.git
+    ```
+  2. remove the up to date repositories
+    ```bash
+    bash git_cleaner.sh "~/Documents"
+    ```
+  3. then do what is necessary for the others
+- backup your `history`
+  ```bash
+  history > $BACKUP_FOLDER_PATH/history.txt
+  ```
+- backup your home directories
+  ```bash
+  for folder in Documents Downloads Pictures ; cp -r ~/${folder} "${BACKUP_FOLDER_PATH}"
+  ```
+- backup the dotfiles
+  ```bash
+  cp -r ~/.config "${BACKUP_FOLDER_PATH}"
+  ```
 
-## Local installation
+### Install a fresh OS
+
+Check the [OS tested list](#os-tested).
+
+### Pre installation
 
 1. Configure the [group_vars.yml](https://gitlab.lemorse.tech/LeMomorse/dotfiles-manjaro/-/blob/master/group_vars/all/vars.yml) file.
-2. Run the script to run the local installation.
-```bash
-bash ./setup.sh
-```
+2. Run the script to run the local installation ans follow the instructions.
+  ```bash
+  bash ./setup.sh
+  ```
 
-### Run ansible
-
-Check the [inventory file](hosts.ini) before running.
+### Installation
 
 ```bash
 ansible-playbook run.yml -K
 ```
 
-#### Install only..
+For more information, check [How to run ansible documentation](docs/how_to_run_ansible.md).
 
-##### ... *feh*.
-
-```bash
-ansible-playbook run.yml -K --tags=wallpapers,feh
-```
-
-##### ... *polybar*.
-
-```bash
-ansible-playbook run.yml -K --tags=bars,polybar
-```
-
-##### ... *zsh* with *aliases*.
-
-```bash
-ansible-playbook run.yml -K --tags=shell,zsh,alias
-```
-
-##### ... *arandr*.
-
-```bash
-ansible-playbook run.yml -K --tags=screenlayout,arandr
-```
-
-##### ... *dev* softwares.
-
-```bash
-ansible-playbook run.yml -K --tags=gui,dev
-```
-
-##### ... *kubectl*.
-
-```bash
-ansible-playbook run.yml -K --tags=cli,kubectl
-```
-
-## Manual configuration
+### Post installation
 
 There some things to configure manually after the installation.
 
+- sign in into firefox
 - the slack nord theme: [follow this guide](https://www.nordtheme.com/ports/slack)
 - sign in into mailspring
 - configure discord:
@@ -90,7 +82,6 @@ There some things to configure manually after the installation.
     1. run spotify for the first time
     2. run the command `spicetify backup apply`
     3. restart spotify
-- sign in into firefox
 - configure the printer at [localhost:631/admin](http://localhost:631/admin)
 - install [IntelliJ IDEA Community Edition](https://www.jetbrains.com/fr-fr/idea/) with [JetBrains Toolbox](https://www.jetbrains.com/fr-fr/lp/toolbox/).
   - configure the IDE settings: *File* > *Manage IDE Settings* > *Settings repository ...* and follow the instructions
