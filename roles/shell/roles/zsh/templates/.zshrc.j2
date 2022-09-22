@@ -115,7 +115,7 @@ source $ZSH/oh-my-zsh.sh
 # aliases
 source $HOME/.aliases
 
-# completion
+# completions
 {% if helm.enabled == true %}
 source <(helm completion zsh)
 {% endif %}
@@ -130,4 +130,7 @@ source $HOME/.kubectl_aliases
 {% endif %}
 {% if terraform.enabled == true %}
 source $HOME/.terraform_aliases
+
+{% if bat.theme | default(False) %}
+export BAT_THEME="{{ bat.theme }}"
 {% endif %}
