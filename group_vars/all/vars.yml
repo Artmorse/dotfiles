@@ -196,6 +196,7 @@ vault:
 # utils
 bat:
   enabled: true
+  theme: Nord
 
 bpytop:
   enabled: true
