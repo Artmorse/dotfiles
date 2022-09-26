@@ -1,0 +1,21 @@
+---
+- name: Install sonar-scanner package
+  kewlfft.aur.aur:
+    use: yay
+    name: sonar-scanner
+    state: latest
+
+- name: Create a symbolic link to sonar-scanner
+  become: yes
+  file:
+    src: /opt/sonar-scanner/bin/sonar-scanner
+    dest: /usr/bin/sonar-scanner
+    mode: '755'
+    state: link
+
+# - name: Update sonar-scanner configuration
+#   become: yes
+#   lineinfile:
+#     path: /opt/sonar-scanner/conf/sonar-scanner.properties
+#     regexp: '#sonar.host.url=http://localhost:9000'
+#     line: sonar.host.url=http://localhost:9100

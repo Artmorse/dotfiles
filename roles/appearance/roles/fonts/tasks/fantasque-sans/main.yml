@@ -1,0 +1,6 @@
+---
+- include_tasks: fantasque-sans.archlinux.yml
+  when: ansible_os_family == "Archlinux"
+
+- include_tasks: fantasque-sans.debian.yml
+  when: ansible_os_family == "Debian"

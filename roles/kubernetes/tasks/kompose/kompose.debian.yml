@@ -1,0 +1,11 @@
+---
+- include_tasks: tasks/get_latest_version_from_github.yml
+  loop: 
+  - kubernetes/kompose
+  loop_control:
+    loop_var: outer_item
+
+- name: Install `kompose` software
+  become: yes
+  apt:
+    deb: https://github.com/kubernetes/kompose/releases/download/{{ version }}/kompose_{{ version[1:] }}_amd64.deb

@@ -1,9 +1,10 @@
 ---
-- name: Install `alacritty` package
-  become: yes
-  package: 
-    name: alacritty
-    state: latest
+- include_tasks: alacritty.archlinux.yml
+  when: ansible_os_family == "Archlinux"
+
+- include_tasks: alacritty.debian.yml
+  when: ansible_os_family == "Debian"
+
 
 
 - name: Ensures `~/.config/alacritty` folder exists

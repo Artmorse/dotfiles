@@ -1,0 +1,11 @@
+---
+- include_tasks: tasks/get_latest_version_from_github.yml
+  loop: 
+  - sharkdp/bat
+  loop_control:
+    loop_var: outer_item
+
+- name: Install `bat` software
+  become: yes
+  apt:
+    deb: https://github.com/sharkdp/bat/releases/download/{{ version }}/bat_{{ version[1:] }}_amd64.deb

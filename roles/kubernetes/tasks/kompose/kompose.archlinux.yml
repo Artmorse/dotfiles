@@ -1,0 +1,6 @@
+---
+- name: Install `kompose` software
+  become: yes
+  package:
+    name: kompose
+    state: latest

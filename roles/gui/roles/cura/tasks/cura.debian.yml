@@ -1,0 +1,6 @@
+---
+- name: Install `cura` software
+  become: yes
+  package:
+    name: cura
+    state: present

@@ -1,0 +1,6 @@
+---
+- name: Install `nfs-common`
+  become: yes
+  package:
+    name: nfs-common
+    state: latest

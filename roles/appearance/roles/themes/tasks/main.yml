@@ -1,6 +1,6 @@
 ---
 - name: Install Adapta Nord themes
-  include_tasks: adapta-nord.yml
+  include_tasks: adapta-nord/main.yml
 
 - name: Install Nordic themes
   include_tasks: nordic.yml
@@ -9,3 +9,5 @@
     - Nordic-bluish-accent
     - Nordic-darker
     - Nordic-Polar
+  loop_control:
+    loop_var: outer_item

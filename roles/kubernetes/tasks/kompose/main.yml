@@ -1,0 +1,6 @@
+---
+- include_tasks: kompose.archlinux.yml
+  when: ansible_os_family == "Archlinux"
+
+- include_tasks: kompose.debian.yml
+  when: ansible_os_family == "Debian"

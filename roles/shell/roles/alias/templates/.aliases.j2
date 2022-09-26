@@ -1,0 +1,44 @@
+#
+# ls
+#
+
+alias ls='exa'
+
+alias l='ls -l'
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
+
+#
+# cd
+#
+
+alias cddo="cd ~/Documents"
+alias cdwpro="cd ~/Documents/workspace-pro"
+alias cdwper="cd ~/Documents/workspace-perso"
+alias cddk="cd ~/.docker"
+
+#
+# file explorer
+#
+
+alias e="thunar ."
+
+#
+# shortcuts
+#
+
+alias d="docker"
+{% if kubectl.enabled | default(False) %}
+alias k="kubectl"
+{% endif %}
+{% if kubecolor.enabled | default(False) %}
+alias k="kubecolor"
+{% endif %}
+{% if terraform.enabled | default(False) %}
+alias k="terraform"
+{% endif %}
+
+
+alias btop="bpytop"

@@ -1,0 +1,14 @@
+---
+- name: Install `lxqt-openssh-askpass`
+  become: yes
+  package:
+    name: lxqt-openssh-askpass
+    state: present
+
+- name: Create a symbolic link to `lxqt-openssh-askpass`
+  become: yes
+  file:
+    src: /usr/bin/lxqt-openssh-askpass
+    dest: /usr/lib/ssh/ssh-askpass
+    mode: '755'
+    state: link

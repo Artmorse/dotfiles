@@ -1,0 +1,9 @@
+---
+- name: Install `code` and `codium`
+  become: yes
+  snap:
+    name: "{{ item }}"
+    classic: yes
+  with_items:
+    - code
+    - codium

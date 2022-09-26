@@ -1,0 +1,15 @@
+---
+
+- include_tasks: jdk/main.yml
+  loop: "{{ java.versions }}"
+  loop_control:
+    loop_var: outer_item
+
+- name: Install `maven` software
+  become: yes
+  package:
+    name: maven
+    state: latest
+
+- include_tasks: jenv/main.yml
+  tags: [cli, dev, jenv]

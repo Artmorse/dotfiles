@@ -1,0 +1,7 @@
+---
+- name: Install pip
+  include_role:
+    name: geerlingguy.pip
+  vars:
+    - ansible_become: yes
+    - pip_package: python3-pip

@@ -1,0 +1,6 @@
+---
+- name: Install `gfold` software
+  become: yes
+  package:
+    name: gfold
+    state: latest

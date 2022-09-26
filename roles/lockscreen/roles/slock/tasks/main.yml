@@ -1,10 +1,12 @@
 ---
-# - name: Install `slock`
-#   become: yes
-#   package:
-#     name: slock
-#     state: latest
-#   tags: [lockscreen, slock]
+- name: Install `slock` requirements
+  become: yes
+  package:
+    name: libxrandr-dev
+    state: latest
+  when: ansible_os_family == "Debian"
+
+
 
 - name: Clone `slock` repository
   git:
@@ -22,6 +24,7 @@
     src: /tmp/slock/slock-capscolor.diff
     basedir: /tmp/slock
     strip: 1
+    remote_src: yes
 
 - name: Remove patch files
   file:

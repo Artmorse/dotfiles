@@ -1,0 +1,7 @@
+---
+- name: Install `kubecolor` software
+  kewlfft.aur.aur:
+    use: yay
+    name: kubecolor
+    state: present
+  retries: 2

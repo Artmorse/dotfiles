@@ -1,0 +1,8 @@
+---
+- name: Install `kind` software
+  kewlfft.aur.aur:
+    use: yay
+    name: kind
+    state: present
+  tags: [cli, dev, kind]
+  retries: 2

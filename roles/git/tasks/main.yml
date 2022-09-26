@@ -20,9 +20,9 @@
   with_items:
     - {
       "src": "gitconfig-wper.j2",
-      "dest": "~/Documents/workspace-perso/.gitconfig"
+      "dest": "~/.gitconfig-perso"
     }
     - {
       "src": "gitconfig-wpro.j2",
-      "dest": "~/Documents/workspace-pro/.gitconfig"
+      "dest": "~/.gitconfig-pro"
     }

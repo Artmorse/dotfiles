@@ -10,29 +10,22 @@
 
 - name: Generate `pro` ssh keypair
   community.crypto.openssh_keypair:
-    path: "~/.ssh/id_{{ ssh_keys.pro.type }}_{{ ssh_keys.pro.name }}"
-    type: "{{ ssh_keys.pro.type }}"
-    passphrase: "{{ ssh_keys.pro.passphrase }}"
+    path: "~/.ssh/id_{{ user.pro.ssh_keys.type }}_{{ user.pro.ssh_keys.name }}"
+    type: "{{ user.pro.ssh_keys.type }}"
+    passphrase: "{{ user.pro.ssh_keys.passphrase }}"
+  when: "{{ user.pro.ssh_keys.create_it | default(False) }}"
 
 - name: Generate `perso` ssh keypair
   community.crypto.openssh_keypair:
-    path: "~/.ssh/id_{{ ssh_keys.perso.type }}_{{ ssh_keys.perso.name }}"
-    type: "{{ ssh_keys.perso.type }}"
-    passphrase: "{{ ssh_keys.perso.passphrase }}"
+    path: "~/.ssh/id_{{ user.perso.ssh_keys.type }}_{{ user.perso.ssh_keys.name }}"
+    type: "{{ user.perso.ssh_keys.type }}"
+    passphrase: "{{ user.perso.ssh_keys.passphrase }}"
+  when: "{{ user.perso.ssh_keys.create_it | default(False) }}"
 
 
-- name: Install `lxqt-openssh-askpass`
-  become: yes
-  package:
-    name: lxqt-openssh-askpass
-    state: present
 
-- name: Create a symbolic link to `lxqt-openssh-askpass`
-  become: True
-  file:
-    src: /usr/bin/lxqt-openssh-askpass
-    dest: /usr/lib/ssh/ssh-askpass
-    mode: '755'
-    state: link
+- include_tasks: ssh.archlinux.yml
+  when: ansible_os_family == "Archlinux"
 
-
+- include_tasks: ssh.debian.yml
+  when: ansible_os_family == "Debian"

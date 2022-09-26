@@ -1,0 +1,13 @@
+---
+- name: Install `discord` software
+  become: yes
+  package:
+    name: discord
+    state: latest
+
+
+- name: Install `betterdiscordctl` software
+  kewlfft.aur.aur:
+    use: yay
+    name: betterdiscordctl
+    state: present

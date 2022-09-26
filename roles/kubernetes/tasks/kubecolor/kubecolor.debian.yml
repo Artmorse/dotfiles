@@ -1,0 +1,6 @@
+---
+- name: Install `kubecolor` software
+  become: yes
+  package:
+    name: kubecolor
+    state: latest

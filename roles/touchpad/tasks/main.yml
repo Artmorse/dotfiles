@@ -1,15 +1,6 @@
 ---
-- name: Install `libinput`
-  include_role:
-    name: touchpad/roles/libinput
-    apply:
-      tags: [libinput]
-  tags: [touchpad]
+- include_tasks: touchpad.archlinux.yml
+  when: ansible_os_family == "Archlinux"
 
-- name: Install `touchegg`
-  include_role:
-    name: touchpad/roles/touchegg
-    apply:
-      tags: [touchegg]
-  tags: [touchpad]
-  when: touchpad.is_present | default(False)
+# - include_tasks: touchpad.debian.yml
+#   when: ansible_os_family == "Debian"

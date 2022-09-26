@@ -1,0 +1,6 @@
+---
+- name: Install `fd` software
+  become: yes
+  package:
+    name: fd-find
+    state: latest

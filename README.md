@@ -46,6 +46,11 @@ The `BACKUP_DEVICE_PATH` is the path to the root of your connected device (exter
   ```bash
   cp -r ~/.config "${BACKUP_FOLDER_PATH}"
   ```
+- backup your SSH keys and GPG keys
+  ```bash
+  cp -r ~/.ssh "${BACKUP_FOLDER_PATH}"
+  ```
+  Follow this [documentation](https://gitlab.lemorse.tech/LeMomorse/help/-/blob/master/gpg/README.md#backup) to know how to backup/restore GPG keys.
 
 ### Install a fresh OS
 

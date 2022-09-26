@@ -1,0 +1,43 @@
+---
+- name: Install virtualization dependencies
+  become: yes
+  package:
+    name: "{{ item }}"
+  with_items:
+  - qemu-full
+  - libvirt
+  - qemu-guest-agent
+  - iptables
+  - libguestfs
+
+- name: Install virtualization frontends (virt-manager and cockpit) dependencies
+  become: yes
+  package:
+    name: "{{ item }}"
+  with_items:
+  - virt-manager
+  - cockpit
+  - cockpit-machines
+
+- name: Start and Enable virtualization services
+  become: yes
+  service:
+    name: "{{ item }}"
+    state: started
+    enabled: yes
+  with_items:
+  - virtqemud
+  - libvirtd
+  - virtnetworkd
+  - virtstoraged
+
+- name: Autostart the default network
+  become: yes
+  command: virsh net-autostart default
+
+- name: Ensure user are added to the libvirt group
+  become: yes
+  user:
+    name: "{{ ansible_user_id }}"
+    groups: libvirt
+    append: True

@@ -1,0 +1,13 @@
+---
+- name: Install `fonts-firacode` package
+  become: yes
+  package: 
+    name: fonts-firacode 
+    state: latest
+
+- include_tasks: tasks/install_nerd_font.yml
+  loop:
+  - name: FiraCode
+    type: opentype
+  loop_control:
+    loop_var: outer_item

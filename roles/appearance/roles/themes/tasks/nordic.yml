@@ -1,22 +1,22 @@
 ---
-- name: Download `{{ item }}` theme package
+- name: Download `{{ outer_item }}` theme package
   get_url:
-    url: "https://github.com/EliverLara/Nordic/releases/download/v2.1.0/{{ item }}.tar.xz"
-    dest: "/tmp/{{ item }}.tar.xz"
+    url: "https://github.com/EliverLara/Nordic/releases/download/v2.1.0/{{ outer_item }}.tar.xz"
+    dest: "/tmp/{{ outer_item }}.tar.xz"
 
 - name: Ensures `/usr/share/themes/` folder exists
   file:
     path: /usr/share/themes/
     state: directory
 
-- name: Unarchive `{{ item }}` theme
+- name: Unarchive `{{ outer_item }}` theme
   become: yes
   unarchive:
-    src: /tmp/{{ item }}.tar.xz
+    src: /tmp/{{ outer_item }}.tar.xz
     dest: /usr/share/themes/
     remote_src: yes
 
 - name: Clean `/tmp` archive
   file:
     state: absent
-    path: /tmp/{{ item }}.tar.xz
+    path: /tmp/{{ outer_item }}.tar.xz

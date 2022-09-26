@@ -1,0 +1,6 @@
+---
+- name: Install `chromium` software
+  become: yes
+  package: 
+    name: chromium
+    state: latest

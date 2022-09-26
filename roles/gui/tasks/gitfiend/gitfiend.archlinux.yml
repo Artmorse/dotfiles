@@ -1,0 +1,7 @@
+---
+- name: Install `gitfiend` software
+  kewlfft.aur.aur:
+    use: yay
+    name: gitfiend
+    state: present
+  retries: 2

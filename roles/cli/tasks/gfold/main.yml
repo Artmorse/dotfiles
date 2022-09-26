@@ -1,0 +1,4 @@
+---
+- include_tasks: gfold.archlinux.yml
+  when: ansible_os_family == "Archlinux"
+

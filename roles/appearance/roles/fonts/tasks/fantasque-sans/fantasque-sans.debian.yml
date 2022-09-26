@@ -1,0 +1,7 @@
+---
+- include_tasks: tasks/install_nerd_font.yml
+  loop: 
+  - name: FantasqueSansMono
+    type: opentype
+  loop_control:
+    loop_var: outer_item

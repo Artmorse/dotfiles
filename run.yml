@@ -5,7 +5,7 @@
   - name: "Limiting the playbooks execution to Archlinux distributions."
     fail:
       msg: "{{ ansible_distribution }} is not supported by these playbooks!"
-    when: ansible_os_family != "Archlinux"
+    when: ansible_os_family not in ["Archlinux", "Debian"]
 
   tasks:
 
@@ -16,6 +16,11 @@
         apply: 
           tags: [essential]
       tags: [essential]
+
+    - name: install/configure PYTHON and tools
+      include_role:
+        name: python
+      tags: [python]
 
 
     # * system customization
@@ -86,12 +91,17 @@
       tags: [git]
 
 
-    # * containerization
-    - name: install docker
+    # * docker
+    - name: install docker with tools
       include_role:
-        name: containerization
-        tasks_from: docker
+        name: docker
       tags: [docker]
+
+    # * kubernetes
+    - name: install kubernetes tools
+      include_role:
+        name: kubernetes
+      tags: [kubernetes]
 
     # * virtualization
     - name: install virt-manager and dependencies
@@ -177,6 +187,11 @@
         name: vpn
       tags: [vpn]
 
+    - name: install/configure JAVA and tools
+      include_role:
+        name: java
+      tags: [java]
+
     - name: install CLI applications
       include_role:
         name: cli
@@ -196,6 +211,5 @@
     # * containers
     - name: run some containers
       include_role: 
-        name: containerization
-        tasks_from: containers
+        name: containers
       tags: [containers]

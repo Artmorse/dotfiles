@@ -1,0 +1,6 @@
+---
+- name: Install `bat` software
+  become: yes
+  package:
+    name: bat
+    state: latest

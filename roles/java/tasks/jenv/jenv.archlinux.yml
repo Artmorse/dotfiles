@@ -1,0 +1,6 @@
+---
+- name: Install `jenv` software
+  become: yes
+  package:
+    name: jenv
+    state: latest

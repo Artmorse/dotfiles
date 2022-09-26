@@ -1,0 +1,14 @@
+---
+- name: Run `portainer` container
+  include_role:
+    name: containers/roles/portainer
+    apply:
+      tags: ["portainer"]
+  tags: ["containers"]
+
+- name: Run `sonarqube` container
+  include_role:
+    name: containers/roles/sonarqube
+    apply:
+      tags: ["sonarqube"]
+  tags: ["containers"]

@@ -1,4 +1,3 @@
 ---
-
 - name: Install Papirus icons
-  include_tasks: papirus.yml
+  include_tasks: papirus/main.yml

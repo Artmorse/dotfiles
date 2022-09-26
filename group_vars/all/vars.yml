@@ -49,24 +49,37 @@ nfs:
     who: 192.168.10.9
     what: /volume1/downloads
     where: /mnt/nas/downloads
+    is_enabled_at_boot: false
   - name: nas-games
     who: 192.168.10.9
     what: /volume1/games
     where: /mnt/nas/games
+    is_enabled_at_boot: false
   - name: nas-videos
     who: 192.168.10.9
     what: /volume1/videos
     where: /mnt/nas/videos
+    is_enabled_at_boot: false
   - name: nas-musics
     who: 192.168.10.9
     what: /volume1/musics
     where: /mnt/nas/musics
+    is_enabled_at_boot: false
 
 #
 # VPN
 #
 vpn: openvpn
 
+#
+# JAVA
+#
+java:
+  enabled: true
+  versions:
+    - 8
+    - 11
+    - 18
 
 #
 # Appearance
@@ -132,13 +145,33 @@ default:
 #
 # User
 #
-user: 
-  email:
-    perso: arthurr.caron@gmail.com
-    pro: arthur.caron@ext.leroymerlin.fr
+user:
   pseudo: lemorse
   first_name: Arthur
   last_name: Caron
+
+  pro:
+    email: acaron@cloudbees.com
+    git:
+      commit:
+        gpgsign: true
+        signingkey: XXXXXXXXX
+    ssh_keys:
+      create_it: false
+      type: rsa
+      name: pro
+      passphrase: my_secret_passphrase
+
+  perso:
+    email: arthurr.caron@gmail.com
+    git:
+      commit:
+        gpgsign: false
+    ssh_keys:
+      create_it: false
+      type: rsa
+      name: perso
+      passphrase: my_secret_passphrase
 
 #
 # Peripherals
@@ -328,19 +361,3 @@ chromium:
 
 firefox:
   enabled: true
-
-
-
-#
-# SSH
-#
-
-ssh_keys:
-  perso:
-    type: rsa
-    name: perso
-    passphrase: my_secret_passphrase
-  pro:
-    type: rsa
-    name: pro
-    passphrase: my_secret_passphrase

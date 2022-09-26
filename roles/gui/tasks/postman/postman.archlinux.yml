@@ -1,0 +1,7 @@
+---
+- name: Install `postman` software
+  kewlfft.aur.aur:
+    use: yay
+    name: postman-bin
+    state: present
+  retries: 2

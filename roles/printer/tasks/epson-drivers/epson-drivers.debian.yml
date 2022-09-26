@@ -1,0 +1,6 @@
+---
+- name: Install EPSON driver from internet
+  become: yes
+  package: 
+    name: "printer-driver-escpr"
+    state: latest

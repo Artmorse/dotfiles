@@ -1,0 +1,12 @@
+---
+- name: Install `openvpn` package
+  become: yes
+  package:
+    name: openvpn
+    state: latest
+
+- name: Install `network-manager-openvpn` package
+  become: yes
+  package:
+    name: network-manager-openvpn
+    state: latest

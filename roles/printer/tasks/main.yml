@@ -17,11 +17,5 @@
 
 
 - name: Install EPSON drivers
-  kewlfft.aur.aur:
-    use: yay
-    name: "{{ item }}"
-    state: present
-  with_items:
-  - epson-inkjet-printer-escpr2
-  - epson-inkjet-printer-escpr
+  include_tasks: epson-drivers/main.yml
   when: have_you_an_epson_printer | default(False)

@@ -1,0 +1,6 @@
+---
+- name: Install `kubectl` software
+  become: yes
+  package:
+    name: kubectl
+    state: latest

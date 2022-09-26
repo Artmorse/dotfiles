@@ -1,0 +1,15 @@
+---
+- name: Install `libinput`
+  include_role:
+    name: touchpad/roles/libinput
+    apply:
+      tags: [libinput]
+  tags: [touchpad]
+
+- name: Install `touchegg`
+  include_role:
+    name: touchpad/roles/touchegg
+    apply:
+      tags: [touchegg]
+  tags: [touchpad]
+  when: touchpad.is_present | default(False)

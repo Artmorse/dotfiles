@@ -1,12 +1,12 @@
 ---
 - name: "Adding wheel group to the sudoers."
+  become: yes
   lineinfile:
     path: /etc/sudoers
     state: present
     regexp: ^%wheel ALL=
     line: "%wheel ALL=(ALL) NOPASSWD: ALL"
     validate: /usr/sbin/visudo -cf %s
-  become: True
 
 #
 # Package Managers
@@ -16,6 +16,14 @@
   pacman:
     update_cache: yes
     upgrade: 'yes'
+  when: ansible_pkg_mgr == 'pacman'
+
+- name: Update and upgrade aptitude packages
+  become: yes
+  apt:
+    update_cache: yes
+    upgrade: 'yes'
+  when: ansible_pkg_mgr == 'apt'
 
 
 - name: Install essential packages
@@ -29,6 +37,8 @@
       # compress/decompress tools
       - unzip
       - unrar
+      # gnupg
+      - gnupg
 
 
 - name: Install `yay` package manager (AUR) and dependencies
@@ -44,14 +54,7 @@
       - autoconf
       - automake
     state: latest
-
-
-- name: Install pip
-  include_role:
-    name: geerlingguy.pip
-  vars:
-    - ansible_become: yes
-    - pip_package: "python-pip"
+  when: ansible_os_family == "Archlinux"
 
 
 #

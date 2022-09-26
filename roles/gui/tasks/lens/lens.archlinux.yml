@@ -1,0 +1,7 @@
+---
+- name: Install `lens` software
+  kewlfft.aur.aur:
+    use: yay
+    name: lens-bin
+    state: present
+  retries: 2

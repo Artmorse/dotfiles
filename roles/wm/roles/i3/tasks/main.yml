@@ -1,4 +1,9 @@
 ---
+- include_tasks: i3.debian.yml
+  when: ansible_os_family == "Debian"
+
+
+
 - name: Install `i3-gaps` package
   become: yes
   package: 

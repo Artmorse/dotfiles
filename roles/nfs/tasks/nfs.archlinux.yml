@@ -1,0 +1,6 @@
+---
+- name: Install `nfs-utils`
+  become: yes
+  package:
+    name: nfs-utils
+    state: latest

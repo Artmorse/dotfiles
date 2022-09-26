@@ -1,9 +1,6 @@
 ---
-- name: Install `openvpn` package and dependencies
-  become: yes
-  package:
-    name: "{{ item }}"
-    state: latest
-  with_items:
-    - networkmanager-openvpn
-    - openvpn
+- include_tasks: openvpn.archlinux.yml
+  when: ansible_os_family == "Archlinux"
+
+- include_tasks: openvpn.debian.yml
+  when: ansible_os_family == "Debian"

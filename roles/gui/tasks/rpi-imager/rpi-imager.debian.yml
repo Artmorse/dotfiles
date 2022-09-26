@@ -1,0 +1,6 @@
+---
+- name: Install `rpi-imager` software
+  become: yes
+  package: 
+    name: rpi-imager
+    state: latest
