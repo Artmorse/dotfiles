@@ -65,7 +65,7 @@ do
 	for i in $(seq 0 `expr ${monitors_number} - 1`); do
 		monitor=$(xrandr --listmonitors | tail -n `expr ${monitors_number} - ${i}` | head -n 1 | awk '{print $NF}')
 		wallpaper_full_path=$(tail -n 1 ~/.fehbg | cut -d " " -f `expr 4  + ${i}` | sed "s/'//g")
-		wallpaper_file_name=$(echo "${picture}" | awk -F'/' '{print $NF}')
+		wallpaper_file_name=$(echo "${wallpaper_full_path}" | awk -F'/' '{print $NF}')
 
 		send_wallpaper_notification &
 	done
