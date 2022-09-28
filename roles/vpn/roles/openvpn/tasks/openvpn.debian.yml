@@ -8,5 +8,5 @@
 - name: Install `network-manager-openvpn` package
   become: yes
   package:
-    name: network-manager-openvpn
+    name: network-manager-openvpn-gnome
     state: latest
