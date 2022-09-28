@@ -1,6 +1,5 @@
 ---
 - name: Install `chromium` software
   become: yes
-  package: 
-    name: chromium-browser
-    state: latest
+  snap:
+    name: chromium
