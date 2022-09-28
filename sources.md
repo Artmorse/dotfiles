@@ -288,6 +288,10 @@
 
 ## [git](roles/git)
 
+### [git-secrets](roles/git/tasks/git-secrets/)
+
+- [git-secrets repository](https://github.com/awslabs/git-secrets)
+- [git-secrets archlinux package](https://aur.archlinux.org/packages/git-secrets)
 
 ## [gui](roles/gui)
 

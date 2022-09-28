@@ -1,4 +1,7 @@
 ---
+- include_tasks: git-secrets/main.yml
+
+
 - name: Ensures folders exists
   file:
     path: "{{ item }}"
