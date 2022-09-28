@@ -1,0 +1,12 @@
+---
+
+- name: Install `pyenv` dependencies
+  become: yes
+  package:
+    name: libedit-dev
+    state: latest
+
+- name: Clone `pyenv` repository
+  git:
+    repo: https://github.com/pyenv/pyenv
+    dest: ~/.pyenv
