@@ -59,9 +59,11 @@ Check the [OS tested list](#os-tested).
 ### Pre installation
 
 1. Configure the [group_vars.yml](https://gitlab.lemorse.tech/LeMomorse/dotfiles-manjaro/-/blob/master/group_vars/all/vars.yml) file.
-2. Run the script to run the local installation ans follow the instructions.
+2. Run the script to run (in function of your based distribution) the local installation ans follow the instructions.
   ```bash
-  bash ./setup.sh
+  bash ./setup.archlinux.sh
+  # OR
+  bash ./setup.debian.sh
   ```
 
 ### Installation
