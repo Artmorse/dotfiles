@@ -479,6 +479,13 @@
 
 ## [java](roles/java)
 
+### [maven](roles/java/tasks/maven)
+
+- [maven website](https://maven.apache.org/)
+- [downloading apache maven](https://maven.apache.org/download.cgi)
+- [installing apache maven](https://maven.apache.org/install.html)
+- [maven archlinux package](https://archlinux.org/packages/community/any/maven/)
+
 ### [openjdk](roles/java/tasks/jdk)
 
 ### [jenv](roles/cli)

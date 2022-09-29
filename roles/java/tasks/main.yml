@@ -5,11 +5,8 @@
   loop_control:
     loop_var: outer_item
 
-- name: Install `maven` software
-  become: yes
-  package:
-    name: maven
-    state: latest
+- include_tasks: maven/main.yml
+  tags: [java, maven]
 
 - include_tasks: jenv/main.yml
   tags: [java, jenv]

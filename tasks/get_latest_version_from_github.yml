@@ -1,5 +1,5 @@
 ---
-- name: Get latest release informations from Github
+- name: Get the latest release version from Github
   uri:
     url: https://api.github.com/repos/{{ outer_item }}/releases/latest
   register: latest_release
@@ -8,6 +8,6 @@
   set_fact:
     version: "{{ latest_release['json']['tag_name'] }}"
 
-- name: Get latest version of `{{ outer_item }}` repository
+- name: The latest version of `{{ outer_item }}` repository
   debug:
     msg: "{{ version }}"
