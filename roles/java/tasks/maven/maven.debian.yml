@@ -43,10 +43,13 @@
 - name: Create a symbolic links to maven
   become: yes
   file:
-    src: /opt/maven/bin/mvn
-    dest: /usr/bin/mvn
+    src: /opt/maven/bin/{{item}}
+    dest: /usr/bin/{{item}}
     mode: '755'
     state: link
+  with_items:
+  - mvn
+  - mvnDebug
 
 - name: Clean `/tmp` folder
   file:
