@@ -1,0 +1,11 @@
+---
+- include_tasks: tasks/get_latest_version_from_github.yml
+  loop: 
+  - Adapta-Projects/Adapta-Nord
+  loop_control:
+    loop_var: outer_item
+
+- name: Install `Adapta-Nord` theme package
+  become: yes
+  apt:
+    deb: https://github.com/Adapta-Projects/Adapta-Nord/releases/download/{{ version }}/Adapta-Nord.deb

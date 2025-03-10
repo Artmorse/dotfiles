@@ -1,9 +1,10 @@
 ---
-- name: Install `ckb-next` aur package
-  kewlfft.aur.aur:
-    use: yay
-    name: ckb-next
-    state: present
+- include_tasks: ckb-next.archlinux.yml
+  when: ansible_os_family == "Archlinux"
+
+- include_tasks: ckb-next.debian.yml
+  when: ansible_os_family == "Debian"
+
 
 
 - name: Ensures `~/.config/ckb-next` folder exists

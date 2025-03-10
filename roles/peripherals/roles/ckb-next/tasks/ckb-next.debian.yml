@@ -1,0 +1,19 @@
+---
+- block:
+  - name: Add `ckb-next` repository from PPA with the current codename
+    become: yes
+    apt_repository:
+      repo: ppa:tatokis/ckb-next
+  rescue:
+  - name: Add `ckb-next` repository from PPA with the `impish` codename
+    become: yes
+    apt_repository:
+      repo: ppa:tatokis/ckb-next
+      codename: impish
+
+
+- name: Install `ckb-next` package
+  become: yes
+  package:
+    name: ckb-next
+    state: latest

@@ -1,16 +1,11 @@
 ---
-- name: Install `discord` software
-  become: yes
-  package:
-    name: discord
-    state: latest
 
+- include_tasks: discord.archlinux.yml
+  when: ansible_os_family == "Archlinux"
 
-- name: Install `betterdiscordctl` software
-  kewlfft.aur.aur:
-    use: yay
-    name: betterdiscordctl
-    state: present
+- include_tasks: discord.debian.yml
+  when: ansible_os_family == "Debian"
+
 
 
 - name: Ensures betterdiscord configuration folders exists

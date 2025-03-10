@@ -2,7 +2,7 @@
 - name: Install `rofi` package
   become: yes
   package: 
-    name: "rofi"
+    name: rofi
     state: latest
 
 

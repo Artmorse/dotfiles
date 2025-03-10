@@ -1,0 +1,57 @@
+---
+- include_tasks: tasks/get_latest_version_from_github.yml
+  loop: 
+  - apache/maven
+  loop_control:
+    loop_var: outer_item
+
+- name: Clean the version
+  set_fact:
+    version: "{{ version | split('-') | last }}"
+
+
+- name: Retrieve the maven checksum
+  uri:
+    url: "https://downloads.apache.org/maven/maven-3/{{ version }}/binaries/apache-maven-{{ version }}-bin.zip.sha512"
+    return_content: true
+  register: maven_checksum
+
+# - debug:
+#     msg: "{{ maven_checksum['content'] }}"
+
+- name: Download `maven` archive
+  get_url:
+    url: https://dlcdn.apache.org/maven/maven-3/{{ version }}/binaries/apache-maven-{{ version }}-bin.zip
+    dest: /tmp/apache-maven-{{ version }}-bin.zip
+    checksum: sha512:{{ maven_checksum['content'] }}
+
+- name: Extract `maven` archive to /opt
+  become: yes
+  unarchive:
+    src: /tmp/apache-maven-{{ version }}-bin.zip
+    dest: /opt/
+    remote_src: yes
+
+- name: Create a symbolic links to maven
+  become: yes
+  file:
+    src: /opt/apache-maven-{{ version }}
+    dest: /opt/maven
+    mode: '755'
+    state: link
+
+- name: Create a symbolic links to maven
+  become: yes
+  file:
+    src: /opt/maven/bin/{{item}}
+    dest: /usr/bin/{{item}}
+    mode: '755'
+    state: link
+  with_items:
+  - mvn
+  - mvnDebug
+
+- name: Clean `/tmp` folder
+  file:
+    state: absent
+    path: /tmp/apache-maven-{{ version }}-bin.zip

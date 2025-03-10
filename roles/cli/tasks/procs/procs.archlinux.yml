@@ -1,0 +1,7 @@
+---
+- name: Install `procs` software
+  kewlfft.aur.aur:
+    use: yay
+    name: procs
+    state: present
+  retries: 2

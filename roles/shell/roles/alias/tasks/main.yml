@@ -1,8 +1,8 @@
 ---
 - name: Copy `~/.aliases` file
-  copy:
-    src: .aliases
-    dest: "~"
+  template:
+    src: .aliases.j2
+    dest: "~/.aliases"
 
 - name: Download external aliases file
   get_url:

@@ -42,3 +42,11 @@
     path: ~/.bashrc
     line: source <(kind completion bash)
   when: kind.enabled | default(False)
+
+- name: Insert/update `~/.bashrc` jenv aliases configuration
+  blockinfile:
+    path: ~/.bashrc
+    block: |
+      export PATH="$HOME/.jenv/bin:$PATH"
+      eval "$(jenv init -)"
+  when: jenv.enabled | default(False)

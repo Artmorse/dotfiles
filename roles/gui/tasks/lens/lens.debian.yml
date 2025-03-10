@@ -1,0 +1,6 @@
+---
+- name: Install `lens` software
+  become: yes
+  snap:
+    name: kontena-lens
+    classic: yes

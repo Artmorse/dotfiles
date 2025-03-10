@@ -1,0 +1,7 @@
+---
+
+- include_tasks: pip/main.yml
+
+- include_tasks: pyenv/main.yml
+  tags: [python, pyenv]
+  when: pyenv.enabled | default(False)

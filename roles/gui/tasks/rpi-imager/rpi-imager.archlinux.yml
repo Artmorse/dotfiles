@@ -1,0 +1,7 @@
+---
+- name: Install `rpi-imager` software
+  kewlfft.aur.aur:
+    use: yay
+    name: rpi-imager
+    state: present
+  retries: 2

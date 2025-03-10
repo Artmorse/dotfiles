@@ -1,0 +1,5 @@
+---
+- name: Install `postman` software
+  become: yes
+  snap:
+    name: postman

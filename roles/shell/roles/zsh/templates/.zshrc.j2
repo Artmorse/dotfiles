@@ -130,6 +130,11 @@ source $HOME/.kubectl_aliases
 {% endif %}
 {% if terraform.enabled == true %}
 source $HOME/.terraform_aliases
+{% endif %}
+{% if jenv.enabled == true %}
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+{% endif %}
 
 {% if bat.theme | default(False) %}
 export BAT_THEME="{{ bat.theme }}"

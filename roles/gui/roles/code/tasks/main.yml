@@ -1,21 +1,10 @@
 ---
-- name: Install `code` dependencies
-  become: yes
-  package:
-    name: xclip
-    state: latest
+- include_tasks: code.archlinux.yml
+  when: ansible_os_family == "Archlinux"
 
-- name: Install `code` software
-  kewlfft.aur.aur:
-    use: yay
-    name: visual-studio-code-bin
-    state: present
+- include_tasks: code.debian.yml
+  when: ansible_os_family == "Debian"
 
-- name: Install `codium` software
-  kewlfft.aur.aur:
-    use: yay
-    name: vscodium-bin
-    state: present
 
 
 - name: Install extensions

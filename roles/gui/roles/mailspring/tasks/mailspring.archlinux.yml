@@ -1,0 +1,6 @@
+---
+- name: Install `mailspring` software
+  kewlfft.aur.aur:
+    use: yay
+    name: mailspring
+    state: present

@@ -1,0 +1,6 @@
+---
+- name: Install `maven` software
+  become: yes
+  package:
+    name: maven
+    state: latest

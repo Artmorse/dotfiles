@@ -1,43 +1,6 @@
 ---
-- name: Install virtualization dependencies
-  become: True
-  package:
-    name: "{{ item }}"
-  with_items:
-  - qemu-full
-  - libvirt
-  - qemu-guest-agent
-  - iptables
-  - libguestfs
+- include_tasks: virtualization.archlinux.yml
+  when: ansible_os_family == "Archlinux"
 
-- name: Install virtualization frontends (virt-manager and cockpit) dependencies
-  become: True
-  package:
-    name: "{{ item }}"
-  with_items:
-  - virt-manager
-  - cockpit
-  - cockpit-machines
-
-- name: Start and Enable virtualization services
-  become: True
-  service:
-    name: "{{ item }}"
-    state: started
-    enabled: yes
-  with_items:
-  - virtqemud
-  - libvirtd
-  - virtnetworkd
-  - virtstoraged
-
-- name: Autostart the default network
-  become: True
-  command: virsh net-autostart default
-
-- name: Ensure user are added to the libvirt group
-  become: True
-  user:
-    name: "{{ ansible_user_id }}"
-    groups: libvirt
-    append: True
+# - include_tasks: virtualization.debian.yml
+#   when: ansible_os_family == "Debian"

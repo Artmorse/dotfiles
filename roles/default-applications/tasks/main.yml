@@ -1,11 +1,6 @@
 ---
-- name: Install `handlr` application
-  become: True
-  package: 
-    name: handlr
-    state: latest
+- include_tasks: default-applications.archlinux.yml
+  when: ansible_os_family == "Archlinux"
 
-- name: Deploying the `mimeapps.list` file
-  template:
-    src: mimeapps.list.j2
-    dest: ~/.config/mimeapps.list
+# - include_tasks: default-applications.debian.yml
+#   when: ansible_os_family == "Debian"

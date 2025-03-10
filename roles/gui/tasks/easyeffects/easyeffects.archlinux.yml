@@ -1,0 +1,6 @@
+---
+- name: Install `easyeffects` software
+  become: yes
+  package: 
+    name: easyeffects
+    state: latest

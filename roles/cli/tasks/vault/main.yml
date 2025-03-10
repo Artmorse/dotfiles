@@ -1,0 +1,6 @@
+---
+- include_tasks: vault.archlinux.yml
+  when: ansible_os_family == "Archlinux"
+
+- include_tasks: vault.debian.yml
+  when: ansible_os_family == "Debian"

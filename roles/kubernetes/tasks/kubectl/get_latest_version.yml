@@ -1,0 +1,15 @@
+---
+- name: Get latest release informations from Github
+  uri:
+    url: https://dl.k8s.io/release/stable.txt
+    return_content: yes
+  register: latest_release
+
+
+- name: Set *version* variable
+  set_fact:
+    version: "{{ latest_release['content'] }}"
+
+- name: Get latest version of `{{ item }}` repository
+  debug:
+    msg: "{{ version }}"

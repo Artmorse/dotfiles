@@ -1,0 +1,7 @@
+---
+- name: Install `jetbrains-toolbox` software
+  kewlfft.aur.aur:
+    use: yay
+    name: jetbrains-toolbox
+    state: present
+  retries: 2

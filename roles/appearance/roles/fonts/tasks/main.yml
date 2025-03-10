@@ -1,16 +1,21 @@
 ---
 
-- include_tasks: cascadia-code.yml
+- name: Install `cascadia-code` font
+  include_tasks: cascadia-code/main.yml
 
 - include_tasks: comic-code.yml
 
-- include_tasks: fantasque-sans.yml
+- name: Install `fantasque-sans` font
+  include_tasks: fantasque-sans/main.yml
 
-- include_tasks: fira-code.yml
+- name: Install `fira-code` font
+  include_tasks: fira-code/main.yml
 
-- include_tasks: iosevka.yml
+- name: Install `iosevka` font
+  include_tasks: iosevka/main.yml
 
-- include_tasks: jetbrains-mono.yml
+- name: Install `jetbrains-mono` font
+  include_tasks: jetbrains-mono/main.yml
 
 - name: Update font cache
-  include_tasks: common.yml
+  shell: fc-cache -f -v

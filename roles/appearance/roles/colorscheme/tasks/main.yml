@@ -4,3 +4,7 @@
     src: .Xresources
     dest: "~"
 
+- name: Update `xrdb`
+  shell: xrdb ~/.Xresources
+  ignore_errors: yes
+

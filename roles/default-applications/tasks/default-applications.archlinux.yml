@@ -1,0 +1,11 @@
+---
+- name: Install `handlr` application
+  become: yes
+  package: 
+    name: handlr
+    state: latest
+
+- name: Deploying the `mimeapps.list` file
+  template:
+    src: mimeapps.list.j2
+    dest: ~/.config/mimeapps.list

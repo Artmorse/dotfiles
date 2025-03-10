@@ -46,6 +46,11 @@ The `BACKUP_DEVICE_PATH` is the path to the root of your connected device (exter
   ```bash
   cp -r ~/.config "${BACKUP_FOLDER_PATH}"
   ```
+- backup your SSH keys and GPG keys
+  ```bash
+  cp -r ~/.ssh "${BACKUP_FOLDER_PATH}"
+  ```
+  Follow this [documentation](https://gitlab.lemorse.tech/LeMomorse/help/-/blob/master/gpg/README.md#backup) to know how to backup/restore GPG keys.
 
 ### Install a fresh OS
 
@@ -54,9 +59,11 @@ Check the [OS tested list](#os-tested).
 ### Pre installation
 
 1. Configure the [group_vars.yml](https://gitlab.lemorse.tech/LeMomorse/dotfiles-manjaro/-/blob/master/group_vars/all/vars.yml) file.
-2. Run the script to run the local installation ans follow the instructions.
+2. Run the script to run (in function of your based distribution) the local installation ans follow the instructions.
   ```bash
-  bash ./setup.sh
+  bash ./setup.archlinux.sh
+  # OR
+  bash ./setup.debian.sh
   ```
 
 ### Installation

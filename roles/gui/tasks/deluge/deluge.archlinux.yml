@@ -1,0 +1,6 @@
+---
+- name: Install `deluge` software
+  become: yes
+  package:
+    name: deluge-gtk
+    state: latest

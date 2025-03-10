@@ -15,41 +15,42 @@
 ### [fonts](roles/appearance/roles/fonts)
 
 - [nerdfonts](https://www.nerdfonts.com/#home)
+- [nerdfonts repository](https://github.com/ryanoasis/nerd-fonts)
 
-#### [cascadia-code](roles/fonts/tasks/cascadia-code.yml)
+#### [cascadia-code](roles/appearance/roles/fonts/tasks/cascadia-code)
 
 - [cascadia-code repository](https://github.com/microsoft/cascadia-code)
 - [cascadia-code archlinux package](https://archlinux.org/packages/community/any/ttf-cascadia-code/)
 - [cascadia-code nerd font archlinux package](https://aur.archlinux.org/packages/nerd-fonts-cascadia-code)
 
-#### [comic-code](roles/fonts/tasks/comic-code.yml)
+#### [comic-code](roles/appearance/roles/fonts/tasks/comic-code.yml)
 
 - [comic-code website](https://tosche.net/fonts/comic-code)
 
-#### [fantasque-sans](roles/fonts/tasks/fantasque-sans.yml)
+#### [fantasque-sans](roles/appearance/roles/fonts/tasks/fantasque-sans)
 
 - [fantasque-sans repository](https://github.com/belluzj/fantasque-sans)
 - [fantasque-sans archlinux package](https://archlinux.org/packages/community/any/ttf-fantasque-sans-mono/)
 - [fantasque-sans nerd font archlinux package](https://aur.archlinux.org/packages/nerd-fonts-fantasque-sans-mono)
 
-#### [fira-code](roles/fonts/tasks/fira-code.yml)
+#### [fira-code](roles/appearance/roles/fonts/tasks/fira-code)
 
 - [fira-code repository](https://github.com/tonsky/FiraCode)
 - [fira-code archlinux package](https://archlinux.org/packages/community/any/ttf-fira-code/)
 - [fira-code nerd font archlinux package](https://aur.archlinux.org/packages/nerd-fonts-fira-code)
 
-#### [iosevka](roles/fonts/tasks/iosevka.yml)
+#### [iosevka](roles/appearance/roles/fonts/tasks/iosevka)
 
 - [iosevka](https://github.com/be5invis/Iosevka)
 - [iosevka archlinux package](https://archlinux.org/packages/community/any/ttc-iosevka/)
 
-#### [jetbrains-mono](roles/fonts/tasks/jetbrains-mono.yml)
+#### [jetbrains-mono](roles/appearance/roles/fonts/tasks/jetbrains-mono)
 
 - [jetbrains-mono repository](https://github.com/JetBrains/JetBrainsMono)
 - [jetbrains-mono archlinux package](https://archlinux.org/packages/community/any/ttf-jetbrains-mono/)
 - [jetbrains-mono nerd font archlinux package](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono)
 
-### [icons](roles/icons)
+### [icons](roles/appearance/roles/icons)
 
 - [papirus website](https://www.gnome-look.org/p/1166289/)
 - [papirus-icon-theme repository](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/)
@@ -59,14 +60,14 @@
 - [papirus-nord gnome-look](https://www.gnome-look.org/p/1362603/)
 - [papirus-nord repository](https://github.com/Adapta-Projects/Papirus-Nord)
 
-### [themes](roles/themes)
+### [themes](roles/appearance/roles/themes)
 
-#### [nordic themes](roles/themes)
+#### [nordic themes](roles/appearance/roles/themes/tasks/nordic.yml)
 
 - [nordic website](https://www.gnome-look.org/p/1267246/)
 - [nordic repository](https://github.com/EliverLara/Nordic)
 
-#### [adapta-nord](roles/themes)
+#### [adapta-nord](roles/appearance/roles/themes/tasks/adapta-nord)
 
 - [adapta-nord website](https://www.xfce-look.org/p/1354255/)
 - [adapta-nord repository](https://github.com/Joshaby/Adapta-Nord)
@@ -108,83 +109,30 @@
 
 ### dev
 
-#### [helm](roles/cli)
-
-- [helm repository](https://github.com/helm/helm)
-- [helm website](https://helm.sh/)
-- [helm autocompletion documentation](https://helm.sh/docs/helm/helm_completion/#see-also)
-- [helm archlinux package](https://archlinux.org/packages/community/x86_64/helm/)
-
-#### [jenv](roles/cli)
-
-- [jenv repository](https://github.com/jenv/jenv)
-- [jenv archlinux package](https://archlinux.org/packages/community/x86_64/jenv/)
-
 #### [jq](roles/cli)
 
 - [jq repository](https://github.com/stedolan/jq)
 - [jq archlinux package](https://archlinux.org/packages/community/x86_64/jq/)
 
-#### [k9s](roles/cli)
-
-- [k9s website](https://k9scli.io/)
-- [k9s repository](https://github.com/derailed/k9s)
-- [k9s archlinux package](https://archlinux.org/packages/community/x86_64/k9s/)
-
-#### [kind](roles/cli)
-
-- [kind website](https://kind.sigs.k8s.io/)
-- [kind repository](https://github.com/kubernetes-sigs/kind)
-- [kind archlinux package](https://aur.archlinux.org/packages/kind)
-
-#### [kompose](roles/cli)
-
-- [kompose repository](https://github.com/kubernetes/kompose)
-- [kompose installation](https://kompose.io/installation/)
-- [kompose autocompletion documentation](https://github.com/kubernetes/kompose#shell-autocompletion)
-- [kompose archlinux package](https://archlinux.org/packages/community/x86_64/kompose/)
-
-#### [kubectl](roles/cli)
-
-- [kubectl repository](https://github.com/kubernetes/kubectl)
-- [kubectl installation](https://kubernetes.io/fr/docs/tasks/tools/install-kubectl/)
-- [kubectl archlinux package](https://archlinux.org/packages/community/x86_64/kubectl/)
-
-#### [kubectx](roles/cli)
-
-- [kubectx repository](https://github.com/ahmetb/kubectx#manual-installation-macos-and-linux)
-- [kubectx installation](https://github.com/ahmetb/kubectx)
-- [kubectx archlinux package](https://archlinux.org/packages/community/any/kubectx/)
-
-#### [ngrok](roles/cli)
+#### [ngrok](roles/cli/tasks/ngrok/)
 
 - [ngrok website](https://ngrok.com/)
 - [ngrok repository](https://github.com/inconshreveable/ngrok)
 - [kubectl archlinux package](https://archlinux.org/packages/community/x86_64/kubectl/)
 
-#### [pyenv](roles/cli/roles/pyenv)
-
-- [pyenv repository](https://github.com/pyenv/pyenv)
-- [pyenv archlinux package](https://archlinux.org/packages/community/x86_64/pyenv/)
-
-#### [quarkus](roles/cli)
-
-- [quarkus repository](https://github.com/quarkusio/quarkus)
-- [quarkus website](https://quarkus.io/)
-
-#### [sonar-scanner](roles/cli/roles/sonar-scanner)
+#### [sonar-scanner](roles/cli/tasks/sonar-scanner)
 
 - [sonar-scanner repository](https://github.com/SonarSource/sonar-scanner-cli)
 - [sonar-scanner documentation](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/)
 - [sonar-scanner archlinux package](https://aur.archlinux.org/packages/sonar-scanner)
 
-#### [terraform](roles/cli)
+#### [terraform](roles/cli/tasks/terraform/)
 
 - [terraform](https://www.terraform.io/)
 - [terraform repository](https://github.com/hashicorp/terraform)
 - [terraform archlinux package](https://archlinux.org/packages/community/x86_64/terraform/)
 
-#### [vault](roles/cli)
+#### [vault](roles/cli/tasks/vault/)
 
 - [vault](https://www.vaultproject.io/)
 - [vault repository](https://github.com/hashicorp/vault)
@@ -192,10 +140,19 @@
 
 ### utils
 
-#### [bat](roles/cli)
+#### [bat](roles/cli/tasks/bat/)
 
 - [bat repository](https://github.com/sharkdp/bat)
 - [bat archlinux package](https://archlinux.org/packages/community/x86_64/bat/)
+
+#### [bpytop](roles/cli)
+
+- [bpytop repository](https://github.com/aristocratos/bpytop)
+- [bpytop archlinux package](https://archlinux.org/packages/community/any/bpytop/)
+
+#### [dig](roles/cli)
+
+- [bind archlinux package](https://archlinux.org/packages/extra/x86_64/bind/)
 
 #### [exa](roles/cli)
 
@@ -203,7 +160,7 @@
 - [exa repository](https://github.com/ogham/exa)
 - [exa archlinux package](https://archlinux.org/packages/community/x86_64/exa/)
 
-#### [fd](roles/cli)
+#### [fd](roles/cli/tasks/fd/)
 
 - [fd repository](https://github.com/sharkdp/fd)
 - [fd archlinux package](https://archlinux.org/packages/community/x86_64/fd/)
@@ -213,7 +170,7 @@
 - [fzf repository](https://github.com/junegunn/fzf)
 - [fzf archlinux package](https://archlinux.org/packages/community/x86_64/fzf/)
 
-#### [gfold](roles/cli)
+#### [gfold](roles/cli/tasks/gfold/)
 
 - [gfold repository](https://github.com/nickgerace/gfold)
 - [gfold archlinux package](https://archlinux.org/packages/community/x86_64/gfold/)
@@ -224,11 +181,11 @@
 - [gparted repository](https://gitlab.gnome.org/GNOME/gparted)
 - [gparted archlinux package](https://archlinux.org/packages/extra/x86_64/gparted/)
 
-#### [nano](roles/cli)
+#### [nano](roles/cli/tasks/nano)
 
 - [nanorc repository](https://github.com/scopatz/nanorc)
 
-#### [procs](roles/cli)
+#### [procs](roles/cli/tasks/procs)
 
 - [procs repository](https://github.com/dalance/procs)
 - [procs archlinux package](https://archlinux.org/packages/community/x86_64/procs/)
@@ -251,27 +208,19 @@
 - [imagemagick archlinux package](https://archlinux.org/packages/extra/x86_64/imagemagick/)
 
 
-## [containerization](roles/containerization)
+## [containers](roles/containerization/roles)
 
-### [containers](roles/containerization/roles)
-
-#### [portainer](roles/containerization/roles/portainer)
+### [portainer](roles/containerization/roles/portainer)
 
 - [portainer website](https://www.portainer.io/)
 - [portainer image](https://hub.docker.com/r/portainer/portainer-ce)
 - [portainer repository](https://github.com/portainer/portainer)
 
-#### [sonarqube](roles/containerization/roles/sonarqube)
+### [sonarqube](roles/containerization/roles/sonarqube)
 
 - [sonarqube website](https://www.sonarqube.org/)
 - [sonarqube image](https://hub.docker.com/_/sonarqube)
 - [sonarqube repository](https://github.com/SonarSource/sonarqube)
-
-### [docker](roles/containerization/tasks/docker.yml)
-
-- [docker website](https://www.docker.com/)
-- [docker archlinux package](https://archlinux.org/packages/community/x86_64/docker/)
-- [docker-compose archlinux package](https://archlinux.org/packages/community/x86_64/docker-compose/)
 
 
 ## [default-applications](roles/default-applications)
@@ -299,6 +248,14 @@
 - [Graphite-kde-theme repository]([Graphite-kde-theme](https://github.com/vinceliuice/Graphite-kde-theme))
 
 
+## [docker](roles/docker)
+
+- [docker website](https://www.docker.com/)
+- [docker archlinux package](https://archlinux.org/packages/community/x86_64/docker/)
+- [docker-compose archlinux package](https://archlinux.org/packages/community/x86_64/docker-compose/)
+- [ansible galaxy role](https://galaxy.ansible.com/geerlingguy/docker)
+
+
 ## [essential](roles/essential)
 
 - [git](https://git-scm.com/)
@@ -306,6 +263,7 @@
 - [curl](https://curl.se/)
 - [unzip](https://doc.ubuntu-fr.org/zip)
 - [unrar](https://doc.ubuntu-fr.org/rar)
+- [gnupg](https://gnupg.org/)
 
 ### package manager
 
@@ -328,6 +286,13 @@
 - [thunar-custom-actions archlinux package](https://aur.archlinux.org/packages/thunar-custom-actions)
 
 
+## [git](roles/git)
+
+### [git-secrets](roles/git/tasks/git-secrets/)
+
+- [git-secrets repository](https://github.com/awslabs/git-secrets)
+- [git-secrets archlinux package](https://aur.archlinux.org/packages/git-secrets)
+
 ## [gui](roles/gui)
 
 ### communication
@@ -349,19 +314,19 @@
 - [mailspring repository](https://github.com/Foundry376/Mailspring)
 - [mailspring nord-theme repository](https://github.com/faraadi/mailspring-nord-theme)
 
-#### [slack](roles/gui)
+#### [slack](roles/gui/tasks/slack/)
 
 - [slack website](https://slack.com)
 - [slack archlinux package](https://aur.archlinux.org/packages/slack-desktop)
 - [nord-slack repository](https://github.com/arcticicestudio/nord-slack)
 - [nord-slack documentation](https://www.nordtheme.com/ports/slack)
 
-#### [teamviewer](roles/gui)
+#### [teamviewer](roles/gui/tasks/teamviewer/)
 
 - [teamviewer website](https://www.teamviewer.com/)
 - [teamviewer archlinux package](https://aur.archlinux.org/packages/teamviewer)
 
-#### [zoom](roles/gui)
+#### [zoom](roles/gui/tasks/zoom/)
 
 - [zoom website](https://www.zoom.com/)
 - [zoom archlinux package](https://aur.archlinux.org/packages/zoom)
@@ -382,29 +347,29 @@
 - [vscodium repository](https://github.com/VSCodium/vscodium#install-with-snap)
 - [vscodium archlinux package](https://aur.archlinux.org/packages/codium)
 
-#### [dbeaver](roles/gui)
+#### [dbeaver](roles/gui/tasks/dbeaver/)
 
 - [dbeaver website](https://dbeaver.com/)
 - [dbeaver repository](https://github.com/dbeaver/dbeaver)
 - [dbeaver archlinux package](https://archlinux.org/packages/community/x86_64/dbeaver/)
 
-#### [gitfiend](roles/gui)
+#### [gitfiend](roles/gui/tasks/gitfiend/)
 
 - [gitfiend website](https://gitfiend.com/)
 - [gitfiend archlinux package](https://aur.archlinux.org/packages/gitfiend)
 
-#### [jetbrains toolbox](roles/gui)
+#### [jetbrains toolbox](roles/gui/tasks/jetbrains-toolbox/)
 
 - [jetbrains toolbox website](https://www.jetbrains.com/toolbox-app/)
 - [jetbrains archlinux package](https://aur.archlinux.org/packages/jetbrains-toolbox)
 
-#### [lens](roles/gui)
+#### [lens](roles/gui/tasks/lens/)
 
 - [lens website](https://k8slens.dev/)
 - [lens repository](https://github.com/lensapp/lens)
 - [lens archlinux package](https://aur.archlinux.org/packages/lens)
 
-#### [postman](roles/gui)
+#### [postman](roles/gui/tasks/postman/)
 
 - [postman website](https://www.postman.com/)
 - [postman archlinux package](https://aur.archlinux.org/packages/postman)
@@ -442,19 +407,19 @@
 
 ### misc
 
-#### [balena-etcher](roles/gui)
+#### [balena-etcher](roles/gui/tasks/balena-etcher/)
 
 - [balena-etcher website](https://www.balena.io/etcher/)
 - [balena-etcher repository](https://github.com/balena-io/etcher)
 - [balena-etcher archlinux package](https://aur.archlinux.org/packages/balena-etcher)
 
-#### [bitwarden](roles/gui)
+#### [bitwarden](roles/gui/tasks/bitwarden/)
 
 - [bitwarden website](https://bitwarden.com/)
 - [bitwarden repository](https://github.com/bitwarden)
 - [bitwarden archlinux package](https://archlinux.org/packages/community/x86_64/bitwarden/)
 
-#### [cura](roles/gui)
+#### [cura](roles/gui/roles/cura)
 
 - [cura website](https://ultimaker.com/software/ultimaker-cura)
 - [cura repository](https://github.com/Ultimaker/Cura)
@@ -462,7 +427,7 @@
 
 - [wanhao france - get started documentation](https://www.wanhaofrance.com/pages/wanhao-duplicator-12-d12-230-300)
 
-#### [deluge](roles/gui)
+#### [deluge](roles/gui/tasks/deluge/)
 
 - [deluge website](https://deluge-torrent.org/)
 - [deluge repository](https://github.com/deluge-torrent/deluge)
@@ -477,7 +442,7 @@
 
 - [qalculate archlinux package](https://archlinux.org/packages/extra/x86_64/qalculate-gtk/)
 
-#### [rpi-imager](roles/gui)
+#### [rpi-imager](roles/gui/tasks/rpi-imager/)
 
 - [rpi-imager website](https://www.raspberrypi.com/software/)
 - [rpi-imager repository](https://github.com/raspberrypi/rpi-imager)
@@ -485,7 +450,7 @@
 
 ### music
 
-#### [easyeffects](roles/gui)
+#### [easyeffects](roles/gui/tasks/easyeffects/)
 
 - [easyeffects repository](https://github.com/wwmm/easyeffects)
 - [easyeffects archlinux package](https://archlinux.org/packages/community/x86_64/easyeffects/)
@@ -501,7 +466,7 @@
 
 ### webbrowsers
 
-#### [chromium](roles/gui)
+#### [chromium](roles/gui/tasks/chromium/)
 
 - [chromium website](https://www.chromium.org/chromium-projects/)
 - [chromium archlinux package](https://archlinux.org/packages/extra/x86_64/chromium/)
@@ -510,6 +475,78 @@
 
 - [firefox website](https://www.mozilla.org/fr/firefox/new/)
 - [firefox archlinux package](https://archlinux.org/packages/extra/x86_64/firefox/)
+
+
+## [java](roles/java)
+
+### [maven](roles/java/tasks/maven)
+
+- [maven website](https://maven.apache.org/)
+- [downloading apache maven](https://maven.apache.org/download.cgi)
+- [installing apache maven](https://maven.apache.org/install.html)
+- [maven archlinux package](https://archlinux.org/packages/community/any/maven/)
+
+### [openjdk](roles/java/tasks/jdk)
+
+### [jenv](roles/cli)
+
+- [jenv repository](https://github.com/jenv/jenv)
+- [jenv archlinux package](https://archlinux.org/packages/community/x86_64/jenv/)
+
+### [quarkus](roles/cli)
+
+- [quarkus repository](https://github.com/quarkusio/quarkus)
+- [quarkus website](https://quarkus.io/)
+
+
+## [kubernetes](roles/kubernetes)
+
+### [helm](roles/kubernetes/tasks/helm/)
+
+- [helm repository](https://github.com/helm/helm)
+- [helm website](https://helm.sh/)
+- [helm autocompletion documentation](https://helm.sh/docs/helm/helm_completion/#see-also)
+- [helm archlinux package](https://archlinux.org/packages/community/x86_64/helm/)
+
+#### [k3sup](roles/cli)
+
+- [k3sup repository](https://github.com/alexellis/k3sup)
+
+#### [k9s](roles/cli)
+
+- [k9s website](https://k9scli.io/)
+- [k9s repository](https://github.com/derailed/k9s)
+- [k9s archlinux package](https://archlinux.org/packages/community/x86_64/k9s/)
+
+#### [kind](roles/cli)
+
+- [kind website](https://kind.sigs.k8s.io/)
+- [kind repository](https://github.com/kubernetes-sigs/kind)
+- [kind archlinux package](https://aur.archlinux.org/packages/kind)
+
+#### [kompose](roles/cli)
+
+- [kompose repository](https://github.com/kubernetes/kompose)
+- [kompose installation](https://kompose.io/installation/)
+- [kompose autocompletion documentation](https://github.com/kubernetes/kompose#shell-autocompletion)
+- [kompose archlinux package](https://archlinux.org/packages/community/x86_64/kompose/)
+
+#### [kubecolor](roles/cli)
+
+- [kubecolor repository](https://github.com/hidetatz/kubecolor)
+- [kubecolor archlinux package](https://aur.archlinux.org/packages/kubecolor)
+
+#### [kubectl](roles/cli)
+
+- [kubectl repository](https://github.com/kubernetes/kubectl)
+- [kubectl installation](https://kubernetes.io/fr/docs/tasks/tools/install-kubectl/)
+- [kubectl archlinux package](https://archlinux.org/packages/community/x86_64/kubectl/)
+
+#### [kubectx](roles/cli)
+
+- [kubectx repository](https://github.com/ahmetb/kubectx#manual-installation-macos-and-linux)
+- [kubectx installation](https://github.com/ahmetb/kubectx)
+- [kubectx archlinux package](https://archlinux.org/packages/community/any/kubectx/)
 
 
 ## [lockscreen](roles/lockscreen)
@@ -572,6 +609,18 @@
 
 - [epson-inkjet-printer-escpr archlinux repository](https://aur.archlinux.org/packages/epson-inkjet-printer-escpr)
 - [epson-inkjet-printer-escpr2 archlinux repository](https://aur.archlinux.org/packages/epson-inkjet-printer-escpr2)
+
+
+## [python](roles/python)
+
+### [pip](roles/python/tasks/pip)
+
+- [ansible galaxy ansible](https://galaxy.ansible.com/geerlingguy/pip)
+
+#### [pyenv](roles/python/tasks/pyenv)
+
+- [pyenv repository](https://github.com/pyenv/pyenv)
+- [pyenv archlinux package](https://archlinux.org/packages/community/x86_64/pyenv/)
 
 
 ## [screenlayout](roles/screenlayout)

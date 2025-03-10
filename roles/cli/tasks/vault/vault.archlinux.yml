@@ -1,0 +1,6 @@
+---
+- name: Install `vault` software
+  become: yes
+  package:
+    name: vault
+    state: latest

@@ -1,18 +1,18 @@
 ---
-- name: Deploying the service file for {{ item.name }} mount
-  become: True
+- name: Deploying the service file for {{ outer_item.name }} mount
+  become: yes
   template:
     src: service.mount.j2
-    dest: /etc/systemd/system/mnt-{{ item.name }}.mount
+    dest: /etc/systemd/system/mnt-{{ outer_item.name }}.mount
 
 - name: Ensure folder exists
-  become: True
+  become: yes
   file:
-    path: "{{ item.where }}"
+    path: "{{ outer_item.where }}"
     state: directory
 
 - name: Ensure the service is enable at boot
-  become: True
+  become: yes
   service:
-    name: "mnt-{{ item.name }}.mount"
-    enabled: yes
+    name: "mnt-{{ outer_item.name }}.mount"
+    enabled: "{{ outer_item.is_enabled_at_boot | default(False) }}"

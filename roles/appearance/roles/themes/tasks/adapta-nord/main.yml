@@ -1,0 +1,6 @@
+---
+- include_tasks: adapta-nord.archlinux.yml
+  when: ansible_os_family == "Archlinux"
+
+- include_tasks: adapta-nord.debian.yml
+  when: ansible_os_family == "Debian"

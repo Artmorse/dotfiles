@@ -3,8 +3,7 @@
 # communication
 #
 
-- name: Install `discord` software
-  include_role:
+- include_role:
     name: gui/roles/discord
     apply: 
       tags: [communication, discord]
@@ -12,8 +11,7 @@
   when: discord.enabled | default(False)
 
 
-- name: Install `mailspring` software
-  include_role:
+- include_role:
     name: gui/roles/mailspring
     apply: 
       tags: [communication, mailspring]
@@ -21,43 +19,26 @@
   when: mailspring.enabled | default(False)
 
 
-- name: Install `slack` software
-  kewlfft.aur.aur:
-    use: yay
-    name: slack-desktop
-    state: present
-  tags: [communication, slack]
-  retries: 2
+- include_tasks: slack/main.yml
+  tags: [gui, communication, slack]
   when: slack.enabled | default(False)
 
 
-- name: Install `teamviewer` software
-  kewlfft.aur.aur:
-    use: yay
-    name: teamviewer
-    state: present
-  tags: [communication, teamviewer]
-  retries: 2
+- include_tasks: teamviewer/main.yml
+  tags: [gui, communication, teamviewer]
   when: teamviewer.enabled | default(False)
 
 
-- name: Install `zoom` software
-  kewlfft.aur.aur:
-    use: yay
-    name: zoom
-    state: present
-  tags: [communication, zoom]
-  retries: 2
+- include_tasks: zoom/main.yml
+  tags: [gui, communication, zoom]
   when: zoom.enabled | default(False)
-
 
 
 #
 # dev
 #
 
-- name: Install `VSCode` and `VSCodium` softwares
-  include_role:
+- include_role:
     name: gui/roles/code
     apply: 
       tags: [dev, code]
@@ -65,54 +46,29 @@
   when: code.enabled | default(False)
 
 
-- name: Install `dbeaver` software
-  become: yes
-  package:
-    name: dbeaver
-    state: latest
-  tags: [dev, dbeaver]
+- include_tasks: dbeaver/main.yml
+  tags: [gui, dev, dbeaver]
   when: dbeaver.enabled | default(False)
 
 
-- name: Install `gitfiend` software
-  kewlfft.aur.aur:
-    use: yay
-    name: gitfiend
-    state: present
-  tags: [dev, gitfiend]
-  retries: 2
+- include_tasks: gitfiend/main.yml
+  tags: [gui, dev, gitfiend]
   when: gitfiend.enabled | default(False)
 
 
-- name: Install `jetbrains-toolbox` software
-  kewlfft.aur.aur:
-    use: yay
-    name: jetbrains-toolbox
-    state: present
-  tags: [dev, jetbrainsToolbox]
-  retries: 2
+- include_tasks: jetbrains-toolbox/main.yml
+  tags: [gui, dev, jetbrainsToolbox]
   when: jetbrainsToolbox.enabled | default(False)
 
 
-- name: Install `lens` software
-  kewlfft.aur.aur:
-    use: yay
-    name: lens-bin
-    state: present
-  tags: [dev, lens]
-  retries: 2
+- include_tasks: lens/main.yml
+  tags: [gui, dev, lens]
   when: lens.enabled | default(False)
 
 
-- name: Install `postman` software
-  kewlfft.aur.aur:
-    use: yay
-    name: postman-bin
-    state: present
-  tags: [dev, postman]
-  retries: 2
+- include_tasks: postman/main.yml
+  tags: [gui, dev, postman]
   when: postman.enabled | default(False)
-
 
 
 #
@@ -169,27 +125,17 @@
 # misc
 #
 
-- name: Install `balena-etcher` software
-  kewlfft.aur.aur:
-    use: yay
-    name: balena-etcher
-    state: present
+- include_tasks: balena-etcher/main.yml
   tags: [misc, balenaEtcher]
-  retries: 2
   when: balenaEtcher.enabled | default(False)
 
 
-- name: Install `bitwarden` software
-  become: yes
-  package:
-    name: bitwarden
-    state: latest
+- include_tasks: bitwarden/main.yml
   tags: [misc, bitwarden]
   when: bitwarden.enabled | default(False)
 
 
-- name: Install `cura` software
-  include_role:
+- include_role:
     name: gui/roles/cura
     apply: 
       tags: [misc, cura]
@@ -197,11 +143,7 @@
   when: cura.enabled | default(False)
 
 
-- name: Install `deluge` software
-  become: yes
-  package:
-    name: deluge-gtk
-    state: latest
+- include_tasks: deluge/main.yml
   tags: [misc, deluge]
   when: deluge.enabled | default(False)
 
@@ -224,15 +166,9 @@
   when: qalculate.enabled | default(False)
 
 
-- name: Install `rpi-imager` software
-  kewlfft.aur.aur:
-    use: yay
-    name: rpi-imager
-    state: present
+- include_tasks: rpi-imager/main.yml
   tags: [misc, rpiImager]
-  retries: 2
   when: rpiImager.enabled | default(False)
-
 
 
 #
@@ -240,17 +176,12 @@
 #
 
 
-- name: Install `easyeffects` software
-  become: yes
-  package: 
-    name: easyeffects
-    state: latest
+- include_tasks: easyeffects/main.yml
   tags: [music, easyeffects]
   when: easyeffects.enabled | default(False)
 
 
-- name: Install `spotify` software
-  include_role:
+- include_role:
     name: gui/roles/spotify
     apply: 
       tags: [music, spotify]
@@ -263,13 +194,10 @@
 # webbrowsers
 #
 
-- name: Install `chromium` software
-  become: yes
-  package: 
-    name: chromium
-    state: latest
+- include_tasks: chromium/main.yml
   tags: [webbrowsers, chromium]
   when: chromium.enabled | default(False)
+
 
 - name: Install `firefox` software
   become: yes

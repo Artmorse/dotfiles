@@ -1,6 +1,14 @@
+{% if user.perso.git.commit.gpgsign == true %}
+[commit]
+    gpgsign = true
+
+{% endif %}
 [user]
-    email = {{ user.email.perso }}
+    email = {{ user.perso.email }}
     name = {{ user.pseudo }}
+    {% if user.perso.git.commit.gpgsign == true %}
+    signingkey = "{{ user.perso.git.commit.signingkey }}"
+    {% endif %}
 
 [core]
-    sshCommand = ssh -i ~/.ssh/id_{{ ssh_keys.perso.type }}_{{ ssh_keys.perso.name }} -F /dev/null
+    sshCommand = ssh -i ~/.ssh/id_{{ user.perso.ssh_keys.type }}_{{ user.perso.ssh_keys.name }} -F /dev/null

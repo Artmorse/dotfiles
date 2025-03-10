@@ -1,0 +1,7 @@
+---
+- name: Install `alacritty` package
+  become: yes
+  snap: 
+    name: alacritty
+    classic: yes
+    state: present

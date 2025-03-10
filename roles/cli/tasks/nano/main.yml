@@ -1,0 +1,25 @@
+---
+- name: Install `nano` software
+  become: yes
+  package:
+    name: nano
+    state: latest
+
+- name: Download `nanorc` installation script
+  get_url:
+    url: "https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh"
+    dest: /tmp/setup-nanorc.sh
+    mode: '0755'
+
+- name: Execute the setup file
+  shell: /tmp/setup-nanorc.sh
+
+- name: Ensure linenumbers is configured
+  lineinfile:
+    path: ~/.nanorc
+    line: set linenumbers
+
+- name: Clean `/tmp` folder
+  file:
+    state: absent
+    path: /tmp/setup-nanorc.sh

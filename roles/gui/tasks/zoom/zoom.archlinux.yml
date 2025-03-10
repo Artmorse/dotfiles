@@ -1,0 +1,7 @@
+---
+- name: Install `zoom` software
+  kewlfft.aur.aur:
+    use: yay
+    name: zoom
+    state: present
+  retries: 2

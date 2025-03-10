@@ -1,0 +1,23 @@
+---
+- name: Install `docker`
+  # become: yes
+  include_role:
+    name: geerlingguy.docker
+  vars:
+    - ansible_become: yes
+    - docker_users:
+      - "{{ ansible_user_id }}"
+
+
+- name: Install `pip` packages
+  pip: 
+    name: "{{ item }}"
+  with_items:
+  - docker
+  - docker-compose
+
+
+- name: Ensures `~/.docker` folder exists
+  file:
+    path: ~/.docker
+    state: directory

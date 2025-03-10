@@ -1,0 +1,6 @@
+---
+- name: Install `ckb-next` aur package
+  kewlfft.aur.aur:
+    use: yay
+    name: ckb-next
+    state: present

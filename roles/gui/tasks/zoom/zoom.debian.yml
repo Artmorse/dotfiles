@@ -1,0 +1,5 @@
+---
+- name: Install `zoom` software
+  become: yes
+  snap:
+    name: zoom-client

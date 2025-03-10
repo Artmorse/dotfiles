@@ -1,0 +1,7 @@
+---
+- name: Install `ngrok` software
+  kewlfft.aur.aur:
+    use: yay
+    name: ngrok
+    state: present
+  retries: 2

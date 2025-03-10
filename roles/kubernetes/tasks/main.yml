@@ -1,0 +1,28 @@
+---
+- include_tasks: helm/main.yml
+  tags: [kubernetes, helm]
+  when: helm.enabled | default(False)
+
+- include_tasks: k3sup/main.yml
+  tags: [kubernetes, k3sup]
+  when: k3sup.enabled | default(False)
+
+- include_tasks: kind/main.yml
+  tags: [kubernetes, kind]
+  when: kind.enabled | default(False)
+
+- include_tasks: kompose/main.yml
+  tags: [kubernetes, kompose]
+  when: kompose.enabled | default(False)
+
+- include_tasks: kubecolor/main.yml
+  tags: [kubernetes, kubecolor]
+  when: kubecolor.enabled | default(False)
+
+- include_tasks: kubectl/main.yml
+  tags: [kubernetes, kubectl]
+  when: kubectl.enabled | default(False)
+
+- include_tasks: kubectx/main.yml
+  tags: [kubernetes, kubectx]
+  when: kubectx.enabled | default(False)

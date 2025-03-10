@@ -1,0 +1,5 @@
+---
+- name: Install `mailspring` software
+  become: yes
+  snap:
+    name: mailspring

@@ -1,15 +1,10 @@
 ---
-- name: Install `cura` software
-  kewlfft.aur.aur:
-    use: yay
-    name: cura-appimage-bin
-    state: present
+- include_tasks: cura.archlinux.yml
+  when: ansible_os_family == "Archlinux"
 
-- name: Install `cura` dependencies
-  become: yes
-  package:
-    name: protobuf
-    state: latest
+- include_tasks: cura.debian.yml
+  when: ansible_os_family == "Debian"
+
 
 
 - name: Install the cura's profiles for the Wanhao France D12-230

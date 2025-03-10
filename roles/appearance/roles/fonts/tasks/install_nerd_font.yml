@@ -1,0 +1,59 @@
+---
+- include_tasks: tasks/get_latest_version_from_github.yml
+  loop: 
+  - ryanoasis/nerd-fonts
+  loop_control:
+    loop_var: outer_item
+
+- name: Download `{{ outer_item.name }}` font archive
+
+  get_url:
+    url: "https://github.com/ryanoasis/nerd-fonts/releases/download/{{ version }}/{{ outer_item.name }}.zip"
+    dest: /tmp/{{ outer_item.name | lower }}.zip
+
+- name: Ensures `/tmp/{{ outer_item.name | lower }}` temporary folder exists
+  file:
+    path: /tmp/{{ outer_item.name | lower }}/
+    state: directory
+
+- name: Extract `{{ outer_item.name }}` font files
+  unarchive:
+    src: /tmp/{{ outer_item.name | lower }}.zip
+    dest: /tmp/{{ outer_item.name | lower }}/
+    remote_src: yes
+
+- name: Ensures `/usr/share/fonts/{{ outer_item.type | default('truetype') }}/{{ outer_item.name | lower }}` folder exists
+  become: yes
+  file:
+    path: /usr/share/fonts/{{ outer_item.type | default('truetype') }}/{{ outer_item.name | lower }}/
+    state: directory
+
+- name: Prepare list of `*.otf` files to move
+  find:
+    paths:
+    - "/tmp/{{ outer_item.name | lower }}/"
+    patterns: '.*([a-zA-Z]+).otf'
+    file_type: file
+    use_regex: yes
+  register: otf_file_list
+
+# - name: Print return information from the previous task
+#   debug:
+#     msg: "{{ otf_file_list.matched }} files matched."
+
+- name: Move the `*.otf` files
+  become: yes
+  copy:
+    src: "{{ item.path }}"
+    dest: "/usr/share/fonts/{{ outer_item.type | default('truetype') }}/{{ outer_item.name | lower }}/"
+    remote_src: yes
+  with_items:
+    - "{{ otf_file_list.files }}"
+
+- name: Clean `/tmp` folder
+  file:
+    state: absent
+    path: "{{ item }}"
+  with_items:
+    - /tmp/{{ outer_item.name | lower }}.zip
+    - /tmp/{{ outer_item.name | lower }}

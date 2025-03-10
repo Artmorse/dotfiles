@@ -1,0 +1,6 @@
+---
+- include_tasks: dbeaver.archlinux.yml
+  when: ansible_os_family == "Archlinux"
+
+- include_tasks: dbeaver.debian.yml
+  when: ansible_os_family == "Debian"

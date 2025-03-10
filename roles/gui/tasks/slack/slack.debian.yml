@@ -1,0 +1,5 @@
+---
+- name: Install `slack` software
+  become: yes
+  snap:
+    name: slack

@@ -1,0 +1,12 @@
+---
+- name: Install `cura` software
+  kewlfft.aur.aur:
+    use: yay
+    name: cura-appimage-bin
+    state: present
+
+- name: Install `cura` dependencies
+  become: yes
+  package:
+    name: protobuf
+    state: latest

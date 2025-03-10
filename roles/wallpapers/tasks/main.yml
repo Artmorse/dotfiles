@@ -17,6 +17,7 @@
     repo: https://github.com/linuxdotexe/nordic-wallpapers.git
     dest: "{{ wallpapers.directory }}/nordic"
 
+
 - name: Install and configure `feh` software
   include_role:
     name: wallpapers/roles/feh

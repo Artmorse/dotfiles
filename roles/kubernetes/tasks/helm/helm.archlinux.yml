@@ -1,0 +1,6 @@
+---
+- name: Install `helm` software
+  become: yes
+  package:
+    name: helm
+    state: latest

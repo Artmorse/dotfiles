@@ -1,0 +1,6 @@
+---
+- name: Install `deluge` package
+  become: yes
+  package: 
+    name: deluge
+    state: latest

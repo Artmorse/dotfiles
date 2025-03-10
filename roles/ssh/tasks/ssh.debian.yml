@@ -1,0 +1,5 @@
+---
+- name: Install `ssh-askpass` packages
+  become: yes
+  package: 
+    name: ssh-askpass

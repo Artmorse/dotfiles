@@ -1,0 +1,13 @@
+---
+- name: Install sddm
+  include_role:
+    name: display-manager/roles/sddm
+    apply: 
+      tags: [display-manager, sddm]
+  tags: [display-manager]
+
+- name: Ensure `lightdm` is disabled at boot
+  become: yes
+  service:
+    name: lightdm
+    enabled: no

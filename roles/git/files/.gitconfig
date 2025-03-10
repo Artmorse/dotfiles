@@ -1,9 +1,10 @@
 [includeif "gitdir:~/Documents/workspace-pro/"]
-	path = ~/Documents/workspace-pro/.gitconfig
+    path = ~/.gitconfig-pro
 [includeif "gitdir:~/Documents/workspace-perso/"]
-	path = ~/Documents/workspace-perso/.gitconfig
+    path = ~/.gitconfig-perso
+
 [user]
 	useConfigOnly = true
 
 [include]
-path = ~/.git_aliases
+	path = ~/.git_aliases

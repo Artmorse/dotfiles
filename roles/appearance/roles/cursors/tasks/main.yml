@@ -1,4 +1,3 @@
 ---
-
 - name: Install Nordzy cursors
   include_tasks: nordzy.yml

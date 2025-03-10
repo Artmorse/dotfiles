@@ -1,0 +1,36 @@
+---
+- name: Install `docker` and `docker-compose`
+  become: yes
+  package:
+    name:
+      - docker
+      - docker-compose
+    state: present
+
+- name: Install `pip` packages
+  pip: 
+    name: "{{ item }}"
+  with_items:
+  - docker
+  - docker-compose
+
+
+- name: Ensure user are added to the docker group
+  become: yes
+  user:
+    name: "{{ ansible_user_id }}"
+    groups: docker
+    append: True
+
+
+- name: Ensure `docker` is enabled at boot
+  become: yes
+  service:
+    name: docker
+    enabled: yes
+
+
+- name: Ensures `~/.docker` folder exists
+  file:
+    path: ~/.docker
+    state: directory

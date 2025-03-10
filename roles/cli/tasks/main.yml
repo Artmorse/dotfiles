@@ -3,22 +3,6 @@
 # dev
 #
 
-- name: Install `helm` software
-  become: yes
-  package:
-    name: helm
-    state: latest
-  tags: [cli, dev, helm]
-  when: helm.enabled | default(False)
-
-- name: Install `jenv` software
-  become: yes
-  package:
-    name: jenv
-    state: latest
-  tags: [cli, dev, jenv]
-  when: jenv.enabled | default(False)
-
 - name: Install `jq` software
   become: yes
   package:
@@ -27,85 +11,19 @@
   tags: [cli, dev, jq]
   when: jq.enabled | default(False)
 
-- name: Install `k9s` software
-  become: yes
-  package:
-    name: k9s
-    state: latest
-  tags: [cli, dev, k9s]
-  when: k9s.enabled | default(False)
-
-- name: Install `kind` software
-  kewlfft.aur.aur:
-    use: yay
-    name: kind
-    state: present
-  tags: [cli, dev, kind]
-  retries: 2
-  when: kind.enabled | default(False)
-
-- name: Install `kompose` software
-  become: yes
-  package:
-    name: kompose
-    state: latest
-  tags: [cli, dev, kompose]
-  when: kompose.enabled | default(False)
-
-- name: Install `kubectl` software
-  become: yes
-  package:
-    name: kubectl
-    state: latest
-  tags: [cli, dev, kubectl]
-  when: kubectl.enabled | default(False)
-
-- name: Install `kubectx` software
-  become: yes
-  package:
-    name: kubectx
-    state: latest
-  tags: [cli, dev, kubectx]
-  when: kubectx.enabled | default(False)
-
-- name: Install `ngrok` software
-  kewlfft.aur.aur:
-    use: yay
-    name: ngrok
-    state: present
+- include_tasks: ngrok/main.yml
   tags: [cli, dev, ngrok]
-  retries: 2
   when: ngrok.enabled | default(False)
 
-- name: Install `pyenv` software
-  include_role:
-    name: cli/roles/pyenv
-    apply:
-      tags: [dev, pyenv]
-  tags: [cli]
-  when: pyenv.enabled | default(False)
-
-- name: Install `sonar-scanner` software
-  include_role:
-    name: cli/roles/sonar-scanner
-    apply:
-      tags: [dev, sonar-scanner]
-  tags: [cli]
+- include_tasks: sonar-scanner/main.yml
+  tags: [cli, dev, sonarScanner]
   when: sonarScanner.enabled | default(False)
 
-- name: Install `terraform` software
-  become: yes
-  package:
-    name: terraform
-    state: latest
+- include_tasks: terraform/main.yml
   tags: [cli, dev, terraform]
   when: terraform.enabled | default(False)
 
-- name: Install `vault` software
-  become: yes
-  package:
-    name: vault
-    state: latest
+- include_tasks: vault/main.yml
   tags: [cli, dev, vault]
   when: vault.enabled | default(False)
 
@@ -114,11 +32,7 @@
 # utils
 #
 
-- name: Install `bat` software
-  become: yes
-  package:
-    name: bat
-    state: latest
+- include_tasks: bat/main.yml
   tags: [cli, utils, bat]
   when: bat.enabled | default(False)
 
@@ -136,7 +50,7 @@
     name: bind
     state: latest
   tags: [cli, dev, dig]
-  when: dig.enabled | default(False)
+  when: dig.enabled | default(False) and ansible_os_family == "Archlinux"
 
 - name: Install `exa` software
   become: yes
@@ -146,11 +60,7 @@
   tags: [cli, utils, exa]
   when: exa.enabled | default(False)
 
-- name: Install `fd` software
-  become: yes
-  package:
-    name: fd
-    state: latest
+- include_tasks: fd/main.yml
   tags: [cli, utils, fd]
   when: fd.enabled | default(False)
 
@@ -162,11 +72,7 @@
   tags: [cli, utils, fzf]
   when: fzf.enabled | default(False)
 
-- name: Install `gfold` software
-  become: yes
-  package:
-    name: gfold
-    state: latest
+- include_tasks: gfold/main.yml
   tags: [cli, utils, gfold]
   when: gfold.enabled | default(False)
 
@@ -178,21 +84,12 @@
   tags: [cli, utils, gparted]
   when: gparted.enabled | default(False)
 
-- name: Install `nano` software
-  become: yes
-  package:
-    name: nano
-    state: latest
+- include_tasks: nano/main.yml
   tags: [cli, utils, nano]
   when: nano.enabled | default(False)
 
-- name: Install `procs` software
-  kewlfft.aur.aur:
-    use: yay
-    name: procs
-    state: present
+- include_tasks: procs/main.yml
   tags: [cli, utils, procs]
-  retries: 2
   when: procs.enabled | default(False)
 
 - name: Install `ripgrep` software
