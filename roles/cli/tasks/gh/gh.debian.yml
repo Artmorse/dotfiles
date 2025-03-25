@@ -1,0 +1,6 @@
+---
+- name: Install `gh` software
+  become: yes
+  package:
+    name: gh
+    state: latest

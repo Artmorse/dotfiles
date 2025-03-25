@@ -72,6 +72,10 @@
   tags: [cli, utils, gfold]
   when: gfold.enabled | default(False)
 
+- include_tasks: gh/main.yml
+  tags: [cli, utils, gh]
+  when: gh.enabled | default(False)
+
 - name: Install `gparted` software
   become: yes
   package:
@@ -111,6 +115,10 @@
     state: latest
   tags: [cli, utils, ripgrep]
   when: ripgrep.enabled | default(False)
+
+- include_tasks: topgrade/main.yml
+  tags: [cli, utils, topgrade]
+  when: topgrade.enabled | default(False)
 
 - include_tasks: zoxide/main.yml
   tags: [cli, utils, zoxide]

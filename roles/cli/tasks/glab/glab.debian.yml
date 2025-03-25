@@ -1,0 +1,6 @@
+---
+- name: Install `glab` software
+  become: yes
+  package:
+    name: glab
+    state: latest

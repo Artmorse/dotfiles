@@ -170,32 +170,36 @@ k9s:
 kind:
   enabled: false
 
+# replaced by asdf
 kompose:
   enabled: false
 
+# replaced by asdf
 kubectl:
-  enabled: true
+  enabled: false
 
 kubectx:
   enabled: true
 
+# not available for debian
 ngrok:
   enabled: true
 
+# replaced by asdf
 pyenv:
   enabled: false
 
-quarkus:
-  enabled: false
-
+# not available for debian
 sonarScanner:
   enabled: false
 
+# replaced by asdf
 terraform:
-  enabled: true
+  enabled: false
 
+# replaced by asdf
 vault:
-  enabled: true
+  enabled: false
 
 # utils
 asdf:
@@ -237,6 +241,15 @@ asdf:
   - name: maven
     versions:
     - 3.9.9
+  - name: kompose
+    versions:
+    - 1.35.0
+  - name: terraform
+    versions:
+    - 1.11.2
+  - name: vault
+    versions:
+    - 1.35.0
 
 bat:
   enabled: true
@@ -254,8 +267,17 @@ fd:
 fzf:
   enabled: true
 
+# not available for debian
 gfold:
   enabled: false
+
+# not available for archlinux
+gh:
+  enabled: true
+
+# not available for archlinux
+glab:
+  enabled: true
 
 gparted:
   enabled: false
@@ -267,6 +289,7 @@ nala:
 nano:
   enabled: true
 
+# only avaulable for archlinux
 procs:
   enabled: false
 
