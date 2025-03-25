@@ -1,0 +1,6 @@
+---
+- name: Install `asdf`
+  kewlfft.aur.aur:
+    use: asdf-vm
+    name: topgrade
+    state: present

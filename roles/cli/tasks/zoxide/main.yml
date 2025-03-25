@@ -1,0 +1,6 @@
+---
+- include_tasks: zoxide.archlinux.yml
+  when: ansible_os_family == "Archlinux"
+
+- include_tasks: zoxide.debian.yml
+  when: ansible_os_family == "Debian"

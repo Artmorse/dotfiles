@@ -1,7 +1,0 @@
----
-- name: Install `openjdk-{{ item }}` jdk
-  become: yes
-  package:
-    name: openjdk-{{ item }}-jdk
-    state: latest
-  with_items: "{{ java.versions }}"

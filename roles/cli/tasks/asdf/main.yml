@@ -1,0 +1,38 @@
+---
+- include_tasks: debian.yml
+  when: ansible_os_family == "Debian"
+
+- name: Configure the default provider
+  shell: asdf completion zsh > ~/.asdf/completions/_asdf
+
+# TODO: configure completions in zsh
+
+- name: Install asdf plugin
+  shell: |
+    asdf plugin add {{ item.0.name }}
+    # asdf list all {{ item.0.name }}
+    asdf install {{ item.0.name }} {{ item.1 }}
+    asdf set -u {{ item.0.name }} {{ item.1 }}
+  loop: "{{ asdf.plugins | subelements('versions') }}"
+
+- name: Configure asdf in shells
+  blockinfile:
+    path: "{{ item }}"
+    block: |
+      export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+      fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+      autoload -Uz compinit && compinit
+  with_items:
+  - ~/.zshrc
+
+- name: Create the list with the last versions of each plugin
+  set_fact:
+    last_versions: "{{ asdf.plugins | map(attribute='versions') | map('last') | list }}"
+
+- name: Write last versions to a file
+  copy:
+    dest: ~/.tool-versions
+    content: |
+      {% for plugin, last_version in asdf.plugins | zip(last_versions) %}
+      {{ plugin.name }} {{ last_version }}
+      {% endfor %}

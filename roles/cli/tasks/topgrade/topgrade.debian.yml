@@ -1,0 +1,11 @@
+---
+- include_tasks: tasks/get_latest_version_from_github.yml
+  loop: 
+  - topgrade-rs/topgrade
+  loop_control:
+    loop_var: outer_item
+
+- name: Install `topgrade` software
+  become: yes
+  apt:
+    deb: https://github.com/topgrade-rs/topgrade/releases/download/v{{ version }}/topgrade_{{ version }}-1_amd64.deb

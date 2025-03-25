@@ -1,0 +1,11 @@
+---
+- include_tasks: tasks/get_latest_version_from_github.yml
+  loop: 
+  - ajeetdsouza/zoxide
+  loop_control:
+    loop_var: outer_item
+
+- name: Install `zoxide` software
+  become: yes
+  apt:
+    deb: https://github.com/ajeetdsouza/zoxide/releases/download/v{{ version }}/zoxide_{{ version }}-1_amd64.deb

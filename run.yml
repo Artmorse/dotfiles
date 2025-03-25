@@ -187,11 +187,6 @@
         name: vpn
       tags: [vpn]
 
-    - name: install/configure JAVA and tools
-      include_role:
-        name: java
-      tags: [java]
-
     - name: install CLI applications
       include_role:
         name: cli

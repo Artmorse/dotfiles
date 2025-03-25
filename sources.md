@@ -140,6 +140,10 @@
 
 ### utils
 
+#### [asdf](roles/cli/tasks/asdf/)
+
+- [asdf repository](https://github.com/asdf-vm/asdf)
+
 #### [bat](roles/cli/tasks/bat/)
 
 - [bat repository](https://github.com/sharkdp/bat)
@@ -154,7 +158,7 @@
 
 - [bind archlinux package](https://archlinux.org/packages/extra/x86_64/bind/)
 
-#### [exa](roles/cli)
+#### [exa](roles/cli/tasks/asdf)
 
 - [exa website](https://the.exa.website/)
 - [exa repository](https://github.com/ogham/exa)
@@ -475,28 +479,6 @@
 
 - [firefox website](https://www.mozilla.org/fr/firefox/new/)
 - [firefox archlinux package](https://archlinux.org/packages/extra/x86_64/firefox/)
-
-
-## [java](roles/java)
-
-### [maven](roles/java/tasks/maven)
-
-- [maven website](https://maven.apache.org/)
-- [downloading apache maven](https://maven.apache.org/download.cgi)
-- [installing apache maven](https://maven.apache.org/install.html)
-- [maven archlinux package](https://archlinux.org/packages/community/any/maven/)
-
-### [openjdk](roles/java/tasks/jdk)
-
-### [jenv](roles/cli)
-
-- [jenv repository](https://github.com/jenv/jenv)
-- [jenv archlinux package](https://archlinux.org/packages/community/x86_64/jenv/)
-
-### [quarkus](roles/cli)
-
-- [quarkus repository](https://github.com/quarkusio/quarkus)
-- [quarkus website](https://quarkus.io/)
 
 
 ## [kubernetes](roles/kubernetes)

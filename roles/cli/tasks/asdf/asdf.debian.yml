@@ -1,0 +1,43 @@
+---
+- include_tasks: tasks/get_latest_version_from_github.yml
+  loop: 
+  - asdf-vm/asdf
+  loop_control:
+    loop_var: outer_item
+
+- name: Download `asdf` release from GitHub
+  get_url:
+    url: "https://github.com/asdf-vm/asdf/releases/download/{{ version }}/asdf-{{ version }}-linux-amd64.tar.gz"
+    dest: /tmp/asdf.tar.gz
+
+- name: Ensures `/opt/asdf` folder exists
+  become: yes
+  file:
+    path: /opt/asdf
+    state: directory
+
+- name: Extract `asdf` archive to /opt
+  become: yes
+  unarchive:
+    src: /tmp/asdf.tar.gz
+    dest: /opt/asdf
+    remote_src: yes
+
+- name: Create a symbolic links to asdf
+  become: yes
+  file:
+    src: /opt/asdf/asdf
+    dest: /usr/bin/asdf
+    mode: '755'
+    state: link
+
+- name: Clean `/tmp` folder
+  file:
+    state: absent
+    path: /tmp/asdf.tar.gz
+
+- name: Ensure the folder exists
+  file:
+    path: ~/.asdf/completions
+    state: directory
+    mode: '0755'

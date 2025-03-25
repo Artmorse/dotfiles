@@ -1,0 +1,6 @@
+---
+- name: Install `fzf` software
+  become: yes
+  package:
+    name: fzf
+    state: latest

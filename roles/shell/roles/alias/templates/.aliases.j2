@@ -14,10 +14,14 @@ alias lt='ls --tree'
 # cd
 #
 
+{% if zoxide.enabled %}
+alias cd="zoxide"
+{% else %}
 alias cddo="cd ~/Documents"
 alias cdwpro="cd ~/Documents/workspace-pro"
 alias cdwper="cd ~/Documents/workspace-perso"
 alias cddk="cd ~/.docker"
+{% endif %}
 
 #
 # file explorer

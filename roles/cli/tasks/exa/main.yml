@@ -1,0 +1,6 @@
+---
+- include_tasks: exa.archlinux.yml
+  when: ansible_os_family == "Archlinux"
+
+- include_tasks: exa.debian.yml
+  when: ansible_os_family == "Debian"

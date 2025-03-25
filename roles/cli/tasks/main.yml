@@ -32,6 +32,10 @@
 # utils
 #
 
+- include_tasks: asdf/main.yml
+  tags: [cli, utils, asdf]
+  when: asdf.enabled | default(False)
+
 - include_tasks: bat/main.yml
   tags: [cli, utils, bat]
   when: bat.enabled | default(False)
@@ -52,11 +56,7 @@
   tags: [cli, dev, dig]
   when: dig.enabled | default(False) and ansible_os_family == "Archlinux"
 
-- name: Install `exa` software
-  become: yes
-  package:
-    name: exa
-    state: latest
+- include_tasks: exa/main.yml
   tags: [cli, utils, exa]
   when: exa.enabled | default(False)
 
@@ -64,11 +64,7 @@
   tags: [cli, utils, fd]
   when: fd.enabled | default(False)
 
-- name: Install `fzf` software
-  become: yes
-  package:
-    name: fzf
-    state: latest
+- include_tasks: fzf/main.yml
   tags: [cli, utils, fzf]
   when: fzf.enabled | default(False)
 
@@ -83,6 +79,22 @@
     state: latest
   tags: [cli, utils, gparted]
   when: gparted.enabled | default(False)
+
+- name: Install `htop` software
+  become: yes
+  package:
+    name: htop
+    state: latest
+  tags: [cli, utils, htop]
+  when: htop.enabled | default(False)
+
+- name: Install `nala` software
+  become: yes
+  package:
+    name: nala
+    state: latest
+  tags: [cli, utils, nala]
+  when: (nala.enabled | default(False)) & ansible_os_family == "Debian"
 
 - include_tasks: nano/main.yml
   tags: [cli, utils, nano]
@@ -100,11 +112,7 @@
   tags: [cli, utils, ripgrep]
   when: ripgrep.enabled | default(False)
 
-- name: Install `zoxide` software
-  become: yes
-  package:
-    name: zoxide
-    state: latest
+- include_tasks: zoxide/main.yml
   tags: [cli, utils, zoxide]
   when: zoxide.enabled | default(False)
 

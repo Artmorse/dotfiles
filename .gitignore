@@ -1,7 +1,8 @@
 #
-# VSCode
+# IDEs
 #
 .vscode
+.idea
 
 #
 # Ansible

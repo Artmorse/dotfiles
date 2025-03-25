@@ -84,6 +84,15 @@
   when: evince.enabled | default(False)
 
 
+- name: Install `gthumb` software
+  become: yes
+  package: 
+    name: gthumb
+    state: latest
+  tags: [media, gthumb]
+  when: gthumb.enabled | default(False)
+
+
 - name: Install `obs-studio` software
   become: yes
   package: 

@@ -1,0 +1,37 @@
+---
+- include_tasks: tasks/get_latest_version_from_github.yml
+  loop: 
+  - ogham/exa
+  loop_control:
+    loop_var: outer_item
+
+- name: Download `exa` release from GitHub
+  get_url:
+    url: "https://github.com/ogham/exa/releases/download/{{ version }}/exa-linux-x86_64-{{ version }}.zip"
+    dest: /tmp/exa.zip
+
+- name: Ensures `/opt/exa` folder exists
+  become: yes
+  file:
+    path: /opt/exa
+    state: directory
+
+- name: Extract `exa` archive to /opt
+  become: yes
+  unarchive:
+    src: /tmp/exa.zip
+    dest: /opt/exa
+    remote_src: yes
+
+- name: Create a symbolic links to exa
+  become: yes
+  file:
+    src: /opt/exa/bin/exa
+    dest: /usr/bin/exa
+    mode: '755'
+    state: link
+
+- name: Clean `/tmp` folder
+  file:
+    state: absent
+    path: /tmp/exa.zip

@@ -139,11 +139,11 @@ set $monitor_1 {{ monitors[0] }}
 set $monitor_2 {{ monitors[1] }}
 
 # assign workspace to the primary monitor
-{% for i in [1, 2, 3, 7, 9, 10] %}
+{% for i in [1, 2, 3, 4, 5, 6] %}
 workspace $ws{{ i }} output $monitor_1
 {% endfor %}
 # assign workspace to the second monitor
-{% for i in [4, 5, 6, 8] %}
+{% for i in [7, 8, 9, 10] %}
 workspace $ws{{ i }} output $monitor_2
 {% endfor %}
 {# ---------------- #}
@@ -155,15 +155,15 @@ set $monitor_2 {{ monitors[1] }}
 set $monitor_3 {{ monitors[2] }}
 
 # assign workspace to the primary monitor
-{% for i in [1, 2, 3, 10] %}
+{% for i in [1, 2, 3, 4, 5, 6] %}
 workspace $ws{{ i }} output $monitor_1
 {% endfor %}
 # assign workspace to the second monitor
-{% for i in [4, 5, 6] %}
+{% for i in [7, 8] %}
 workspace $ws{{ i }} output $monitor_2
 {% endfor %}
 # assign workspace to the third monitor
-{% for i in [7, 8, 9] %}
+{% for i in [9, 10] %}
 workspace $ws{{ i }} output $monitor_3
 {% endfor %}
 {% endif %}
@@ -196,7 +196,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # assign [class="jetbrains|Code"] 1
 # assign [class="firefox"] 4
 # assign [class="Chromium"] 5
-assign [class="discord|Slack"] 6
+assign [class="discord|Slack"] 7
 
 # application always floating (`xprop`)
 for_window [class="Nm-connection-editor"] floating enable
@@ -304,8 +304,13 @@ exec_always --no-startup-id "xautolock -time 5 -locker slock"
 # bluetooth
 exec --no-startup-id "blueman-tray"
 
+# network manager applet
+exec --no-startup-id "nm-applet"
+
+{% if mailspring.enabled %}
 # mails
 # exec --no-startup-id "mailspring --background"
+{% endif %}
 
 # polybar (managed throught autorandr)
 # exec_always --no-startup-id "sleep 2 ; ~/.config/polybar/launch.sh $monitor_1 $monitor_2 $monitor_3"
@@ -316,5 +321,7 @@ bindsym $mod+F6 exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym $mod+F7 exec brightnessctl set +5%
 
+{% if touchpad.is_present %}
 # touchpad
 exec --no-startup-id "touchegg --client"
+{% endif %}

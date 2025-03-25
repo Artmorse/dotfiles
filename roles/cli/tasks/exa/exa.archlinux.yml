@@ -1,0 +1,6 @@
+---
+- name: Install `exa` software
+  become: yes
+  package:
+    name: exa
+    state: latest

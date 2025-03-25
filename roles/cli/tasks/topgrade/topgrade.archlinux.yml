@@ -1,0 +1,6 @@
+---
+- name: Install `topgrade`
+  kewlfft.aur.aur:
+    use: yay
+    name: topgrade
+    state: present

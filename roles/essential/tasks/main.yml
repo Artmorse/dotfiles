@@ -37,8 +37,15 @@
       # compress/decompress tools
       - unzip
       - unrar
-      # gnupg
+      # gpg
       - gnupg
+      - gnupg2
+      # network manager
+      - network-manager-gnome
+      # misc
+      - software-properties-common
+      - apt-transport-https
+      - ca-certificates
 
 
 - name: Install `yay` package manager (AUR) and dependencies

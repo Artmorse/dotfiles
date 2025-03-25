@@ -28,7 +28,7 @@ audio:
 # Touchpad configuration
 #
 touchpad:
-  is_present: true
+  is_present: false
   # xinput list | grep Touchpad
   device: DLL0945:00 04F3:311C
 
@@ -41,45 +41,11 @@ monitors:
   - eDP-1  # second
   - DP-1-1 # third
 
+
 #
 # NFS configuration
 #
 nfs:
-  - name: nas-downloads
-    who: 192.168.10.9
-    what: /volume1/downloads
-    where: /mnt/nas/downloads
-    is_enabled_at_boot: false
-  - name: nas-games
-    who: 192.168.10.9
-    what: /volume1/games
-    where: /mnt/nas/games
-    is_enabled_at_boot: false
-  - name: nas-videos
-    who: 192.168.10.9
-    what: /volume1/videos
-    where: /mnt/nas/videos
-    is_enabled_at_boot: false
-  - name: nas-musics
-    who: 192.168.10.9
-    what: /volume1/musics
-    where: /mnt/nas/musics
-    is_enabled_at_boot: false
-
-#
-# VPN
-#
-vpn: openvpn
-
-#
-# JAVA
-#
-java:
-  enabled: true
-  versions:
-    - 8
-    - 11
-    - 18
 
 #
 # Appearance
@@ -117,6 +83,7 @@ wallpapers:
 # Default applications
 #
 
+# not available on debian
 default:
   webbrowser: # firefox or chromium
     name: firefox
@@ -155,6 +122,8 @@ user:
     git:
       commit:
         gpgsign: true
+        # gpg --full-generate-key
+        # gpg --list-keys --keyid-format LONG
         signingkey: XXXXXXXXX
     ssh_keys:
       create_it: false
@@ -176,8 +145,8 @@ user:
 #
 # Peripherals
 #
-have_you_a_some_corsair_peripherals: true
-have_you_an_epson_printer: true
+have_you_a_some_corsair_peripherals: false
+have_you_an_epson_printer: false
 
 #
 # Enable/Disable: CLI
@@ -187,8 +156,9 @@ have_you_an_epson_printer: true
 helm:
   enabled: true
 
+# replaced by asdf
 jenv:
-  enabled: true
+  enabled: false
 
 jq:
   enabled: true
@@ -196,11 +166,12 @@ jq:
 k9s:
   enabled: true
 
+# replaced by asdf
 kind:
-  enabled: true
+  enabled: false
 
 kompose:
-  enabled: true
+  enabled: false
 
 kubectl:
   enabled: true
@@ -212,13 +183,13 @@ ngrok:
   enabled: true
 
 pyenv:
-  enabled: true
+  enabled: false
 
 quarkus:
-  enabled: true
+  enabled: false
 
 sonarScanner:
-  enabled: true
+  enabled: false
 
 terraform:
   enabled: true
@@ -227,6 +198,46 @@ vault:
   enabled: true
 
 # utils
+asdf:
+  enabled: true
+  plugins:
+  - name: nodejs
+    versions:
+    - latest
+  - name: java
+    versions:
+    - openjdk-17
+    - openjdk-21
+  - name: kind
+    versions:
+    - latest
+  - name: rust
+    versions:
+    - stable
+  - name: golang
+    versions:
+    - 1.24.1
+  - name: kubectl
+    versions:
+    - 1.28.0
+    - 1.29.0
+    - 1.30.0
+    - 1.31.0
+    - 1.32.0
+    - 1.33.0
+  - name: helm
+    versions:
+    - 3.17.2
+  - name: helmfile
+    versions:
+    - 0.171.0
+  - name: gcloud
+    versions:
+    - 515.0.0
+  - name: maven
+    versions:
+    - 3.9.9
+
 bat:
   enabled: true
   theme: Nord
@@ -238,24 +249,31 @@ exa:
   enabled: true
 
 fd:
-  enabled: true
+  enabled: false
 
 fzf:
   enabled: true
 
 gfold:
-  enabled: true
+  enabled: false
 
 gparted:
+  enabled: false
+
+# only available for debian
+nala:
   enabled: true
 
 nano:
   enabled: true
 
 procs:
-  enabled: true
+  enabled: false
 
 ripgrep:
+  enabled: false
+
+topgrade:
   enabled: true
 
 zoxide:
@@ -273,9 +291,11 @@ imagemagick:
 # communication
 discord:
   enabled: true
+  betterdiscordctl:
+    enabled: false
 
 mailspring:
-  enabled: true
+  enabled: false
 
 slack:
   enabled: true
@@ -296,6 +316,8 @@ dbeaver:
 gitfiend: 
   enabled: true
 
+# not available on debian
+# https://www.jetbrains.com/toolbox-app/
 jetbrainsToolbox: 
   enabled: true
 
@@ -309,11 +331,14 @@ postman:
 evince:
   enabled: true
 
+gthumb:
+  enabled: true
+
 obsStudio:
   enabled: true
 
 photoflare:
-  enabled: true
+  enabled: false
 
 ristretto:
   enabled: true
@@ -322,19 +347,20 @@ vlc:
   enabled: true
 
 # misc
+# not available on debian
 balenaEtcher:
-  enabled: true
+  enabled: false
 
 bitwarden:
   enabled: true
 
 cura:
-  enabled: true
+  enabled: false
   additionnal_profiles:
   - wanhao-france-d12
 
 deluge:
-  enabled: true
+  enabled: false
 
 filezilla:
   enabled: true
@@ -350,7 +376,7 @@ easyeffects:
   enabled: true
 
 spotify:
-  enabled: true
+  enabled: false
   spicetify:
     theme: Sleek
     colorscheme: Nord

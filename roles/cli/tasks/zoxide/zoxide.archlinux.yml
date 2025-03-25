@@ -1,0 +1,6 @@
+---
+- name: Install `zoxide` software
+  become: yes
+  package:
+    name: zoxide
+    state: latest
