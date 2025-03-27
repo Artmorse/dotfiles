@@ -199,6 +199,9 @@ terraform:
 vault:
   enabled: false
 
+yq:
+  enabled: true
+
 # utils
 asdf:
   enabled: true

@@ -27,6 +27,14 @@
   tags: [cli, dev, vault]
   when: vault.enabled | default(False)
 
+- name: Install `yq` software
+ become: yes
+ package:
+   name: yq
+   state: latest
+ tags: [cli, dev, yq]
+ when: yq.enabled | default(False)
+
 
 #
 # utils
