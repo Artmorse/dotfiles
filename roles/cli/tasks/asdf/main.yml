@@ -1,6 +1,11 @@
----
-- include_tasks: debian.yml
+
+- include_tasks: asdf.archlinux.yml
+  when: ansible_os_family == "Archlinux"
+
+- include_tasks: asdf.debian.yml
   when: ansible_os_family == "Debian"
+
+
 
 - name: Configure the default provider
   shell: asdf completion zsh > ~/.asdf/completions/_asdf
@@ -24,6 +29,11 @@
       autoload -Uz compinit && compinit
   with_items:
   - ~/.zshrc
+
+- name: Install components if specified
+  shell: |
+    {{ item.name }} components install {{ component }}
+  loop: "{{ asdf.plugins | selectattr('components', 'defined') | list }}"
 
 - name: Create the list with the last versions of each plugin
   set_fact:

@@ -218,7 +218,7 @@ asdf:
     - stable
   - name: golang
     versions:
-    - 1.24.1
+    - latest
   - name: kubectl
     versions:
     - 1.28.0
@@ -236,19 +236,21 @@ asdf:
     - latest
   - name: gcloud
     versions:
-    - 515.0.0
+    - latest
+    components:
+    - kubectl
   - name: maven
     versions:
-    - 3.9.9
+    - latest
   - name: kompose
     versions:
-    - 1.35.0
+    - latest
   - name: terraform
     versions:
-    - 1.11.2
+    - latest
   - name: vault
     versions:
-    - 1.35.0
+    - latest
   - name: k9s
     versions:
     - latest
@@ -291,7 +293,7 @@ nala:
 nano:
   enabled: true
 
-# only avaulable for archlinux
+# only available for archlinux
 procs:
   enabled: false
 
