@@ -36,8 +36,8 @@ alias e="thunar ."
 alias d="docker"
 {% if kubectl.enabled | default(False) %}
 alias k="kubectl"
-{% endif %}
-{% if kubecolor.enabled | default(False) %}
+{% elif kubecolor.enabled | default(False) %}
+alias kubectl="kubecolor"
 alias k="kubecolor"
 {% endif %}
 {% if terraform.enabled | default(False) %}

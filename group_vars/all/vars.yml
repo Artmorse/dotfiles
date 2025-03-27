@@ -153,17 +153,15 @@ have_you_an_epson_printer: false
 #
 
 # dev
+# replaced by asdf
 helm:
-  enabled: true
+  enabled: false
 
 # replaced by asdf
 jenv:
   enabled: false
 
 jq:
-  enabled: true
-
-k9s:
   enabled: true
 
 # replaced by asdf
@@ -229,12 +227,13 @@ asdf:
     - 1.31.0
     - 1.32.0
     - 1.33.0
+    - latest
   - name: helm
     versions:
-    - 3.17.2
+    - latest
   - name: helmfile
     versions:
-    - 0.171.0
+    - latest
   - name: gcloud
     versions:
     - 515.0.0
@@ -250,6 +249,9 @@ asdf:
   - name: vault
     versions:
     - 1.35.0
+  - name: k9s
+    versions:
+    - latest
 
 bat:
   enabled: true
